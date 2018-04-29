@@ -1,0 +1,367 @@
+/*
+  Theme Name: Songwriter Shelter Studios
+  Author: Max Garceau
+  Version: 1.0
+*/
+/* CSS Reset */
+/* Custom Fonts */
+@font-face {
+  font-family: din-light-regular;
+  src: url("./fonts/din-light-regular.otf"); }
+@font-face {
+  font-family: futura-book-regular;
+  src: url("./fonts/futura-book-regular.otf"); }
+@font-face {
+  font-family: the-skinny-bold;
+  src: url("./fonts/the-skinny-bold.otf"); }
+@font-face {
+  font-family: the-skinny;
+  src: url("./fonts/the-skinny.otf"); }
+body {
+  text-align: center;
+  color: white;
+  font-family: din-light-regular, Arial, Helvetica; }
+
+header {
+  margin-bottom: 20px; }
+
+hr {
+  border-color: white;
+  padding: 0 0 20px 0;
+  width: 20%;
+  border-width: 3px; }
+
+section {
+  padding: 40px 0; }
+
+/*Re-write with Sass*/
+/* Footer */
+footer p {
+  background-color: rgba(0, 0, 0, 0); }
+
+.footer__font-size {
+  font-size: 0.8em; }
+
+.footer__background-color {
+  background-color: black; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: futura-book-regular, Arial, Helvetica;
+  font-weight: bold;
+  padding-top: 15px; }
+
+h1 {
+  font-family: the-skinny-bold;
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 3.2em; }
+
+a {
+  color: #E6E6E6;
+  font-weight: bold;
+  text-decoration: underline; }
+
+a:visited {
+  color: #8E8E8E; }
+
+a:hover {
+  color: white; }
+
+nav a {
+  text-decoration: none; }
+
+.discography-shadow {
+  text-shadow: #ffffff 0px 0px 6px; }
+
+.text__reg-color {
+  color: white; }
+
+.h1-primary__font-size {
+  font-size: 2.2em; }
+
+.h1-secondary__font-size {
+  font-size: 1em;
+  letter-spacing: .3em; }
+
+.h1-secondary__font-family {
+  font-family: the-skinny; }
+
+h3 {
+  font-weight: normal; }
+
+header {
+  margin: 0px; }
+
+button:focus {
+  outline: none; }
+
+/*Rewrite all page ID styles with sass*/
+.home-content::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -999;
+  display: block;
+  background-image: url("http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/home-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: brightness(70%) grayscale(25%); }
+
+#services {
+  background-image: url("http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/services-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-bottom: 200px; }
+
+.iframe-div {
+  width: 90%;
+  margin: auto;
+  margin: 15px auto; }
+
+iframe {
+  width: 450px;
+  height: 325px; }
+
+.my-work-content::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -999;
+  display: block;
+  background-image: url("http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/my-work-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: brightness(70%) grayscale(25%); }
+
+#testimonials {
+  background-image: url("http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/testimonials-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top; }
+
+#testimonials p {
+  background-color: initial;
+  border-radius: initial;
+  line-height: 2.5;
+  letter-spacing: 0.1rem; }
+
+#about p {
+  background-color: initial;
+  border-radius: initial;
+  width: 100%; }
+
+.about-content::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -999;
+  display: block;
+  background-image: url("http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/about-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: brightness(70%) grayscale(25%); }
+
+#request-a-quote {
+  background-image: url("http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/request-a-quote-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top; }
+
+/* Pictures */
+.services-pics {
+  height: 120px;
+  width: 220px;
+  color: white;
+  margin-bottom: 10px; }
+
+.flex-container {
+  display: flex; }
+
+.flex-child {
+  margin: auto; }
+
+.main-button {
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  padding: 30px; }
+
+.main-button__lg-font {
+  font-size: 2em; }
+
+.navbar-bg-color {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.well__title {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 100px;
+  width: 45%;
+  margin: 15px auto;
+  padding: 30px; }
+
+.well__medium-width {
+  width: 70%; }
+
+.well__max-width {
+  width: 90%; }
+
+.well__bgcolor-white {
+  background-color: white; }
+
+.well__circle {
+  border-radius: 50%;
+  padding: 50px; }
+
+.well__small-margin-padding {
+  margin: 10px auto;
+  padding: 10px; }
+
+.well__small-width {
+  width: 40%; }
+
+.well__medium-top-margin {
+  margin-top: 30px; }
+
+/* Music Player */
+.mejs-container, .mejs-container * {
+  border-radius: 25px; }
+
+.cue-playlist-container {
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 25px; }
+
+.cue-playlist {
+  font-family: inherit !important; }
+
+.cue-skin-default {
+  font-family: inherit !important; }
+
+.cue-track-title {
+  font-size: 1.25em !important; }
+
+.mejs-mediaelement {
+  font-size: 3em !important; }
+
+/* Subtitles */
+.subtitle-main {
+  font-size: 1.2em; }
+
+.subtitle-hr {
+  border-width: 1px;
+  padding: 0px;
+  margin-bottom: 0px;
+  line-height: 0; }
+
+.margin__bottom {
+  margin-bottom: 10px; }
+
+.align-right {
+  text-align: right; }
+
+.italic__font {
+  font-style: italic; }
+
+.bold__font {
+  font-weight: bold; }
+
+.title__font {
+  font-family: futura-book-regular, Arial, Helvetica; }
+
+.no__margin-padding {
+  margin: 0px;
+  padding: 0px; }
+
+.no__well {
+  background-color: initial;
+  border-radius: initial; }
+
+.no__padding {
+  padding: 0px; }
+
+p {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 100px;
+  width: 45%;
+  margin: 15px auto;
+  padding: 30px; }
+
+.container p {
+  width: 100%; }
+
+p.line-space {
+  line-height: 2.5; }
+
+p {
+  line-height: 2; }
+
+/* Contact Form */
+.wpforms-field-container {
+  display: block;
+  position: relative; }
+
+.wpforms-field input {
+  margin: 0 auto !important; }
+
+.wpforms-field ul {
+  float: left; }
+
+div.wpforms-container-full .wpforms-form ul {
+  text-align: left; }
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+  border-radius: 25px !important; }
+
+.contact-form--list ul {
+  margin-left: 25% !important; }
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 2em; }
+
+  .well__title {
+    width: 70%; }
+
+  .cue-playlist-container {
+    width: 70%; } }
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5em; }
+
+  p {
+    width: 90%; }
+
+  .well__title {
+    width: 90%; }
+
+  iframe {
+    width: initial;
+    height: initial; }
+
+  .cue-playlist-container {
+    width: 90%; }
+
+  #testimonials h2 {
+    font-size: 2.7em; }
+
+  #services {
+    padding-bottom: 50px; } }
+
+/*# sourceMappingURL=style.css.map */
