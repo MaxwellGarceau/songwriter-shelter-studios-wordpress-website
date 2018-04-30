@@ -14,7 +14,10 @@ function songwriter_files() {
 	// Styles
 
 	wp_enqueue_style('normalize', 'http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/normalize.css');		
+	
+	// Font Awesome (local version)
 	// wp_enqueue_style('font-awesome', 'http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/fontawesome/web-fonts-with-css/css/fontawesome.css');
+
 	// Link to font awesome (not local version)
 	wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');	
 	wp_enqueue_style('bootstrap', 'http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/bootstrap/css/bootstrap.css');	
@@ -22,3 +25,10 @@ function songwriter_files() {
 }
 
 add_action('wp_enqueue_scripts', 'songwriter_files');
+
+// Gives WordPress control over title tag and customizes title per page
+function songwriter_title() {
+	add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'songwriter_title');

@@ -25,7 +25,7 @@
 
 
 <div class="col-sm-4">
-<a href="#request-a-quote" class="js-scroll-trigger"><button type="button" class="main-button main-button__lg-font bold__font title__font">Request A Quote</button></a>
+<a href="<?php echo site_url('#request-a-quote') ?>" class="js-scroll-trigger"><button type="button" class="main-button main-button__lg-font bold__font title__font">Request A Quote</button></a>
 <br>
 <div class="well__title well__bgcolor-white well__max-width main-button">
     <div class="margin__bottom">Full Production (Before and After)</div>

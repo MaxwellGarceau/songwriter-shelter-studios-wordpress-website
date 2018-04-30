@@ -4,6 +4,87 @@
   Version: 1.0
 */
 /* CSS Reset */
+/* BREADCRUMB LINKS FOR PAGES */
+.metabox {
+  background-color: white;
+  color: black;
+  border-radius: 25px; }
+  .metabox .metabox__blog-home-link {
+    background-color: white;
+    display: inline-block;
+    border-radius: 3px 0 0 3px; }
+  .metabox__main {
+    padding: 0px 15px 10px 11px;
+    font-style: italic;
+    font-size: .9em; }
+  .metabox a:hover {
+    color: black; }
+  .metabox p {
+    background-color: inherit;
+    border-radius: inherit;
+    width: inherit;
+    margin: inherit;
+    padding: inherit; }
+
+.breadcrumb-container {
+  width: 25%;
+  margin: auto; }
+
+/* Page Links */
+.page-links {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  margin: 0 0 40px 0;
+  float: right;
+  width: 300px;
+  margin: 0 30px 0 0;
+  border-radius: 25px; }
+  .page-links .min-list {
+    list-style: none;
+    padding: 0; }
+  .page-links .page-links__title {
+    margin: 0;
+    font-size: 2em;
+    font-weight: normal;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #e2e0e0;
+    color: #FFF;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px; }
+    .page-links .page-links__title a {
+      color: black;
+      text-decoration: none;
+      background-color: none; }
+  .page-links ul {
+    margin: 0; }
+  .page-links li {
+    border-top: 1px solid color(black l(-14%)); }
+  .page-links li:first-child {
+    border-top: none; }
+  .page-links__active, .page-links .current_page_item {
+    text-align: center;
+    background-color: color(black blackness(11%) s(50%));
+    color: blue;
+    font-weight: bold; }
+  .page-links li a {
+    display: block;
+    text-align: center;
+    padding: 17px 10px;
+    color: black;
+    transition: all .3s; }
+  .page-links li a:hover {
+    color: white;
+    background-color: black; }
+
+/* Blog Pages */
+.blog-title__font {
+  font-size: 3.5em; }
+
+.blog-title__margin {
+  margin-top: 30px; }
+
 /* Custom Fonts */
 @font-face {
   font-family: din-light-regular;
@@ -70,6 +151,30 @@ a:hover {
 
 nav a {
   text-decoration: none; }
+
+ul li.dropdown .itemdown {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  width: auto; }
+
+ul li.dropdown .itemdown li {
+  clear: both;
+  font-size: .8em;
+  font-style: italic; }
+
+ul li.dropdown .itemdown li a {
+  text-decoration: none;
+  padding: 16px 18px; }
+
+ul li.dropdown:hover .itemdown {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.hidden {
+  visibility: hidden; }
 
 .discography-shadow {
   text-shadow: #ffffff 0px 0px 6px; }
@@ -332,7 +437,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 .contact-form--list ul {
   margin-left: 25% !important; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
   h1 {
     font-size: 2em; }
 
@@ -340,7 +445,22 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     width: 70%; }
 
   .cue-playlist-container {
-    width: 70%; } }
+    width: 70%; }
+
+  /* Dropdown for Mobile */
+  ul li.dropdown {
+    display: block; }
+
+  ul li.dropdown .itemdown {
+    width: 100%;
+    position: relative; }
+
+  ul li.dropdown .itemdown li a {
+    width: 100%; }
+
+  ul li.dropdown:hover .itemdown {
+    background-color: inherit;
+    padding-top: inherit; } }
 @media only screen and (max-width: 480px) {
   h1 {
     font-size: 1.5em; }
@@ -362,6 +482,8 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     font-size: 2.7em; }
 
   #services {
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+
+  /* Dropdown for Mobile */ }
 
 /*# sourceMappingURL=style.css.map */

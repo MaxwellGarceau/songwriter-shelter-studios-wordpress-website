@@ -58,4 +58,13 @@ INSERT INTO `wp_postmeta` VALUES
 (72,41,"_wp_attachment_metadata","a:17:{s:10:\"dataformat\";s:3:\"mp3\";s:8:\"channels\";i:2;s:11:\"sample_rate\";i:48000;s:7:\"bitrate\";i:320000;s:11:\"channelmode\";s:12:\"joint stereo\";s:12:\"bitrate_mode\";s:3:\"cbr\";s:8:\"lossless\";b:0;s:15:\"encoder_options\";s:6:\"CBR320\";s:17:\"compression_ratio\";d:0.20833333333333334;s:10:\"fileformat\";s:3:\"mp3\";s:8:\"filesize\";i:2091873;s:9:\"mime_type\";s:10:\"audio/mpeg\";s:6:\"length\";i:52;s:16:\"length_formatted\";s:4:\"0:52\";s:16:\"encoder_settings\";s:11:\"Lavf52.54.0\";s:6:\"artist\";s:11:\"Fawn Larson\";s:5:\"album\";s:0:\"\";}"),
 (73,42,"_edit_last","1"),
 (76,42,"_edit_lock","1524729713:1"),
-(77,42,"enclosure","http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3\r\n2091873\r\naudio/mpeg\r\n");
+(77,42,"enclosure","http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3\r\n2091873\r\naudio/mpeg\r\n"),
+(78,2,"_edit_lock","1525044669:1"),
+(79,44,"_edit_last","1"),
+(80,44,"_edit_lock","1525052624:1"),
+(81,48,"_edit_last","1"),
+(82,48,"_edit_lock","1525052677:1"),
+(83,51,"_edit_last","1"),
+(84,51,"_edit_lock","1525055484:1"),
+(85,53,"_edit_last","1"),
+(86,53,"_edit_lock","1525052679:1");

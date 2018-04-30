@@ -3,9 +3,9 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
-    <meta charset="utf-8"/>
+    <meta charset="<?php bloginfo("charset"); ?>"/>
 
-<title>The Songwriter Shelter Recording Studios | Max Garceau</title>
+<!-- <title>The Songwriter Shelter Recording Studios | Max Garceau</title> -->
 
 <meta name="generator" content="Wix.com Website Builder">
 
@@ -35,7 +35,7 @@
 <!-- <link rel="stylesheet" href="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/style.css">  -->
 <?php wp_head(); ?>
         </head>
-<body>
+<body <?php body_class(); ?>>
         
     
     
@@ -48,23 +48,37 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#home">Home</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#home') ?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#services') ?>">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#my-work">My Work</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#my-work') ?>">My Work</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#testimonials">Testimonials</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#testimonials') ?>">Testimonials</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#about') ?>">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#request-a-quote">Request A Quote</a>
-            </li>                                    
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#request-a-quote') ?>">Request A Quote</a>
+            </li>      
+            <li class="nav-item dropdown">
+              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-advice-from-a-nashville-music-producer') ?>">Blogs <span class="fa fa-angle-down"></span></a>
+              <ul class="itemdown">
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-salon-music-philosophy-in-the-21st-century') ?>">Songwriter Salon</a>
+                </li>
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-advice-from-a-nashville-music-producer') ?>">Advice For Songwriters</a>
+                </li>
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how') ?>">Music Tutorials</a>
+                </li>
+            </ul>
+            </li>                                             
           </ul>
         </div>
       </div>
