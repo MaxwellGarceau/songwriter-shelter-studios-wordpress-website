@@ -1,10 +1,10 @@
 <?php
 	get_header();
-	while(have_posts()) {
-		the_post(); ?>
-<section style="background-color: black">		
+  ?>
+
+<section class="page-background">		
 		<h1 class="blog-title__font blog-title__margin"><?php the_title(); ?></h1>
-		<hr>
+		<hr class='no__margin-bottom'>
 
 
 <!-- Breadcrumb for Children Pages -->
@@ -16,7 +16,7 @@ $theParent = wp_get_post_parent_id(get_the_ID());
       <div class="metabox">
       <p><a class="metabox__blog-home-link" href="<?php echo get_permalink($theParent); ?>"><i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title($theParent); ?></a> 
       	<br>
-      <span class="metabox__main"><?php the_title(); ?></span></p>
+      <span class="metabox__main breadcrumb--title-text"><?php the_title(); ?></span></p>
     </div>
 <?php  
 }
@@ -48,14 +48,28 @@ $theParent = wp_get_post_parent_id(get_the_ID());
           ?>
       </ul>
     </div>
-    <?php  
+
+        <?php  
       } 
     ?>
 
+<!-- Blog Page Listings (PUT IMAGES HERE AND LINK TO THE IMAGES) -->
+<div class="blog-landing">
+  <h2>Blog Pages</h2>
+<ul>
+<?php 
+   wp_list_pages([
+    'child_of' => 44,
+    'title_li' => NULL
+  ]);
+?>
+</ul>
+</div>
 
-		<div>
-			<?php the_content(); ?>
-		</div>
+<?php echo paginate_links(); ?>
+
+
+
 
 </section>
-	<?php } get_footer();?>
+	<?php get_footer();?>

@@ -51,6 +51,12 @@ $clicked-link-color: #8E8E8E;
 
 $black: black;
 $mainBlue: blue;
+$grey: #e8e8e8;
+
+// General Border, Margin, Etc
+
+$border-radius-main: 50px;
+$border-radius-small: 20px;
 
 /* CSS Reset */
  // * {
@@ -135,6 +141,7 @@ $mainBlue: blue;
 	background-color: white;
 	color: black;
 	border-radius: 25px;
+	margin-bottom: 20px;
 
 	& &__blog-home-link {
 		background-color: white;
@@ -163,10 +170,20 @@ $mainBlue: blue;
 
 .breadcrumb-container {
 	width: 25%;
+	min-width: 300px;
 	margin: auto;
 }
 
 /* Page Links */
+
+.page-background {
+	background-color: black;
+}
+
+.archive-title .min-list, .page-links .min-list {
+	list-style: none;
+	padding: 0;
+}
 
 .page-links {
   position: relative;
@@ -185,10 +202,10 @@ $mainBlue: blue;
   //   float: right;
   // }
 
- & .min-list {
-  list-style: none;
-  padding: 0;
-}
+//  & .min-list {
+//   list-style: none;
+//   padding: 0;
+// }
 
   & &__title {
     margin: 0;
@@ -240,6 +257,10 @@ $mainBlue: blue;
     color: white;
     background-color: black;
   }
+}
+
+.side-list__float-left {
+	float: left;
 }
 
 /* Blog Pages */
@@ -699,6 +720,10 @@ iframe {
 
 // General
 
+.no__margin-bottom {
+	margin-bottom: 0;
+}
+
 .margin__bottom {
 	margin-bottom: 10px;
 }
@@ -727,6 +752,10 @@ iframe {
 .no__well {
 	background-color: initial;
 	border-radius: initial;		
+}
+
+.smaller-font {
+	font-size: .8em;
 }
 
 .no__padding {
@@ -786,6 +815,119 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 	// color: red !important;
 }
 
+/* Blogs */
+
+.page--posts .main-content-well:first-child {
+	padding-top: 0;
+}
+
+.newsfeed-title {
+	font-size: 4.5em;
+	// margin-top: 10px;
+	margin: auto;
+	margin-bottom: 25px;
+	padding-top: 13px;
+	border-radius: 50px;
+	width: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	// opacity: .1;
+	color: black;
+}
+
+.newsfeed-post-title {
+	font-size: 3em;
+}
+
+.meta-box {
+	background-color: $grey;
+	opacity: .5;
+	color: black;
+	border-radius: $border-radius-main;
+	width: 40%;
+	margin: auto;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+.blog-landing {
+	width: 60%;
+	margin: 0 auto;
+	padding: 50px;
+	margin-bottom: 150px;
+}
+
+.blog-landing ul {
+	list-style: none;
+	padding-left: 0;
+	// text-align: left;
+}
+.blog-landing ul li {
+	// padding-left: 15%;
+}
+
+.main-content-well {
+	background-color: rgba(255, 255, 255, .7);
+	width: 60%;
+	margin: 0 auto;
+	border-radius: $border-radius-small;
+	padding: 50px;
+}
+
+.main-content-well p {
+	background-color: initial;
+	border-radius: initial;	
+	width: 100%;	
+	padding: 0;
+	margin: 0;
+}
+
+.newsfeed-well__width {
+	width: 90%;
+}
+
+.newsfeed-well__background-color {
+	background-color: initial;
+}
+
+.newsfeed__margin {
+	margin-bottom: 20px;
+}
+
+/* Single Page */
+
+.single-post__margin {
+	padding-top: 100px;
+}
+
+.single-title__font {
+	font-size: 4.5em;
+}
+
+.single-link--box {
+	background-color: $grey;
+	opacity: .8;
+	color: black;
+	border-radius: $border-radius-main;
+	width: 200px;
+	margin: auto;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+.related-post--title {
+
+}
+
+.related-post--list {
+	list-style: none;
+	padding-left: 0;
+}
+
+@media only screen and (max-width : 1300px) {
+	.page-links {
+		display: none;
+	}
+}
 
 @media only screen and (max-width : 991px) {
 	h1 {
@@ -817,6 +959,28 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 		background-color: inherit;
 		padding-top: inherit;
 	}	
+	.meta-box {
+		width: 80%;
+	}			
+	.generic-content {
+		width: 100%;
+	}
+	.main-content-well {
+		// width: 70%;
+		padding: 25px;
+	}	
+	.blog-landing {
+		padding: 25px;
+	}
+	.newsfeed-title {
+		// width: 70%;
+	}
+	.breadcrumb--title-text {
+		display: none;
+	}		
+	.metabox .metabox__blog-home-link {
+		border-radius: 25px;
+	}
 }
 
 
@@ -844,6 +1008,20 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 	#services {
 		padding-bottom: 50px;
 	}
+	.main-content-well {
+		width: 90%;
+		padding: 25px;
+	}
+	.blog-landing {
+		width: 90%;
+		padding: 25px;		
+	}
+	.meta-box {
+		width: 100%;
+	}
+	.newsfeed-title {
+		width: 90%;
+	}		
 
 	/* Dropdown for Mobile */
 

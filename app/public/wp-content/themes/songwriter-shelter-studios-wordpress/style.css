@@ -8,7 +8,8 @@
 .metabox {
   background-color: white;
   color: black;
-  border-radius: 25px; }
+  border-radius: 25px;
+  margin-bottom: 20px; }
   .metabox .metabox__blog-home-link {
     background-color: white;
     display: inline-block;
@@ -28,9 +29,17 @@
 
 .breadcrumb-container {
   width: 25%;
+  min-width: 300px;
   margin: auto; }
 
 /* Page Links */
+.page-background {
+  background-color: black; }
+
+.archive-title .min-list, .page-links .min-list {
+  list-style: none;
+  padding: 0; }
+
 .page-links {
   position: relative;
   z-index: 1;
@@ -40,9 +49,6 @@
   width: 300px;
   margin: 0 30px 0 0;
   border-radius: 25px; }
-  .page-links .min-list {
-    list-style: none;
-    padding: 0; }
   .page-links .page-links__title {
     margin: 0;
     font-size: 2em;
@@ -77,6 +83,9 @@
   .page-links li a:hover {
     color: white;
     background-color: black; }
+
+.side-list__float-left {
+  float: left; }
 
 /* Blog Pages */
 .blog-title__font {
@@ -375,6 +384,9 @@ iframe {
   margin-bottom: 0px;
   line-height: 0; }
 
+.no__margin-bottom {
+  margin-bottom: 0; }
+
 .margin__bottom {
   margin-bottom: 10px; }
 
@@ -397,6 +409,9 @@ iframe {
 .no__well {
   background-color: initial;
   border-radius: initial; }
+
+.smaller-font {
+  font-size: .8em; }
 
 .no__padding {
   padding: 0px; }
@@ -437,6 +452,90 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 .contact-form--list ul {
   margin-left: 25% !important; }
 
+/* Blogs */
+.page--posts .main-content-well:first-child {
+  padding-top: 0; }
+
+.newsfeed-title {
+  font-size: 4.5em;
+  margin: auto;
+  margin-bottom: 25px;
+  padding-top: 13px;
+  border-radius: 50px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black; }
+
+.newsfeed-post-title {
+  font-size: 3em; }
+
+.meta-box {
+  background-color: #e8e8e8;
+  opacity: .5;
+  color: black;
+  border-radius: 50px;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 10px; }
+
+.blog-landing {
+  width: 60%;
+  margin: 0 auto;
+  padding: 50px;
+  margin-bottom: 150px; }
+
+.blog-landing ul {
+  list-style: none;
+  padding-left: 0; }
+
+.main-content-well {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 50px; }
+
+.main-content-well p {
+  background-color: initial;
+  border-radius: initial;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.newsfeed-well__width {
+  width: 90%; }
+
+.newsfeed-well__background-color {
+  background-color: initial; }
+
+.newsfeed__margin {
+  margin-bottom: 20px; }
+
+/* Single Page */
+.single-post__margin {
+  padding-top: 100px; }
+
+.single-title__font {
+  font-size: 4.5em; }
+
+.single-link--box {
+  background-color: #e8e8e8;
+  opacity: .8;
+  color: black;
+  border-radius: 50px;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 10px; }
+
+.related-post--list {
+  list-style: none;
+  padding-left: 0; }
+
+@media only screen and (max-width: 1300px) {
+  .page-links {
+    display: none; } }
 @media only screen and (max-width: 991px) {
   h1 {
     font-size: 2em; }
@@ -460,7 +559,25 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
   ul li.dropdown:hover .itemdown {
     background-color: inherit;
-    padding-top: inherit; } }
+    padding-top: inherit; }
+
+  .meta-box {
+    width: 80%; }
+
+  .generic-content {
+    width: 100%; }
+
+  .main-content-well {
+    padding: 25px; }
+
+  .blog-landing {
+    padding: 25px; }
+
+  .breadcrumb--title-text {
+    display: none; }
+
+  .metabox .metabox__blog-home-link {
+    border-radius: 25px; } }
 @media only screen and (max-width: 480px) {
   h1 {
     font-size: 1.5em; }
@@ -483,6 +600,20 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
   #services {
     padding-bottom: 50px; }
+
+  .main-content-well {
+    width: 90%;
+    padding: 25px; }
+
+  .blog-landing {
+    width: 90%;
+    padding: 25px; }
+
+  .meta-box {
+    width: 100%; }
+
+  .newsfeed-title {
+    width: 90%; }
 
   /* Dropdown for Mobile */ }
 

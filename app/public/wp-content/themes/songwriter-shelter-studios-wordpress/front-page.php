@@ -41,7 +41,7 @@
 <p>
 "Working with Max Garceau at The Songwriter Shelter Recording Studios was a great experience. He is extremely knowledgeable and cares deeply about his work. I recorded a full length album with him and would recommend him to anyone! He is experienced with different styles of music and really put in the time and effort to make my album sound incredible!"       
 <br>
--Fawn Larson 
+-Fawn Larson
 </p>
 </div>
 </div>

@@ -1,5 +1,6 @@
 <?php
 
+// Load styles and scripts
 function songwriter_files() {
 	// Scripts
 
@@ -32,3 +33,22 @@ function songwriter_title() {
 }
 
 add_action('after_setup_theme', 'songwriter_title');
+
+// Change default URL Queries
+
+function songwriter_adjust_queries($query) {
+	// Custom URL Query for Music Production & Composition Tutorials Archive
+	if (!is_admin() AND is_post_type_archive('production-tutorials') AND $query->is_main_query()) {
+		$query->set('posts_per_page', '-1');
+	}
+	// Custom URL Query for Music Production & Composition Tutorials Archive	
+	if (!is_admin() AND is_post_type_archive('songwriter-salon') AND $query->is_main_query()) {
+		$query->set('posts_per_page', '-1');
+	}
+	// Custom URL Query for Music Production & Composition Tutorials Archive
+	if (!is_admin() AND is_post_type_archive('songwriter-advice') AND $query->is_main_query()) {
+		$query->set('posts_per_page', '-1');
+	}		
+}
+
+add_action('pre_get_posts', 'songwriter_adjust_queries');

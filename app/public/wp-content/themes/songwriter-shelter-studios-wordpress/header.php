@@ -66,7 +66,7 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#request-a-quote') ?>">Request A Quote</a>
             </li>      
             <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-advice-from-a-nashville-music-producer') ?>">Blogs <span class="fa fa-angle-down"></span></a>
+              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages') ?>">Blogs <span class="fa fa-angle-down"></span></a>
               <ul class="itemdown">
                 <li>
                   <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-salon-music-philosophy-in-the-21st-century') ?>">Songwriter Salon</a>
