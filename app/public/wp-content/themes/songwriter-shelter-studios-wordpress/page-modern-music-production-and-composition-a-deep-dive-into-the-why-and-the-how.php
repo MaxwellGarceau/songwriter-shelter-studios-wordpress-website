@@ -6,28 +6,21 @@
         'posts_per_page' => 2,
         'post_type' => 'production-tutorials'
       ]);
-  ?>
+?>
 
-<section class="page-background">		
-		<h1 class="blog-title__font blog-title__margin"><?php the_title(); ?></h1>
-		<hr class='no__margin-bottom'>
+<section class="page-background no__padding-top">		
+<?php
+  while(have_posts()) {
+  the_post();
+
+  // Custom PHP function to load page banner
+  pageBanner();
+  $theParent = wp_get_post_parent_id(get_the_ID());
+  get_template_part('template-parts/content-returntomainpage');
+  }
+?>
 
 
-<!-- Breadcrumb for Children Pages -->
-<div class="breadcrumb-container">
-<?php 
-$theParent = wp_get_post_parent_id(get_the_ID());
-  if ($theParent) { 
-    ?>
-      <div class="metabox">
-      <p><a class="metabox__blog-home-link" href="<?php echo get_permalink($theParent); ?>"><i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title($theParent); ?></a> 
-      	<br>
-      <span class="metabox__main breadcrumb--title-text"><?php the_title(); ?></span></p>
-    </div>
-<?php  
-}
- ?>
-</div>
 
 <!-- Breadcrumb for Parent Pages -->
 <?php 
@@ -35,25 +28,12 @@ $theParent = wp_get_post_parent_id(get_the_ID());
       'child_of' => get_the_ID()
     ));
 
-    if ($theParent or $theChild) { ?>
+    if ($theParent or $theChild) { 
+      get_template_part('template-parts/content-pagelinkssidebar');
+      ?>
 
-    <div class="page-links">
-      <div class="page-links__title"><a href="<?php echo get_permalink($theParent); ?>"><?php echo get_the_title($theParent); ?></a></div>
-      <ul class="min-list">
-        <?php 
-        if ($theParent) {
-          $findChildrenOf = $theParent;
-        } else {
-          $findChildrenOf = get_the_ID();
-        }
-        wp_list_pages(array(
-            'title_li' => NULL,
-            'child_of' => $findChildrenOf,
-            'sort_column' => 'menu_order'
-          )); 
-          ?>
-      </ul>
-    </div>
+
+<!-- LEFT OFF HERE (PUTTING REUSABLE CODE IN TEMPLATE PARTS) -->
 
 <!-- Side List of All Posts -->
 
@@ -105,7 +85,6 @@ $theParent = wp_get_post_parent_id(get_the_ID());
 </div>
 </div>
 </div>
-
 <?php
   }
 ?>

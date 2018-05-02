@@ -6,10 +6,13 @@
       $blogParentPage = 44;
   ?>
 
-<section class="page-background">		
-		<h1 class="blog-title__font blog-title__margin">Songwriter Advice From A Nashville Music Producer Archive</h1>
-		<hr class='no__margin-bottom'>
-
+<section class="page-background no__padding-top">		
+  <?php
+  // Custom PHP function to load page banner
+  pageBanner([
+    'title' => 'Songwriter Advice From A Nashville Producer Archive'
+  ]);
+?>
 
 <!-- Breadcrumb for Children Pages -->
 <div class="breadcrumb-container">

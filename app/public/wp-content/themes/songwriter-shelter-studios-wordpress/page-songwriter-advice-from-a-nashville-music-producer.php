@@ -8,9 +8,14 @@
       ]);  
   ?>
 
-<section class="page-background">		
-		<h1 class="blog-title__font blog-title__margin"><?php the_title(); ?></h1>
-		<hr class='no__margin-bottom'>
+<section class="page-background no__padding-top">		
+  <?php
+    while(have_posts()) {
+  the_post();
+
+  // Custom PHP function to load page banner
+  pageBanner();
+  ?>
 
 
 <!-- Breadcrumb for Children Pages -->
@@ -28,6 +33,7 @@ $theParent = wp_get_post_parent_id(get_the_ID());
 }
  ?>
 </div>
+<?php } ?>
 
 <!-- Breadcrumb for Parent Pages -->
 <?php 

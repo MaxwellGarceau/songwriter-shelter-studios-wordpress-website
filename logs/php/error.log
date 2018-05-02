@@ -3,3 +3,196 @@
 [26-Apr-2018 04:13:03 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/front-page.php on line 189
 [26-Apr-2018 04:14:35 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/front-page.php on line 189
 [26-Apr-2018 04:15:16 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/front-page.php on line 189
+[30-Apr-2018 16:31:57 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page.php on line 89
+[30-Apr-2018 18:46:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:46:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:46:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:46:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:47:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:47:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:47:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:52:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:52:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:52:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:53:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:53:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[30-Apr-2018 18:54:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:58
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 58
+[30-Apr-2018 19:03:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-advice-from-a-nashville-music-producer.php:59
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-advice-from-a-nashville-music-producer.php on line 59
+[30-Apr-2018 19:04:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-advice-from-a-nashville-music-producer.php:65
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-advice-from-a-nashville-music-producer.php on line 65
+[30-Apr-2018 19:04:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-advice-from-a-nashville-music-producer.php:65
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-advice-from-a-nashville-music-producer.php on line 65
+[30-Apr-2018 19:54:45 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/archive-songwriter-salon.php on line 88
+[30-Apr-2018 19:59:53 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/archive-songwriter-salon.php on line 14
+[30-Apr-2018 20:08:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_site_uri() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/archive-songwriter-salon.php:23
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/archive-songwriter-salon.php on line 23
+[30-Apr-2018 20:11:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_site_uri() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/archive-songwriter-salon.php:24
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/archive-songwriter-salon.php on line 24
+[30-Apr-2018 21:59:38 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 41
+[30-Apr-2018 21:59:39 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 41
+[30-Apr-2018 21:59:55 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 45
+[01-May-2018 04:06:28 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-songwriter-salon.php on line 26
+[01-May-2018 04:10:22 UTC] PHP Warning:  Invalid argument supplied for foreach() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-songwriter-salon.php on line 28
+[01-May-2018 04:48:30 UTC] PHP Parse error:  syntax error, unexpected ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-songwriter-advice.php on line 35
+[01-May-2018 16:08:53 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-production-tutorials.php on line 34
+[01-May-2018 16:58:19 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function pageBanner(), 0 passed in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 18 and exactly 1 expected in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:3
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php(18): pageBanner()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 3
+[01-May-2018 16:59:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function pageBanner(), 0 passed in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 18 and exactly 1 expected in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:3
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php(18): pageBanner()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 3
+[01-May-2018 17:00:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function pageBanner(), 0 passed in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 18 and exactly 1 expected in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:3
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php(18): pageBanner()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 3
+[01-May-2018 17:05:09 UTC] PHP Fatal error:  Constant expression contains invalid operations in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 3
+[01-May-2018 17:29:03 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 6
+[01-May-2018 17:29:03 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 9
+[01-May-2018 17:29:03 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 13
+[01-May-2018 17:29:03 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 6
+[01-May-2018 17:29:03 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 9
+[01-May-2018 17:29:03 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 13
+[02-May-2018 01:10:07 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 86
+[02-May-2018 01:30:58 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 41
+[02-May-2018 01:31:55 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_post_type_archive_link(), 0 passed in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 41 and exactly 1 expected in /app/public/wp-includes/link-template.php:1134
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php(41): get_post_type_archive_link()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-includes/link-template.php on line 1134
+[02-May-2018 01:31:59 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_post_type_archive_link(), 0 passed in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 41 and exactly 1 expected in /app/public/wp-includes/link-template.php:1134
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php(41): get_post_type_archive_link()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-includes/link-template.php on line 1134
+[02-May-2018 01:39:52 UTC] PHP Parse error:  syntax error, unexpected ''post_type'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[02-May-2018 01:40:04 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Query as array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php:43
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43

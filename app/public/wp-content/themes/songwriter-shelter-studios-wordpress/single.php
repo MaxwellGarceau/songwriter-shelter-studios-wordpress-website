@@ -1,17 +1,15 @@
 <?php get_header() ?>
-<section class="page-background">
+<section class="page-background no__padding-top">
 <!-- <div class="single-post__margin"></div> -->
 <?php 
 
 while(have_posts()) {
 	the_post();
+
+	// Custom PHP function to load page banner
+	pageBanner();	
 ?>
 <div class="main-content-well newsfeed__margin newsfeed-well__width newsfeed-well__background-color">
-<h6 class="newsfeed-post-title"><?php the_title(); ?></h6>
-
-<div class="meta-box">
-  <span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F, Y'); ?></span>
-</div>
 
 
 

@@ -6,26 +6,25 @@
       $blogParentPage = 44;
   ?>
 
-<section class="page-background">		
-		<h1 class="blog-title__font blog-title__margin">Modern Music Production And Composition Archive</h1>
-		<hr class='no__margin-bottom'>
-
-
+<section class="page-background no__padding-top">		
+  <?php
+  // Custom PHP function to load page banner
+  pageBanner([
+    'title' => 'Modern Music Production And Composition Archive'
+  ]);
+?>
 <!-- Breadcrumb for Children Pages -->
 <div class="breadcrumb-container">
 <?php 
 $theParent = wp_get_post_parent_id(get_the_ID());
-  if (true) { 
     ?>
       <div class="metabox">
       <p><a class="metabox__blog-home-link" href="<?php echo site_url('songwriter-shelter-studios-blog-pages/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how/'); ?>"><i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title($mainPage); ?></a> 
       	<br>
       <span class="metabox__main breadcrumb--title-text"><?php echo get_the_title($mainPage); ?></span></p>
     </div>
-<?php  
-}
- ?>
 </div>
+
 
 <!-- Breadcrumb for Parent Pages -->
     <div class="page-links">

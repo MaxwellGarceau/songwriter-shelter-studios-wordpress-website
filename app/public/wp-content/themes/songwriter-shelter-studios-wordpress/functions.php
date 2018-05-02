@@ -1,5 +1,45 @@
 <?php
 
+function pageBanner($args = []) {
+	// php logic
+	if (!$args['title']) {
+		$args['title'] = get_the_title();
+	}
+	if (!$args['subtitle']) {
+		$args['subtitle'] = get_field('page_banner_subtitle');
+	}
+	if (!$args['photo']) {
+		if (get_field('page_banner_background_image')) {
+			$args['photo'] = get_field('page_banner_background_image')['sizes']['page-banner'];
+		} else {
+			$args['photo'] = get_theme_file_uri('/images/testimonials-background.jpg');
+		}
+	}
+	?>
+	<div class="page-banner">
+		<div class="page-banner__bg-image" style="background-image: url(<?php echo $args['photo']; ?>)">
+			<?php if (is_page() OR is_archive()) {
+				?> 
+				<h1 class="blog-title__font <?php if (!is_archive()) { 
+					echo'pagebanner-title__margin'; 
+				} else { 
+					echo 'pagebanner-title__margin-archive'; 
+				} ?> "><?php echo $args['title']; ?></h1>
+				<hr class='no__margin-bottom'>
+			<?php
+			} else { ?>
+				<h6 class="newsfeed-post-title pagebanner-title__margin "><?php echo $args['title']; ?></h6>
+				<hr>
+			<?php } if (!is_archive()) { ?>
+				<div class="meta-box">
+	  			<span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F, Y'); ?></span>
+			</div>
+			<?php } ?>
+		</div>
+	</div>
+	<?php
+}
+
 // Load styles and scripts
 function songwriter_files() {
 	// Scripts
@@ -30,6 +70,10 @@ add_action('wp_enqueue_scripts', 'songwriter_files');
 // Gives WordPress control over title tag and customizes title per page
 function songwriter_title() {
 	add_theme_support('title-tag');
+	add_theme_support('post-thumbnails');
+	// Generate custom sizes for images when uploading into wordpress. Saves bandwidth of user/makes site load faster
+	add_image_size('featured-blogimg-size', 300, 9999, false);
+	add_image_size('page-banner', 1500, 350, true);
 }
 
 add_action('after_setup_theme', 'songwriter_title');
