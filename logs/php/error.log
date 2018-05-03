@@ -230,3 +230,5 @@ Stack trace:
 #4 /app/public/index.php(17): require('/app/public/wp-...')
 #5 {main}
   thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 197
+[03-May-2018 15:53:46 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-includes/class.wp-scripts.php on line 426
+[03-May-2018 15:53:48 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-includes/class.wp-scripts.php on line 426

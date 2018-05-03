@@ -117,3 +117,51 @@
 .body-no-scroll {
   overflow: hidden;
 }
+
+.spinner-loader {
+  margin-top: 45px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(0, 0, 0, 0.2);
+  border-top-color: black;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-list a:link, .link-list a {
+  color: $darkOrange;
+}
+
+.link-list a:visited {
+  color: $lightOrange;
+}
+
+.link-list a:hover {
+  color: $lightOrange;
+  -webkit-animation-duration: .5s;animation-duration: .5s;
+  /*animation-duration: 1s;*/
+  -webkit-animation-name: linkfade;
+  animation-name: linkfade;
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+@keyframes linkfade {
+  0% {opacity: 1;}
+  100% {opacity: .5;}
+}
+
+@-webkit-keyframes linkfade {
+  0% {opacity: 1;}
+  100% {opacity: .5;}
+}

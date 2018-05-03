@@ -249,7 +249,14 @@ function songwriter_files() {
 	// Link to font awesome (not local version)
 	wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');	
 	wp_enqueue_style('bootstrap', 'http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/bootstrap/css/bootstrap.css');	
-	wp_enqueue_style('songwriter_main_styles', get_stylesheet_uri());	
+	wp_enqueue_style('songwriter_main_styles', get_stylesheet_uri());
+	// Localize script for JSON
+	wp_localize_script('search-js', 'songwriterSearch', [
+		'root_url' => get_site_url()
+	]);	
+	wp_localize_script('main-songwriter-js', 'songwriterData', [
+		'root_url' => get_site_url()
+	]);	
 }
 
 add_action('wp_enqueue_scripts', 'songwriter_files');
