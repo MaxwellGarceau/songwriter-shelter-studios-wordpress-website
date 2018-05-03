@@ -58,6 +58,16 @@ $grey: #e8e8e8;
 $border-radius-main: 50px;
 $border-radius-small: 20px;
 
+// Import
+
+// Sass and Global
+@import "css/base/variables.scss";
+@import "css/base/baseline.scss";
+@import "css/base/utility-classes.scss";
+
+// Modules
+@import "css/modules/search-overlay.scss";
+
 /* CSS Reset */
  // * {
  //        margin: 0;

@@ -1,21 +1,23 @@
 // Enable parallax scrolling
-const myWorkWP = new Waypoint({
-    element: document.getElementById('services'),
-    handler: function(direction) {
-        if (direction === "down") {
-            $('#home').removeClass('home-content my-work-content about-content').addClass('my-work-content');
-        } else $('#home').removeClass('home-content my-work-content about-content').addClass('home-content');
-    }
-});
+if (document.getElementById('home')) {
+    const myWorkWP = new Waypoint({
+        element: document.getElementById('services'),
+        handler: function(direction) {
+            if (direction === "down") {
+                $('#home').removeClass('home-content my-work-content about-content').addClass('my-work-content');
+            } else $('#home').removeClass('home-content my-work-content about-content').addClass('home-content');
+        }
+    });
 
-const aboutWP = new Waypoint({
-    element: document.getElementById('testimonials'),
-    handler: function(direction) {
-        if (direction === "down") {
-            $('#home').removeClass('home-content my-work-content about-content').addClass('about-content');
-        } else $('#home').removeClass('home-content my-work-content about-content').addClass('my-work-content');
-    }
-});
+    const aboutWP = new Waypoint({
+        element: document.getElementById('testimonials'),
+        handler: function(direction) {
+            if (direction === "down") {
+                $('#home').removeClass('home-content my-work-content about-content').addClass('about-content');
+            } else $('#home').removeClass('home-content my-work-content about-content').addClass('my-work-content');
+        }
+    });
+}
 
 // Misc
 

@@ -3,6 +3,183 @@
   Author: Max Garceau
   Version: 1.0
 */
+/*$mainBlue: #0D3B66;*/
+@define-mixin atSmall {
+  @media (min-width: 530px) {
+    @mixin-content; } }
+@define-mixin atSmallMedium {
+  @media (min-width: 767px) {
+    @mixin-content; } }
+@define-mixin atMedium {
+  @media (min-width: 960px) {
+    @mixin-content; } }
+/*body {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $mainBlue;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p, ul, ol {
+  margin: 0 0 1.65em 0;
+}
+
+p, li {
+  line-height: 1.65;
+}*/
+/*.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+}
+
+.container--narrow {
+  max-width: 960px;
+}
+
+.section-break {
+  border: none;
+  border-top: 1px solid #DDD;
+  margin: 2.5rem 0;
+}
+
+.min-list {
+  padding: 0;
+  margin: 0;
+}
+
+.min-list li {
+  list-style: none;
+}
+
+.p-top-small {padding-top: 1rem}
+.p-top-large {padding-top: 1.6rem}
+.p-bottom-large {padding-bottom: 1.6rem}
+
+@mixin atSmall {
+  .p-top-large {padding-top: 3.5rem}
+  .p-bottom-large {padding-bottom: 3.5rem}
+}
+
+.no-margin {margin: 0}
+.nu {text-decoration: none}
+.nu:hover {text-decoration: underline}
+
+.t-left {text-align: left}
+.t-right {text-align: right}
+.t-center {text-align: center}
+
+
+.t-small {font-size: .85rem}
+
+.float-left {float: left}
+.float-right {float: right}
+.push-right {margin-right: 20px}
+
+.container:before,
+.container:after,
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+
+.container:after,
+.group:after {
+  clear: both;
+}
+
+.hide {
+  display: none;
+}*/
+.search-overlay {
+  color: black;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1031;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.09);
+  transition: opacity .3s, transform .3s, visibility .3s;
+  box-sizing: border-box; }
+  .search-overlay p {
+    padding-top: 15px; }
+  .search-overlay .event-summary p {
+    padding-top: 0; }
+  .search-overlay .event-summary {
+    margin-bottom: 0;
+    margin-top: 20px; }
+  body.admin-bar .search-overlay {
+    top: 32px; }
+  .search-overlay__top {
+    background-color: rgba(0, 0, 0, 0.12); }
+  .search-overlay__icon {
+    margin-right: 10px;
+    font-size: 1.8rem;
+    color: #F95738; }
+  .search-overlay--active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1); }
+  .search-overlay__section-title {
+    margin: 30px 0 1px 0;
+    font-weight: 400;
+    color: blue;
+    font-size: 2rem;
+    padding: 15px 0;
+    border-bottom: 1px solid #CCC; }
+  .search-overlay__close {
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    font-size: 2.1rem;
+    cursor: pointer;
+    transition: all .3s;
+    /*background-color: #FFF;*/
+    color: #F95738;
+    line-height: .7; }
+  .search-overlay__close:hover {
+    opacity: 1; }
+  .search-overlay input {
+    font-size: 2em; }
+  .search-overlay .one-half {
+    padding-bottom: 0; }
+
+.search-term {
+  width: 75%;
+  box-sizing: border-box;
+  border: none;
+  padding: 15px 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 300;
+  outline: none;
+  color: #F95738; }
+
+.body-no-scroll {
+  overflow: hidden; }
+
 /* CSS Reset */
 /* BREADCRUMB LINKS FOR PAGES */
 .metabox {

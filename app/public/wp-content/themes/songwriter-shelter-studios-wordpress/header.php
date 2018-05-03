@@ -78,7 +78,10 @@
                   <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how') ?>">Music Tutorials</a>
                 </li>
             </ul>
-            </li>                                             
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link"><span class="fa fa-search js-search-trigger"></span></a>
+            </li>                                                        
           </ul>
         </div>
       </div>

@@ -196,3 +196,37 @@ Stack trace:
 #2 /app/public/index.php(17): require('/app/public/wp-...')
 #3 {main}
   thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how.php on line 43
+[02-May-2018 14:53:16 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 171
+[02-May-2018 14:54:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 171
+[02-May-2018 16:08:32 UTC] PHP Warning:  Illegal string offset 'related-field' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 137
+[02-May-2018 16:08:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on boolean in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:193
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php(155): singleRelatedPostLinkBack(false, 'If You Liked Th...')
+#1 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-production-tutorials.php(11): singleMainContent(Array)
+#2 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#3 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#4 /app/public/index.php(17): require('/app/public/wp-...')
+#5 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 193
+[02-May-2018 16:10:23 UTC] PHP Warning:  Illegal string offset 'related-field' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 137
+[02-May-2018 16:12:22 UTC] PHP Warning:  Illegal string offset 'related-field' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 137
+[02-May-2018 16:12:35 UTC] PHP Warning:  Illegal string offset 'related-field' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 137
+[02-May-2018 16:12:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:197
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php(171): singleRelatedPostLinkBack(NULL, 'If You Liked Th...')
+#1 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-production-tutorials.php(12): singleMainContent(Array)
+#2 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#3 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#4 /app/public/index.php(17): require('/app/public/wp-...')
+#5 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 197
+[02-May-2018 16:12:47 UTC] PHP Warning:  Illegal string offset 'related-field' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 137
+[02-May-2018 16:14:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:197
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php(171): singleRelatedPostLinkBack(NULL, 'If You Liked Th...')
+#1 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-production-tutorials.php(10): singleMainContent()
+#2 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#3 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#4 /app/public/index.php(17): require('/app/public/wp-...')
+#5 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 197

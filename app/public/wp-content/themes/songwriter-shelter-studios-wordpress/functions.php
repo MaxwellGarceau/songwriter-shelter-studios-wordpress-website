@@ -1,5 +1,10 @@
 <?php
 
+// Custom Functions
+
+// Generic (all pages or several different ones)
+
+// Function for page banner on blog
 function pageBanner($args = []) {
 	// php logic
 	if (!$args['title']) {
@@ -40,6 +45,187 @@ function pageBanner($args = []) {
 	<?php
 }
 
+// Archives
+
+// Archive return to main page
+function archiveReturnToMainPage($mainPage = 44) {
+	?>
+	<div class="breadcrumb-container">
+<?php 
+$theParent = wp_get_post_parent_id(get_the_ID());
+    ?>
+      <div class="metabox">
+      <p><a class="metabox__blog-home-link" href="<?php echo get_permalink($mainPage); ?>"><i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title($mainPage); ?></a> 
+      	<br>
+      <span class="metabox__main breadcrumb--title-text"><?php echo get_the_title($mainPage); ?></span></p>
+    </div>
+</div>
+<?php
+}
+
+// Pages
+
+// Archive list breadcrumb of blog posts (left side)
+function pageArchiveBreadCrumb($args = []) {
+	$defaultQuery = new WP_Query;
+	if (!$args['title']) {
+		$args['title'] = get_the_title();
+	}
+	if (!$args['post-type']) {
+		$args['post-type'] = get_post_type();
+	}
+	if (!$args['query']) {
+		$args['query'] = $defaultQuery;
+	}
+	?>
+	<div class="page-links side-list__float-left">
+        <!-- Maybe link title of Side List to archive for the current post type -->
+      <div class="page-links__title"><a href="<?php echo get_post_type_archive_link($args['post-type']) ?>"><?php echo $args['title'] ?></a></div>
+      <ul class="min-list">
+        <?php
+        while ($args['query']->have_posts()) {
+          $args['query']->the_post();
+          ?>
+
+        <li>
+          <a href="<?php echo the_permalink(); ?>">            
+            <?php
+            echo the_title();
+            ?> 
+          </a>          
+        </li>
+
+        <?php
+         }
+          ?>
+      </ul>
+    </div>
+    <?php
+}
+
+// Main Content for Blog Pages
+function pageMainContent($args = []) {
+	if (!$args['query']) {
+		$args['query'] = $defaultQuery;
+	}
+	?>
+	<!-- Main Content -->
+	    <div class="page--posts">
+	    <?php 
+
+	      while($args['query']->have_posts()) {
+	    $args['query']->the_post(); ?>
+	<!-- Post Body -->
+	<div class="main-content-well newsfeed__margin newsfeed-well__background-color">
+	<h6 class="newsfeed-post-title"><?php the_title(); ?></h6>
+
+	<div class="meta-box">
+	  <span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F, Y'); ?></span>
+	</div>
+
+
+
+	<div class="generic-content main-content-well newsfeed-well__width">
+	<?php the_excerpt(); ?>
+	<br>
+	<span><a href="<?php the_permalink(); ?>">Continue Reading &raquo;</a></span>
+	</div>
+	</div>
+	</div>
+	<?php
+	}
+}
+
+// Single
+
+// Main Content for singles
+function singleMainContent($args = []) {
+	if (!$args['related-field-query']) {
+		$args['related-field-query'] = NULL;
+	}
+	if (!$args['related-post-destination-title']) {
+		$args['related-post-destination-title'] = 'If You Liked This You Might Also Like...';
+	}
+	if (!$args['related-post-origin-title']) {
+		$args['related-post-origin-title'] = 'Related Posts';
+	}	
+	if (!$args['related-field']) {
+		$args['related-field'] = NULL;
+	}
+
+?>
+	<div class="main-content-well newsfeed__margin newsfeed-well__width newsfeed-well__background-color">
+		<?php if (has_post_thumbnail()) { ?>
+			<div class="generic-content main-content-well newsfeed-well__width container">
+				<div class="row">
+					<div class="row">
+						<div class="col-sm-4">
+							<img class="featured-thumbnail-image-custom" src="<?php the_post_thumbnail_url('featured-blogimg-size'); ?>">
+							<p class="italic__font smaller-font darker-color"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
+						</div>
+						<div class="col-sm-8">
+							<?php 
+								the_content(); 
+								if ($args['related-field']) {
+									singleRelatedPost($args['related-field'], $args['related-post-origin-title']);
+								}
+								if ($args['related-field-query']) {
+									singleRelatedPostLinkBack($args['related-field-query'], $args['related-post-destination-title']);
+								}
+							?>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>			
+		<?php } else { ?>
+			<div class="generic-content main-content-well newsfeed-well__width">		
+			<?php 
+				the_content(); 
+				if ($args['related-field']) {
+					singleRelatedPost($args['related-field'], $args['related-post-origin-title']);
+				}
+				if ($args['related-field-query']) {
+					singleRelatedPostLinkBack($args['related-field-query'], $args['related-post-destination-title']);
+				}
+			?>
+			<br>
+			</div>
+			<?php } ?>
+	</div>
+<?php
+}
+
+// Related Posts (Origin)
+function singleRelatedPost($argField, $title) {
+	$relatedField = get_field($argField);
+	
+	if ($relatedField) {
+		echo '<hr>';
+		echo '<h4 class="related-post--title">' . $title . '</h4>';
+		echo '<ul class="related-post--list">';
+		foreach($relatedField as $field) { ?>
+			<li><a href="<?php echo get_the_permalink($field); ?>"><?php echo get_the_title($field)?></a></li>
+	<?php }
+		echo '</ul>';
+	}
+}
+
+// Related Posts (Destination)
+function singleRelatedPostLinkBack($query, $title) {
+	if ($query->have_posts()) {
+			echo '<hr>';
+			echo '<h4 class="related-post--title">' . $title . '</h4>';
+			echo '<ul class="related-post--list">';
+		while($query->have_posts()) {
+			$query->the_post(); ?>
+				<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title()?></a></li>			
+			<?php
+		}
+			echo '</ul>';
+	}
+}
+
 // Load styles and scripts
 function songwriter_files() {
 	// Scripts
@@ -50,6 +236,7 @@ function songwriter_files() {
 	wp_enqueue_script('jquery-ui', 'http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/jquery-ui-waypoints/jquery-ui.min.js', NULL, '1.0', true);
 	wp_enqueue_script('jquery-waypoints', 'http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/jquery-ui-waypoints/jquery.waypoints.min.js', NULL, '1.0', true);
 	wp_enqueue_script('scrolling-nav', get_theme_file_uri('/js/scrolling-nav.js'), NULL, '1.0', true);	
+	wp_enqueue_script('search-js', get_theme_file_uri('/js/search.js'), NULL, '1.0', true);		
 	wp_enqueue_script('main-songwriter-js', get_theme_file_uri('/js/script.js'), NULL, '1.0', true);	
 
 	// Styles
