@@ -5,6 +5,7 @@
 function songwriter_post_types() {
 	// Songwriter Salon Post Type
 	register_post_type('songwriter-salon', [
+		'show_in_rest' => true,
 		'supports' => ['title', 'editor', 'thumbnail', 'author'],
 		'has_archive' => true,
 		'public' => true,
@@ -15,6 +16,7 @@ function songwriter_post_types() {
 	]);
 	// Songwriter Advice Post Type
 	register_post_type('songwriter-advice', [
+		'show_in_rest' => true,
 		'supports' => ['title', 'editor', 'thumbnail', 'author'],
 		'has_archive' => true,
 		'public' => true,
@@ -25,6 +27,7 @@ function songwriter_post_types() {
 	]);	
 	// Music Production/Composition Tutorial Post Type
 	register_post_type('production-tutorials', [
+		'show_in_rest' => true,
 		'supports' => ['title', 'editor', 'thumbnail', 'author'],
 		'has_archive' => true,
 		'public' => true,

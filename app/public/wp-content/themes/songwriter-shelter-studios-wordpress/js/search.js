@@ -5,6 +5,7 @@ jQuery(document).ready(function ($){
 
 class Search {
 	constructor() {
+		this.addSearchHTML();
 		this.resultsDiv = $('#search-overlay__results');
 		this.openButton = $('.js-search-trigger');
 		this.closeButton = $('.search-overlay__close');
@@ -32,27 +33,32 @@ class Search {
 					this.resultsDiv.html('<div class="spinner-loader"></div>');
 					this.isSpinnerVisible = true;
 				}	
-				this.typingTimer = setTimeout(this.getResults.bind(this), 2000);							
+				this.typingTimer = setTimeout(this.getResults.bind(this), 750);							
 			} else {
 				this.resultsDiv.html('');
 				this.isSpinnerVisible = false;
 			}
-
 
 			this.previousValue = this.searchField.val();
 		}
 	}
 
 	getResults() {
-		// Using songwriter data which is tied to main-songwriter-js instead of search-js to make it easier when I switch to gulp workflow
-		$.getJSON(songwriterData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val(), (posts) => {
+		$.when(
+// Using songwriter data which is tied to main-songwriter-js instead of search-js to make it easier when I switch to gulp workflow			
+			$.getJSON(songwriterData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val()), 
+			$.getJSON(songwriterData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val())
+			).then((posts, pages) => {
+			let combinedResults = posts[0].concat(pages[0]);
 			this.resultsDiv.html(`
-				<h2 class="search-overlay__section-title">General Information</h2>
-				${posts.length !== 0 ? '<ul class="link-list min-list">' : '<span>Sorry, no results</span>'}
-					${posts.map((post) => `<li><a href="${post.link}">${post.title.rendered}</a></li>`).join('')}
-				${posts.length == 0 ? '</ul>' : ''}
-				`);
-			this.isSpinnerVisible = false;			
+			<h2 class="search-overlay__section-title">General Information</h2>
+			${combinedResults.length !== 0 ? '<ul class="link-list min-list">' : '<span>Sorry, no results</span>'}
+			${combinedResults.map((item) => `<li><a href="${item.link}">${item.title.rendered}</a>${item.type == 'post' ?  `- ${item.categoryName}` : ''}</li>`).join('')}
+			${combinedResults.length == 0 ? '</ul>' : ''}
+			`);
+			this.isSpinnerVisible = false;	
+		}, () => {
+			this.resultsDiv.html('<span>Unexpected error. Please try again.</span>')
 		});
 	}
 
@@ -70,6 +76,9 @@ class Search {
 	openOverlay() {
 		this.searchOverlay.addClass('search-overlay--active');
 		$('body').addClass('body-no-scroll');
+		this.searchField.val('');
+		this.resultsDiv.html('');
+		setTimeout(() => this.searchField.focus(), 301);
 		this.isOverlayOpen = true;
 	}
 
@@ -77,6 +86,23 @@ class Search {
 		this.searchOverlay.removeClass('search-overlay--active');
 		$('body').removeClass('body-no-scroll');
 		this.isOverlayOpen = false;
+	}
+
+	addSearchHTML() {
+		$('body').append(`
+		    <div class="search-overlay">
+		        <div class="search-overlay__top">
+		            <div class="">
+		                <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>
+		                <input type="text" class="search-term" placeholder="What are you looking for?" id="search-term">
+		                <i class="fa fa-close search-overlay__close" aria-hidden="true"></i>                
+		            </div>
+		        </div>
+		        <div>
+		            <div id="search-overlay__results"></div>
+		        </div>
+		    </div>
+		`);
 	}
 }
 

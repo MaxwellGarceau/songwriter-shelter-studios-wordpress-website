@@ -1,5 +1,17 @@
 <?php
 
+require get_theme_file_path('/inc/search-route.php');
+
+function songwriter_custom_rest() {
+	register_rest_field('post', 'categoryName', [
+		'get_callback' => function() {
+			return get_post_type();
+		}
+	]);
+}
+
+add_action('rest_api_init', 'songwriter_custom_rest');
+
 // Custom Functions
 
 // Generic (all pages or several different ones)

@@ -232,3 +232,5 @@ Stack trace:
   thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 197
 [03-May-2018 15:53:46 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-includes/class.wp-scripts.php on line 426
 [03-May-2018 15:53:48 UTC] PHP Warning:  Cannot use a scalar value as an array in /app/public/wp-includes/class.wp-scripts.php on line 426
+[03-May-2018 21:40:54 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/inc/search-route.php on line 81
+[03-May-2018 21:42:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/inc/search-route.php on line 81
