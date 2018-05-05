@@ -165,3 +165,18 @@
   0% {opacity: 1;}
   100% {opacity: .5;}
 }
+
+.text-container {
+  height: 178px;
+  line-height: 170px;
+
+  & h2 {
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+.text-container__reset {
+  height: initial;
+  line-height: initial;
+}

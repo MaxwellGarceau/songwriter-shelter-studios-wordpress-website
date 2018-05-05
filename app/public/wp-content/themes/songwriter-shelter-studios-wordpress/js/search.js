@@ -44,22 +44,47 @@ class Search {
 	}
 
 	getResults() {
-		$.when(
-// Using songwriter data which is tied to main-songwriter-js instead of search-js to make it easier when I switch to gulp workflow			
-			$.getJSON(songwriterData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val()), 
-			$.getJSON(songwriterData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val())
-			).then((posts, pages) => {
-			let combinedResults = posts[0].concat(pages[0]);
+		$.getJSON(songwriterData.root_url + '/wp-json/songwriter/v1/search?term=' + this.searchField.val(), (results) => {
 			this.resultsDiv.html(`
-			<h2 class="search-overlay__section-title">General Information</h2>
-			${combinedResults.length !== 0 ? '<ul class="link-list min-list">' : '<span>Sorry, no results</span>'}
-			${combinedResults.map((item) => `<li><a href="${item.link}">${item.title.rendered}</a>${item.type == 'post' ?  `- ${item.categoryName}` : ''}</li>`).join('')}
-			${combinedResults.length == 0 ? '</ul>' : ''}
-			`);
-			this.isSpinnerVisible = false;	
-		}, () => {
-			this.resultsDiv.html('<span>Unexpected error. Please try again.</span>')
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3 text-container">
+							<h2 class="search-overlay__section-title">Pages</h2>
+							<div class="text-container__reset">
+								${results.pageSection.length !== 0 ? '<ul class="link-list min-list">' : '<span>Sorry, no results</span>'}
+								${results.pageSection.map((item) => `<li><a href="${item.permalink}">${item.title}</a>${item.postType == 'post' ?  ` - ${item.postDate}` : ''}</li><br>`).join('')}
+								${results.pageSection.length == 0 ? '</ul>' : ''}		
+							</div>					
+						</div>
+						<div class="col-sm-3 text-container">
+							<h2 class="search-overlay__section-title">Songwriter Salon</h2>
+							<div class="text-container__reset">
+								${results.songwriterSalon.length !== 0 ? '<ul class="link-list min-list">' : `<span>Sorry, no results. <br> <a href="${songwriterData.root_url}/songwriter-shelter-studios-blog-pages/songwriter-salon-music-philosophy-in-the-21st-century/">See all Songwriter Salon posts here.</a></span>`}
+								${results.songwriterSalon.map((item) => `<li><a href="${item.permalink}">${item.title}</a> - ${item.postDate}</li><br>`).join('')}
+								${results.songwriterSalon.length == 0 ? '</ul>' : ''}
+							</div>											
+						</div>
+						<div class="col-sm-3 text-container">
+							<h2 class="search-overlay__section-title">Advice for Songwriters</h2>
+							<div class="text-container__reset">
+								${results.songwriterAdvice.length !== 0 ? '<ul class="link-list min-list">' : `<span>Sorry, no results. <br> <a href="${songwriterData.root_url}/songwriter-shelter-studios-blog-pages/songwriter-advice-from-a-nashville-music-producer/">See all Advice for Songwriters posts here.</a></span>`}
+								${results.songwriterAdvice.map((item) => `<li><a href="${item.permalink}">${item.title}</a> - ${item.postDate}</li><br>`).join('')}
+								${results.songwriterAdvice.length == 0 ? '</ul>' : ''}		
+							</div>	
+						</div>
+						<div class="col-sm-3 text-container">
+							<h2 class="search-overlay__section-title">Music Production and Composition Tutorials</h2>
+							<div class="text-container__reset">
+								${results.productionTutorials.length !== 0 ? '<ul class="link-list min-list">' : `<span>Sorry, no results. <br> <a href="${songwriterData.root_url}/songwriter-shelter-studios-blog-pages/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how/">See all Music Production and Composition Tutorial posts here.</a></span>`}
+								${results.productionTutorials.map((item) => `<li><a href="${item.permalink}">${item.title}</a> - ${item.postDate}</li><br>`).join('')}
+								${results.productionTutorials.length == 0 ? '</ul>' : ''}	
+							</div>		
+						</div>						
+					</div>
+				</div>
+				`);
 		});
+		this.isSpinnerVisible = false;
 	}
 
 	keyPressDispatcher(e) {
@@ -80,6 +105,7 @@ class Search {
 		this.resultsDiv.html('');
 		setTimeout(() => this.searchField.focus(), 301);
 		this.isOverlayOpen = true;
+		return false;
 	}
 
 	closeOverlay() {

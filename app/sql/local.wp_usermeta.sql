@@ -17,7 +17,7 @@ INSERT INTO `wp_usermeta` VALUES
 (13,1,"wp_user_level","10"),
 (14,1,"dismissed_wp_pointers",""),
 (15,1,"show_welcome_panel","1"),
-(16,1,"session_tokens","a:1:{s:64:\"bb1593794cb7e353f41bf8c19b46f10849a7302aba4440dd8366559b99ca4177\";a:4:{s:10:\"expiration\";i:1525394114;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36\";s:5:\"login\";i:1525221314;}}"),
+(16,1,"session_tokens","a:1:{s:64:\"8805398b27e3d660cd14e4740c54fc31b15ffddfa2c624ee3ccd5afa625e6235\";a:4:{s:10:\"expiration\";i:1525617967;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36\";s:5:\"login\";i:1525445167;}}"),
 (17,1,"wp_dashboard_quick_press_last_post_id","55"),
 (18,1,"community-events-location","a:1:{s:2:\"ip\";s:12:\"192.168.95.0\";}"),
 (19,1,"wp_user-settings","editor=html&libraryContent=browse"),
@@ -29,4 +29,5 @@ INSERT INTO `wp_usermeta` VALUES
 (25,1,"closedpostboxes_production-tutorials","a:0:{}"),
 (26,1,"metaboxhidden_production-tutorials","a:1:{i:0;s:6:\"acf_64\";}"),
 (27,1,"closedpostboxes_post","a:0:{}"),
-(28,1,"metaboxhidden_post","a:6:{i:0;s:6:\"acf_64\";i:1;s:11:\"postexcerpt\";i:2;s:13:\"trackbacksdiv\";i:3;s:16:\"commentstatusdiv\";i:4;s:11:\"commentsdiv\";i:5;s:9:\"authordiv\";}");
+(28,1,"metaboxhidden_post","a:5:{i:0;s:6:\"acf_64\";i:1;s:11:\"postexcerpt\";i:2;s:13:\"trackbacksdiv\";i:3;s:16:\"commentstatusdiv\";i:4;s:11:\"commentsdiv\";}"),
+(29,1,"_new_email","a:2:{s:4:\"hash\";s:32:\"e32bf08707289076cd6dce1cb404b935\";s:8:\"newemail\";s:24:\"maxwellgarceau@gmail.com\";}");

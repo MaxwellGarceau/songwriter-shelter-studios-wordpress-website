@@ -224,6 +224,17 @@ p, li {
     opacity: 1; }
   100% {
     opacity: .5; } }
+.text-container {
+  height: 178px;
+  line-height: 170px; }
+  .text-container h2 {
+    vertical-align: middle;
+    display: inline-block; }
+
+.text-container__reset {
+  height: initial;
+  line-height: initial; }
+
 /* CSS Reset */
 /* BREADCRUMB LINKS FOR PAGES */
 .metabox {
@@ -785,6 +796,10 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   list-style: none;
   padding-left: 0; }
 
+/* Search Form */
+.search-bar {
+  width: 50%; }
+
 @media only screen and (max-width: 1300px) {
   .page-links {
     display: none; } }
@@ -831,6 +846,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   .metabox .metabox__blog-home-link {
     border-radius: 25px; } }
 @media only screen and (max-width: 480px) {
+  .search-bar {
+    width: 300px; }
+
   h1 {
     font-size: 1.5em; }
 

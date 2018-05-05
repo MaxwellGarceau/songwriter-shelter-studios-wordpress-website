@@ -16,6 +16,21 @@ add_action('rest_api_init', 'songwriter_custom_rest');
 
 // Generic (all pages or several different ones)
 
+// Custom Excerpt function for Advanced Custom Fields
+function custom_field_excerpt($fieldName, $wordCount = 55) {
+	global $post;
+	$text = get_field($fieldName);
+	if ( '' != $text ) {
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]&gt;', ']]&gt;', $text);
+		$excerpt_length = $wordCount;
+		$excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+	}
+	return apply_filters('the_excerpt', $text);
+}
+
 // Function for page banner on blog
 function pageBanner($args = []) {
 	// php logic
@@ -138,7 +153,11 @@ function pageMainContent($args = []) {
 
 
 	<div class="generic-content main-content-well newsfeed-well__width">
-	<?php the_excerpt(); ?>
+	<?php if(empty(get_the_content())) {
+		echo custom_field_excerpt('main_body_content');
+	} else {
+		the_excerpt();
+	} ?>
 	<br>
 	<span><a href="<?php the_permalink(); ?>">Continue Reading &raquo;</a></span>
 	</div>
@@ -177,7 +196,11 @@ function singleMainContent($args = []) {
 						</div>
 						<div class="col-sm-8">
 							<?php 
-								the_content(); 
+								if(empty(get_the_content())) {
+									echo get_field('main_body_content');
+								} else {
+									the_content();
+								} 
 								if ($args['related-field']) {
 									singleRelatedPost($args['related-field'], $args['related-post-origin-title']);
 								}
@@ -193,7 +216,11 @@ function singleMainContent($args = []) {
 		<?php } else { ?>
 			<div class="generic-content main-content-well newsfeed-well__width">		
 			<?php 
-				the_content(); 
+				if(empty(get_the_content())) {
+					echo get_field('main_body_content');
+				} else {
+					the_content();
+				}
 				if ($args['related-field']) {
 					singleRelatedPost($args['related-field'], $args['related-post-origin-title']);
 				}

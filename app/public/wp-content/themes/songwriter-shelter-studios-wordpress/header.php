@@ -80,7 +80,7 @@
             </ul>
             </li> 
             <li class="nav-item">
-              <a class="nav-link"><span class="fa fa-search js-search-trigger"></span></a>
+              <a href="<?php echo esc_url(site_url('/search')); ?>" class="nav-link js-search-trigger"><span class="fa fa-search" aria-hidden="true"></span></a>
             </li>                                                        
           </ul>
         </div>
