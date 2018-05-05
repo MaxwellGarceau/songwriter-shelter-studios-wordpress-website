@@ -1,0 +1,109 @@
+/* User Sign Up */
+
+.login-master-container {
+	display: table;
+	width: 100%;
+}
+
+.login-text {
+	// font-family: breathe fire;
+	font-size: 3em;
+	margin: 0 auto; 
+	text-align: center; 
+	display: table-cell; 
+	padding-left: 300px;
+	color: white;
+}
+
+.login-button {
+	/*float: right;*/
+	/*margin-left: 300px;*/
+	display: table-cell;
+	text-align: right;
+	/*margin-right: 300px;*/
+	/*margin-left: 200px;*/
+}
+
+.user-login {
+	/*margin-left: 30px;*/
+	color: black;
+	border-radius: 25px;
+	margin-bottom: 10px;
+	margin-right: 50px;
+	padding: 8px;
+	width: 85px;
+}
+
+.user-signup {
+	color: black;
+	border-radius: 25px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	padding: 8px;
+	width: 85px;	
+}
+
+.signup-link {
+	text-decoration: none;
+}
+
+.site-header__avatar {
+	margin-right: 70px;
+	/*margin-left: 52px;*/
+	/*border-radius: 25px;*/
+/*	border-style: solid;
+	border-width: 2px;
+	border-color: white;*/
+}
+
+/* Login/Signup Screen */
+
+.login h1 a {
+	// Put a background image in here (replaces wordpress logo)
+	background-image: url('');
+	background-size: initial;
+	width: initial;
+	height: 60px;
+	border-radius: 10px;
+}
+
+.login {
+	background-color: #212121;
+}
+
+#loginform, #registerform {
+	border-radius: 10px;
+	color: white;
+	background-color: black;
+}
+
+#loginform label, #registerform label {
+	color: #e5e3e3;
+	// font-family: breathe fire;
+	font-size: 1.3em;
+}
+
+#wp-submit {
+	background-color: #870808;
+	border-color: gray;
+	text-shadow: none;
+	box-shadow: none;
+	// font-family: breathe fire;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.forgetmenot label {
+	margin-bottom: 10px;
+}
+
+#reg_passmail {
+	// font-family: breathe fire;
+	font-size: 1.2em;
+	color: white;
+}
+
+.register {
+	// font-family: breathe fire;	
+	font-size: 1.2em;
+}

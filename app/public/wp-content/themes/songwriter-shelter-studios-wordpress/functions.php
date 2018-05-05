@@ -1,6 +1,12 @@
 <?php
 
 require get_theme_file_path('/inc/search-route.php');
+require get_theme_file_path('/inc/user-registration-backend.php');
+require get_theme_file_path('/inc/upvote.php');
+
+// Custom Function Includes
+require get_theme_file_path('/inc/upvote-button.php');
+require get_theme_file_path('/inc/user-registration-buttons.php');
 
 function songwriter_custom_rest() {
 	register_rest_field('post', 'categoryName', [
@@ -62,7 +68,7 @@ function pageBanner($args = []) {
 			} else { ?>
 				<h6 class="newsfeed-post-title pagebanner-title__margin "><?php echo $args['title']; ?></h6>
 				<hr>
-			<?php } if (!is_archive()) { ?>
+			<?php } if (!is_archive() AND !is_page(93) AND !is_search()) { ?>
 				<div class="meta-box">
 	  			<span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F, Y'); ?></span>
 			</div>
@@ -276,6 +282,7 @@ function songwriter_files() {
 	wp_enqueue_script('jquery-waypoints', 'http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/jquery-ui-waypoints/jquery.waypoints.min.js', NULL, '1.0', true);
 	wp_enqueue_script('scrolling-nav', get_theme_file_uri('/js/scrolling-nav.js'), NULL, '1.0', true);	
 	wp_enqueue_script('search-js', get_theme_file_uri('/js/search.js'), NULL, '1.0', true);		
+	wp_enqueue_script('upvote-js', get_theme_file_uri('/js/upvote.js'), NULL, '1.0', true);
 	wp_enqueue_script('main-songwriter-js', get_theme_file_uri('/js/script.js'), NULL, '1.0', true);	
 
 	// Styles
@@ -289,13 +296,19 @@ function songwriter_files() {
 	wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');	
 	wp_enqueue_style('bootstrap', 'http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/bootstrap/css/bootstrap.css');	
 	wp_enqueue_style('songwriter_main_styles', get_stylesheet_uri());
+
 	// Localize script for JSON
 	wp_localize_script('search-js', 'songwriterSearch', [
 		'root_url' => get_site_url()
 	]);	
 	wp_localize_script('main-songwriter-js', 'songwriterData', [
-		'root_url' => get_site_url()
+		'root_url' => get_site_url(),
+		'nonce' => wp_create_nonce('wp_rest')
 	]);	
+	// wp_localize_script('upvote-js', 'songwriterData', array(
+	//     'root_url' => get_site_url(),
+	//     'nonce' => wp_create_nonce('wp_rest')
+	// ));	
 }
 
 add_action('wp_enqueue_scripts', 'songwriter_files');

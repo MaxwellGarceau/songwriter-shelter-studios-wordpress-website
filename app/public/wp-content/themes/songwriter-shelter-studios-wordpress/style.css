@@ -235,6 +235,155 @@ p, li {
   height: initial;
   line-height: initial; }
 
+/* Email Pop Up */
+/*.pop-up__bgcolor {
+	background-color: black;
+}
+
+.pop-up__overwrite {
+	padding-bottom: 20px !important;
+	margin-bottom: initial !important;
+}*/
+.hustle-modal-body article {
+  background-color: black; }
+
+.hustle-modal-optin_form {
+  background-color: #7a7a7a; }
+
+.hustle-modal-optin_button button {
+  background-color: black !important; }
+
+.wph-modal.module_id_1 .hustle-modal .hustle-modal-close svg path {
+  fill: black !important; }
+
+/* Like Box */
+.upvote-content .upvote-box {
+  float: left;
+  font-size: 1rem;
+  background-color: #EDEDED;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  color: red;
+  padding: 10px 10px 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  /*margin: 0 0 30px 30px;*/
+  position: relative; }
+
+.upvote-content .upvote-box:hover {
+  background-color: #DEDEDE; }
+
+.upvote-count {
+  padding-left: 10px; }
+
+.upvote-box .fa-heart-o {
+  transition: all .35s ease-out;
+  position: absolute;
+  left: 10px; }
+
+.upvote-box .fa-heart {
+  left: 10px;
+  transition: all .4s ease-out;
+  position: absolute;
+  visibility: hidden;
+  transform: scale(0.2);
+  opacity: 0; }
+
+.upvote-box[data-exists="yes"] .fa-heart {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1; }
+
+.upvote-box[data-exists="yes"] .fa-heart-o {
+  visibility: hidden;
+  opacity: 0; }
+
+/* User Sign Up */
+.login-master-container {
+  display: table;
+  width: 100%; }
+
+.login-text {
+  font-size: 3em;
+  margin: 0 auto;
+  text-align: center;
+  display: table-cell;
+  padding-left: 300px;
+  color: white; }
+
+.login-button {
+  /*float: right;*/
+  /*margin-left: 300px;*/
+  display: table-cell;
+  text-align: right;
+  /*margin-right: 300px;*/
+  /*margin-left: 200px;*/ }
+
+.user-login {
+  /*margin-left: 30px;*/
+  color: black;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  padding: 8px;
+  width: 85px; }
+
+.user-signup {
+  color: black;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  padding: 8px;
+  width: 85px; }
+
+.signup-link {
+  text-decoration: none; }
+
+.site-header__avatar {
+  margin-right: 70px;
+  /*margin-left: 52px;*/
+  /*border-radius: 25px;*/
+  /*	border-style: solid;
+  	border-width: 2px;
+  	border-color: white;*/ }
+
+/* Login/Signup Screen */
+.login h1 a {
+  background-image: url("");
+  background-size: initial;
+  width: initial;
+  height: 60px;
+  border-radius: 10px; }
+
+.login {
+  background-color: #212121; }
+
+#loginform, #registerform {
+  border-radius: 10px;
+  color: white;
+  background-color: black; }
+
+#loginform label, #registerform label {
+  color: #e5e3e3;
+  font-size: 1.3em; }
+
+#wp-submit {
+  background-color: #870808;
+  border-color: gray;
+  text-shadow: none;
+  box-shadow: none;
+  font-size: 1.2em;
+  text-align: center; }
+
+.forgetmenot label {
+  margin-bottom: 10px; }
+
+#reg_passmail {
+  font-size: 1.2em;
+  color: white; }
+
+.register {
+  font-size: 1.2em; }
+
 /* CSS Reset */
 /* BREADCRUMB LINKS FOR PAGES */
 .metabox {

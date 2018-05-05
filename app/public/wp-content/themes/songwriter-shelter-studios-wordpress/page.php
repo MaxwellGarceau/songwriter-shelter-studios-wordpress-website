@@ -28,6 +28,7 @@
 <!-- Blog Page Listings (PUT IMAGES HERE AND LINK TO THE IMAGES) -->
 <div class="blog-landing">
   <h2>Blog Pages</h2>
+  <?php userRegistrationButtons(); ?>
 <ul>
 <?php 
    wp_list_pages([

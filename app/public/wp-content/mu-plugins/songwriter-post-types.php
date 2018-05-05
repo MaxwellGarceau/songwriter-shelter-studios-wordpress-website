@@ -46,6 +46,22 @@ function songwriter_post_types() {
 		],
 		'menu_icon' => 'dashicons-hidden'
 	]);			
+
+	// Upvote Post Type
+	register_post_type('upvote', [
+		'supports' => ['title'],
+		'public' => false,
+		'show_ui' => true,
+		'labels' => [
+			'name' => 'Upvotes',
+			'add_new_item' => 'Add New Upvote',
+			'edit_item' => 'Edit Upvote',
+			'all_items' => 'All Upvotes',
+			'singular_name' => 'Upvote'
+		],
+		'menu_icon' => 'dashicons-arrow-up-alt'
+	]);
+
 }
 
 add_action('init', 'songwriter_post_types');
