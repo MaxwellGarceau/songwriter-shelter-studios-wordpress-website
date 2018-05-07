@@ -35,8 +35,66 @@ function songwriter_post_types() {
 			'name' => 'Music Prod & Comp Tutorials'
 		],
 		'menu_icon' => 'dashicons-hammer'
+	]);			
+
+	// Forum Pages
+
+	// Main Forum Landing Page
+	register_post_type('forum', [
+		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'has_archive' => false,
+		'public' => true,
+		'labels' => [
+			'name' => 'Forum'
+		],
+		'menu_icon' => 'dashicons-groups'
+	]);	
+
+	// Music Philosophy Discussions
+	register_post_type('music-phil-forum', [
+		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'has_archive' => true,
+		'public' => true,
+		'labels' => [
+			'name' => 'Music Philosophy Forum'
+		],
+		'menu_icon' => 'dashicons-schedule'
 	]);		
-	// Music Production/Composition Tutorial Post Type
+
+	// Music Production Discussions
+	register_post_type('music-prod-forum', [
+		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'has_archive' => true,
+		'public' => true,
+		'labels' => [
+			'name' => 'Music Production Forum'
+		],
+		'menu_icon' => 'dashicons-flag'
+	]);		
+
+	// Music Production Discussions
+	register_post_type('song-discuss-forum', [
+		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'has_archive' => true,
+		'public' => true,
+		'labels' => [
+			'name' => 'Songwriting Discussion Forum'
+		],
+		'menu_icon' => 'dashicons-art'
+	]);		
+
+	// Off Topic Discussions
+	register_post_type('off-topic-forum', [
+		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'has_archive' => true,
+		'public' => true,
+		'labels' => [
+			'name' => 'Off Topic Forum'
+		],
+		'menu_icon' => 'dashicons-id'
+	]);			
+
+	// Utility Posts (Such as contact form, music player, etc)
 	register_post_type('utility', [
 		'supports' => ['title', 'editor', 'thumbnail', 'author'],
 		'has_archive' => false,
@@ -45,7 +103,7 @@ function songwriter_post_types() {
 			'name' => 'Utility Widgets'
 		],
 		'menu_icon' => 'dashicons-hidden'
-	]);			
+	]);					
 
 	// Upvote Post Type
 	register_post_type('upvote', [
@@ -61,7 +119,6 @@ function songwriter_post_types() {
 		],
 		'menu_icon' => 'dashicons-arrow-up-alt'
 	]);
-
 }
 
 add_action('init', 'songwriter_post_types');

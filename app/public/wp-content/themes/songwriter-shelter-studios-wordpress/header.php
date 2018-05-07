@@ -64,9 +64,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#request-a-quote') ?>">Request A Quote</a>
-            </li>      
+            </li>   
+            <!-- Navigation for Blogs -->   
             <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages') ?>">Blogs <span class="fa fa-angle-down"></span></a>
+              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages') ?>">Blogs<span class="fa fa-angle-down"></span></a>
               <ul class="itemdown">
                 <li>
                   <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-salon-music-philosophy-in-the-21st-century') ?>">Songwriter Salon</a>
@@ -78,7 +79,25 @@
                   <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how') ?>">Music Tutorials</a>
                 </li>
             </ul>
-            </li> 
+            </li>
+            <!-- Navigation for Forum -->
+            <li class="nav-item dropdown">
+              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-forum') ?>">Forum<span class="fa fa-angle-down"></span></a>
+              <ul class="itemdown">
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/music-philosophy-discussion') ?>">Music Philosophy Discussion</a>
+                </li>
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/music-production-discussion') ?>">Music Production Discussion</a>
+                </li>
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriting-discussion') ?>">Songwriting Discussion</a>
+                </li>
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/off-topic') ?>">Off Topic</a>
+                </li>                
+            </ul>
+            </li>              
             <li class="nav-item">
               <a href="<?php echo esc_url(site_url('/search')); ?>" class="nav-link js-search-trigger"><span class="fa fa-search" aria-hidden="true"></span></a>
             </li>                                                        

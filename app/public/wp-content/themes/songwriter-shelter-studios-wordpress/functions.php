@@ -78,6 +78,116 @@ function pageBanner($args = []) {
 	<?php
 }
 
+// Forums
+
+// Forum Main Content
+function forumMainContent($args = []) {
+	if (!$args['query']) {
+		$args['query'] = $defaultQuery;
+	}
+	?>
+	<!-- Main Content -->
+	    <div class="page--posts">
+	    <?php 
+
+	      while($args['query']->have_posts()) {
+	    $args['query']->the_post(); ?>
+	<!-- Post Body -->
+	<div class="forum-post newsfeed-well__background-color">
+
+	<div class="generic-content forum-post__well">
+
+	<div>
+		<h6 class="forum-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+	  	<span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F, Y'); ?></span>
+	</div>
+<br>
+	<?php if(empty(get_the_content())) {
+		echo custom_field_excerpt('main_body_content');
+	} else {
+		the_excerpt();
+	} ?>
+	<br>
+	<span><a href="<?php the_permalink(); ?>">Full Post &raquo;</a></span>
+	</div>
+	</div>
+	</div>
+	<?php
+	}	
+}
+
+// Main Content for forum singles
+function forumSingleMainContent($args = []) {
+	if (!$args['related-field-query']) {
+		$args['related-field-query'] = NULL;
+	}
+	if (!$args['related-post-destination-title']) {
+		$args['related-post-destination-title'] = 'If You Liked This You Might Also Like...';
+	}
+	if (!$args['related-post-origin-title']) {
+		$args['related-post-origin-title'] = 'Related Posts';
+	}	
+	if (!$args['related-field']) {
+		$args['related-field'] = NULL;
+	}
+
+?>
+	<div class="main-content-well newsfeed__margin newsfeed-well__width newsfeed-well__background-color">
+		<?php if (has_post_thumbnail()) { ?>
+
+
+
+			<div class="generic-content main-content-well newsfeed-well__width container">
+				<div class="row">
+					<div class="row">
+						<div class="col-sm-4">
+							<img class="featured-thumbnail-image-custom" src="<?php the_post_thumbnail_url('featured-blogimg-size'); ?>">
+							<p class="italic__font smaller-font darker-color"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
+						</div>
+						<div class="col-sm-8">
+							<?php 
+								if(empty(get_the_content())) {
+									echo get_field('main_body_content');
+								} else {
+									the_content();
+								} 
+								if ($args['related-field']) {
+									singleRelatedPost($args['related-field'], $args['related-post-origin-title']);
+								}
+								if ($args['related-field-query']) {
+									singleRelatedPostLinkBack($args['related-field-query'], $args['related-post-destination-title']);
+								}
+							?>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>	
+
+
+					
+		<?php } else { ?>
+			<div class="generic-content main-content-well newsfeed-well__width">		
+			<?php 
+				if(empty(get_the_content())) {
+					echo get_field('main_body_content');
+				} else {
+					the_content();
+				}
+				if ($args['related-field']) {
+					singleRelatedPost($args['related-field'], $args['related-post-origin-title']);
+				}
+				if ($args['related-field-query']) {
+					singleRelatedPostLinkBack($args['related-field-query'], $args['related-post-destination-title']);
+				}
+			?>
+			<br>
+			</div>
+			<?php } ?>
+	</div>
+<?php
+}
+
 // Archives
 
 // Archive return to main page

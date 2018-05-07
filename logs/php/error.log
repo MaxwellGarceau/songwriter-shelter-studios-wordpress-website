@@ -240,3 +240,19 @@ Stack trace:
 [04-May-2018 21:27:54 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/inc/search-route.php on line 162
 [04-May-2018 21:29:11 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/inc/search-route.php on line 162
 [04-May-2018 21:29:37 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/inc/search-route.php on line 162
+[07-May-2018 00:42:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:93
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php(45): forumMainContent(Array)
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 93
+[07-May-2018 00:42:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:93
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php(44): forumMainContent(Array)
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 93
