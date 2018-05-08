@@ -2,7 +2,6 @@
 					function upvoteButton() {
 				?>					                    
                     <!-- UPVOTE CONTAINER START-->
-                    <p class="">
 					<div class="upvote-content">
 
 						<?php //Accesses backend database 
@@ -34,7 +33,6 @@
 					<span class="upvote-count"><?php echo $upvoteCount->found_posts; ?></span>
 					</span>
 					</div>
-				</p>
 					<!-- UPVOTE CONTAINER END-->
 				<?php
 					}

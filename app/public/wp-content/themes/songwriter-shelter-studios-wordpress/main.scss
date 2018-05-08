@@ -9,6 +9,7 @@
 // General
 
 $small-margin: 10px;
+$medium-margin: 20px;
 
 // Main well parameters
 
@@ -21,6 +22,7 @@ $well-maximum-width: 90%;
 $well-small-width: 40%;
 $well-margin: 15px auto;
 $well-padding: 30px;
+$well-mobile-padding: 25px;
 $well-small-margin: 10px auto;
 $well-small-padding: 10px;
 $well-medium-margin: 30px;
@@ -70,6 +72,7 @@ $border-radius-small: 20px;
 @import "css/modules/email-popup.scss";
 @import "css/modules/upvote.scss";
 @import "css/modules/user-registration.scss";
+@import "css/modules/forum.scss";
 
 /* CSS Reset */
  // * {
@@ -1059,10 +1062,10 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 	}
 	.main-content-well {
 		// width: 70%;
-		padding: 25px;
+		padding: $well-mobile-padding;
 	}	
 	.blog-landing {
-		padding: 25px;
+		padding: $well-mobile-padding;
 	}
 	.newsfeed-title {
 		// width: 70%;
@@ -1105,11 +1108,11 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 	}
 	.main-content-well {
 		width: 90%;
-		padding: 25px;
+		padding: $well-mobile-padding;
 	}
 	.blog-landing {
 		width: 90%;
-		padding: 25px;		
+		padding: $well-mobile-padding;		
 	}
 	.meta-box {
 		width: 100%;

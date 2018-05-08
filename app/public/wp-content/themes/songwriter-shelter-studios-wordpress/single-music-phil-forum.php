@@ -9,6 +9,7 @@ while(have_posts()) {
 	pageBanner();
 	// Main content for single
 	forumSingleMainContent();
+	comments_template();
 	}
 ?>
 <a href="<?php echo site_url('/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how') ?>"><div class="single-link--box">Back to Modern Music Production and Composition</div></a>

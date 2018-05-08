@@ -256,3 +256,4 @@ Stack trace:
 #3 /app/public/index.php(17): require('/app/public/wp-...')
 #4 {main}
   thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 93
+[07-May-2018 15:49:27 UTC] PHP Parse error:  syntax error, unexpected ''author'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php on line 8

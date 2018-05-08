@@ -28,7 +28,7 @@ function songwriter_post_types() {
 	// Music Production/Composition Tutorial Post Type
 	register_post_type('production-tutorials', [
 		'show_in_rest' => true,
-		'supports' => ['title', 'thumbnail', 'author'],
+		'supports' => ['title', 'thumbnail', 'author', 'comments'],
 		'has_archive' => true,
 		'public' => true,
 		'labels' => [
@@ -52,7 +52,10 @@ function songwriter_post_types() {
 
 	// Music Philosophy Discussions
 	register_post_type('music-phil-forum', [
-		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'capability_type' => 'music-phil-post',
+		'map_meta_cap' => true,
+		'show_in_rest' => true,
+		'supports' => ['title', 'editor', 'thumbnail', 'author', 'comments'],
 		'has_archive' => true,
 		'public' => true,
 		'labels' => [
@@ -63,7 +66,10 @@ function songwriter_post_types() {
 
 	// Music Production Discussions
 	register_post_type('music-prod-forum', [
-		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'capability_type' => 'music-prod-post',
+		'map_meta_cap' => true,		
+		'show_in_rest' => true,
+		'supports' => ['title', 'editor', 'thumbnail', 'author', 'comments'],
 		'has_archive' => true,
 		'public' => true,
 		'labels' => [
@@ -72,9 +78,12 @@ function songwriter_post_types() {
 		'menu_icon' => 'dashicons-flag'
 	]);		
 
-	// Music Production Discussions
+	// Songwriting Production Discussions
 	register_post_type('song-discuss-forum', [
-		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'capability_type' => 'song-discuss-post',
+		'map_meta_cap' => true,		
+		'show_in_rest' => true,
+		'supports' => ['title', 'editor', 'thumbnail', 'author', 'comments'],
 		'has_archive' => true,
 		'public' => true,
 		'labels' => [
@@ -85,7 +94,10 @@ function songwriter_post_types() {
 
 	// Off Topic Discussions
 	register_post_type('off-topic-forum', [
-		'supports' => ['title', 'editor', 'thumbnail', 'author'],
+		'capability_type' => 'off-topic-post',
+		'map_meta_cap' => true,		
+		'show_in_rest' => true,
+		'supports' => ['title', 'editor', 'thumbnail', 'author', 'comments'],
 		'has_archive' => true,
 		'public' => true,
 		'labels' => [

@@ -157,6 +157,7 @@ function forumSingleMainContent($args = []) {
 								if ($args['related-field-query']) {
 									singleRelatedPostLinkBack($args['related-field-query'], $args['related-post-destination-title']);
 								}
+								upvoteButton();
 							?>
 						</div>
 					</div>
@@ -180,6 +181,7 @@ function forumSingleMainContent($args = []) {
 				if ($args['related-field-query']) {
 					singleRelatedPostLinkBack($args['related-field-query'], $args['related-post-destination-title']);
 				}
+				upvoteButton();
 			?>
 			<br>
 			</div>
@@ -393,6 +395,7 @@ function songwriter_files() {
 	wp_enqueue_script('scrolling-nav', get_theme_file_uri('/js/scrolling-nav.js'), NULL, '1.0', true);	
 	wp_enqueue_script('search-js', get_theme_file_uri('/js/search.js'), NULL, '1.0', true);		
 	wp_enqueue_script('upvote-js', get_theme_file_uri('/js/upvote.js'), NULL, '1.0', true);
+	wp_enqueue_script('forum-js', get_theme_file_uri('/js/forum.js'), NULL, '1.0', true);
 	wp_enqueue_script('main-songwriter-js', get_theme_file_uri('/js/script.js'), NULL, '1.0', true);	
 
 	// Styles

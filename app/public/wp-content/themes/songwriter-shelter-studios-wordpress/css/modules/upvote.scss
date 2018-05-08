@@ -1,7 +1,7 @@
 /* Like Box */
 
 .upvote-content .upvote-box {
-  float: left;
+  // float: left;
   font-size: 1rem;
   background-color: #EDEDED;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
@@ -9,6 +9,7 @@
   padding: 10px 10px 10px 25px;
   border-radius: 4px;
   cursor: pointer;
+  margin: auto;
   /*margin: 0 0 30px 30px;*/
   position: relative;
 }

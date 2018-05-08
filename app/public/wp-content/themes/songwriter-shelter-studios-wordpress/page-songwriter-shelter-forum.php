@@ -18,7 +18,6 @@
   $theParent = wp_get_post_parent_id(get_the_ID());
   // Return to main page
   get_template_part('template-parts/content-returntomainpage');
-  upvoteButton();
   }
 ?>
 
