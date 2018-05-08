@@ -4,62 +4,6 @@
   Version: 1.0
 */
 
-// Variables
-
-// General
-
-$small-margin: 10px;
-$medium-margin: 20px;
-
-// Main well parameters
-
-$well-background-color: rgba(0, 0, 0, .6);
-$well-bgcolor-white: rgba(255, 255, 255, 1);
-$well-border-radius: 100px;
-$well-width: 45%;
-$well-medium-width: 70%;
-$well-maximum-width: 90%;
-$well-small-width: 40%;
-$well-margin: 15px auto;
-$well-padding: 30px;
-$well-mobile-padding: 25px;
-$well-small-margin: 10px auto;
-$well-small-padding: 10px;
-$well-medium-margin: 30px;
-
-// Line Height
-$large-line-height: 2.5;
-$medium-line-height: 2;
-
-// Letter Spacing
-$wide-letter-spacing: .1rem;
-
-// Font Family
-
-$title-font: futura-book-regular, Arial, Helvetica;
-
-// Font Size
-
-$lg-btn-font: 2em;
-$section-font-size: 3.2em;
-$footer-font-size: .8em;
-
-// Link Color
-
-$link-color: #E6E6E6;
-$clicked-link-color: #8E8E8E;
-
-// Colors
-
-$black: black;
-// $mainBlue: blue;
-$grey: #e8e8e8;
-
-// General Border, Margin, Etc
-
-$border-radius-main: 50px;
-$border-radius-small: 20px;
-
 // Import
 
 // Sass and Global
@@ -73,85 +17,6 @@ $border-radius-small: 20px;
 @import "css/modules/upvote.scss";
 @import "css/modules/user-registration.scss";
 @import "css/modules/forum.scss";
-
-/* CSS Reset */
- // * {
- //        margin: 0;
- //        padding: 0;
- //        border: 0;
- //        outline: 0;
- //        font-size: 100%;
- //        vertical-align: baseline;
- //        background: transparent;
- //    } 
-
-
-/* BREADCRUMB LINKS FOR PAGES */
-
-// .metabox {
-//   background-color: $black;
-//   border-radius: 3px;
-//   padding: 10px 15px;
-//   display: inline-block;
-//   // display: block;
-//   // margin: auto;
-//   margin-bottom: 30px;
-//   // margin: 0 0 30px 0 auto;
-//   box-shadow: 2px 2px 1px rgba(0, 0, 0, .07);
-
-//   &--position-up {
-//     position: absolute;
-//     top: 0;
-//     // transform: translateY(-50%);
-//     transform: translateX(-20%);
-//   }
-
-//   &--with-home-link {
-//     padding: 0;
-//   }
-
-//   &__main {
-//     padding: 10px 15px 10px 11px;
-//   }
-
-//   p {
-//     margin: 0;
-//     font-size: .9rem;
-//     color: color($black l(-45%) s(-33%));
-//   }
-
-//   a {
-//     color: color($black l(-45%) s(-33%));
-//     text-decoration: none;
-//     font-weight: bold;
-//   }
-
-//   a:hover {
-//     text-decoration: underline;
-//   }
-
-//   & &__blog-home-link {
-//     background-color: $mainBlue;
-//     color: #FFF;
-//     display: inline-block;
-//     padding: 10px 15px;
-//     border-radius: 3px 0 0 3px;
-//     font-weight: normal;
-//   }
-
-//   & &__blog-home-link:hover {
-//     text-decoration: none;
-//     background-color: color($mainBlue l(-5%));
-//   }
-
-// }
-
-// .breadcrumb-container {
-//   max-width: 1300px;
-//   margin: 0 auto;
-//   padding: 0 16px;
-//   position: relative;
-// }	
 
 .metabox {
 	background-color: white;
@@ -193,7 +58,11 @@ $border-radius-small: 20px;
 /* Page Links */
 
 .page-background {
-	background-color: black;
+	// background-color: black;
+	background-image: url('./images/wood-background-2-min-darker.jpg');
+	// background-image: url('./images/wood-background-1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .archive-title .min-list, .page-links .min-list {
@@ -211,17 +80,6 @@ $border-radius-small: 20px;
   width: 300px;
   margin: 0 10px 0 10px;
   border-radius: 25px;
-  // margin: 0 0 40px 20px;  
-  // @mixin atSmallMedium {
-  //   margin: 0 0 40px 20px;
-  //   width: 300px;
-  //   float: right;
-  // }
-
-//  & .min-list {
-//   list-style: none;
-//   padding: 0;
-// }
 
   & &__title {
     margin: 0;
@@ -334,7 +192,6 @@ section {
   padding: 40px 0;
 }
 
-/*Re-write with Sass*/
 /* Footer */
 footer p {
 background-color: rgba(0, 0, 0, 0);		
@@ -437,10 +294,6 @@ ul li.dropdown:hover .itemdown {
 	font-family: the-skinny;
 }
 
-// .h1-secondary__margin {
-// 	padding-top: 100px;
-// }
-
 h3 {
 	font-weight: normal;
 }
@@ -454,38 +307,6 @@ button:focus {
 }
 
 /*Rewrite all page ID styles with sass*/
-#home {
-	// position: absolute;
-	// height: 1400px;
-	// background-image: url('http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/home-background.png');
-	// background-size: 100% 100%;
-	// background-size: cover;
-	// background-repeat: no-repeat;
-	// background-position: center;
-	// background-attachment: absolute;
-}
-
-// #home::before {
-//   content: "";
-//   position: fixed;
-//   // top: 0;
-//   left: 0;
-//   right: 0;
-//   z-index: -999;
-
-//   display: block;
-//   background-image: url('http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/home-background.png');
-// 	background-size: cover;
-// 	background-repeat: no-repeat;
-// 	background-position: center;
-//   width: 100%;
-//   height: 100%;
-//   filter: brightness(70%) grayscale(25%);
-// }
-
-.home-content {
-
-}
 
 .home-content::before {
   content: "";
@@ -513,13 +334,6 @@ button:focus {
 	padding-bottom: 200px;	
 }
 
-#my-work {
-	// background-image: url('http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/my-work-background.jpg');	
-	// background-size: cover;
-	// background-repeat: no-repeat;
-	// background-position: center;	
-}
-
 .iframe-div {
 	width: 90%;
 	margin: auto;
@@ -529,10 +343,6 @@ button:focus {
 iframe {
 	width: 450px;
 	height: 325px;
-}
-
-.my-work-content {
-
 }
 
 .my-work-content::before {
@@ -568,20 +378,6 @@ iframe {
 	letter-spacing: $wide-letter-spacing;		
 }
 
-// .testimonials-bg-pic {
-// 	background-image: url('http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/testimonials-background.jpg');	
-// 	background-size: cover;
-// 	background-repeat: no-repeat;
-// 	background-position: center top;
-// 	filter: brightness(70%) grayscale(25%);		
-// }
-
-#about {
-	// background-image: url('http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/about-background.jpg');
-	// background-size: cover;
-	// background-repeat: no-repeat;
-	// background-position: center top;	
-}
 
 #about p {
 	background-color: initial;
@@ -985,34 +781,6 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .search-bar {
 	width: 50%;
-}
-
-/* Forum */
-
-.forum-post {
-	all: inherit;
-
-	& p {
-		all: initial;
-	}	
-
-	&__well {
-		background-color: rgba(255, 255, 255, .7);
-		width: 60%;
-		margin: 0 auto;	
-		border-bottom: 1px solid black;		
-	}
-
-	&__title {
-
-	}
-
-	& h6 a:link {
-		color: white;
-	}
-	& h6 a:hover {
-		color: $grey;
-	}	
 }
 
 @media only screen and (max-width : 1300px) {

@@ -71,7 +71,7 @@ function pageBanner($args = []) {
 		if (get_field('page_banner_background_image')) {
 			$args['photo'] = get_field('page_banner_background_image')['sizes']['page-banner'];
 		} else {
-			$args['photo'] = get_theme_file_uri('/images/testimonials-background.jpg');
+			$args['photo'] = get_theme_file_uri('/images/autumn-background-board-min-crop.jpg');
 		}
 	}
 	?>

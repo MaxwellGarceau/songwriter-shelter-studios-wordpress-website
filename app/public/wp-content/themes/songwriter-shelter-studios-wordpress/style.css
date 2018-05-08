@@ -385,6 +385,21 @@ p, li {
   font-size: 1.2em; }
 
 /* My forum-posts */
+.forum-post {
+  all: inherit;
+  padding-bottom: 0; }
+  .forum-post p {
+    all: initial; }
+  .forum-post__well {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: 1px solid black; }
+  .forum-post h6 a:link {
+    color: white; }
+  .forum-post h6 a:hover {
+    color: #e8e8e8; }
+
 .edit-forum-post,
 .delete-forum-post,
 .create-forum-post,
@@ -546,8 +561,6 @@ p, li {
   .new-forum-post-body-field {
     width: 90%;
     padding: 25px; } }
-/* CSS Reset */
-/* BREADCRUMB LINKS FOR PAGES */
 .metabox {
   background-color: white;
   color: black;
@@ -577,7 +590,9 @@ p, li {
 
 /* Page Links */
 .page-background {
-  background-color: black; }
+  background-image: url("./images/wood-background-2-min-darker.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .archive-title .min-list, .page-links .min-list {
   list-style: none;
@@ -667,7 +682,6 @@ hr {
 section {
   padding: 40px 0; }
 
-/*Re-write with Sass*/
 /* Footer */
 footer p {
   background-color: rgba(0, 0, 0, 0); }
@@ -1110,21 +1124,6 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 /* Search Form */
 .search-bar {
   width: 50%; }
-
-/* Forum */
-.forum-post {
-  all: inherit; }
-  .forum-post p {
-    all: initial; }
-  .forum-post__well {
-    background-color: rgba(255, 255, 255, 0.7);
-    width: 60%;
-    margin: 0 auto;
-    border-bottom: 1px solid black; }
-  .forum-post h6 a:link {
-    color: white; }
-  .forum-post h6 a:hover {
-    color: #e8e8e8; }
 
 @media only screen and (max-width: 1300px) {
   .page-links {
