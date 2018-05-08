@@ -74,3 +74,13 @@
 [06-May-2018 21:34:59] NOTICE: ready to handle connections
 [07-May-2018 13:58:48] NOTICE: fpm is running, pid 8
 [07-May-2018 13:58:48] NOTICE: ready to handle connections
+[08-May-2018 03:27:06] NOTICE: Terminating ...
+[08-May-2018 03:27:06] NOTICE: exiting, bye-bye!
+[08-May-2018 14:07:45] NOTICE: fpm is running, pid 25
+[08-May-2018 14:07:45] NOTICE: ready to handle connections
+[08-May-2018 17:34:29] WARNING: [pool www] child 36 exited on signal 11 (SIGSEGV) after 12403.724674 seconds from start
+[08-May-2018 17:34:29] NOTICE: [pool www] child 305 started
+[08-May-2018 17:34:31] WARNING: [pool www] child 300 exited on signal 11 (SIGSEGV) after 12400.232879 seconds from start
+[08-May-2018 17:34:31] NOTICE: [pool www] child 306 started
+[08-May-2018 17:34:33] WARNING: [pool www] child 37 exited on signal 11 (SIGSEGV) after 12407.775385 seconds from start
+[08-May-2018 17:34:33] NOTICE: [pool www] child 307 started

@@ -490,7 +490,13 @@ p, li {
   margin-top: 0;
   padding: 0; }
 
+.forum-post-limit-message {
+  display: none; }
+
 /* Edit/Delete User Posts area */
+.user-posts {
+  display: none; }
+
 .user-posts__list {
   list-style: none;
   padding: 0; }

@@ -14,6 +14,27 @@ function songwriter_custom_rest() {
 			return get_post_type();
 		}
 	]);
+	// User count rest info for forums
+	register_rest_field('music-phil-forum', 'userPostCount', [
+		'get_callback' => function() {
+			return count_user_posts(get_current_user_id(), 'music-phil-forum');
+		}
+	]);	
+	register_rest_field('music-prod-forum', 'userPostCount', [
+		'get_callback' => function() {
+			return count_user_posts(get_current_user_id(), 'music-prod-forum');
+		}
+	]);	
+	register_rest_field('song-discuss-forum', 'userPostCount', [
+		'get_callback' => function() {
+			return count_user_posts(get_current_user_id(), 'song-discuss-forum');
+		}
+	]);	
+	register_rest_field('off-topic-forum', 'userPostCount', [
+		'get_callback' => function() {
+			return count_user_posts(get_current_user_id(), 'off-topic-forum');
+		}
+	]);				
 }
 
 add_action('rest_api_init', 'songwriter_custom_rest');
@@ -455,3 +476,21 @@ function songwriter_adjust_queries($query) {
 }
 
 add_action('pre_get_posts', 'songwriter_adjust_queries');
+
+function sanitizeForumPosts($data, $postArr) {
+	$postType = $data['post_type'];
+	if ($postType == 'music-phil-forum' OR $postType == 'music-prod-forum' OR $postType == 'song-discuss-forum' OR $postType == 'off-topic-forum') {
+	// PUT DAILY POSTING LIMIT LOGIC FOR USERS HERE
+
+		// Gives a hard post limit for all time periods (NOT WHAT WE WANT)
+		// if (count_user_posts(get_current_user_id(), 'music-phil-forum') >= 5 AND !$postArr['ID']) {
+		// 	die("Slow down, you're posting too quickly.");
+		// }
+
+		$data['post_content'] = sanitize_textarea_field($data['post_content']);
+		$data['post_title'] = sanitize_text_field($data['post_title']);
+	}
+	return $data;
+}
+
+add_filter('wp_insert_post_data', 'sanitizeForumPosts', 10, 2);

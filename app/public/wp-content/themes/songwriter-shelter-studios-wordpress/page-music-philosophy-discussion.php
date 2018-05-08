@@ -32,8 +32,8 @@
   // upvoteButton();
   }
 ?>
-<button class="user-posts-button" id="user-posts-button">See My Posts</button>
-<div class="user-posts" id="user-posts-area" class="user-posts--hidden">
+<button class="user-posts-button" id="user-posts-button">Show My Posts</button>
+<div class="user-posts" id="user-posts-area">
   <?php if (is_user_logged_in()) {
     ?>
   <ul class="user-posts__list" id="user-forum-posts">
@@ -91,10 +91,37 @@
       ?>
       <div>
         <h4>Make a Post</h4>
+        <?php
+        // Attempt 1
+
+        // $postTimeRestriction = new WP_Query([
+        //   'post_type' => 'music-phil-forum',
+        //   'date_query' => [
+        //     'after' => [
+        //       'year' => 2018,
+        //       'month' => 5,
+        //       'day' => 7
+        //     ],
+        //   ],
+        // ]); 
+        // while ($postTimeRestriction->have_posts()) {
+        //   $postTimeRestriction->the_post();
+        //   echo $postTimeRestriction->post_count();
+        // }
+
+        // Attempt 2
+
+        // $querystr = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'music-phil-forum' AND post_date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) LIMIT 0, 30");
+        // if (0 < $querystr) $querystr = number_format($querystr);   
+        // echo $querystr;
+        // count_user_posts(get_current_user_id())
+        ?>
         <input placeholder="Title" class="new-forum-post-title">
         <hr class="forum-post-title__hr">
         <textarea placeholder="Your post here..." class="new-forum-post-body-field"></textarea>
         <span class="create-forum-post">Create Post</span>
+        <br>
+        <span class="forum-post-limit-message">Daily Post Limit Reached. Don't worry, you can post tomorrow.</span>
       </div>
 <?php echo paginate_links(); ?>
 

@@ -81,6 +81,7 @@
 }
 
 /* Create forum-post */
+
 .create-forum-post {
   background-color: #DDD;
   color: black;
@@ -132,11 +133,20 @@
   padding: 0;
 }
 
+.forum-post-limit-message {
+  // visibility: hidden;
+  display: none;
+}
+
 .forum-post-header {
   // margin-bottom: $medium-margin;
 }
 
 /* Edit/Delete User Posts area */
+
+.user-posts {
+  display: none;
+}
 
 .user-posts__list {
   list-style: none;

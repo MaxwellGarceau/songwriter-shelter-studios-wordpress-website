@@ -22,8 +22,14 @@ jQuery(document).ready(function ($) {
 			$('.create-forum-post').on('click', this.createForumPost.bind(this));
 		}
 		toggleUserPosts() {
-			$('#user-posts-area').toggleClass('user-posts--hidden');
-			$('#user-posts-button').html() == 'Show My Posts' ? $('#user-posts-button').html('Hide My Posts') : $('#user-posts-button').html('Show My Posts');
+			// $('#user-posts-area').toggleClass('user-posts--hidden');
+			if ($('#user-posts-button').html() == 'Show My Posts') {
+				$('#user-posts-area').slideDown(1000);
+				$('#user-posts-button').html('Hide My Posts');
+			} else {
+				$('#user-posts-area').slideUp();
+				$('#user-posts-button').html('Show My Posts');
+			}
 		}
 		editUserPost(e) {
 			const thisPost = $(e.target).parents('li');
@@ -57,6 +63,9 @@ jQuery(document).ready(function ($) {
 					thisPost.slideUp();
 					console.log('congrats');
 					console.log(response);
+					if (response.userPostCount < 5) {
+						$('.forum-post-limit-message').fadeOut();
+					}
 				},
 				error: (response) => {
 					console.log('sorry');
@@ -122,8 +131,12 @@ jQuery(document).ready(function ($) {
 					console.log(response);
 				},
 				error: (response) => {
+					// PHP adding white space, fix later
+					if (response.responseText == "									Slow down, you're posting too quickly.") {
+						$('.forum-post-limit-message').fadeIn();
+					}
 					console.log('sorry');
-					console.log(response);						
+					console.log(response);
 				}
 			});
 		}								
