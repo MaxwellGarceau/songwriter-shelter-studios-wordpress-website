@@ -10,7 +10,7 @@
   <?php
   // Custom PHP function to load page banner
   pageBanner([
-    'title' => 'Songwriter Advice From A Nashville Producer Archive'
+    'title' => 'Advice For Songwriters <br> <span class="blog-title--smaller">Archive</span>'
   ]);
   // Return to main page
   archiveReturnToMainPage($mainPage);

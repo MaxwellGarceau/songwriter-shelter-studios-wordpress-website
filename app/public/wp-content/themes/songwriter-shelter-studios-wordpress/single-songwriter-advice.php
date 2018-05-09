@@ -24,7 +24,7 @@ while(have_posts()) {
 		]);	
 	}
 ?>
-<a href="<?php echo site_url('/songwriter-advice-from-a-nashville-music-producer') ?>"><div class="single-link--box">Back to Songwriter Advice</div></a>
+<a href="<?php echo site_url('/songwriter-advice-from-a-nashville-music-producer') ?>"><div class="single-link--box">Back to Advice For Songwriters</div></a>
 
 </section>
 

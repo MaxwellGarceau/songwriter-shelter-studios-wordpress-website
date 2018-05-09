@@ -17,7 +17,7 @@ INSERT INTO `wp_usermeta` VALUES
 (13,1,"wp_user_level","10"),
 (14,1,"dismissed_wp_pointers",""),
 (15,1,"show_welcome_panel","1"),
-(17,1,"wp_dashboard_quick_press_last_post_id","55"),
+(17,1,"wp_dashboard_quick_press_last_post_id","148"),
 (18,1,"community-events-location","a:1:{s:2:\"ip\";s:12:\"192.168.95.0\";}"),
 (19,1,"wp_user-settings","editor=html&libraryContent=browse&editor_expand=on"),
 (20,1,"wp_user-settings-time","1525463959"),
@@ -48,4 +48,4 @@ INSERT INTO `wp_usermeta` VALUES
 (45,2,"default_password_nag",""),
 (52,1,"closedpostboxes_music-phil-forum","a:0:{}"),
 (53,1,"metaboxhidden_music-phil-forum","a:3:{i:0;s:6:\"acf_78\";i:1;s:6:\"acf_64\";i:2;s:7:\"slugdiv\";}"),
-(57,1,"session_tokens","a:1:{s:64:\"3bee8d128e51e56aaaaca669c30f008276914d0341e75790cf539e550a611f37\";a:4:{s:10:\"expiration\";i:1525883077;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36\";s:5:\"login\";i:1525710277;}}");
+(59,1,"session_tokens","a:1:{s:64:\"42617508afdcb57eb15f424eddef4adf584eac15141864fefdf3ae1b840eaed0\";a:4:{s:10:\"expiration\";i:1525967347;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36\";s:5:\"login\";i:1525794547;}}");

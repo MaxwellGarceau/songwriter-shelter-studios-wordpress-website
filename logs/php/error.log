@@ -260,3 +260,14 @@ Stack trace:
 [08-May-2018 17:16:03 UTC] PHP Recoverable fatal error:  Object of class wpdb could not be converted to string in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php on line 113
 [08-May-2018 17:18:06 UTC] WordPress database error Unknown column 'user_id' in 'where clause' for query SELECT COUNT(*) FROM wp_posts WHERE post_status = 'publish' AND post_type = 'music-phil-forum' AND user_id = get_current_user_id() AND post_date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) LIMIT 0, 30 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php')
 [08-May-2018 17:18:20 UTC] WordPress database error Unknown column 'user_id' in 'where clause' for query SELECT COUNT(*) FROM wp_posts WHERE post_status = 'publish' AND post_type = 'music-phil-forum' AND user_id = 2 AND post_date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) LIMIT 0, 30 made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php')
+[09-May-2018 18:09:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_post() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:92
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-songwriter-salon.php(10): pageBanner()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 92
+[09-May-2018 18:27:42 UTC] PHP Parse error:  syntax error, unexpected ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 508
+[09-May-2018 18:28:10 UTC] PHP Parse error:  syntax error, unexpected ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 508
+[09-May-2018 18:28:12 UTC] PHP Parse error:  syntax error, unexpected ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 508

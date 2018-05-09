@@ -68,11 +68,11 @@ function pageBanner($args = []) {
 		$args['subtitle'] = get_field('page_banner_subtitle');
 	}
 	if (!$args['photo']) {
-		if (get_field('page_banner_background_image')) {
-			$args['photo'] = get_field('page_banner_background_image')['sizes']['page-banner'];
-		} else {
+		// if (get_field('page_banner_background_image')) {
+		// 	$args['photo'] = get_field('page_banner_background_image')['sizes']['page-banner'];
+		// } else {
 			$args['photo'] = get_theme_file_uri('/images/autumn-background-board-min-crop.jpg');
-		}
+		// }
 	}
 	?>
 	<div class="page-banner">
@@ -84,16 +84,20 @@ function pageBanner($args = []) {
 				} else { 
 					echo 'pagebanner-title__margin-archive'; 
 				} ?> "><?php echo $args['title']; ?></h1>
-				<hr class='no__margin-bottom'>
+				<hr class='no__margin-bottom' style="padding-bottom: 5px;">
 			<?php
 			} else { ?>
-				<h6 class="newsfeed-post-title pagebanner-title__margin "><?php echo $args['title']; ?></h6>
+				<h6 class="newsfeed-post-title pagebanner-title__margin pagebanner__title--width"><?php echo $args['title']; ?></h6>
 				<hr>
-			<?php } if (!is_archive() AND !is_page(93) AND !is_search()) { ?>
-				<div class="meta-box">
-	  			<span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F, Y'); ?></span>
-			</div>
-			<?php } ?>
+			<?php } if (!is_archive() AND !is_page(93) AND !is_search() AND !is_single()) { ?>
+				<!-- <div class="meta-box"> -->
+	  			<span class="italic__font">Last post on <?php the_time('F, Y'); ?></span>
+			<!-- </div> -->
+			<?php } if (is_single()) {
+				?>
+				<div class="meta-box meta-box--small-width"><span>Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span></div>
+				<?php
+			} ?>
 		</div>
 	</div>
 	<?php
@@ -120,7 +124,7 @@ function forumMainContent($args = []) {
 
 	<div>
 		<h6 class="forum-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-	  	<span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F, Y'); ?></span>
+	  	<span>Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span>
 	</div>
 <br>
 	<?php if(empty(get_the_content())) {
@@ -222,8 +226,7 @@ $theParent = wp_get_post_parent_id(get_the_ID());
     ?>
       <div class="metabox">
       <p><a class="metabox__blog-home-link" href="<?php echo get_permalink($mainPage); ?>"><i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title($mainPage); ?></a> 
-      	<br>
-      <span class="metabox__main breadcrumb--title-text"><?php echo get_the_title($mainPage); ?></span></p>
+  	  </p>
     </div>
 </div>
 <?php
@@ -246,7 +249,7 @@ function pageArchiveBreadCrumb($args = []) {
 	?>
 	<div class="page-links side-list__float-left">
         <!-- Maybe link title of Side List to archive for the current post type -->
-      <div class="page-links__title"><a href="<?php echo get_post_type_archive_link($args['post-type']) ?>"><?php echo $args['title'] ?></a></div>
+      <div class="page-links__title page-links__main-background"><a href="<?php echo get_post_type_archive_link($args['post-type']) ?>"><?php echo $args['title'] ?></a></div>
       <ul class="min-list">
         <?php
         while ($args['query']->have_posts()) {
@@ -286,7 +289,7 @@ function pageMainContent($args = []) {
 	<h6 class="newsfeed-post-title"><?php the_title(); ?></h6>
 
 	<div class="meta-box">
-	  <span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F, Y'); ?></span>
+	  <span>Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span>
 	</div>
 
 
@@ -298,7 +301,7 @@ function pageMainContent($args = []) {
 		the_excerpt();
 	} ?>
 	<br>
-	<span><a href="<?php the_permalink(); ?>">Continue Reading &raquo;</a></span>
+	<span><a class="inverse-link-color" href="<?php the_permalink(); ?>">Continue Reading &raquo;</a></span>
 	</div>
 	</div>
 	</div>
@@ -325,6 +328,8 @@ function singleMainContent($args = []) {
 
 ?>
 	<div class="main-content-well newsfeed__margin newsfeed-well__width newsfeed-well__background-color">
+		<h4 class="pagebanner__title--width"><?php the_title(); ?></h4>
+		<hr class="no__margin-bottom no__padding">
 		<?php if (has_post_thumbnail()) { ?>
 			<div class="generic-content main-content-well newsfeed-well__width container">
 				<div class="row">
@@ -383,7 +388,7 @@ function singleRelatedPost($argField, $title) {
 		echo '<h4 class="related-post--title">' . $title . '</h4>';
 		echo '<ul class="related-post--list">';
 		foreach($relatedField as $field) { ?>
-			<li><a href="<?php echo get_the_permalink($field); ?>"><?php echo get_the_title($field)?></a></li>
+			<li><a class="inverse-link-color" href="<?php echo get_the_permalink($field); ?>"><?php echo get_the_title($field)?></a></li>
 	<?php }
 		echo '</ul>';
 	}
@@ -397,7 +402,7 @@ function singleRelatedPostLinkBack($query, $title) {
 			echo '<ul class="related-post--list">';
 		while($query->have_posts()) {
 			$query->the_post(); ?>
-				<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title()?></a></li>			
+				<li><a class="inverse-link-color" href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title()?></a></li>			
 			<?php
 		}
 			echo '</ul>';
@@ -494,3 +499,16 @@ function sanitizeForumPosts($data, $postArr) {
 }
 
 add_filter('wp_insert_post_data', 'sanitizeForumPosts', 10, 2);
+
+
+// Display custom post types in author archive
+function post_types_author_archives($query) {
+    if ($query->is_author)
+            // Add 'books' CPT and the default 'posts' to display in author's archive
+            $query->set( 'post_type', ['songwriter-salon', 'songwriter-advice', 'production-tutorials', 'Post']);
+            // $query->set( 'post_type', ['songwriter-advice', 'posts']);
+    remove_action( 'pre_get_posts', 'custom_post_author_archive' );
+}
+
+add_action('pre_get_posts', 'post_types_author_archives');
+    

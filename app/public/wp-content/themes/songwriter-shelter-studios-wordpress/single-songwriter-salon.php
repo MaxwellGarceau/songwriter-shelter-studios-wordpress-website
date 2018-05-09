@@ -18,7 +18,7 @@ while(have_posts()) {
 <?php
 	}
 ?>
-<a href="<?php echo site_url('/songwriter-salon-music-philosophy-in-the-21st-century') ?>"><div class="single-link--box">Back to the Songwriter Salon</div></a>
+<a href="<?php echo site_url('/songwriter-salon-music-philosophy-in-the-21st-century') ?>"><div class="single-link--box">Back to The Songwriter Salon</div></a>
 
 </section>
 

@@ -84,3 +84,7 @@
 [08-May-2018 17:34:31] NOTICE: [pool www] child 306 started
 [08-May-2018 17:34:33] WARNING: [pool www] child 37 exited on signal 11 (SIGSEGV) after 12407.775385 seconds from start
 [08-May-2018 17:34:33] NOTICE: [pool www] child 307 started
+[08-May-2018 22:44:28] NOTICE: Terminating ...
+[08-May-2018 22:44:28] NOTICE: exiting, bye-bye!
+[09-May-2018 14:42:29] NOTICE: fpm is running, pid 25
+[09-May-2018 14:42:29] NOTICE: ready to handle connections

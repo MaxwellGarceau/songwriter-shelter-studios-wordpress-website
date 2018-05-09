@@ -56,7 +56,7 @@ function songwriter_post_types() {
 		'map_meta_cap' => true,
 		'show_in_rest' => true,
 		'supports' => ['title', 'editor', 'thumbnail', 'author', 'comments'],
-		'has_archive' => true,
+		'has_archive' => false,
 		'public' => true,
 		'labels' => [
 			'name' => 'Music Philosophy Forum'
@@ -70,7 +70,7 @@ function songwriter_post_types() {
 		'map_meta_cap' => true,		
 		'show_in_rest' => true,
 		'supports' => ['title', 'editor', 'thumbnail', 'author', 'comments'],
-		'has_archive' => true,
+		'has_archive' => false,
 		'public' => true,
 		'labels' => [
 			'name' => 'Music Production Forum'
@@ -84,7 +84,7 @@ function songwriter_post_types() {
 		'map_meta_cap' => true,		
 		'show_in_rest' => true,
 		'supports' => ['title', 'editor', 'thumbnail', 'author', 'comments'],
-		'has_archive' => true,
+		'has_archive' => false,
 		'public' => true,
 		'labels' => [
 			'name' => 'Songwriting Discussion Forum'
@@ -98,7 +98,7 @@ function songwriter_post_types() {
 		'map_meta_cap' => true,		
 		'show_in_rest' => true,
 		'supports' => ['title', 'editor', 'thumbnail', 'author', 'comments'],
-		'has_archive' => true,
+		'has_archive' => false,
 		'public' => true,
 		'labels' => [
 			'name' => 'Off Topic Forum'

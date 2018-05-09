@@ -32,7 +32,7 @@
       get_template_part('template-parts/content-pagelinkssidebar');
       // Archive breadcrumb side list of posts (left side)
       pageArchiveBreadCrumb([
-          'title' => 'Songwriter Advice From A Nashville Music Producer Archive',
+          'title' => 'Advice For Songwriters Archive',
           'post-type' => 'songwriter-advice',
           'query' => $songwriterAdvice
         ]); 

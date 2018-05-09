@@ -31,7 +31,7 @@
       get_template_part('template-parts/content-pagelinkssidebar');
       // Archive breadcrumb side list of posts (left side)
       pageArchiveBreadCrumb([
-          'title' => 'Songwriter Salon Archive',
+          'title' => 'The Songwriter Salon Archive',
           'post-type' => 'songwriter-salon',
           'query' => $songwriterSalon
         ]); 

@@ -18,6 +18,8 @@
 @import "css/modules/user-registration.scss";
 @import "css/modules/forum.scss";
 
+// Start
+
 .metabox {
 	background-color: white;
 	color: black;
@@ -28,9 +30,8 @@
 		background-color: white;
 	    // color: black;
 	    display: inline-block;
-	    // padding: 10px 15px;
+	    padding: 10px 0;
 	    border-radius: 3px 0 0 3px;
-	    // font-weight: normal;		
 	}
 	  &__main {
 	    padding: 0px 15px 10px 11px;
@@ -99,6 +100,12 @@
       }
 
   }
+  & &__main-background {
+	background-color: $orange;
+  }
+  & &__forum-background {
+  	// background-color: red;
+  }  
  & ul {
  	margin: 0;
  } 
@@ -140,7 +147,20 @@
 /* Blog Pages */
 
 .blog-title__font {
-	font-size: 3.5em;
+	font-size: 5em;
+}
+
+.blog-title--smaller {
+	font-size: .5em;
+	font-style: italic;
+}
+
+h1 .blog-title--smaller-color {
+	color: $lightTan;
+}
+
+h1 .blog-title--bigger {
+	// color: $grey;
 }
 
 .blog-title__margin {
@@ -188,6 +208,10 @@ hr {
 	border-width: 3px;
 }
 
+.thin-hr {
+	border-width: 2px;
+}
+
 section {
   padding: 40px 0;
 }
@@ -223,17 +247,29 @@ h2 {
 // Links
 
 a {
-	color: $link-color;
+	color: black;
 	font-weight: bold;
 	text-decoration: underline;
 }
 
 a:visited {
-	color: $clicked-link-color;
+	color: $lightBlack;
 }
 
 a:hover {
+	color: $linkGrey;
+}
+
+.inverse-link-color {
 	color: white;
+}
+
+.inverse-link-color:visited {
+	color: $grey;
+}
+
+.inverse-link-color:hover {
+	color: $linkGrey;
 }
 
 // Nav Menu Links
@@ -300,6 +336,10 @@ h3 {
 
 header {
 	margin: 0px;
+}
+
+button {
+	cursor: pointer;
 }
 
 button:focus {
@@ -429,6 +469,21 @@ iframe {
 
 .flex-child {
 	margin: auto;
+}
+
+.flex-archive-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-archive-child {
+	flex-grow: 1;
+	flex-basis: 300px;
+	margin: 10px;
+}
+
+.flex-archive-child:empty {
+	height: 0;
 }
 
 .main-button {
@@ -672,7 +727,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 }
 
 .pagebanner-title__margin-archive {
-	padding-top: 150px;
+	padding-top: 100px;
 }
 
 .newsfeed-title {
@@ -689,18 +744,28 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 }
 
 .newsfeed-post-title {
-	font-size: 3em;
+	font-size: 2.7em;
+}
+
+.pagebanner__title--width {
+	width: 70%;
+	margin: auto;
 }
 
 .meta-box {
 	background-color: $grey;
-	opacity: .5;
+	opacity: .8;
 	color: black;
 	border-radius: $border-radius-main;
 	width: 40%;
 	margin: auto;
 	margin-bottom: 15px;
+	margin-top: 15px;
 	padding: 10px;
+}
+
+.meta-box--small-width {
+	width: 25%;
 }
 
 .blog-landing {
@@ -719,12 +784,25 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 	// padding-left: 15%;
 }
 
+.blog-landing ul li a {
+	@extend .inverse-link-color;
+}
+
+.blog-landing ul li a:visited {
+	@extend .inverse-link-color:visited;
+}
+
+.blog-landing ul li a:hover {
+	@extend .inverse-link-color:hover;
+}
+
 .main-content-well {
-	background-color: rgba(255, 255, 255, .7);
+	// background-color: rgba(255, 255, 255, .7);
 	width: 60%;
 	margin: 0 auto;
 	border-radius: $border-radius-small;
 	padding: 50px;
+	padding-top: 15px;
 }
 
 .main-content-well p {

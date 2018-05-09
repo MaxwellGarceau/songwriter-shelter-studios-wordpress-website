@@ -10,7 +10,7 @@
   <?php
   // Custom PHP function to load page banner
   pageBanner([
-    'title' => 'Songwriter Salon Archive'
+    'title' => 'Songwriter Salon <br> <span class="blog-title--smaller">Archive</span>'
   ]);
   // Return to main page
   archiveReturnToMainPage($mainPage);

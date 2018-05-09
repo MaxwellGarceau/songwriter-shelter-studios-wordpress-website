@@ -10,7 +10,7 @@
   <?php
   // Custom PHP function to load page banner
   pageBanner([
-    'title' => 'Modern Music Production And Composition Archive'
+    'title' => 'Modern Music Production And Composition <br> <span class="blog-title--smaller">Archive</span>'
   ]);
   // Return to main page
   archiveReturnToMainPage($mainPage);
