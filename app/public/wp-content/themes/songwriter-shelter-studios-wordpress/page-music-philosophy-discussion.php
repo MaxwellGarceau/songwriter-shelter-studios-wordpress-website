@@ -33,7 +33,6 @@
   }
 ?>
 <button class="user-posts-button" id="user-posts-button">Show My Posts</button>
-<button class="user-posts-button" id="user-create-posts-button">Create A Post</button>
 <div class="user-posts" id="user-posts-area">
   <?php if (is_user_logged_in()) {
     ?>
@@ -61,36 +60,8 @@
     echo '<p>Please log in to see your posts.</p>';
   } ?>
 </div>
-
-
-<!-- Breadcrumb for Parent Pages -->
-<?php 
-    // Resets query from musicPhilForum User to default page query
-    wp_reset_query();
-        ?>
-
-    <h4 class="forum-post-header"><?php echo get_the_title(); ?></h4>   
-    <hr class="forum-post-title__hr">         
-        <?php    
-    $theChild = get_pages(array(
-      'child_of' => get_the_ID()
-    ));
-
-    if ($theParent or $theChild) { 
-      // Links to other blog pages (right side)
-      get_template_part('template-parts/content-pagelinkssidebar');
-      // Archive breadcrumb side list of posts (left side)
-      pageArchiveBreadCrumb([
-          'title' => 'Music Philosophy Forum Archive',
-          'post-type' => 'music-phil-forum',
-          'query' => $musicPhilForum
-        ]); 
-      // Main Content
-      forumMainContent([
-        'query' => $musicPhilForum
-      ]);           
-      ?>
-      <div>
+<button class="user-posts-button" id="user-create-posts-button">Create A Post</button>
+      <div class="user-create-posts" id="user-create-posts-area">
         <h4>Make a Post</h4>
         <?php
         // Attempt 1
@@ -124,6 +95,37 @@
         <br>
         <span class="forum-post-limit-message">Daily Post Limit Reached. Don't worry, you can post tomorrow.</span>
       </div>
+
+
+
+<!-- Breadcrumb for Parent Pages -->
+<?php 
+    // Resets query from musicPhilForum User to default page query
+    wp_reset_query();
+        ?>
+
+    <h4 class="forum-post-header"><?php echo get_the_title(); ?></h4>   
+    <hr class="forum-post-title__hr">         
+        <?php    
+    $theChild = get_pages(array(
+      'child_of' => get_the_ID()
+    ));
+
+    if ($theParent or $theChild) { 
+      // Links to other blog pages (right side)
+      get_template_part('template-parts/content-pagelinkssidebar');
+      // Archive breadcrumb side list of posts (left side)
+      pageArchiveBreadCrumb([
+          'title' => 'Music Philosophy Forum Archive',
+          'post-type' => 'music-phil-forum',
+          'query' => $musicPhilForum
+        ]); 
+      // Main Content
+      forumMainContent([
+        'query' => $musicPhilForum
+      ]);           
+      ?>
+
 <?php echo paginate_links(); ?>
 
     <?php  

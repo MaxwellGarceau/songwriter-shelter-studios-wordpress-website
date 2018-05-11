@@ -397,7 +397,8 @@ p, li {
   font-size: 1.2em; }
 
 .message {
-  color: black; }
+  color: black;
+  background-color: initial; }
 
 .login .message {
   border-left: 0; }
@@ -427,11 +428,17 @@ p, li {
 #nav a:link, #backtoblog a:link {
   color: white; }
 
-#nav a:hover, #backtoblog a:hover {
-  color: #e8e8e8; }
-
 #nav a:visited, #backtoblog a:visited {
   color: #efefef; }
+
+.login #nav a:hover, .login #backtoblog a:hover {
+  color: #777777; }
+
+.login #nav a:active, .login #backtoblog a:active {
+  color: #777777; }
+
+.login #nav a:focus, .login #backtoblog a:focus {
+  box-shadow: none; }
 
 /* My forum-posts */
 .forum-post {
@@ -559,6 +566,9 @@ p, li {
 
 /* Edit/Delete User Posts area */
 .user-posts {
+  display: none; }
+
+.user-create-posts {
   display: none; }
 
 .user-posts__list {

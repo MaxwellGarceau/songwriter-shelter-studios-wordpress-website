@@ -142,6 +142,7 @@
 
 .message {
 	color: black;
+	background-color: initial;
 }
 
 .login .message {
@@ -181,10 +182,18 @@
 	color: white;
 }
 
-#nav a:hover, #backtoblog a:hover {
-	color: $grey;
-}
-
 #nav a:visited, #backtoblog a:visited {
 	color: $darkerWhite;
+}
+
+.login #nav a:hover, .login #backtoblog a:hover {
+	color: $linkGrey;
+}
+
+.login #nav a:active, .login #backtoblog a:active {
+	color: $linkGrey;
+}
+
+.login #nav a:focus, .login #backtoblog a:focus {
+	box-shadow: none;
 }

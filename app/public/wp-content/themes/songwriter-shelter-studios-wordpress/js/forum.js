@@ -15,7 +15,8 @@ jQuery(document).ready(function ($) {
 			this.events();
 		}
 		events() {
-			$('#user-posts-button').on('click', this.toggleUserPosts);			
+			$('#user-posts-button').on('click', this.toggleUserPosts);
+			$('#user-create-posts-button').on('click', this.toggleCreatePosts);			
 			$('#user-forum-posts').on('click', '.delete-forum-post', this.deleteUserPost);
 			$('#user-forum-posts').on('click', '.update-forum-post', this.updateUserPost.bind(this));
 			$('#user-forum-posts').on('click', '.edit-forum-post', this.editUserPost.bind(this));
@@ -31,6 +32,15 @@ jQuery(document).ready(function ($) {
 				$('#user-posts-button').html('Show My Posts');
 			}
 		}
+		toggleCreatePosts() {
+			if ($('#user-create-posts-button').html() == 'Create A Post') {
+				$('#user-create-posts-area').slideDown(1000);
+				$('#user-create-posts-button').html('Cancel');
+			} else {
+				$('#user-create-posts-area').slideUp();
+				$('#user-create-posts-button').html('Create A Post');
+			}
+		}		
 		editUserPost(e) {
 			const thisPost = $(e.target).parents('li');
 			if (thisPost.data('state') == 'editable') {
