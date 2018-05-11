@@ -46,28 +46,29 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav m-auto">  
+            <!-- Production Studio Website Menu -->
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#home') ?>">Home</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#home') ?>">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#services') ?>">Services</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#services') ?>">SERVICES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#my-work') ?>">My Work</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#my-work') ?>">MY WORK</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#testimonials') ?>">Testimonials</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#testimonials') ?>">TESTIMONIALS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#about') ?>">About</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#about') ?>">ABOUT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#request-a-quote') ?>">Request A Quote</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('#request-a-quote') ?>">REQUEST A QUOTE</a>
             </li>   
             <!-- Navigation for Blogs -->   
             <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages') ?>">Blogs<span class="fa fa-angle-down"></span></a>
+              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages') ?>">BLOGS<span class="fa fa-angle-down"></span></a>
               <ul class="itemdown">
                 <li>
                   <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-salon-music-philosophy-in-the-21st-century') ?>">Songwriter Salon</a>
@@ -82,7 +83,7 @@
             </li>
             <!-- Navigation for Forum -->
             <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-forum') ?>">Forum<span class="fa fa-angle-down"></span></a>
+              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-forum') ?>">FORUM<span class="fa fa-angle-down"></span></a>
               <ul class="itemdown">
                 <li>
                   <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/music-philosophy-discussion') ?>">Music Philosophy Discussion</a>
@@ -97,11 +98,17 @@
                   <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/off-topic') ?>">Off Topic</a>
                 </li>                
             </ul>
-            </li>              
+            </li>   
+            <!-- Live Search -->             
             <li class="nav-item">
               <a href="<?php echo esc_url(site_url('/search')); ?>" class="nav-link js-search-trigger"><span class="fa fa-search" aria-hidden="true"></span></a>
-            </li>                                                        
+            </li> 
+
           </ul>
+            <!-- User Name Display -->
+             <?php userRegNameDisplay(); ?>            
+            <!-- User Registration/Login Button -->   
+              <?php userRegButton(); ?>             
         </div>
       </div>
     </nav>

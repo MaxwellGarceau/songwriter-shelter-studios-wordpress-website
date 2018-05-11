@@ -88,3 +88,9 @@
 [08-May-2018 22:44:28] NOTICE: exiting, bye-bye!
 [09-May-2018 14:42:29] NOTICE: fpm is running, pid 25
 [09-May-2018 14:42:29] NOTICE: ready to handle connections
+[10-May-2018 14:55:59] NOTICE: fpm is running, pid 8
+[10-May-2018 14:55:59] NOTICE: ready to handle connections
+[10-May-2018 14:56:04] NOTICE: Terminating ...
+[10-May-2018 14:56:04] NOTICE: exiting, bye-bye!
+[10-May-2018 14:56:08] NOTICE: fpm is running, pid 29
+[10-May-2018 14:56:08] NOTICE: ready to handle connections

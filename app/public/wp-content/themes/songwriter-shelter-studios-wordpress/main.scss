@@ -59,11 +59,11 @@
 /* Page Links */
 
 .page-background {
-	// background-color: black;
+	background-color: black;
 	background-image: url('./images/wood-background-2-min-darker.jpg');
-	// background-image: url('./images/wood-background-1.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 .archive-title .min-list, .page-links .min-list {
@@ -272,7 +272,11 @@ a:hover {
 	color: $linkGrey;
 }
 
-// Nav Menu Links
+// Navbar Menu
+
+.navbar {
+    padding: .85rem 1rem;	
+}
 
 nav a {
 	text-decoration: none;
@@ -303,6 +307,42 @@ ul li.dropdown:hover .itemdown {
 	background-color: rgba(0, 0, 0, 0.5);
 	// padding-top: 8px;
 	// margin-top: 8px;
+}
+
+.navbar-bg-color {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.m-auto {
+	margin: auto;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	font-size: 1.05em;
+	// letter-spacing: 1px;
+	color: $darkerWhite;
+	transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	-webkit-transition: opacity .3s ease-in-out;	
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: $grey;
+	opacity: .5;
+}
+
+@media (min-width: 992px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+	    padding-right: .9rem;
+	    padding-left: .9rem;
+	}	
+}
+
+
+@media (min-width: 1200px) {
+	.container {
+	    max-width: 100%;
+	}	
 }
 
 .hidden {
@@ -371,6 +411,7 @@ button:focus {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-attachment: fixed;
 	padding-bottom: 200px;	
 }
 
@@ -408,6 +449,7 @@ iframe {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-attachment: fixed;
 	// filter: brightness(70%) grayscale(25%);			
 }
 
@@ -417,7 +459,6 @@ iframe {
 	line-height: $large-line-height;
 	letter-spacing: $wide-letter-spacing;		
 }
-
 
 #about p {
 	background-color: initial;
@@ -451,7 +492,8 @@ iframe {
 	background-image: url('http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/request-a-quote-background.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center top;	
+	background-position: center top;
+	background-attachment: fixed;	
 }
 
 /* Pictures */
@@ -495,10 +537,6 @@ iframe {
 
 .main-button__lg-font {
 	font-size: $lg-btn-font;
-}
-
-.navbar-bg-color {
-	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .well__title {
@@ -768,33 +806,92 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 	width: 25%;
 }
 
+/* Blog Landing */
+
 .blog-landing {
 	width: 60%;
 	margin: 0 auto;
 	padding: 50px;
 	margin-bottom: 150px;
+	padding-top: 0;
 }
+
+.blog-landing__well {
+	// background-color: rgba(0, 0, 0, 1);
+	background-color: $orange;
+	padding: 10px;
+	padding-bottom: 35px;
+	border-radius: $border-radius-small;
+}
+
+.blog-landing__list .page_item {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  // max-height: 70px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 1.4em;
+}
+
 
 .blog-landing ul {
 	list-style: none;
 	padding-left: 0;
+	// display: table;
+	margin: auto;
+	margin-bottom: 30px;
 	// text-align: left;
 }
 .blog-landing ul li {
-	// padding-left: 15%;
+	// display: table-cell;
+	padding: 0 15px;
+	// float: left;
+	margin: auto;
+	color: black;
+}
+
+.blog-landing ul li:last-child {
+	margin-top: 33px;
 }
 
 .blog-landing ul li a {
-	@extend .inverse-link-color;
+	color: black;
+	text-align: center;
+	text-decoration: none;
 }
 
 .blog-landing ul li a:visited {
-	@extend .inverse-link-color:visited;
+	color: $lightBlack;
 }
 
 .blog-landing ul li a:hover {
 	@extend .inverse-link-color:hover;
 }
+
+@media (min-width: 900px) {
+	.blog-landing__list .page_item {
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 33.333333%;
+	    flex: 0 0 33.333333%;
+	    max-width: 33.333333%;
+	}
+}
+@media (max-width: 900px) {
+	.blog-landing ul li {
+		margin-bottom: 20px;
+	}	
+	.blog-landing ul li:last-child {
+		margin-top: 0;
+		margin-bottom: 0;
+	}	
+	.blog-landing__well {
+		padding-bottom: 15px;
+	}
+	.display-none--900 {
+		display: none;
+	}	
+}		
 
 .main-content-well {
 	// background-color: rgba(255, 255, 255, .7);

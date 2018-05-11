@@ -27,16 +27,44 @@
 
 <!-- Blog Page Listings (PUT IMAGES HERE AND LINK TO THE IMAGES) -->
 <div class="blog-landing">
-  <h2>Blog Pages</h2>
-  <?php userRegistrationButtons(); ?>
-<ul>
+<!--   <h2 class="no__padding-top">Blog Pages</h2> -->
+  <div class="container">
+<ul class="blog-landing__list blog-landing__well row">
 <?php 
    wp_list_pages([
-    'child_of' => 44,
+    'child_of' => get_the_ID(),
     'title_li' => NULL
   ]);
 ?>
 </ul>
+<div class="row display-none--900">
+    <?php 
+    $blogPostTypes = ['songwriter-salon', 'songwriter-advice', 'production-tutorials'];
+
+    foreach($blogPostTypes as $postType) {
+      $recentPosts = wp_get_recent_posts([
+        'numberposts' => 1,
+        'post_type' => $postType
+      ]);
+      ?>
+    <div class="col-sm-3">
+      <h6>Recent Posts</h6>
+<a class="inverse-link-color" href="<?php echo get_permalink($recentPosts[0]['ID']) ?>">
+  <div class="font-italic smaller-font">
+      <?php
+      echo $recentPosts[0]['post_title'];
+      ?>    
+  </div>      
+</a>
+    </div>  
+      <?php
+    }
+
+ 
+    ?>
+
+</div>
+</div>
 </div>
 
 <?php echo paginate_links(); ?>

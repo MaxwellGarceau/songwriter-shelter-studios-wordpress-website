@@ -7,6 +7,7 @@ require get_theme_file_path('/inc/upvote.php');
 // Custom Function Includes
 require get_theme_file_path('/inc/upvote-button.php');
 require get_theme_file_path('/inc/user-registration-buttons.php');
+require get_theme_file_path('/inc/user-registration-name-display.php');
 
 function songwriter_custom_rest() {
 	register_rest_field('post', 'categoryName', [
@@ -501,14 +502,15 @@ function sanitizeForumPosts($data, $postArr) {
 add_filter('wp_insert_post_data', 'sanitizeForumPosts', 10, 2);
 
 
-// Display custom post types in author archive
-function post_types_author_archives($query) {
-    if ($query->is_author)
-            // Add 'books' CPT and the default 'posts' to display in author's archive
-            $query->set( 'post_type', ['songwriter-salon', 'songwriter-advice', 'production-tutorials', 'Post']);
-            // $query->set( 'post_type', ['songwriter-advice', 'posts']);
-    remove_action( 'pre_get_posts', 'custom_post_author_archive' );
-}
+// // Display custom post types in author archive
+// function post_types_author_archives($query) {
+// 	    if ($query->is_author) {
+// 	            // Add 'books' CPT and the default 'posts' to display in author's archive
+// 	            $query->set( 'post_type', ['songwriter-salon', 'songwriter-advice', 'production-tutorials', 'Post']);
+// 	    	// $query->set( 'post_type', ['music-phil-forum']);
+// 	    remove_action( 'pre_get_posts', 'custom_post_author_archive' );    	
+// 	}
+// }
 
-add_action('pre_get_posts', 'post_types_author_archives');
+// add_action('pre_get_posts', 'post_types_author_archives');
     

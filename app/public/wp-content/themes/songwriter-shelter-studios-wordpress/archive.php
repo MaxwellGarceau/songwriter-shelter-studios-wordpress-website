@@ -9,7 +9,7 @@
     'title' => get_the_archive_title()
   ]);
   // Main content
-  get_template_part('/template-parts/archivecontent-maincontent'); 
+  get_template_part('/template-parts/archivecontent-authormaincontent'); 
 ?>
 
 </section>

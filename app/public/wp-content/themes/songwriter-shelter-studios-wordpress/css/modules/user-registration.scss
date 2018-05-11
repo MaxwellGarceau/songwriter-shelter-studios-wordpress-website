@@ -7,40 +7,30 @@
 
 .login-text {
 	// font-family: breathe fire;
-	font-size: 3em;
-	margin: 0 auto; 
-	text-align: center; 
-	display: table-cell; 
-	padding-left: 300px;
+	font-size: 1rem;
+	// margin: 0 auto; 
+	// text-align: center; 
+	// display: table-cell; 
+	// padding-left: 300px;
 	color: white;
 }
 
-.login-button {
-	/*float: right;*/
-	/*margin-left: 300px;*/
-	display: table-cell;
-	text-align: right;
-	/*margin-right: 300px;*/
-	/*margin-left: 200px;*/
+.nav-reg__button {
+	background-color: black;
+	color: white;
+	border-radius: 25px;
+	// margin-bottom: 10px;
+	// margin-right: 5px;
+	// padding: 8px;
+	padding: 0;
+	width: 70px;	
+	// transition: background-color 1s ease;
+	transition: .6s ease;
 }
 
-.user-login {
-	/*margin-left: 30px;*/
+.nav-reg__button:hover {
+	background-color: white;
 	color: black;
-	border-radius: 25px;
-	margin-bottom: 10px;
-	margin-right: 50px;
-	padding: 8px;
-	width: 85px;
-}
-
-.user-signup {
-	color: black;
-	border-radius: 25px;
-	margin-bottom: 10px;
-	margin-right: 5px;
-	padding: 8px;
-	width: 85px;	
 }
 
 .signup-link {
@@ -48,12 +38,42 @@
 }
 
 .site-header__avatar {
-	margin-right: 70px;
+	// margin-right: 70px;
 	/*margin-left: 52px;*/
 	/*border-radius: 25px;*/
 /*	border-style: solid;
 	border-width: 2px;
 	border-color: white;*/
+	// padding: 0;
+
+	& img {
+		border-radius: 12px;
+	}
+}
+
+.nav-reg__position {
+	position: absolute;
+}
+
+.nav-reg__right-elem {
+	right: 0;
+}
+
+.nav-reg__left-elem {
+	right: 80px;
+}
+
+.nav-reg__user-name {
+	right: 140px;
+}
+
+@media (max-width: 991px) {
+	.nav-reg__position {
+		position: initial;
+	}
+	.nav-reg__user-name--mobile-display-none {
+		display: none;
+	}
 }
 
 /* Login/Signup Screen */
@@ -69,6 +89,18 @@
 
 .login {
 	background-color: #212121;
+	background-image: url('./images/wood-background-2-min-darker.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#login p {
+	width: initial;
+}
+
+#login h1 {
+	color: white;
 }
 
 #loginform, #registerform {
@@ -106,4 +138,53 @@
 .register {
 	// font-family: breathe fire;	
 	font-size: 1.2em;
+}
+
+.message {
+	color: black;
+}
+
+.login .message {
+	border-left: 0;
+}
+
+.login h1 a {
+	background-image: url('images/logo.png');
+	background-size: 320px auto;
+	height: 180px;
+	border-radius: $border-radius-main;
+}
+
+#wp-submit {
+	// background-color: $darkOrange;
+	background-color: white;
+	color: black;
+    border-radius: 25px;
+    transition: .6s ease;	
+}
+
+#wp-submit:hover {
+	// background-color: $darkOrange;
+	background-color: black;
+	color: white;
+}
+
+#lostpasswordform {
+	background-color: black;
+}
+
+#lostpasswordform label {
+	color: white;
+}
+
+#nav a:link, #backtoblog a:link {
+	color: white;
+}
+
+#nav a:hover, #backtoblog a:hover {
+	color: $grey;
+}
+
+#nav a:visited, #backtoblog a:visited {
+	color: $darkerWhite;
 }

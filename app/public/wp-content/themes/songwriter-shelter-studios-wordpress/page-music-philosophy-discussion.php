@@ -33,6 +33,7 @@
   }
 ?>
 <button class="user-posts-button" id="user-posts-button">Show My Posts</button>
+<button class="user-posts-button" id="user-create-posts-button">Create A Post</button>
 <div class="user-posts" id="user-posts-area">
   <?php if (is_user_logged_in()) {
     ?>
