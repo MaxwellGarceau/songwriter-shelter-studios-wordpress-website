@@ -66,6 +66,14 @@
 	background-attachment: fixed;
 }
 
+.forum-background {
+	background-color: black;
+	background-image: url('./images/black-and-white-gray-guitar.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;	
+}
+
 .archive-title .min-list, .page-links .min-list {
 	list-style: none;
 	padding: 0;
@@ -142,6 +150,10 @@
 
 .side-list__float-left {
 	float: left;
+}
+
+.side-list__float-right {
+	float: right;
 }
 
 /* Blog Pages */
@@ -624,6 +636,10 @@ iframe {
 }
 
 // General
+
+.justify--center {
+	justify-content: center;
+}
 
 .darker-color {
 	filter: contrast(80%);

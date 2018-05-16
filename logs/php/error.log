@@ -273,3 +273,93 @@ Stack trace:
 [09-May-2018 18:28:12 UTC] PHP Parse error:  syntax error, unexpected ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 508
 [10-May-2018 14:56:04 UTC] WordPress database error Query execution was interrupted for query SELECT option_value FROM wp_options WHERE option_name = '_site_transient_update_core' LIMIT 1 made by include('phar:///usr/local/bin/wp/php/boot-phar.php'), include('phar:///usr/local/bin/wp/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->_run_command_and_exit, WP_CLI\Runner->run_command, WP_CLI\Dispatcher\Subcommand->invoke, call_user_func, WP_CLI\Dispatcher\CommandFactory::WP_CLI\Dispatcher\{closure}, call_user_func, Core_Command->check_update, Core_Command->get_updates, wp_version_check, get_site_transient, get_site_option, get_network_option, get_option
 [10-May-2018 14:56:04 UTC] PHP Warning:  Error while sending QUERY packet. PID=331 in /app/public/wp-includes/wp-db.php on line 1924
+[12-May-2018 00:30:39 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-shelter-forum.php on line 18
+[12-May-2018 00:32:02 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-shelter-forum.php on line 18
+[12-May-2018 00:32:04 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-shelter-forum.php on line 18
+[12-May-2018 00:34:47 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-shelter-forum.php on line 18
+[13-May-2018 16:02:24 UTC] WordPress database error Query execution was interrupted for query SELECT option_value FROM wp_options WHERE option_name = 'wpforms_debug' LIMIT 1 made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, WPForms_Logging->register_post_type, wpforms_debug, get_option
+[13-May-2018 16:02:24 UTC] PHP Warning:  Error while sending QUERY packet. PID=20 in /app/public/wp-includes/wp-db.php on line 1924
+[14-May-2018 16:55:03 UTC] WordPress database error Query execution was interrupted for query SELECT option_value FROM wp_options WHERE option_name = 'members_settings' LIMIT 1 made by include('phar:///usr/local/bin/wp/php/boot-phar.php'), include('phar:///usr/local/bin/wp/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), include_once('/plugins/members/members.php'), members_plugin, Members_Plugin::get_instance, Members_Plugin->includes, require_once('/plugins/members/inc/functions-users.php'), members_explicitly_deny_caps, members_get_setting, get_option
+[14-May-2018 16:55:03 UTC] PHP Warning:  Error while sending QUERY packet. PID=714 in /app/public/wp-includes/wp-db.php on line 1924
+[15-May-2018 17:37:52 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 137
+[15-May-2018 17:38:38 UTC] PHP Parse error:  syntax error, unexpected 'the_permalink' (T_STRING), expecting ',' or ')' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 137
+[15-May-2018 22:05:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:221
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php(90): forumPostCreateDeleteModifyButtons()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 221
+[15-May-2018 22:05:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:221
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php(90): forumPostCreateDeleteModifyButtons()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 221
+[15-May-2018 22:06:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:221
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php(90): forumPostCreateDeleteModifyButtons()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 221
+[15-May-2018 22:06:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:221
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php(90): forumPostCreateDeleteModifyButtons()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 221
+[15-May-2018 22:19:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function WP_Query() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php:28
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php on line 28
+[15-May-2018 22:19:39 UTC] PHP Recoverable fatal error:  Object of class WP_Query could not be converted to string in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php on line 29
+[15-May-2018 22:20:02 UTC] PHP Parse error:  syntax error, unexpected ''author'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php on line 29
+[15-May-2018 22:29:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get__current_user_id() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php:11
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php(60): wpForumQueryCreator('music-phil-foru...')
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-music-philosophy-discussion.php on line 11
+[15-May-2018 22:50:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_post_type() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:197
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-shelter-forum.php(107): forumCategorySubtitle()
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 197
+[15-May-2018 23:14:39 UTC] PHP Warning:  require(single-forum-posts): failed to open stream: No such file or directory in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-music-phil-forum.php on line 1
+[15-May-2018 23:14:39 UTC] PHP Fatal error:  require(): Failed opening required 'single-forum-posts' (include_path='.:/usr/share/php:/www/wp-content/pear') in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-music-phil-forum.php on line 1
+[15-May-2018 23:15:56 UTC] PHP Warning:  require(/app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-forum-posts): failed to open stream: No such file or directory in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-music-phil-forum.php on line 1
+[15-May-2018 23:15:56 UTC] PHP Fatal error:  require(): Failed opening required '/app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-forum-posts' (include_path='.:/usr/share/php:/www/wp-content/pear') in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/single-music-phil-forum.php on line 1
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to assign property of non-object in /app/public/wp-includes/post.php on line 1450
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to modify property of non-object in /app/public/wp-includes/post.php on line 1459
+[15-May-2018 23:32:00 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /app/public/wp-includes/post.php on line 1475
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to assign property of non-object in /app/public/wp-includes/post.php on line 1476
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to assign property of non-object in /app/public/wp-includes/post.php on line 1450
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to modify property of non-object in /app/public/wp-includes/post.php on line 1459
+[15-May-2018 23:32:00 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /app/public/wp-includes/post.php on line 1475
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to assign property of non-object in /app/public/wp-includes/post.php on line 1476
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to assign property of non-object in /app/public/wp-includes/post.php on line 1450
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to modify property of non-object in /app/public/wp-includes/post.php on line 1459
+[15-May-2018 23:32:00 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /app/public/wp-includes/post.php on line 1475
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to assign property of non-object in /app/public/wp-includes/post.php on line 1476
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to assign property of non-object in /app/public/wp-includes/post.php on line 1450
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to modify property of non-object in /app/public/wp-includes/post.php on line 1459
+[15-May-2018 23:32:00 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /app/public/wp-includes/post.php on line 1475
+[15-May-2018 23:32:00 UTC] PHP Warning:  Attempt to assign property of non-object in /app/public/wp-includes/post.php on line 1476
+[15-May-2018 23:32:29 UTC] PHP Parse error:  syntax error, unexpected ''label'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 214
+[15-May-2018 23:33:09 UTC] PHP Parse error:  syntax error, unexpected ''label'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 214
+[15-May-2018 23:34:36 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 241

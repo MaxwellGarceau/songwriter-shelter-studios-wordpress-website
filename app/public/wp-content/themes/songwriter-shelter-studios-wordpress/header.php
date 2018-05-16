@@ -83,21 +83,7 @@
             </li>
             <!-- Navigation for Forum -->
             <li class="nav-item dropdown">
-              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-forum') ?>">FORUM<span class="fa fa-angle-down"></span></a>
-              <ul class="itemdown">
-                <li>
-                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/music-philosophy-discussion') ?>">Music Philosophy Discussion</a>
-                </li>
-                <li>
-                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/music-production-discussion') ?>">Music Production Discussion</a>
-                </li>
-                <li>
-                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriting-discussion') ?>">Songwriting Discussion</a>
-                </li>
-                <li>
-                  <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/off-topic') ?>">Off Topic</a>
-                </li>                
-            </ul>
+              <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-forum') ?>">FORUM</a>
             </li>   
             <!-- Live Search -->             
             <li class="nav-item">

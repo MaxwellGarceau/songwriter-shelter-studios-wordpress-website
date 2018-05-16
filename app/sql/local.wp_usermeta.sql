@@ -47,4 +47,7 @@ INSERT INTO `wp_usermeta` VALUES
 (44,2,"wp_user_level","0"),
 (45,2,"default_password_nag",""),
 (52,1,"closedpostboxes_music-phil-forum","a:0:{}"),
-(53,1,"metaboxhidden_music-phil-forum","a:3:{i:0;s:6:\"acf_78\";i:1;s:6:\"acf_64\";i:2;s:7:\"slugdiv\";}");
+(53,1,"metaboxhidden_music-phil-forum","a:3:{i:0;s:6:\"acf_78\";i:1;s:6:\"acf_64\";i:2;s:7:\"slugdiv\";}"),
+(55,1,"session_tokens","a:2:{s:64:\"5fc9d36076fbe94f80fc9fb42cc66d42b721f5f8ffbd8f6acffb7b31525013d1\";a:4:{s:10:\"expiration\";i:1526477353;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36\";s:5:\"login\";i:1526304553;}s:64:\"157f3a9428ceb9847afad8c4a8eb1d2bcdf6e17f2325cc23982bf0d98b7aa4ee\";a:4:{s:10:\"expiration\";i:1526525938;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36\";s:5:\"login\";i:1526353138;}}"),
+(56,1,"closedpostboxes_song-discuss-forum","a:0:{}"),
+(57,1,"metaboxhidden_song-discuss-forum","a:3:{i:0;s:6:\"acf_78\";i:1;s:6:\"acf_64\";i:2;s:7:\"slugdiv\";}");

@@ -121,25 +121,140 @@ function forumMainContent($args = []) {
 	<!-- Post Body -->
 	<div class="forum-post newsfeed-well__background-color">
 
+<!-- Forum Post Type Pic -->
+<div class="forum-post__icons-container forum-post__icons-container forum-post__icons-container--category-pic">
+	<span class="forum-post__icons"><i class="fa <?php echo forumCategoryPic(); ?> forum-post__icons--category"></i></span>
+	<br>
+	<span class="forum-post__icons--subtitle"><?php echo forumCategorySubtitle(); ?></span>
+</div>
+
+<!-- Comments pic -->
+<div class="forum-post__icons-container forum-post__icons-container forum-post__icons-container--comments">
+	<span class="forum-post__icons">
+	<?php 
+	if (get_comments_number() == 0) { ?> 
+		<a href="<?php the_permalink(); ?>"><?php comments_number('Be the first to comment!', '1', '%') ?></a> <?php 
+	} else {
+		comments_number('Be the first to comment!', '1', '%');
+	} ?>
+	 &nbsp;&nbsp;<i class="fa fa-comments forum-post__icons--comments"></i>
+	</span>
+</div>
+
+<!-- View Count Per Post -->
+<div class="forum-post__icons-container forum-post__icons-container forum-post__icons-container--views">
+	<span class="forum-post__icons">
+		<?php if (get_post_meta(get_the_ID(), 'post_views_count', true) != 0) {
+			echo get_post_meta(get_the_ID(), 'post_views_count', true);
+		} else {
+			echo '0';
+		} ?>&nbsp;&nbsp;<i class="fa fa-eye forum-post__icons--views"></i>
+	</span>
+</div>	
+
 	<div class="generic-content forum-post__well">
 
 	<div>
-		<h6 class="forum-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-	  	<span>Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span>
+		<h6 class="forum-post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+	  	<span class="forum-post__author">Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span>
 	</div>
 <br>
+<div class="forum-post__content">
 	<?php if(empty(get_the_content())) {
 		echo custom_field_excerpt('main_body_content');
 	} else {
 		the_excerpt();
 	} ?>
-	<br>
-	<span><a href="<?php the_permalink(); ?>">Full Post &raquo;</a></span>
-	</div>
+</div>
+<!-- 	<br>
+	<div class="forum-post__full-post"><a href="<?php the_permalink(); ?>">Full Post &raquo;</a></div> -->
 	</div>
 	</div>
 	<?php
 	}	
+	?>	
+	</div>
+<?php
+}
+
+// Switch Statement for forum post type category pic
+function forumCategoryPic() {
+	switch(get_post_type()) {
+		case 'music-phil-forum':
+		return 'fa-book';
+		case 'song-discuss-forum':
+		return 'fa-music';
+		case 'music-prod-forum':
+		return 'fa-headphones';
+		case 'off-topic-forum':
+		return 'fa-paper-plane';
+	}
+}
+
+// Subtitle for forum post type category pic
+function forumCategorySubtitle() {
+	switch(get_post_type()) {
+		case 'music-phil-forum':
+		return 'Music Philosophy';
+		case 'song-discuss-forum':
+		return 'Songwriting';
+		case 'music-prod-forum':
+		return 'Music Production';
+		case 'off-topic-forum':
+		return 'Off Topic';
+	}
+}
+
+// Forum create, edit, delete buttons
+
+function forumPostCreateDeleteModifyButtons($postTypeQuery) {
+	$postTypeQuery->the_post();
+	?>
+          <!-- Forum Button Start -->
+          <!-- needs argument for 1) query type for while loop 2) post type for ajax request  -->
+          <i class="forum-button__caption">Manage your <?php echo forumCategorySubtitle(get_post_type()); ?> posts</i>
+          <br>
+            <button class="user-posts-button forum-button user-posts-button__show" id="user-posts-button">Show My Posts</button>
+            <div class="user-posts user-posts-area__show" id="user-posts-area">
+                <?php if (is_user_logged_in()) {
+    ?>
+                <ul class="user-posts__list user-forum-posts" id="user-forum-posts">
+                    <?php while($postTypeQuery->have_posts()) {
+    $postTypeQuery->the_post();
+    ?>
+                    <!-- User Posts -->
+                    <li data-id="<?php the_ID(); ?>" data-post-type="<?php echo get_post_type(); ?>">
+                        <input readonly class="user-posts__title" value="<?php echo esc_attr(get_the_title()); ?>">
+                        <br>
+                        <textarea readonly class="user-posts__content">
+                            <?php echo esc_attr(get_the_content()); ?>
+                        </textarea>
+                        <br>
+                        <span class="edit-forum-post"><i class="fa fa-pencil" aria-hidden="true"> Edit</i></span>
+                        <span class="delete-forum-post"><i class="fa fa-trash-o" aria-hidden="true"> Delete</i></span>
+                        <span class="update-forum-post"><i class="fa fa-arrow-right" aria-hidden="true"> Save</i></span>
+                        <hr class="user-posts__hr">
+                    </li>
+                    <?php
+  } ?>
+                </ul>
+                <?php } else {
+    echo '<p>Please log in to see your posts.</p>';
+  } ?>
+            </div>
+            <button class="user-posts-button forum-button user-posts-button__create" id="user-create-posts-button">Create A Post</button>
+            <div data-post-type="<?php echo get_post_type(); ?>" class="user-create-posts user-posts-area__create" id="user-create-posts-area">
+                <h4>Make a Post</h4>
+
+                    <input placeholder="Title" class="new-forum-post-title">
+                    <hr class="forum-post-title__hr">
+                    <textarea placeholder="Your post here..." class="new-forum-post-body-field"></textarea>
+                    <span class="create-forum-post">Create Post</span>
+                    <br>
+                    <span class="forum-post-limit-message">Daily Post Limit Reached. Don't worry, you can post tomorrow.</span>
+            </div>  
+            <!-- Forum Button End -->  	
+            <?php
 }
 
 // Main Content for forum singles
@@ -159,11 +274,14 @@ function forumSingleMainContent($args = []) {
 
 ?>
 	<div class="main-content-well newsfeed__margin newsfeed-well__width newsfeed-well__background-color">
-		<?php if (has_post_thumbnail()) { ?>
 
+		<h2 class="forum-single__title">
+			<?php the_title(); ?>
+		</h2>
 
+	<?php if (has_post_thumbnail()) { ?>
 
-			<div class="generic-content main-content-well newsfeed-well__width container">
+			<div class="generic-content main-content-well newsfeed-well__width container forum-single__well">
 				<div class="row">
 					<div class="row">
 						<div class="col-sm-4">
@@ -194,7 +312,7 @@ function forumSingleMainContent($args = []) {
 
 					
 		<?php } else { ?>
-			<div class="generic-content main-content-well newsfeed-well__width">		
+			<div class="generic-content main-content-well newsfeed-well__width forum-single__well">		
 			<?php 
 				if(empty(get_the_content())) {
 					echo get_field('main_body_content');
@@ -247,8 +365,13 @@ function pageArchiveBreadCrumb($args = []) {
 	if (!$args['query']) {
 		$args['query'] = $defaultQuery;
 	}
+	if (!$args['float-right']) {
+		$args['float-right'] = '';
+	} else {
+		$args['float-right'] = 'side-list__float-right';
+	}
 	?>
-	<div class="page-links side-list__float-left">
+	<div class="page-links side-list__float-left <?php echo $args['float-right']; ?>">
         <!-- Maybe link title of Side List to archive for the current post type -->
       <div class="page-links__title page-links__main-background"><a href="<?php echo get_post_type_archive_link($args['post-type']) ?>"><?php echo $args['title'] ?></a></div>
       <ul class="min-list">
@@ -410,6 +533,20 @@ function singleRelatedPostLinkBack($query, $title) {
 	}
 }
 
+// Add up number of views per post
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 1;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '1');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
 // Load styles and scripts
 function songwriter_files() {
 	// Scripts
@@ -463,6 +600,20 @@ function songwriter_title() {
 }
 
 add_action('after_setup_theme', 'songwriter_title');
+
+// // Custom single template for forum singles
+
+// function forumSingleTemplate($template) {
+
+//   $cpt = [ 'america', 'nepal', 'norway' ];
+
+//   return in_array( get_queried_object()->post_type, $cpt, true )
+//     ? 'path/to/country-single.php'
+//     : $template;
+
+// } 
+
+// add_filter( 'single_template', 'forumSingleTemplate');
 
 // Change default URL Queries
 

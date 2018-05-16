@@ -15,30 +15,32 @@ jQuery(document).ready(function ($) {
 			this.events();
 		}
 		events() {
-			$('#user-posts-button').on('click', this.toggleUserPosts);
-			$('#user-create-posts-button').on('click', this.toggleCreatePosts);			
-			$('#user-forum-posts').on('click', '.delete-forum-post', this.deleteUserPost);
-			$('#user-forum-posts').on('click', '.update-forum-post', this.updateUserPost.bind(this));
-			$('#user-forum-posts').on('click', '.edit-forum-post', this.editUserPost.bind(this));
+			// $('#user-posts-button').on('click', this.toggleUserPosts);
+			$('.user-posts-button__show').on('click', this.toggleUserPosts);
+			$('.user-posts-button__create').on('click', this.toggleCreatePosts);			
+			$('.user-forum-posts').on('click', '.delete-forum-post', this.deleteUserPost);
+			$('.user-forum-posts').on('click', '.update-forum-post', this.updateUserPost.bind(this));
+			$('.user-forum-posts').on('click', '.edit-forum-post', this.editUserPost.bind(this));
 			$('.create-forum-post').on('click', this.createForumPost.bind(this));
 		}
-		toggleUserPosts() {
-			// $('#user-posts-area').toggleClass('user-posts--hidden');
-			if ($('#user-posts-button').html() == 'Show My Posts') {
-				$('#user-posts-area').slideDown(1000);
-				$('#user-posts-button').html('Hide My Posts');
+		toggleUserPosts(e) {
+			const thisSection = $(e.target).parents('.forum-master-container__subsection');
+			if (thisSection.find('.user-posts-button__show').html() == 'Show My Posts') {
+				thisSection.find('.user-posts-area__show').slideDown(1000);
+				thisSection.find('.user-posts-button__show').html('Hide My Posts');
 			} else {
-				$('#user-posts-area').slideUp();
-				$('#user-posts-button').html('Show My Posts');
-			}
+				thisSection.find('.user-posts-area__show').slideUp();
+				thisSection.find('.user-posts-button__show').html('Show My Posts');
+			}		
 		}
-		toggleCreatePosts() {
-			if ($('#user-create-posts-button').html() == 'Create A Post') {
-				$('#user-create-posts-area').slideDown(1000);
-				$('#user-create-posts-button').html('Cancel');
+		toggleCreatePosts(e) {
+			const thisSection = $(e.target).parents('.forum-master-container__subsection');
+			if (thisSection.find('.user-posts-button__create').html() == 'Create A Post') {
+				thisSection.find('.user-posts-area__create').slideDown(1000);
+				thisSection.find('.user-posts-button__create').html('Cancel');
 			} else {
-				$('#user-create-posts-area').slideUp();
-				$('#user-create-posts-button').html('Create A Post');
+				thisSection.find('.user-posts-area__create').slideUp();
+				thisSection.find('.user-posts-button__create').html('Create A Post');
 			}
 		}		
 		editUserPost(e) {
@@ -62,19 +64,22 @@ jQuery(document).ready(function ($) {
 			thisPost.data('state', 'cancel');
 		}
 		deleteUserPost(e) {
+			const thisSection = $(e.target).parents('.forum-master-container__subsection');
 			const thisPost = $(e.target).parents('li');
+
 			$.ajax({
 				beforeSend: (xhr) => {
 					xhr.setRequestHeader('X-WP-Nonce', songwriterData.nonce);
 				},
-				url: songwriterData.root_url + '/wp-json/wp/v2/music-phil-forum/' + thisPost.data('id'),
+				// Need to make 'music-phil-forum' dynamic depending on button clicked
+				url: songwriterData.root_url + '/wp-json/wp/v2/' + thisPost.data('post-type') + '/' + thisPost.data('id'),
 				type: 'DELETE',
 				success: (response) => {
 					thisPost.slideUp();
 					console.log('congrats');
 					console.log(response);
 					if (response.userPostCount < 5) {
-						$('.forum-post-limit-message').fadeOut();
+						thisSection.find('.forum-post-limit-message').fadeOut();
 					}
 				},
 				error: (response) => {
@@ -95,7 +100,8 @@ jQuery(document).ready(function ($) {
 				beforeSend: (xhr) => {
 					xhr.setRequestHeader('X-WP-Nonce', songwriterData.nonce);
 				},
-				url: songwriterData.root_url + '/wp-json/wp/v2/music-phil-forum/' + thisPost.data('id'),
+				// Need to make 'music-phil-forum' dynamic depending on button clicked
+				url: songwriterData.root_url + '/wp-json/wp/v2/' + thisPost.data('post-type') + '/' + thisPost.data('id'),
 				type: 'POST',
 				data: ourUpdatedPost,
 				success: (response) => {
@@ -110,9 +116,11 @@ jQuery(document).ready(function ($) {
 			});
 		}
 		createForumPost(e) {
+			const thisSection = $(e.target).parents('.forum-master-container__subsection');
+			// const thisPost = $(e.target).parents('div');
 			const ourNewPost = {
-				'title': $('.new-forum-post-title').val(),
-				'content': $('.new-forum-post-body-field').val(),
+				'title': thisSection.find('.new-forum-post-title').val(),
+				'content': thisSection.find('.new-forum-post-body-field').val(),
 				'status': 'publish'
 			};
 
@@ -120,13 +128,15 @@ jQuery(document).ready(function ($) {
 				beforeSend: (xhr) => {
 					xhr.setRequestHeader('X-WP-Nonce', songwriterData.nonce);
 				},
-				url: songwriterData.root_url + '/wp-json/wp/v2/music-phil-forum/',
+				// Need to make 'music-phil-forum' dynamic depending on button clicked
+				url: songwriterData.root_url + '/wp-json/wp/v2/' + thisSection.find('.user-posts-area__create').data('post-type') + '/',
 				type: 'POST',
 				data: ourNewPost,
 				success: (response) => {
-					$('.new-forum-post-title, .new-forum-post-body-field').val('');
+					console.log(response);
+					thisSection.find('.new-forum-post-title, .new-forum-post-body-field').val('');
 					$(`
-					    <li data-id="${response.id}">
+					    <li data-id="${response.id}" data-post-type="${response.type}">
 					      <input readonly class="user-posts__title" value="${response.title.raw}">
 					      <br>
 					      <textarea readonly class="user-posts__content">${response.content.raw}</textarea>
@@ -136,14 +146,28 @@ jQuery(document).ready(function ($) {
 					      <span class="update-forum-post"><i class="fa fa-arrow-right" aria-hidden="true"> Save</i></span>
 					    </li>
 					    <hr>						
-						`).prependTo('#user-forum-posts').hide().slideDown();
+						`).prependTo(thisSection.find('.user-forum-posts')).hide().slideDown();
+					// Update forum list in real time (could also do for delete if I have time)
+					
+					// $(`
+				 //        $musicPhilForum = new WP_Query([
+				 //        'posts_per_page' => -1,
+				 //        'post_type' => ${thisPost.data('post-type')}
+				 //      ]);
+
+				 //    <?php
+				 //      forumMainContent([
+				 //        'query' => $musicPhilForum
+				 //      ]);           
+				 //      ?>														
+					// 	`).prependTo('.page--posts').hide().slideDown();					
 					console.log('congrats');
 					console.log(response);
 				},
 				error: (response) => {
 					// PHP adding white space, fix later
 					if (response.responseText == "									Slow down, you're posting too quickly.") {
-						$('.forum-post-limit-message').fadeIn();
+						thisSection.find('.forum-post-limit-message').fadeIn();
 					}
 					console.log('sorry');
 					console.log(response);

@@ -37,7 +37,7 @@
   ]);
 ?>
 </ul>
-<div class="row display-none--900">
+<div class="row display-none--900 justify--center">
     <?php 
     $blogPostTypes = ['songwriter-salon', 'songwriter-advice', 'production-tutorials'];
 
