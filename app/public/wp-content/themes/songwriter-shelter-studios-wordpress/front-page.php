@@ -19,8 +19,12 @@
     "Working with Max at The Songwriter Shelter Recording Studios has definitely changed me as an artist.  I have worked with him for almost a year now and have recorded 3 separate projects.  Max definitely takes the heart and soul of the songs and project in mind.  Being a musician himself he understands the need for musicians to be comfortable and feel like the best work is going to be done with their creations.  I have never felt more confident to show my music to people as I have with the work that Max has produced."
         <br>
         -Jake Parker
+        <br>
+        <?php 
+        global $wp;
+        echo home_url($wp->request); 
+        ?>
     </p>
-    
 </div>
 
 

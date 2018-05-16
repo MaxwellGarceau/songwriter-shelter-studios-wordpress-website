@@ -257,43 +257,50 @@ p, li {
   fill: black !important; }
 
 /* Like Box */
+.upvote-content {
+  padding: 10px; }
+
 .upvote-content .upvote-box {
   font-size: 1rem;
   background-color: #EDEDED;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  color: red;
+  color: #515151;
   padding: 10px 10px 10px 25px;
   border-radius: 4px;
   cursor: pointer;
   margin: auto;
   /*margin: 0 0 30px 30px;*/
-  position: relative; }
+  position: relative;
+  float: right; }
 
 .upvote-content .upvote-box:hover {
   background-color: #DEDEDE; }
 
 .upvote-count {
-  padding-left: 10px; }
+  padding-left: 11px; }
 
-.upvote-box .fa-heart-o {
+.upvote-box .fa-arrow-circle-o-up {
   transition: all .35s ease-out;
   position: absolute;
+  font-size: 1.6em;
   left: 10px; }
 
-.upvote-box .fa-heart {
+.upvote-box .fa-arrow-circle-up {
   left: 10px;
+  color: black;
+  font-size: 1.6em;
   transition: all .4s ease-out;
   position: absolute;
   visibility: hidden;
   transform: scale(0.2);
   opacity: 0; }
 
-.upvote-box[data-exists="yes"] .fa-heart {
+.upvote-box[data-exists="yes"] .fa-arrow-circle-up {
   transform: scale(1);
   visibility: visible;
   opacity: 1; }
 
-.upvote-box[data-exists="yes"] .fa-heart-o {
+.upvote-box[data-exists="yes"] .fa-arrow-circle-o-up {
   visibility: hidden;
   opacity: 0; }
 
@@ -377,6 +384,9 @@ p, li {
 #loginform label, #registerform label {
   color: #e5e3e3;
   font-size: 1.3em; }
+
+.login #login_error, .login .message {
+  color: black; }
 
 #wp-submit {
   background-color: #870808;
@@ -533,11 +543,141 @@ p, li {
     background-color: #694629;
     border-radius: 20px; }
 
+.forum-background .main-content-well {
+  padding-bottom: 0; }
+
 .forum-single__title {
-  margin-bottom: 20px; }
-.forum-single__well {
+  color: black;
   background-color: white;
+  border-style: solid;
+  border-radius: 30px;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px; }
+.main-content-well .forum-single__well {
+  background-color: white;
+  color: #515151;
+  padding-top: 30px;
+  padding-bottom: 50px; }
+
+.comment-form .logged-in-as {
+  background-color: white;
+  color: black;
+  width: 25%;
+  margin-top: 10px;
+  padding: 5px; }
+.comment-form .logged-in-as a {
+  color: black; }
+.comment-form .logged-in-as a:visited {
   color: #515151; }
+.comment-form .logged-in-as a:hover {
+  color: black; }
+.comment-form a {
+  color: white; }
+.comment-form a:visited {
+  color: #efefef; }
+.comment-form a:hover {
+  color: white; }
+.comment-form label {
+  display: none; }
+
+.comment-reply-title {
+  color: black;
+  background-color: white;
+  border-style: solid;
+  border-radius: 30px;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 70px;
+  padding: 10px; }
+
+#comments {
+  background-color: black;
+  padding: 15px;
+  width: 40%;
+  margin: 0 auto 15px auto;
+  border-radius: 25px; }
+
+.comment-form-comment {
+  width: 50%;
+  padding: 40px 0; }
+
+#comment {
+  width: 700px;
+  height: 125px;
+  border-radius: 10px;
+  padding: 0 10px; }
+
+.form-submit {
+  background-color: initial;
+  padding: 0; }
+
+.submit {
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  padding: 5px 12px;
+  width: auto;
+  transition: .6s ease; }
+
+.submit:hover {
+  background-color: white;
+  color: black; }
+
+.comment-body {
+  background-color: white;
+  width: 40%;
+  margin: 15px auto;
+  padding: 15px;
+  color: black;
+  border-radius: 20px; }
+  .comment-body p {
+    width: 90%;
+    color: black;
+    background-color: initial;
+    padding: 10px;
+    margin: 10px auto; }
+
+.commentlist {
+  list-style: none; }
+
+.comment-reply-link {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 20px; }
+
+.reply a:visited {
+  color: #efefef; }
+
+.comment {
+  list-style: none; }
+
+.forum-breadcrumb {
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  display: inline-block;
+  float: right;
+  color: black;
+  width: 350px;
+  margin: 0 15px 0 0; }
+  .forum-breadcrumb__h2-title {
+    font-size: 1em; }
+  .forum-breadcrumb__subsection {
+    margin-bottom: 10px; }
+
+.forum-breadcrumb .forum-breadcrumb__subsection {
+  margin-bottom: 15px; }
+
+@media only screen and (max-width: 1300px) {
+  .forum-breadcrumb {
+    display: none; } }
+div .page-links .page-links__title--forum {
+  color: black; }
 
 .forum-button {
   border-radius: 50px;
@@ -549,6 +689,8 @@ p, li {
     background-color: #943E0F; }
   .forum-button__caption {
     font-size: .9em;
+    color: black; }
+  .forum-button__no-posts {
     color: black; }
 
 .edit-forum-post,
@@ -753,9 +895,9 @@ p, li {
   background-size: cover;
   background-attachment: fixed; }
 
-.forum-background {
+.forum-background-single {
   background-color: black;
-  background-image: url("./images/black-and-white-gray-guitar.jpg");
+  background-image: url("./images/forum-background-guitar-color.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }

@@ -1,3 +1,115 @@
 2018/05/16 13:37:46 Using in-memory storage
 2018/05/16 13:37:46 [SMTP] Binding to address: 0.0.0.0:1025
 2018/05/16 13:37:46 Serving under http://:1080/
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Starting session
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Received 16 bytes: 'EHLO localhost\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: ESTABLISH] In ESTABLISH state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 21 bytes: '250-Hello localhost\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 16 bytes: '250-PIPELINING\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Received 35 bytes: 'MAIL FROM:<www-data@ffb196322c52>\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: MAIL] Processing line: MAIL FROM:<www-data@ffb196322c52>
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<www-data@ffb196322c52>'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: MAIL] In MAIL state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 37 bytes: '250 Sender www-data@ffb196322c52 ok\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Received 34 bytes: 'RCPT TO:<mailhog@flywheel.local>\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: RCPT] Processing line: RCPT TO:<mailhog@flywheel.local>
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<mailhog@flywheel.local>'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: RCPT] In RCPT state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: RCPT] Got RCPT command
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 41 bytes: '250 Recipient mailhog@flywheel.local ok\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Received 6 bytes: 'DATA\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: RCPT] Processing line: DATA
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: RCPT] In RCPT state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: RCPT] Got DATA command, switching to DATA state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Received 614 bytes: 'To: dev-email@flywheel.local\r\nSubject: [The Songwriter Shelter Recording Studios] New User Registration\r\nX-PHP-Originating-Script: 1000:class-phpmailer.php\r\nDate: Wed, 16 May 2018 17:06:58 +0000\r\nFrom: WordPress <wordpress@songwriter-shelter-studios.local>\r\nMessage-ID: <b12113a0571f047d221567d2aad60eff@songwriter-shelter-studios.local>\r\nX-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\nNew user registration on your site The Songwriter Shelter Recording Studios:\r\n\r\nUsername: MaxSignupTest2\r\n\r\nEmail: maxgarceau@comcast.com\r\n\r\n.\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2018/05/16 17:06:58 Parsing Content from string: 'To: dev-email@flywheel.local
+Subject: [The Songwriter Shelter Recording Studios] New User Registration
+X-PHP-Originating-Script: 1000:class-phpmailer.php
+Date: Wed, 16 May 2018 17:06:58 +0000
+From: WordPress <wordpress@songwriter-shelter-studios.local>
+Message-ID: <b12113a0571f047d221567d2aad60eff@songwriter-shelter-studios.local>
+X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+New user registration on your site The Songwriter Shelter Recording Studios:
+
+Username: MaxSignupTest2
+
+Email: maxgarceau@comcast.com
+'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Storing message 8chVWnbEij7Dv-SUvLTuGb8E-3Z-MKIzebUGA_k9Mig=@mailhog.example
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 80 bytes: '250 Ok: queued as 8chVWnbEij7Dv-SUvLTuGb8E-3Z-MKIzebUGA_k9Mig=@mailhog.example\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Received 6 bytes: 'QUIT\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: MAIL] Processing line: QUIT
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: MAIL] In state 6, got command 'QUIT', args ''
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] [PROTO: MAIL] Got QUIT verb, staying in MAIL state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Sent 9 bytes: '221 Bye\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53708] Session ended
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Starting session
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Received 16 bytes: 'EHLO localhost\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: ESTABLISH] In ESTABLISH state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 21 bytes: '250-Hello localhost\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 16 bytes: '250-PIPELINING\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Received 35 bytes: 'MAIL FROM:<www-data@ffb196322c52>\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: MAIL] Processing line: MAIL FROM:<www-data@ffb196322c52>
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<www-data@ffb196322c52>'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: MAIL] In MAIL state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 37 bytes: '250 Sender www-data@ffb196322c52 ok\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Received 34 bytes: 'RCPT TO:<mailhog@flywheel.local>\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: RCPT] Processing line: RCPT TO:<mailhog@flywheel.local>
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<mailhog@flywheel.local>'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: RCPT] In RCPT state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: RCPT] Got RCPT command
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 41 bytes: '250 Recipient mailhog@flywheel.local ok\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Received 6 bytes: 'DATA\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: RCPT] Processing line: DATA
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: RCPT] In RCPT state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: RCPT] Got DATA command, switching to DATA state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Received 733 bytes: 'To: maxgarceau@comcast.com\r\nSubject: [The Songwriter Shelter Recording Studios] Your username and password info\r\nX-PHP-Originating-Script: 1000:class-phpmailer.php\r\nDate: Wed, 16 May 2018 17:06:58 +0000\r\nFrom: WordPress <wordpress@songwriter-shelter-studios.local>\r\nMessage-ID: <7231e2df1d8bf2d5feec9bc0275b9874@songwriter-shelter-studios.local>\r\nX-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\nUsername: MaxSignupTest2\r\n\r\nTo set your password, visit the following address:\r\n\r\n<http://songwriter-shelter-studios.local/wp-login.php?action=rp&key=XrldA4zsbzRvp5YlXRSs&login=MaxSignupTest2>\r\n\r\nhttp://songwriter-shelter-studios.local/wp-login.php\r\n\r\n.\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2018/05/16 17:06:58 Parsing Content from string: 'To: maxgarceau@comcast.com
+Subject: [The Songwriter Shelter Recording Studios] Your username and password info
+X-PHP-Originating-Script: 1000:class-phpmailer.php
+Date: Wed, 16 May 2018 17:06:58 +0000
+From: WordPress <wordpress@songwriter-shelter-studios.local>
+Message-ID: <7231e2df1d8bf2d5feec9bc0275b9874@songwriter-shelter-studios.local>
+X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Username: MaxSignupTest2
+
+To set your password, visit the following address:
+
+<http://songwriter-shelter-studios.local/wp-login.php?action=rp&key=XrldA4zsbzRvp5YlXRSs&login=MaxSignupTest2>
+
+http://songwriter-shelter-studios.local/wp-login.php
+'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Storing message dbDQ4r2j14I54ypVMQuUiLiPBOmgZvdFmu8rGM5r_EA=@mailhog.example
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 80 bytes: '250 Ok: queued as dbDQ4r2j14I54ypVMQuUiLiPBOmgZvdFmu8rGM5r_EA=@mailhog.example\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Received 6 bytes: 'QUIT\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: MAIL] Processing line: QUIT
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: MAIL] In state 6, got command 'QUIT', args ''
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] [PROTO: MAIL] Got QUIT verb, staying in MAIL state
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Sent 9 bytes: '221 Bye\r\n'
+2018/05/16 17:06:58 [SMTP 127.0.0.1:53710] Session ended

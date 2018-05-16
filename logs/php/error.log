@@ -363,3 +363,20 @@ Stack trace:
 [15-May-2018 23:32:29 UTC] PHP Parse error:  syntax error, unexpected ''label'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 214
 [15-May-2018 23:33:09 UTC] PHP Parse error:  syntax error, unexpected ''label'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 214
 [15-May-2018 23:34:36 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 241
+[16-May-2018 15:06:21 UTC] PHP Parse error:  syntax error, unexpected ''post_type'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 215
+[16-May-2018 15:24:04 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Query as array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:215
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-shelter-forum.php(103): forumPostCreateDeleteModifyButtons(Object(WP_Query))
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 215
+[16-May-2018 15:33:26 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Query as array in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php:220
+Stack trace:
+#0 /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/page-songwriter-shelter-forum.php(103): forumPostCreateDeleteModifyButtons(Object(WP_Query))
+#1 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#2 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#3 /app/public/index.php(17): require('/app/public/wp-...')
+#4 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 220

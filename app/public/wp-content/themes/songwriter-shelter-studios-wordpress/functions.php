@@ -192,8 +192,11 @@ function forumCategoryPic() {
 }
 
 // Subtitle for forum post type category pic
-function forumCategorySubtitle() {
-	switch(get_post_type()) {
+function forumCategorySubtitle($postType = null) {
+	if (!$postType) {
+		$postType = get_post_type();
+	}
+	switch($postType) {
 		case 'music-phil-forum':
 		return 'Music Philosophy';
 		case 'song-discuss-forum':
@@ -208,16 +211,22 @@ function forumCategorySubtitle() {
 // Forum create, edit, delete buttons
 
 function forumPostCreateDeleteModifyButtons($postTypeQuery) {
-	$postTypeQuery->the_post();
+	// $postTypeQuery->the_post();
+	$postType = $postTypeQuery->query['post_type'];
 	?>
           <!-- Forum Button Start -->
           <!-- needs argument for 1) query type for while loop 2) post type for ajax request  -->
-          <i class="forum-button__caption">Manage your <?php echo forumCategorySubtitle(get_post_type()); ?> posts</i>
+          <i class="forum-button__caption">Manage your <?php echo forumCategorySubtitle($postType); ?> posts</i>
           <br>
             <button class="user-posts-button forum-button user-posts-button__show" id="user-posts-button">Show My Posts</button>
             <div class="user-posts user-posts-area__show" id="user-posts-area">
-                <?php if (is_user_logged_in()) {
-    ?>
+                <?php if (is_user_logged_in()) { 
+                		if (count_user_posts(get_current_user_id(), $postType) == 0) {
+                			?> 
+							<div class="forum-button__no-posts">You don't have any posts at the moment. Click the "Create A Post" button to make some!</div>
+                			<?php
+                		}
+                	?>
                 <ul class="user-posts__list user-forum-posts" id="user-forum-posts">
                     <?php while($postTypeQuery->have_posts()) {
     $postTypeQuery->the_post();
@@ -243,7 +252,7 @@ function forumPostCreateDeleteModifyButtons($postTypeQuery) {
   } ?>
             </div>
             <button class="user-posts-button forum-button user-posts-button__create" id="user-create-posts-button">Create A Post</button>
-            <div data-post-type="<?php echo get_post_type(); ?>" class="user-create-posts user-posts-area__create" id="user-create-posts-area">
+            <div data-post-type="<?php echo $postType; ?>" class="user-create-posts user-posts-area__create" id="user-create-posts-area">
                 <h4>Make a Post</h4>
 
                     <input placeholder="Title" class="new-forum-post-title">
@@ -374,6 +383,49 @@ function pageArchiveBreadCrumb($args = []) {
 	<div class="page-links side-list__float-left <?php echo $args['float-right']; ?>">
         <!-- Maybe link title of Side List to archive for the current post type -->
       <div class="page-links__title page-links__main-background"><a href="<?php echo get_post_type_archive_link($args['post-type']) ?>"><?php echo $args['title'] ?></a></div>
+      <ul class="min-list">
+        <?php
+        while ($args['query']->have_posts()) {
+          $args['query']->the_post();
+          ?>
+
+        <li>
+          <a href="<?php echo the_permalink(); ?>">            
+            <?php
+            echo the_title();
+            ?> 
+          </a>          
+        </li>
+
+        <?php
+         }
+          ?>
+      </ul>
+    </div>
+    <?php
+}
+
+// Archive list breadcrumb of blog posts (left side)
+function forumPostMasterList($args = []) {
+	$defaultQuery = new WP_Query;
+	if (!$args['title']) {
+		$args['title'] = get_the_title();
+	}
+	if (!$args['post-type']) {
+		$args['post-type'] = get_post_type();
+	}
+	if (!$args['query']) {
+		$args['query'] = $defaultQuery;
+	}
+	if (!$args['float-right']) {
+		$args['float-right'] = '';
+	} else {
+		$args['float-right'] = 'side-list__float-right';
+	}
+	?>
+	<div class="page-links side-list__float-left <?php echo $args['float-right']; ?> forum-breadcrumb__subsection">
+        <!-- Maybe link title of Side List to archive for the current post type -->
+      <div class="page-links__title page-links__main-background page-links__title--forum"><?php echo forumCategorySubtitle($args['query']->query['post_type']) . ' Posts'; ?></div>
       <ul class="min-list">
         <?php
         while ($args['query']->have_posts()) {
@@ -651,6 +703,27 @@ function sanitizeForumPosts($data, $postArr) {
 }
 
 add_filter('wp_insert_post_data', 'sanitizeForumPosts', 10, 2);
+
+// // Changes default login redirect
+// function redirect_previous_page( $redirect_to ){
+//     global $user;
+
+//     $request = $_SERVER["HTTP_REFERER"];
+
+//     if ( in_array( $user->roles[0], array( 'administrator') ) ) {
+
+//         return admin_url();
+
+//     } elseif ( in_array( $user->roles[0], array( 'subscriber') ) ) {
+
+//         // return 'http://songwriter-shelter-studios.local/songwriter-shelter-forum/';
+//         return $request;
+//     } 
+
+//     return $redirect_to;
+// }
+
+// add_filter('login_redirect', 'redirect_previous_page', 10, 1);
 
 
 // // Display custom post types in author archive

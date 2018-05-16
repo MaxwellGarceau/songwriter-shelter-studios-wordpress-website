@@ -46,7 +46,7 @@
             <?php 
     // Resets query from musicPhilForum User to default page query
     wp_reset_query();  
-    
+
     // $theChild = get_pages(array(
     //   'child_of' => get_the_ID()
     // ));
@@ -55,15 +55,35 @@
       // Links to other blog pages (right side)
       // get_template_part('template-parts/content-pagelinkssidebar');
       // Archive breadcrumb side list of posts (left side)
-      pageArchiveBreadCrumb([
-          'title' => 'All Forum Posts',
-          // 'post-type' => 'music-phil-forum',
+        ?>
+        <div class="forum-breadcrumb">
+          <h2 class="forum-breadcrumb__h2-title">All <?php the_title(); ?> Posts</h2>
+      <?php
+      // Music Philosophy Forum Master Post List
+      forumPostMasterList([
           'query' => wpForumQueryCreator('music-phil-forum'),
-          // 'query' => $musicPhilForum,
           'float-right' => true
         ]); 
-        ?>
 
+      // Songwriting Forum Master Post List
+      forumPostMasterList([
+          'query' => wpForumQueryCreator('song-discuss-forum'),
+          'float-right' => true
+        ]);       
+
+      // Songwriting Forum Master Post List
+      forumPostMasterList([
+          'query' => wpForumQueryCreator('music-prod-forum'),
+          'float-right' => true
+        ]);   
+
+      // Songwriting Forum Master Post List
+      forumPostMasterList([
+          'query' => wpForumQueryCreator('off-topic-forum'),
+          'float-right' => true
+        ]);                 
+        ?>
+        </div>
                 <?php
         // Attempt 1
 

@@ -1,17 +1,23 @@
 /* Like Box */
 
+.upvote-content {
+  padding: 10px;
+}
+
 .upvote-content .upvote-box {
   // float: left;
   font-size: 1rem;
   background-color: #EDEDED;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
-  color: red;
+  color: $lightBlack;
   padding: 10px 10px 10px 25px;
   border-radius: 4px;
   cursor: pointer;
   margin: auto;
   /*margin: 0 0 30px 30px;*/
   position: relative;
+  float: right;
+  // margin-top: 10px;
 }
 
 .upvote-content .upvote-box:hover {
@@ -19,17 +25,20 @@
 }
 
 .upvote-count {
-  padding-left: 10px;
+  padding-left: 11px;
 }
 
-.upvote-box .fa-heart-o {
+.upvote-box .fa-arrow-circle-o-up {
   transition: all .35s ease-out;
   position: absolute;
+  font-size: $upvoteSize;
   left: 10px;
 }
 
-.upvote-box .fa-heart {
+.upvote-box .fa-arrow-circle-up {
   left: 10px;
+  color: black;
+  font-size: $upvoteSize;
   transition: all .4s ease-out;
   position: absolute;
   visibility: hidden;
@@ -37,13 +46,13 @@
   opacity: 0;
 }
 
-.upvote-box[data-exists="yes"] .fa-heart {
+.upvote-box[data-exists="yes"] .fa-arrow-circle-up {
   transform: scale(1);
   visibility: visible;
   opacity: 1;
 }
 
-.upvote-box[data-exists="yes"] .fa-heart-o {
+.upvote-box[data-exists="yes"] .fa-arrow-circle-o-up {
   visibility: hidden;
   opacity: 0;
 }

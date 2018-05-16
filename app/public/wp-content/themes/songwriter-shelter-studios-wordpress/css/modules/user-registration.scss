@@ -115,6 +115,10 @@
 	font-size: 1.3em;
 }
 
+.login #login_error, .login .message {
+	color: black;
+}
+
 #wp-submit {
 	background-color: #870808;
 	border-color: gray;

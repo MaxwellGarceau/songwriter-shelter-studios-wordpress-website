@@ -81,6 +81,9 @@ jQuery(document).ready(function ($) {
 					if (response.userPostCount < 5) {
 						thisSection.find('.forum-post-limit-message').fadeOut();
 					}
+					if (response.userPostCount == 0) {
+						$('.forum-button__no-posts').html(`You don't have any posts at the moment. Click the "Create A Post" button to make some!`);
+					}
 				},
 				error: (response) => {
 					console.log('sorry');
@@ -135,6 +138,7 @@ jQuery(document).ready(function ($) {
 				success: (response) => {
 					console.log(response);
 					thisSection.find('.new-forum-post-title, .new-forum-post-body-field').val('');
+					$('.forum-button__no-posts').html('');
 					$(`
 					    <li data-id="${response.id}" data-post-type="${response.type}">
 					      <input readonly class="user-posts__title" value="${response.title.raw}">
@@ -144,8 +148,8 @@ jQuery(document).ready(function ($) {
 					      <span class="edit-forum-post"><i class="fa fa-pencil" aria-hidden="true"> Edit</i></span>
 					      <span class="delete-forum-post"><i class="fa fa-trash-o" aria-hidden="true"> Delete</i></span>
 					      <span class="update-forum-post"><i class="fa fa-arrow-right" aria-hidden="true"> Save</i></span>
+					    <hr>						      
 					    </li>
-					    <hr>						
 						`).prependTo(thisSection.find('.user-forum-posts')).hide().slideDown();
 					// Update forum list in real time (could also do for delete if I have time)
 					

@@ -20,7 +20,6 @@
   get_template_part('template-parts/content-returntomainpage');
   }  
   ?>
-
 <!-- Breadcrumb for Parent Pages -->
 <?php 
     $theChild = get_pages(array(
