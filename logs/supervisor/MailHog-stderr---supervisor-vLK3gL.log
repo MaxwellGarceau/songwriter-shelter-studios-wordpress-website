@@ -1,0 +1,885 @@
+2018/05/17 13:04:59 Using in-memory storage
+2018/05/17 13:04:59 Serving under http://:1080/
+2018/05/17 13:04:59 [SMTP] Binding to address: 0.0.0.0:1025
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Starting session
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 16 bytes: 'EHLO localhost\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: ESTABLISH] In ESTABLISH state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 21 bytes: '250-Hello localhost\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 16 bytes: '250-PIPELINING\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 35 bytes: 'MAIL FROM:<www-data@ffb196322c52>\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: MAIL] Processing line: MAIL FROM:<www-data@ffb196322c52>
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<www-data@ffb196322c52>'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: MAIL] In MAIL state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 37 bytes: '250 Sender www-data@ffb196322c52 ok\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 34 bytes: 'RCPT TO:<mailhog@flywheel.local>\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: RCPT] Processing line: RCPT TO:<mailhog@flywheel.local>
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<mailhog@flywheel.local>'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: RCPT] In RCPT state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: RCPT] Got RCPT command
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 41 bytes: '250 Recipient mailhog@flywheel.local ok\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 6 bytes: 'DATA\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: RCPT] Processing line: DATA
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: RCPT] In RCPT state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: RCPT] Got DATA command, switching to DATA state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'To: max@songwritershelterstudios.com\r\nSubject: New Entry: Songwriter Shelter Studios Quote Request\r\nX-PHP-Originating-Script: 1000:class-phpmailer.php\r\nDate: Thu, 17 May 2018 13:10:18 +0000\r\nFrom: Max <dev-email@flywheel.local>\r\nReply-To: maxgarceau@comcast.net\r\nMessage-ID: <9c4ce2ae36a8a76715f1bf8c702c3bfb@songwriter-shelter-studios.local>\r\nX-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=utf-8\r\n\r\n<!doctype html>\r\n<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">\r\n<head>\r\n	<!--[if gte mso 15]>\r\n	<xml>\r\n		<o:OfficeDocumentSettings>\r\n		<o:AllowPNG/>\r\n		<o:PixelsPerInch>96</o:PixelsPerInch>\r\n		</o:OfficeDocumentSettings>\r\n	</xml>\r\n	<![endif]-->\r\n	<meta charset="UTF-8">\r\n	<meta http-equiv="X-UA-Compatible" content="IE=edge">\r\n	<meta name="viewport" content="width=device-width, initial-scale=1">\r\n	<title>The Songwriter Shelter Recording Studios</titl'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'e>\r\n	<style type="text/css">\r\n		p{\r\n			margin:10px 0;\r\n			padding:0;\r\n		}\r\n		table{\r\n			border-collapse:collapse;\r\n		}\r\n		h1,h2,h3,h4,h5,h6{\r\n			display:block;\r\n			margin:0;\r\n			padding:0;\r\n		}\r\n		img,a img{\r\n			border:0;\r\n			height:auto;\r\n			outline:none;\r\n			text-decoration:none;\r\n		}\r\n		body,#bodyTable,#bodyCell{\r\n			height:100%;\r\n			margin:0;\r\n			padding:0;\r\n			width:100%;\r\n		}\r\n		#outlook a{\r\n			padding:0;\r\n		}\r\n		img{\r\n			-ms-interpolation-mode:bicubic;\r\n		}\r\n		table{\r\n			mso-table-lspace:0pt;\r\n			mso-table-rspace:0pt;\r\n		}\r\n		.ReadMsgBody{\r\n			width:100%;\r\n		}\r\n		.ExternalClass{\r\n			width:100%;\r\n		}\r\n		p,a,li,td,blockquote{\r\n			mso-line-height-rule:exactly;\r\n		}\r\n		a[href^=tel],a[href^=sms]{\r\n			color:inherit;\r\n			cursor:default;\r\n			text-decoration:none;\r\n		}\r\n		p,a,li,td,body,table,blockquote{\r\n			-ms-text-size-adjust:100%;\r\n			-webkit-text-size-adjust:100%;\r\n		}\r\n		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font{\r\n			line-height:100%;\r\n		}'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: '\r\n		a[x-apple-data-detectors]{\r\n			color:inherit !important;\r\n			text-decoration:none !important;\r\n			font-size:inherit !important;\r\n			font-family:inherit !important;\r\n			font-weight:inherit !important;\r\n			line-height:inherit !important;\r\n		}\r\n		#bodyCell{\r\n			padding:50px 50px;\r\n		}\r\n		.templateContainer{\r\n			max-width:600px !important;\r\n			border:0;\r\n		}\r\n		a.mcnButton{\r\n			display:block;\r\n		}\r\n		.mcnTextContent{\r\n			word-break:break-word;\r\n		}\r\n		.mcnTextContent img{\r\n			height:auto !important;\r\n		}\r\n		.mcnDividerBlock{\r\n			table-layout:fixed !important;\r\n		}\r\n		/***** Make theme edits below if needed *****/\r\n		/* Page - Background Style */\r\n		body,#bodyTable{\r\n			background-color:#e9eaec;\r\n		}\r\n		/* Page - Heading 1 */\r\n		h1{\r\n			color:#202020;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:26px;\r\n			font-style:normal;\r\n			font-weight:bold;\r\n			line-height:125%;\r\n			letter-spacing:normal;\r\n		}\r\n		/* Page - Heading 2 */\r\n		h2{\r\n			color:#202020;\r\n			font-f'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'amily: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:22px;\r\n			font-style:normal;\r\n			font-weight:bold;\r\n			line-height:125%;\r\n			letter-spacing:normal;\r\n		}\r\n		/* Page - Heading 3 */\r\n		h3{\r\n			color:#202020;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:20px;\r\n			font-style:normal;\r\n			font-weight:bold;\r\n			line-height:125%;\r\n			letter-spacing:normal;\r\n		}\r\n		/* Page - Heading 4 */\r\n		h4{\r\n			color:#202020;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:18px;\r\n			font-style:normal;\r\n			font-weight:bold;\r\n			line-height:125%;\r\n			letter-spacing:normal;\r\n		}\r\n		/* Header - Header Style */\r\n		#templateHeader{\r\n			border-top:0;\r\n			border-bottom:0;\r\n			padding-top:0;\r\n			padding-bottom:20px;\r\n			text-align: center;\r\n		}\r\n		/* Body - Body Style */\r\n		#templateBody{\r\n			background-color:#FFFFFF;\r\n			border-top:0;\r\n			border: 1px solid #c1c1c1;\r\n			padding-top:0;\r\n			padding-bottom:0p'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'x;\r\n		}\r\n		/* Body -Body Text */\r\n		#templateBody .mcnTextContent,\r\n		#templateBody .mcnTextContent p{\r\n			color:#555555;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:14px;\r\n			line-height:150%;\r\n		}\r\n		/* Body - Body Link */\r\n		#templateBody .mcnTextContent a,\r\n		#templateBody .mcnTextContent p a{\r\n			color:#ff7f50;\r\n			font-weight:normal;\r\n			text-decoration:underline;\r\n		}\r\n		/* Footer - Footer Style */\r\n		#templateFooter{\r\n			background-color:#e9eaec;\r\n			border-top:0;\r\n			border-bottom:0;\r\n			padding-top:12px;\r\n			padding-bottom:12px;\r\n		}\r\n		/* Footer - Footer Text */\r\n		#templateFooter .mcnTextContent,\r\n		#templateFooter .mcnTextContent p{\r\n			color:#cccccc;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:12px;\r\n			line-height:150%;\r\n			text-align:center;\r\n		}\r\n		/* Footer - Footer Link */\r\n		#templateFooter .mcnTextContent a,\r\n		#templateFooter .mcnTextContent p a{\r\n			color:#cccccc;\r\n			font-weight:norm'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'al;\r\n			text-decoration:underline;\r\n		}\r\n		@media only screen and (min-width:768px){\r\n			.templateContainer{\r\n				width:600px !important;\r\n			}\r\n		}\r\n		@media only screen and (max-width: 480px){\r\n			body,table,td,p,a,li,blockquote{\r\n				-webkit-text-size-adjust:none !important;\r\n			}\r\n		}\r\n		@media only screen and (max-width: 480px){\r\n			body{\r\n				width:100% !important;\r\n				min-width:100% !important;\r\n			}\r\n		}\r\n		@media only screen and (max-width: 680px){\r\n			#bodyCell{\r\n				padding:20px 20px !important;\r\n			}\r\n		}\r\n		@media only screen and (max-width: 480px){\r\n			.mcnTextContentContainer{\r\n				max-width:100% !important;\r\n				width:100% !important;\r\n			}\r\n		}\r\n	</style>\r\n</head>\r\n<body style="height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e9eaec;">\r\n	<!-- Don't forget to run final template through http://templates.mailchimp.com/resources/inline-css/ -->\r\n	<center>\r\n		<table align="center" border="0" cellpadding="0" cellspacing="0" '
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #e9eaec;">\r\n			<tr>\r\n				<td align="center" valign="top" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 50px 50px;width: 100%;">\r\n					<!-- BEGIN TEMPLATE // -->\r\n					<!--[if gte mso 9]>\r\n					<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">\r\n					<tr>\r\n					<td align="center" valign="top" width="600" style="width:600px;">\r\n					<![endif]-->\r\n					<table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;">\r\n												<tr>\r\n				'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: '			<td valign="top" id="templateBody" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border: 1px solid #c1c1c1;padding-top: 0;padding-bottom: 0px;">\r\n								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">\r\n									<tbody class="mcnTextBlockOuter">\r\n										<tr>\r\n											<td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">\r\n												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer">\r\n													<tbody>\r\n														<tr>\r\n									'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: '						<td valign="top" style="padding-top: 30px;padding-right: 30px;padding-bottom: 30px;padding-left: 30px;" class="mcnTextContent">\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style=" display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Artist/Band Name</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Max</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Email Address</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;"><a href="mailto:maxgarceau@comcast.net">maxgarceau@comcast.net</a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" '
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Contact Name</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Maxwell</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Location (City, State)</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Nashville</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Genre</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Your Mom</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Project Needs</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Mastering<br />\r\nEditing</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Budget</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20p'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'x;">0</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Number of Songs</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">100</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n															</td>\r\n														</tr>\r\n													</tbody>\r\n												</table>\r\n											</td>\r\n										</tr>\r\n									</tbody>\r\n								</table>\r\n							</td>\r\n						</tr>\r\n						<tr>\r\n							<td valign="top" id="templateFooter" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e9eaec;border-top: 0;border-bottom: 0;padding-top: 12px;padding-bottom: 12px;">\r\n								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collaps'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 1024 bytes: 'e: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">\r\n									<tbody class="mcnTextBlockOuter">\r\n										<tr>\r\n											<td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">\r\n												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer">\r\n													<tbody>\r\n														<tr>\r\n															<td valign="top" class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #aaa;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: center;">\r\n\r\n																<!-- Footer conte'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 543 bytes: 'nt -->\r\n																Sent from <a href="http://songwriter-shelter-studios.local" style="color:#bbbbbb;">The Songwriter Shelter Recording Studios</a>\r\n															</td>\r\n														</tr>\r\n													</tbody>\r\n												</table>\r\n											</td>\r\n										</tr>\r\n									</tbody>\r\n								</table>\r\n							</td>\r\n						</tr>\r\n					</table>\r\n					<!--[if gte mso 9]>\r\n					</td>\r\n					</tr>\r\n					</table>\r\n					<![endif]-->\r\n					<!-- // END TEMPLATE -->\r\n					</td>\r\n				</tr>\r\n			</table>\r\n		</center>\r\n	</body>\r\n</html>\r\n\r\n.\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2018/05/17 13:10:18 Parsing Content from string: 'To: max@songwritershelterstudios.com
+Subject: New Entry: Songwriter Shelter Studios Quote Request
+X-PHP-Originating-Script: 1000:class-phpmailer.php
+Date: Thu, 17 May 2018 13:10:18 +0000
+From: Max <dev-email@flywheel.local>
+Reply-To: maxgarceau@comcast.net
+Message-ID: <9c4ce2ae36a8a76715f1bf8c702c3bfb@songwriter-shelter-studios.local>
+X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!doctype html>
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+	<!--[if gte mso 15]>
+	<xml>
+		<o:OfficeDocumentSettings>
+		<o:AllowPNG/>
+		<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Songwriter Shelter Recording Studios</title>
+	<style type="text/css">
+		p{
+			margin:10px 0;
+			padding:0;
+		}
+		table{
+			border-collapse:collapse;
+		}
+		h1,h2,h3,h4,h5,h6{
+			display:block;
+			margin:0;
+			padding:0;
+		}
+		img,a img{
+			border:0;
+			height:auto;
+			outline:none;
+			text-decoration:none;
+		}
+		body,#bodyTable,#bodyCell{
+			height:100%;
+			margin:0;
+			padding:0;
+			width:100%;
+		}
+		#outlook a{
+			padding:0;
+		}
+		img{
+			-ms-interpolation-mode:bicubic;
+		}
+		table{
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		p,a,li,td,blockquote{
+			mso-line-height-rule:exactly;
+		}
+		a[href^=tel],a[href^=sms]{
+			color:inherit;
+			cursor:default;
+			text-decoration:none;
+		}
+		p,a,li,td,body,table,blockquote{
+			-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font{
+			line-height:100%;
+		}
+		a[x-apple-data-detectors]{
+			color:inherit !important;
+			text-decoration:none !important;
+			font-size:inherit !important;
+			font-family:inherit !important;
+			font-weight:inherit !important;
+			line-height:inherit !important;
+		}
+		#bodyCell{
+			padding:50px 50px;
+		}
+		.templateContainer{
+			max-width:600px !important;
+			border:0;
+		}
+		a.mcnButton{
+			display:block;
+		}
+		.mcnTextContent{
+			word-break:break-word;
+		}
+		.mcnTextContent img{
+			height:auto !important;
+		}
+		.mcnDividerBlock{
+			table-layout:fixed !important;
+		}
+		/***** Make theme edits below if needed *****/
+		/* Page - Background Style */
+		body,#bodyTable{
+			background-color:#e9eaec;
+		}
+		/* Page - Heading 1 */
+		h1{
+			color:#202020;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:26px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+		}
+		/* Page - Heading 2 */
+		h2{
+			color:#202020;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:22px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+		}
+		/* Page - Heading 3 */
+		h3{
+			color:#202020;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:20px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+		}
+		/* Page - Heading 4 */
+		h4{
+			color:#202020;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:18px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+		}
+		/* Header - Header Style */
+		#templateHeader{
+			border-top:0;
+			border-bottom:0;
+			padding-top:0;
+			padding-bottom:20px;
+			text-align: center;
+		}
+		/* Body - Body Style */
+		#templateBody{
+			background-color:#FFFFFF;
+			border-top:0;
+			border: 1px solid #c1c1c1;
+			padding-top:0;
+			padding-bottom:0px;
+		}
+		/* Body -Body Text */
+		#templateBody .mcnTextContent,
+		#templateBody .mcnTextContent p{
+			color:#555555;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:14px;
+			line-height:150%;
+		}
+		/* Body - Body Link */
+		#templateBody .mcnTextContent a,
+		#templateBody .mcnTextContent p a{
+			color:#ff7f50;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		/* Footer - Footer Style */
+		#templateFooter{
+			background-color:#e9eaec;
+			border-top:0;
+			border-bottom:0;
+			padding-top:12px;
+			padding-bottom:12px;
+		}
+		/* Footer - Footer Text */
+		#templateFooter .mcnTextContent,
+		#templateFooter .mcnTextContent p{
+			color:#cccccc;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:12px;
+			line-height:150%;
+			text-align:center;
+		}
+		/* Footer - Footer Link */
+		#templateFooter .mcnTextContent a,
+		#templateFooter .mcnTextContent p a{
+			color:#cccccc;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		@media only screen and (min-width:768px){
+			.templateContainer{
+				width:600px !important;
+			}
+		}
+		@media only screen and (max-width: 480px){
+			body,table,td,p,a,li,blockquote{
+				-webkit-text-size-adjust:none !important;
+			}
+		}
+		@media only screen and (max-width: 480px){
+			body{
+				width:100% !important;
+				min-width:100% !important;
+			}
+		}
+		@media only screen and (max-width: 680px){
+			#bodyCell{
+				padding:20px 20px !important;
+			}
+		}
+		@media only screen and (max-width: 480px){
+			.mcnTextContentContainer{
+				max-width:100% !important;
+				width:100% !important;
+			}
+		}
+	</style>
+</head>
+<body style="height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e9eaec;">
+	<!-- Don't forget to run final template through http://templates.mailchimp.com/resources/inline-css/ -->
+	<center>
+		<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #e9eaec;">
+			<tr>
+				<td align="center" valign="top" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 50px 50px;width: 100%;">
+					<!-- BEGIN TEMPLATE // -->
+					<!--[if gte mso 9]>
+					<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+					<tr>
+					<td align="center" valign="top" width="600" style="width:600px;">
+					<![endif]-->
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;">
+												<tr>
+							<td valign="top" id="templateBody" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border: 1px solid #c1c1c1;padding-top: 0;padding-bottom: 0px;">
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+									<tbody class="mcnTextBlockOuter">
+										<tr>
+											<td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer">
+													<tbody>
+														<tr>
+															<td valign="top" style="padding-top: 30px;padding-right: 30px;padding-bottom: 30px;padding-left: 30px;" class="mcnTextContent">
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style=" display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Artist/Band Name</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Max</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Email Address</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;"><a href="mailto:maxgarceau@comcast.net">maxgarceau@comcast.net</a></td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Contact Name</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Maxwell</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Location (City, State)</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Nashville</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Genre</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Your Mom</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Project Needs</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Mastering<br />
+Editing</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Budget</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">0</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Number of Songs</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">100</td>
+</tr>
+</tbody>
+</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top" id="templateFooter" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e9eaec;border-top: 0;border-bottom: 0;padding-top: 12px;padding-bottom: 12px;">
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+									<tbody class="mcnTextBlockOuter">
+										<tr>
+											<td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer">
+													<tbody>
+														<tr>
+															<td valign="top" class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #aaa;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: center;">
+
+																<!-- Footer content -->
+																Sent from <a href="http://songwriter-shelter-studios.local" style="color:#bbbbbb;">The Songwriter Shelter Recording Studios</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!--[if gte mso 9]>
+					</td>
+					</tr>
+					</table>
+					<![endif]-->
+					<!-- // END TEMPLATE -->
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
+'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Storing message eYQ2lSX0gjlDkpy7iyXmmDc3tK20iLdDFOC9v6RGMaQ=@mailhog.example
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 80 bytes: '250 Ok: queued as eYQ2lSX0gjlDkpy7iyXmmDc3tK20iLdDFOC9v6RGMaQ=@mailhog.example\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Received 6 bytes: 'QUIT\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: MAIL] Processing line: QUIT
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: MAIL] In state 6, got command 'QUIT', args ''
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] [PROTO: MAIL] Got QUIT verb, staying in MAIL state
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Sent 9 bytes: '221 Bye\r\n'
+2018/05/17 13:10:18 [SMTP 127.0.0.1:37242] Session ended
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Starting session
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 16 bytes: 'EHLO localhost\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: ESTABLISH] In ESTABLISH state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 21 bytes: '250-Hello localhost\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 16 bytes: '250-PIPELINING\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 35 bytes: 'MAIL FROM:<www-data@ffb196322c52>\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: MAIL] Processing line: MAIL FROM:<www-data@ffb196322c52>
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<www-data@ffb196322c52>'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: MAIL] In MAIL state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 37 bytes: '250 Sender www-data@ffb196322c52 ok\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 34 bytes: 'RCPT TO:<mailhog@flywheel.local>\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: RCPT] Processing line: RCPT TO:<mailhog@flywheel.local>
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<mailhog@flywheel.local>'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: RCPT] In RCPT state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: RCPT] Got RCPT command
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 41 bytes: '250 Recipient mailhog@flywheel.local ok\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 6 bytes: 'DATA\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: RCPT] Processing line: DATA
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: RCPT] In RCPT state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: RCPT] Got DATA command, switching to DATA state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'To: max@songwritershelterstudios.com\r\nSubject: New Entry: Songwriter Shelter Studios Quote Request\r\nX-PHP-Originating-Script: 1000:class-phpmailer.php\r\nDate: Thu, 17 May 2018 13:16:22 +0000\r\nFrom: Max <dev-email@flywheel.local>\r\nReply-To: maxgarceau@comcast.net\r\nMessage-ID: <6dcf8e44824201d4d826528f36beaa17@songwriter-shelter-studios.local>\r\nX-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=utf-8\r\n\r\n<!doctype html>\r\n<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">\r\n<head>\r\n	<!--[if gte mso 15]>\r\n	<xml>\r\n		<o:OfficeDocumentSettings>\r\n		<o:AllowPNG/>\r\n		<o:PixelsPerInch>96</o:PixelsPerInch>\r\n		</o:OfficeDocumentSettings>\r\n	</xml>\r\n	<![endif]-->\r\n	<meta charset="UTF-8">\r\n	<meta http-equiv="X-UA-Compatible" content="IE=edge">\r\n	<meta name="viewport" content="width=device-width, initial-scale=1">\r\n	<title>The Songwriter Shelter Recording Studios</titl'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'e>\r\n	<style type="text/css">\r\n		p{\r\n			margin:10px 0;\r\n			padding:0;\r\n		}\r\n		table{\r\n			border-collapse:collapse;\r\n		}\r\n		h1,h2,h3,h4,h5,h6{\r\n			display:block;\r\n			margin:0;\r\n			padding:0;\r\n		}\r\n		img,a img{\r\n			border:0;\r\n			height:auto;\r\n			outline:none;\r\n			text-decoration:none;\r\n		}\r\n		body,#bodyTable,#bodyCell{\r\n			height:100%;\r\n			margin:0;\r\n			padding:0;\r\n			width:100%;\r\n		}\r\n		#outlook a{\r\n			padding:0;\r\n		}\r\n		img{\r\n			-ms-interpolation-mode:bicubic;\r\n		}\r\n		table{\r\n			mso-table-lspace:0pt;\r\n			mso-table-rspace:0pt;\r\n		}\r\n		.ReadMsgBody{\r\n			width:100%;\r\n		}\r\n		.ExternalClass{\r\n			width:100%;\r\n		}\r\n		p,a,li,td,blockquote{\r\n			mso-line-height-rule:exactly;\r\n		}\r\n		a[href^=tel],a[href^=sms]{\r\n			color:inherit;\r\n			cursor:default;\r\n			text-decoration:none;\r\n		}\r\n		p,a,li,td,body,table,blockquote{\r\n			-ms-text-size-adjust:100%;\r\n			-webkit-text-size-adjust:100%;\r\n		}\r\n		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font{\r\n			line-height:100%;\r\n		}'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: '\r\n		a[x-apple-data-detectors]{\r\n			color:inherit !important;\r\n			text-decoration:none !important;\r\n			font-size:inherit !important;\r\n			font-family:inherit !important;\r\n			font-weight:inherit !important;\r\n			line-height:inherit !important;\r\n		}\r\n		#bodyCell{\r\n			padding:50px 50px;\r\n		}\r\n		.templateContainer{\r\n			max-width:600px !important;\r\n			border:0;\r\n		}\r\n		a.mcnButton{\r\n			display:block;\r\n		}\r\n		.mcnTextContent{\r\n			word-break:break-word;\r\n		}\r\n		.mcnTextContent img{\r\n			height:auto !important;\r\n		}\r\n		.mcnDividerBlock{\r\n			table-layout:fixed !important;\r\n		}\r\n		/***** Make theme edits below if needed *****/\r\n		/* Page - Background Style */\r\n		body,#bodyTable{\r\n			background-color:#e9eaec;\r\n		}\r\n		/* Page - Heading 1 */\r\n		h1{\r\n			color:#202020;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:26px;\r\n			font-style:normal;\r\n			font-weight:bold;\r\n			line-height:125%;\r\n			letter-spacing:normal;\r\n		}\r\n		/* Page - Heading 2 */\r\n		h2{\r\n			color:#202020;\r\n			font-f'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'amily: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:22px;\r\n			font-style:normal;\r\n			font-weight:bold;\r\n			line-height:125%;\r\n			letter-spacing:normal;\r\n		}\r\n		/* Page - Heading 3 */\r\n		h3{\r\n			color:#202020;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:20px;\r\n			font-style:normal;\r\n			font-weight:bold;\r\n			line-height:125%;\r\n			letter-spacing:normal;\r\n		}\r\n		/* Page - Heading 4 */\r\n		h4{\r\n			color:#202020;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:18px;\r\n			font-style:normal;\r\n			font-weight:bold;\r\n			line-height:125%;\r\n			letter-spacing:normal;\r\n		}\r\n		/* Header - Header Style */\r\n		#templateHeader{\r\n			border-top:0;\r\n			border-bottom:0;\r\n			padding-top:0;\r\n			padding-bottom:20px;\r\n			text-align: center;\r\n		}\r\n		/* Body - Body Style */\r\n		#templateBody{\r\n			background-color:#FFFFFF;\r\n			border-top:0;\r\n			border: 1px solid #c1c1c1;\r\n			padding-top:0;\r\n			padding-bottom:0p'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'x;\r\n		}\r\n		/* Body -Body Text */\r\n		#templateBody .mcnTextContent,\r\n		#templateBody .mcnTextContent p{\r\n			color:#555555;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:14px;\r\n			line-height:150%;\r\n		}\r\n		/* Body - Body Link */\r\n		#templateBody .mcnTextContent a,\r\n		#templateBody .mcnTextContent p a{\r\n			color:#ff7f50;\r\n			font-weight:normal;\r\n			text-decoration:underline;\r\n		}\r\n		/* Footer - Footer Style */\r\n		#templateFooter{\r\n			background-color:#e9eaec;\r\n			border-top:0;\r\n			border-bottom:0;\r\n			padding-top:12px;\r\n			padding-bottom:12px;\r\n		}\r\n		/* Footer - Footer Text */\r\n		#templateFooter .mcnTextContent,\r\n		#templateFooter .mcnTextContent p{\r\n			color:#cccccc;\r\n			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\r\n			font-size:12px;\r\n			line-height:150%;\r\n			text-align:center;\r\n		}\r\n		/* Footer - Footer Link */\r\n		#templateFooter .mcnTextContent a,\r\n		#templateFooter .mcnTextContent p a{\r\n			color:#cccccc;\r\n			font-weight:norm'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'al;\r\n			text-decoration:underline;\r\n		}\r\n		@media only screen and (min-width:768px){\r\n			.templateContainer{\r\n				width:600px !important;\r\n			}\r\n		}\r\n		@media only screen and (max-width: 480px){\r\n			body,table,td,p,a,li,blockquote{\r\n				-webkit-text-size-adjust:none !important;\r\n			}\r\n		}\r\n		@media only screen and (max-width: 480px){\r\n			body{\r\n				width:100% !important;\r\n				min-width:100% !important;\r\n			}\r\n		}\r\n		@media only screen and (max-width: 680px){\r\n			#bodyCell{\r\n				padding:20px 20px !important;\r\n			}\r\n		}\r\n		@media only screen and (max-width: 480px){\r\n			.mcnTextContentContainer{\r\n				max-width:100% !important;\r\n				width:100% !important;\r\n			}\r\n		}\r\n	</style>\r\n</head>\r\n<body style="height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e9eaec;">\r\n	<!-- Don't forget to run final template through http://templates.mailchimp.com/resources/inline-css/ -->\r\n	<center>\r\n		<table align="center" border="0" cellpadding="0" cellspacing="0" '
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #e9eaec;">\r\n			<tr>\r\n				<td align="center" valign="top" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 50px 50px;width: 100%;">\r\n					<!-- BEGIN TEMPLATE // -->\r\n					<!--[if gte mso 9]>\r\n					<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">\r\n					<tr>\r\n					<td align="center" valign="top" width="600" style="width:600px;">\r\n					<![endif]-->\r\n					<table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;">\r\n												<tr>\r\n				'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: '			<td valign="top" id="templateBody" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border: 1px solid #c1c1c1;padding-top: 0;padding-bottom: 0px;">\r\n								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">\r\n									<tbody class="mcnTextBlockOuter">\r\n										<tr>\r\n											<td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">\r\n												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer">\r\n													<tbody>\r\n														<tr>\r\n									'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: '						<td valign="top" style="padding-top: 30px;padding-right: 30px;padding-bottom: 30px;padding-left: 30px;" class="mcnTextContent">\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style=" display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Artist/Band Name</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Max</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Email Address</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;"><a href="mailto:maxgarceau@comcast.net">maxgarceau@comcast.net</a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" '
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Contact Name</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Maxwell</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Location (City, State)</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Nashville</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Genre</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Your Mom</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Project Needs</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Mastering<br />\r\nEditing</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Budget</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20p'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'x;">0</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">\r\n<tbody>\r\n<tr>\r\n<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Number of Songs</strong></td>\r\n</tr>\r\n<tr>\r\n<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">100</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n															</td>\r\n														</tr>\r\n													</tbody>\r\n												</table>\r\n											</td>\r\n										</tr>\r\n									</tbody>\r\n								</table>\r\n							</td>\r\n						</tr>\r\n						<tr>\r\n							<td valign="top" id="templateFooter" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e9eaec;border-top: 0;border-bottom: 0;padding-top: 12px;padding-bottom: 12px;">\r\n								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collaps'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 1024 bytes: 'e: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">\r\n									<tbody class="mcnTextBlockOuter">\r\n										<tr>\r\n											<td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">\r\n												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer">\r\n													<tbody>\r\n														<tr>\r\n															<td valign="top" class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #aaa;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: center;">\r\n\r\n																<!-- Footer conte'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 543 bytes: 'nt -->\r\n																Sent from <a href="http://songwriter-shelter-studios.local" style="color:#bbbbbb;">The Songwriter Shelter Recording Studios</a>\r\n															</td>\r\n														</tr>\r\n													</tbody>\r\n												</table>\r\n											</td>\r\n										</tr>\r\n									</tbody>\r\n								</table>\r\n							</td>\r\n						</tr>\r\n					</table>\r\n					<!--[if gte mso 9]>\r\n					</td>\r\n					</tr>\r\n					</table>\r\n					<![endif]-->\r\n					<!-- // END TEMPLATE -->\r\n					</td>\r\n				</tr>\r\n			</table>\r\n		</center>\r\n	</body>\r\n</html>\r\n\r\n.\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2018/05/17 13:16:22 Parsing Content from string: 'To: max@songwritershelterstudios.com
+Subject: New Entry: Songwriter Shelter Studios Quote Request
+X-PHP-Originating-Script: 1000:class-phpmailer.php
+Date: Thu, 17 May 2018 13:16:22 +0000
+From: Max <dev-email@flywheel.local>
+Reply-To: maxgarceau@comcast.net
+Message-ID: <6dcf8e44824201d4d826528f36beaa17@songwriter-shelter-studios.local>
+X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!doctype html>
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+	<!--[if gte mso 15]>
+	<xml>
+		<o:OfficeDocumentSettings>
+		<o:AllowPNG/>
+		<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Songwriter Shelter Recording Studios</title>
+	<style type="text/css">
+		p{
+			margin:10px 0;
+			padding:0;
+		}
+		table{
+			border-collapse:collapse;
+		}
+		h1,h2,h3,h4,h5,h6{
+			display:block;
+			margin:0;
+			padding:0;
+		}
+		img,a img{
+			border:0;
+			height:auto;
+			outline:none;
+			text-decoration:none;
+		}
+		body,#bodyTable,#bodyCell{
+			height:100%;
+			margin:0;
+			padding:0;
+			width:100%;
+		}
+		#outlook a{
+			padding:0;
+		}
+		img{
+			-ms-interpolation-mode:bicubic;
+		}
+		table{
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		p,a,li,td,blockquote{
+			mso-line-height-rule:exactly;
+		}
+		a[href^=tel],a[href^=sms]{
+			color:inherit;
+			cursor:default;
+			text-decoration:none;
+		}
+		p,a,li,td,body,table,blockquote{
+			-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font{
+			line-height:100%;
+		}
+		a[x-apple-data-detectors]{
+			color:inherit !important;
+			text-decoration:none !important;
+			font-size:inherit !important;
+			font-family:inherit !important;
+			font-weight:inherit !important;
+			line-height:inherit !important;
+		}
+		#bodyCell{
+			padding:50px 50px;
+		}
+		.templateContainer{
+			max-width:600px !important;
+			border:0;
+		}
+		a.mcnButton{
+			display:block;
+		}
+		.mcnTextContent{
+			word-break:break-word;
+		}
+		.mcnTextContent img{
+			height:auto !important;
+		}
+		.mcnDividerBlock{
+			table-layout:fixed !important;
+		}
+		/***** Make theme edits below if needed *****/
+		/* Page - Background Style */
+		body,#bodyTable{
+			background-color:#e9eaec;
+		}
+		/* Page - Heading 1 */
+		h1{
+			color:#202020;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:26px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+		}
+		/* Page - Heading 2 */
+		h2{
+			color:#202020;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:22px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+		}
+		/* Page - Heading 3 */
+		h3{
+			color:#202020;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:20px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+		}
+		/* Page - Heading 4 */
+		h4{
+			color:#202020;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:18px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+		}
+		/* Header - Header Style */
+		#templateHeader{
+			border-top:0;
+			border-bottom:0;
+			padding-top:0;
+			padding-bottom:20px;
+			text-align: center;
+		}
+		/* Body - Body Style */
+		#templateBody{
+			background-color:#FFFFFF;
+			border-top:0;
+			border: 1px solid #c1c1c1;
+			padding-top:0;
+			padding-bottom:0px;
+		}
+		/* Body -Body Text */
+		#templateBody .mcnTextContent,
+		#templateBody .mcnTextContent p{
+			color:#555555;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:14px;
+			line-height:150%;
+		}
+		/* Body - Body Link */
+		#templateBody .mcnTextContent a,
+		#templateBody .mcnTextContent p a{
+			color:#ff7f50;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		/* Footer - Footer Style */
+		#templateFooter{
+			background-color:#e9eaec;
+			border-top:0;
+			border-bottom:0;
+			padding-top:12px;
+			padding-bottom:12px;
+		}
+		/* Footer - Footer Text */
+		#templateFooter .mcnTextContent,
+		#templateFooter .mcnTextContent p{
+			color:#cccccc;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size:12px;
+			line-height:150%;
+			text-align:center;
+		}
+		/* Footer - Footer Link */
+		#templateFooter .mcnTextContent a,
+		#templateFooter .mcnTextContent p a{
+			color:#cccccc;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		@media only screen and (min-width:768px){
+			.templateContainer{
+				width:600px !important;
+			}
+		}
+		@media only screen and (max-width: 480px){
+			body,table,td,p,a,li,blockquote{
+				-webkit-text-size-adjust:none !important;
+			}
+		}
+		@media only screen and (max-width: 480px){
+			body{
+				width:100% !important;
+				min-width:100% !important;
+			}
+		}
+		@media only screen and (max-width: 680px){
+			#bodyCell{
+				padding:20px 20px !important;
+			}
+		}
+		@media only screen and (max-width: 480px){
+			.mcnTextContentContainer{
+				max-width:100% !important;
+				width:100% !important;
+			}
+		}
+	</style>
+</head>
+<body style="height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e9eaec;">
+	<!-- Don't forget to run final template through http://templates.mailchimp.com/resources/inline-css/ -->
+	<center>
+		<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #e9eaec;">
+			<tr>
+				<td align="center" valign="top" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 50px 50px;width: 100%;">
+					<!-- BEGIN TEMPLATE // -->
+					<!--[if gte mso 9]>
+					<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+					<tr>
+					<td align="center" valign="top" width="600" style="width:600px;">
+					<![endif]-->
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;">
+												<tr>
+							<td valign="top" id="templateBody" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border: 1px solid #c1c1c1;padding-top: 0;padding-bottom: 0px;">
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+									<tbody class="mcnTextBlockOuter">
+										<tr>
+											<td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer">
+													<tbody>
+														<tr>
+															<td valign="top" style="padding-top: 30px;padding-right: 30px;padding-bottom: 30px;padding-left: 30px;" class="mcnTextContent">
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style=" display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Artist/Band Name</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Max</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Email Address</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;"><a href="mailto:maxgarceau@comcast.net">maxgarceau@comcast.net</a></td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Contact Name</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Maxwell</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Location (City, State)</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Nashville</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Genre</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Your Mom</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Project Needs</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">Mastering<br />
+Editing</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Budget</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">0</td>
+</tr>
+</tbody>
+</table>
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #dddddd; display:block;min-width: 100%;border-collapse: collapse;width:100%;">
+<tbody>
+<tr>
+<td style="color:#333333;padding-top: 20px;padding-bottom: 3px;"><strong>Number of Songs</strong></td>
+</tr>
+<tr>
+<td style="color:#555555;padding-top: 3px;padding-bottom: 20px;">100</td>
+</tr>
+</tbody>
+</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top" id="templateFooter" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e9eaec;border-top: 0;border-bottom: 0;padding-top: 12px;padding-bottom: 12px;">
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+									<tbody class="mcnTextBlockOuter">
+										<tr>
+											<td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer">
+													<tbody>
+														<tr>
+															<td valign="top" class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #aaa;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: center;">
+
+																<!-- Footer content -->
+																Sent from <a href="http://songwriter-shelter-studios.local" style="color:#bbbbbb;">The Songwriter Shelter Recording Studios</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!--[if gte mso 9]>
+					</td>
+					</tr>
+					</table>
+					<![endif]-->
+					<!-- // END TEMPLATE -->
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
+'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Storing message A-0u7jD6U5z9zsYxrwWayvTAAGBmXiQUydb239wm2ow=@mailhog.example
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 80 bytes: '250 Ok: queued as A-0u7jD6U5z9zsYxrwWayvTAAGBmXiQUydb239wm2ow=@mailhog.example\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Received 6 bytes: 'QUIT\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: MAIL] Processing line: QUIT
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: MAIL] In state 6, got command 'QUIT', args ''
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] [PROTO: MAIL] Got QUIT verb, staying in MAIL state
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Sent 9 bytes: '221 Bye\r\n'
+2018/05/17 13:16:22 [SMTP 127.0.0.1:37274] Session ended

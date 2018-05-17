@@ -37,8 +37,6 @@
         </head>
 <body <?php body_class(); ?>>
         
-    
-    
             <header>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-bg-color fixed-top" id="mainNav">
       <div class="container">

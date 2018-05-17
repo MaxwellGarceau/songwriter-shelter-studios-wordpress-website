@@ -17,6 +17,7 @@
 @import "css/modules/upvote.scss";
 @import "css/modules/user-registration.scss";
 @import "css/modules/forum.scss";
+@import 'css/modules/contact-form.scss';
 
 // Start
 
@@ -64,6 +65,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	min-height: 1100px;
+	min-height: 100vh;
 }
 
 .forum-background-single {
@@ -72,7 +75,9 @@
 	background-image: url('./images/forum-background-guitar-color.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;	
+	background-attachment: fixed;
+	min-height: 1100px;
+	min-height: 100vh;	
 }
 
 .archive-title .min-list, .page-links .min-list {
@@ -426,7 +431,16 @@ button:focus {
 	background-position: center top;
 	background-attachment: fixed;
 	padding-bottom: 200px;	
+
+	// Parallax image movement
+    transition: all 2s;	
 }
+
+// #services:hover {
+//     -ms-transform: translate(0px,100px); /* IE 9 */
+//    -webkit-transform: translate(0px,100px); /* Safari */
+//     transform: translate(0px,100px); /* Standard syntax */		
+// }
 
 .iframe-div {
 	width: 90%;
@@ -638,6 +652,10 @@ iframe {
 
 // General
 
+.page-padding-bottom {
+	padding-bottom: 300px;
+}
+
 .justify--center {
 	justify-content: center;
 }
@@ -714,39 +732,6 @@ p.line-space {
 
 p {
 	line-height: $medium-line-height;
-}
-
-/* Contact Form */
-
-.wpforms-field-container {
-	display: block;
-	position: relative;
-	// margin: 0 auto;
-}
-
-.wpforms-field input {
-	margin: 0 auto !important;
-}
-
-.wpforms-field ul {
-	float: left;
-}
-
-div.wpforms-container-full .wpforms-form ul {
-	text-align: left;
-}
-
-div.wpforms-container-full .wpforms-form ul li {
-	// margin: inherit !important;
-}
-
-div.wpforms-container-full .wpforms-form button[type=submit] {
-	border-radius: 25px !important;
-}
-
-.contact-form--list ul {
-	margin-left: 25% !important;
-	// color: red !important;
 }
 
 /* Blogs */
@@ -884,6 +869,18 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .blog-landing ul li a:hover {
 	@extend .inverse-link-color:hover;
+}
+
+// No Pagebanner
+
+.no-pagebanner-title {
+	padding-top: 100px;
+	// &--search-results {
+	// 	padding-top: 100px;
+	// }
+	// &--no-results {
+	// 	padding-top: 100px;
+	// }
 }
 
 @media (min-width: 900px) {

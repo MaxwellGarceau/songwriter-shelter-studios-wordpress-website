@@ -170,7 +170,7 @@ jQuery(document).ready(function ($) {
 				},
 				error: (response) => {
 					// PHP adding white space, fix later
-					if (response.responseText == "									Slow down, you're posting too quickly.") {
+					if (response.responseText == "Slow down, you're posting too quickly.") {
 						thisSection.find('.forum-post-limit-message').fadeIn();
 					}
 					console.log('sorry');

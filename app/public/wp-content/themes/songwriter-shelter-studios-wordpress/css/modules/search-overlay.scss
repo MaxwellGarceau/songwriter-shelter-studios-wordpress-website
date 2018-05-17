@@ -1,182 +1,282 @@
 .search-overlay {
-  color: black;
-  overflow-y: auto;
-  overflow-x: hidden;
-  z-index: 1031;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, .96);
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(1.09);
-  transition: opacity .3s, transform .3s, visibility .3s;
-  box-sizing: border-box;
+    color: black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1031;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .96);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.09);
+    transition: opacity .3s, transform .3s, visibility .3s;
+    box-sizing: border-box;
 
-  p {
-    padding-top: 15px;
-  }
-
-  .event-summary p {
-    padding-top: 0;
-  }
-
-  .event-summary {
-    margin-bottom: 0;
-    margin-top: 20px;
-  }
-
-  body.admin-bar & {
-    top: 32px;
-  }
-
-  &__top {
-    background-color: rgba(0, 0, 0, .12);
-  }
-
-  &__icon {
-    margin-right: 10px;
-    font-size: 1.8rem;
-    color: $darkOrange;
-    @mixin atMedium {
-      font-size: 2.5rem;
+    p {
+        padding-top: 15px;
     }
-  }
 
-  &--active {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  &__section-title {
-    margin: 30px 0 1px 0;
-    font-weight: 400;
-    color: $mainBlue;
-    font-size: 2rem;
-    padding: 15px 0;
-    border-bottom: 1px solid #CCC;
-  }
-
-  &__close {
-    position: absolute;
-    top: 13px;
-    right: 16px;
-    font-size: 2.1rem;
-    cursor: pointer;
-    transition: all .3s;
-    /*background-color: #FFF;*/
-    color: $darkOrange;
-    line-height: .7;
-    @mixin atSmall {
-      top: 18px;
-      font-size: 2.1rem;
+    .event-summary p {
+        padding-top: 0;
     }
-    @mixin atMedium {
-      top: 26px;
-      font-size: 2.8rem;
+
+    .event-summary {
+        margin-bottom: 0;
+        margin-top: 20px;
     }
-  }
 
-  &__close:hover {
-    opacity: 1;
-  }
+    body.admin-bar & {
+        top: 32px;
+    }
 
-  & input {
-    font-size: 2em;
-  }
+    &__top {
+        background-color: rgba(0, 0, 0, .12);
+    }
 
-  .one-half {
-    padding-bottom: 0;
-  }
+    &__icon {
+        margin-right: 10px;
+        font-size: 1.8rem;
+        color: $darkOrange;
+        @mixin atMedium {
+            font-size: 2.5rem;
+        }
+    }
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &__section-title {
+        margin: 30px 0 1px 0;
+        font-weight: 400;
+        color: $mainBlue;
+        font-size: 2rem;
+        padding: 15px 0;
+        border-bottom: 1px solid #CCC;
+    }
+
+    &__close {
+        position: absolute;
+        top: 13px;
+        right: 16px;
+        font-size: 2.1rem;
+        cursor: pointer;
+        transition: all .3s;
+        /*background-color: #FFF;*/
+        color: $darkOrange;
+        line-height: .7;
+        @mixin atSmall {
+            top: 18px;
+            font-size: 2.1rem;
+        }
+        @mixin atMedium {
+            top: 26px;
+            font-size: 2.8rem;
+        }
+    }
+
+    &__close:hover {
+        opacity: 1;
+    }
+
+    & input {
+        font-size: 2em;
+    }
+
+    .one-half {
+        padding-bottom: 0;
+    }
 }
 
 .search-term {
-  width: 75%;
-  box-sizing: border-box;
-  border: none;
-  padding: 15px 0;
-  margin: 0;
-  background-color: transparent;
-  font-size: 1rem;
-  font-weight: 300;
-  outline: none;
-  color: $darkOrange;
-  @mixin atSmall {
-    font-size: 1.5rem
-  }
-  @mixin atMedium {
-    width: 80%;
-    font-size: 3rem;
-  }
-
+    width: 75%;
+    box-sizing: border-box;
+    border: none;
+    padding: 15px 0;
+    margin: 0;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 300;
+    outline: none;
+    color: $darkOrange;
+    @mixin atSmall {
+        font-size: 1.5rem
+    }
+    @mixin atMedium {
+        width: 80%;
+        font-size: 3rem;
+    }
 }
 
 .body-no-scroll {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .spinner-loader {
-  margin-top: 45px;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  border: 0.25rem solid rgba(0, 0, 0, 0.2);
-  border-top-color: black;
-  -webkit-animation: spin 1s infinite linear;
-          animation: spin 1s infinite linear;
+    margin-top: 45px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 0.25rem solid rgba(0, 0, 0, 0.2);
+    border-top-color: black;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
 }
 
 @keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .link-list {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
-.link-list a:link, .link-list a {
-  color: $darkOrange;
+.link-list a:link,
+.link-list a {
+    color: $darkOrange;
 }
 
 .link-list a:visited {
-  color: $lightOrange;
+    color: $lightOrange;
 }
 
 .link-list a:hover {
-  color: $lightOrange;
-  -webkit-animation-duration: .5s;animation-duration: .5s;
-  /*animation-duration: 1s;*/
-  -webkit-animation-name: linkfade;
-  animation-name: linkfade;
-  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+    color: $lightOrange;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    /*animation-duration: 1s;*/
+    -webkit-animation-name: linkfade;
+    animation-name: linkfade;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 @keyframes linkfade {
-  0% {opacity: 1;}
-  100% {opacity: .5;}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+    }
 }
 
 @-webkit-keyframes linkfade {
-  0% {opacity: 1;}
-  100% {opacity: .5;}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+    }
 }
 
 .text-container {
-  height: 178px;
-  line-height: 170px;
+    height: 178px;
+    line-height: 170px;
 
-  & h2 {
-    vertical-align: middle;
-    display: inline-block;
-  }
+    & h2 {
+        vertical-align: middle;
+        display: inline-block;
+    }
 }
 
 .text-container__reset {
-  height: initial;
-  line-height: initial;
+    height: initial;
+    line-height: initial;
+}
+
+// Default Search
+.search-button {
+    @extend .nav-reg__button;
+    padding: 1.5px 5px;
+    margin-left: 5px;
+    &:focus {
+        outline: none;
+    }
+}
+
+
+.search-bar {
+    border-radius: 25px;
+    padding: 1px 15px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+.default-search {
+    &__well {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    // padding-top: 15px; 
+      & p {
+        background-color: initial;
+        border-radius: initial; 
+        width: 100%;  
+        padding: 0;
+        margin: 0;
+      }       
+    }
+
+    &__label {
+        font-style: italic;
+    }
+
+    &__title {
+        border-style: solid;
+        background-color: black;
+        border-radius: 25px;
+        width: 25%;
+        margin: 0 auto;
+        padding: 15px;
+
+        &--results {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__results-list {
+        border: solid;
+        background-color: white;
+        border-radius: 25px;
+        padding: 20px;
+        list-style: none;
+    }
+
+    &__results-list-item {
+        // border-bottom-style: dashed;
+        border-width: 1px;
+        padding: 15px;
+        border-bottom-color: $lightBlack;
+        color: black;
+        & a {
+            color: black;
+        }
+        & a:visited {
+            color: $blackIsh;
+        }
+        & a:hover {
+            color: $lightBlack;
+        }
+        &:nth-child(odd) {
+            background-color: $darkerWhite; // color: white;     
+        }
+        &:nth-child(even) {
+            background-color: white; // color: black;
+        }
+    }
 }

@@ -198,7 +198,8 @@ p, li {
   list-style: none;
   padding: 0; }
 
-.link-list a:link, .link-list a {
+.link-list a:link,
+.link-list a {
   color: #F95738; }
 
 .link-list a:visited {
@@ -234,6 +235,61 @@ p, li {
 .text-container__reset {
   height: initial;
   line-height: initial; }
+
+.search-button {
+  padding: 1.5px 5px;
+  margin-left: 5px; }
+  .search-button:focus {
+    outline: none; }
+
+.search-bar {
+  border-radius: 25px;
+  padding: 1px 15px; }
+  .search-bar:focus {
+    outline: none; }
+
+.default-search__well {
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 20px; }
+  .default-search__well p {
+    background-color: initial;
+    border-radius: initial;
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+.default-search__label {
+  font-style: italic; }
+.default-search__title {
+  border-style: solid;
+  background-color: black;
+  border-radius: 25px;
+  width: 25%;
+  margin: 0 auto;
+  padding: 15px; }
+  .default-search__title--results {
+    margin-bottom: 20px; }
+.default-search__results-list {
+  border: solid;
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+  list-style: none; }
+.default-search__results-list-item {
+  border-width: 1px;
+  padding: 15px;
+  border-bottom-color: #515151;
+  color: black; }
+  .default-search__results-list-item a {
+    color: black; }
+  .default-search__results-list-item a:visited {
+    color: #212121; }
+  .default-search__results-list-item a:hover {
+    color: #515151; }
+  .default-search__results-list-item:nth-child(odd) {
+    background-color: #efefef; }
+  .default-search__results-list-item:nth-child(even) {
+    background-color: white; }
 
 /* Email Pop Up */
 /*.pop-up__bgcolor {
@@ -313,7 +369,7 @@ p, li {
   font-size: 1rem;
   color: white; }
 
-.nav-reg__button {
+.nav-reg__button, .search-button {
   background-color: black;
   color: white;
   border-radius: 25px;
@@ -321,7 +377,7 @@ p, li {
   width: 70px;
   transition: .6s ease; }
 
-.nav-reg__button:hover {
+.nav-reg__button:hover, .search-button:hover {
   background-color: white;
   color: black; }
 
@@ -368,7 +424,9 @@ p, li {
   background-image: url("./images/wood-background-2-min-darker.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  min-height: 1100px;
+  min-height: 100vh; }
 
 #login p {
   width: initial; }
@@ -859,6 +917,59 @@ div .page-links .page-links__title--forum {
   .new-forum-post-body-field {
     width: 90%;
     padding: 25px; } }
+/* Contact Form */
+.wpforms-field-container {
+  display: block;
+  position: relative; }
+
+.wpforms-field input {
+  margin: 0 auto !important; }
+
+.wpforms-field ul {
+  float: left; }
+
+div.wpforms-container-full .wpforms-form ul {
+  text-align: left; }
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+  border-radius: 25px !important; }
+
+.contact-form--list ul {
+  margin-left: 25% !important; }
+
+.nav-reg__button--contact {
+  width: auto;
+  padding: 15px 25px; }
+
+.contact-form__label {
+  display: block; }
+  .contact-form__label--checkbox {
+    display: inline-block; }
+.contact-form__field {
+  width: 100%;
+  max-width: 60%;
+  margin-bottom: 15px;
+  height: 40px; }
+  .contact-form__field--big {
+    max-width: 85%;
+    height: 120px; }
+.contact-form__required-indicator {
+  color: red; }
+.contact-form__checkbox {
+  list-style: none;
+  text-align: left;
+  margin-left: 20%;
+  padding: 0; }
+
+.quote-request-submission-background {
+  background-color: black;
+  background-image: url("images/quote-request-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 1100px;
+  min-height: 100vh; }
+
 .metabox {
   background-color: white;
   color: black;
@@ -893,14 +1004,18 @@ div .page-links .page-links__title--forum {
   background-image: url("./images/wood-background-2-min-darker.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  min-height: 1100px;
+  min-height: 100vh; }
 
 .forum-background-single {
   background-color: black;
   background-image: url("./images/forum-background-guitar-color.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  min-height: 1100px;
+  min-height: 100vh; }
 
 .archive-title .min-list, .page-links .min-list {
   list-style: none;
@@ -1152,7 +1267,8 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
-  padding-bottom: 200px; }
+  padding-bottom: 200px;
+  transition: all 2s; }
 
 .iframe-div {
   width: 90%;
@@ -1315,6 +1431,9 @@ iframe {
   margin-bottom: 0px;
   line-height: 0; }
 
+.page-padding-bottom {
+  padding-bottom: 300px; }
+
 .justify--center {
   justify-content: center; }
 
@@ -1374,26 +1493,6 @@ p.line-space {
 
 p {
   line-height: 2; }
-
-/* Contact Form */
-.wpforms-field-container {
-  display: block;
-  position: relative; }
-
-.wpforms-field input {
-  margin: 0 auto !important; }
-
-.wpforms-field ul {
-  float: left; }
-
-div.wpforms-container-full .wpforms-form ul {
-  text-align: left; }
-
-div.wpforms-container-full .wpforms-form button[type=submit] {
-  border-radius: 25px !important; }
-
-.contact-form--list ul {
-  margin-left: 25% !important; }
 
 /* Blogs */
 /* Featured Image */
@@ -1495,6 +1594,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .blog-landing ul li a:visited {
   color: #515151; }
+
+.no-pagebanner-title {
+  padding-top: 100px; }
 
 @media (min-width: 900px) {
   .blog-landing__list .page_item {

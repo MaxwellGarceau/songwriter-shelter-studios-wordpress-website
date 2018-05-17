@@ -1,0 +1,83 @@
+/* Contact Form */
+
+.wpforms-field-container {
+    display: block;
+    position: relative; // margin: 0 auto;
+}
+
+.wpforms-field input {
+    margin: 0 auto !important;
+}
+
+.wpforms-field ul {
+    float: left;
+}
+
+div.wpforms-container-full .wpforms-form ul {
+    text-align: left;
+}
+
+div.wpforms-container-full .wpforms-form ul li {
+    // margin: inherit !important;
+}
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+    border-radius: 25px !important;
+}
+
+.contact-form--list ul {
+    margin-left: 25% !important; // color: red !important;
+}
+
+// New Contact Form
+.nav-reg__button--contact {
+    width: auto;
+    padding: 15px 25px;
+}
+
+.contact-form {
+
+    &__label {
+        display: block;
+        &--checkbox {
+            display: inline-block;
+        }
+    }
+
+    &__field {
+        width: 100%;
+        max-width: 60%;
+        margin-bottom: 15px;
+        height: 40px;
+        &--big {
+            max-width: 85%;
+            height: 120px;
+        }
+        &--project-details {
+            // margin-bottom: 15px;
+        }
+    }
+
+    &__required-indicator {
+        color: red;
+    }
+
+    &__checkbox {
+        list-style: none;
+        text-align: left;
+        margin-left: 20%;
+        padding: 0;
+    }
+}
+
+// Request submission confirmation page
+
+.quote-request-submission-background {
+	background-color: black;
+	background-image: url('images/quote-request-background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    min-height: 1100px;
+    min-height: 100vh;    
+}

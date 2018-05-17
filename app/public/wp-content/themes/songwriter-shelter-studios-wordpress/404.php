@@ -1,9 +1,9 @@
 <?php
 	get_header();
   ?>
-<section class="page-background no__padding-top" style="padding-bottom: 300px;">
+<section class="page-background no__padding-top">
 
-<div class="blog-landing">
+<div class="blog-landing no-pagebanner-title">
   <h2>Ooops.</h2>
   <h5>Error. 404.</h5>
   <a class="inverse-link-color" href="<?php echo get_site_url('/home') ?>">

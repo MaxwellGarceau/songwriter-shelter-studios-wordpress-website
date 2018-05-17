@@ -90,7 +90,7 @@ function pageBanner($args = []) {
 			} else { ?>
 				<h6 class="newsfeed-post-title pagebanner-title__margin pagebanner__title--width"><?php echo $args['title']; ?></h6>
 				<hr>
-			<?php } if (!is_archive() AND !is_page(93) AND !is_search() AND !is_single()) { ?>
+			<?php } if (!is_archive() AND !is_page(93) AND !is_page(246) AND !is_search() AND !is_single()) { ?>
 				<!-- <div class="meta-box"> -->
 	  			<span class="italic__font">Last post on <?php the_time('F, Y'); ?></span>
 			<!-- </div> -->
@@ -235,9 +235,7 @@ function forumPostCreateDeleteModifyButtons($postTypeQuery) {
                     <li data-id="<?php the_ID(); ?>" data-post-type="<?php echo get_post_type(); ?>">
                         <input readonly class="user-posts__title" value="<?php echo esc_attr(get_the_title()); ?>">
                         <br>
-                        <textarea readonly class="user-posts__content">
-                            <?php echo esc_attr(get_the_content()); ?>
-                        </textarea>
+                        <textarea readonly class="user-posts__content"><?php echo esc_attr(get_the_content()); ?></textarea>
                         <br>
                         <span class="edit-forum-post"><i class="fa fa-pencil" aria-hidden="true"> Edit</i></span>
                         <span class="delete-forum-post"><i class="fa fa-trash-o" aria-hidden="true"> Delete</i></span>
