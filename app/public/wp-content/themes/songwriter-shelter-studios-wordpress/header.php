@@ -29,10 +29,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="5DyTKsh-rTSExWv4G9KAXtvSCmLhz-emDp1X1YKoQXY" />
 
-<!-- <link href="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/normalize.css" rel="stylesheet"> -->
-<!-- <link href="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
-<!-- <link rel="stylesheet" href="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/style.css">  -->
 <?php wp_head(); ?>
         </head>
 <body <?php body_class(); ?>>

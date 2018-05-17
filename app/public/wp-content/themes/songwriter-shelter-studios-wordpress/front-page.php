@@ -15,12 +15,9 @@
             <div class="col-sm-4">
                 <p>
                     "Working with Max at The Songwriter Shelter Recording Studios has definitely changed me as an artist. I have worked with him for almost a year now and have recorded 3 separate projects. Max definitely takes the heart and soul of the songs and project in mind. Being a musician himself he understands the need for musicians to be comfortable and feel like the best work is going to be done with their creations. I have never felt more confident to show my music to people as I have with the work that Max has produced."
+
                     <br> -Jake Parker
                     <br>
-                    <?php 
-        global $wp;
-        echo home_url($wp->request); 
-        ?>
                 </p>
             </div>
             <div class="col-sm-4">
@@ -59,7 +56,7 @@
     <div class="container well__title well__max-width">
         <div class="row">
             <div class="col-lg-4">
-                <img class="services-pics" src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/mixer.svg">
+                <img class="services-pics" src="<?php echo site_url('/wp-content/themes/songwriter-shelter-studios-wordpress/images/mixer.svg');?>">
                 <br>
                 <span class="subtitle-main">Mixing/Mastering</span>
                 <hr class="subtitle-hr">
@@ -69,7 +66,7 @@
                 </p>
             </div>
             <div class="col-lg-4">
-                <img class="services-pics" src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/guitar.svg">
+                <img class="services-pics" src="<?php echo site_url('/wp-content/themes/songwriter-shelter-studios-wordpress/images/guitar.svg'); ?>">
                 <br>
                 <span class="subtitle-main">Composition</span>
                 <hr class="subtitle-hr">
@@ -79,7 +76,7 @@
                 </p>
             </div>
             <div class="col-lg-4">
-                <img class="services-pics" src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/images/microphone.svg">
+                <img class="services-pics" src="<?php echo site_url('/wp-content/themes/songwriter-shelter-studios-wordpress/images/microphone.svg'); ?>">
                 <br>
                 <span class="subtitle-main">Recording</span>
                 <hr class="subtitle-hr">

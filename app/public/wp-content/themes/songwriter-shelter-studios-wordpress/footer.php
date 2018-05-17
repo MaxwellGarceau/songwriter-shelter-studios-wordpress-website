@@ -10,19 +10,6 @@
        <i>© 2016 The Songwriter Shelter Recording Studios</i>
 </p>       
       </div>
-    <!-- Bootstrap core JavaScript -->
-    <!-- <script src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/jquery/jquery.min.js"></script> -->
-    <!-- <script src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-
-    <!-- Plugin JavaScript -->
-    <!-- <script src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/jquery-easing/jquery.easing.min.js"></script> -->
-    <!-- <script src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/jquery-ui-waypoints/jquery-ui.min.js"></script>    -->
-    <!-- <script src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/vendor/jquery-ui-waypoints/jquery.waypoints.min.js"></script>        -->
-
-    <!-- Custom JavaScript for this theme -->
-    <!-- <script src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/js/scrolling-nav.js"></script> -->
-    <!-- Main Custom JavaScript File -->
-    <!-- <script src="http://songwriter-shelter-studios.local/wp-content/themes/songwriter-shelter-studios-wordpress/js/script.js"></script>     -->
     </footer>
 
 <?php wp_footer(); ?>        

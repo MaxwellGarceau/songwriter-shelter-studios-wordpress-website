@@ -380,3 +380,26 @@ Stack trace:
 #3 /app/public/index.php(17): require('/app/public/wp-...')
 #4 {main}
   thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/functions.php on line 220
+[17-May-2018 22:46:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_stylesheet_ur() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/inc/user-registration-backend.php:44
+Stack trace:
+#0 /app/public/wp-includes/class-wp-hook.php(286): ourLoginCSS('')
+#1 /app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /app/public/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /app/public/wp-login.php(103): do_action('login_enqueue_s...')
+#4 /app/public/wp-login.php(973): login_header('Log In', '', Object(WP_Error))
+#5 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/inc/user-registration-backend.php on line 44
+[17-May-2018 22:57:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_site_ul() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/front-page.php:69
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/front-page.php on line 69
+[17-May-2018 22:57:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_site_ul() in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/front-page.php:69
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(74): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/songwriter-shelter-studios-wordpress/front-page.php on line 69

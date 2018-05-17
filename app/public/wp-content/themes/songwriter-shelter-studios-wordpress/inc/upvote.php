@@ -22,12 +22,19 @@ function songwriterUpvoteRoutes() {
 function createUpvote($data) {
 	if (is_user_logged_in()) {
 		// sanitize_text_field protects from malicious user input
-		$user = sanitize_text_field($data['userId']);
+		$post = sanitize_text_field($data['postId']);
 
 		// Makes sure each user can only give one upvote
 		$existQuery = new WP_Query([
 			'author' => get_current_user_id(),
-			'post_type' => 'upvote'
+			'post_type' => 'upvote',
+			'meta_query' => [
+				[
+					'key' => 'upvoted_post_id',
+					'compare' => '=',
+					'value' => get_the_ID()
+				]
+			]
 		]);
 
 		if ($existQuery->found_posts == 0) {
@@ -36,13 +43,12 @@ function createUpvote($data) {
 				'post_status' => 'publish',
 				'post_title' => 'New Upvote!',
 				'meta_input' => [
-					'upvoted_user_id' => $user
+					'upvoted_post_id' => $post
 				]
 			]);
 		} else {
 			die('One upvote per user.');
 		}
-
 
 	} else {
 		die('Only logged in users can create an upvote.');

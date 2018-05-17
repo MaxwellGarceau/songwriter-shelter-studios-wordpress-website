@@ -27,7 +27,7 @@ class Upvote {
 			},
 			url: songwriterData.root_url + '/wp-json/songwriter/v1/manageUpvote',
 			type: 'POST',
-			data: {'userId': currentUpvoteBox.data('user')},
+			data: {'postId': currentUpvoteBox.data('post')},
 			success: (response) => {
 				// Visually updates Upvote box and count
 				currentUpvoteBox.attr('data-exists', 'yes');
