@@ -14,7 +14,13 @@
   the_post();
 
   // Custom PHP function to load page banner
-  pageBanner();
+  ?>
+  <div class="music-production__page-banner">
+    <?php
+  pageBanner(['title' => '<span class="music-production__title">Modern Music Production and Composition<br><span class="blog-title--smaller blog-title--smaller-color">A Deep Dive Into The "Why" And The "How"</span></span>']);
+  ?>
+  </div>
+  <?php
   $theParent = wp_get_post_parent_id(get_the_ID());
   // Return to main page
   get_template_part('template-parts/content-returntomainpage');

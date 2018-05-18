@@ -15,3 +15,37 @@
     @mixin-content;
   }
 }
+
+// Media Query Breakpoints
+
+// Main Breakpoints
+
+@mixin phone-size-down {
+	@media (max-width: 600px) { @content; }
+}
+
+@mixin tablet-portrait-size-down {
+	@media (max-width: 900px) { @content; }
+}
+
+@mixin tablet-landscape-size-down {
+	@media (max-width: 1200px) { @content; }
+}
+
+@mixin desktop-size-up {
+	@media (min-width: 1201px) { @content; }
+}
+
+@mixin big-desktop-size-up {
+	@media (min-width: 1801px) { @content; }
+}
+
+// Misc Media Breakpoints
+
+@mixin bootstrap-large-column-bp {
+	@media (max-width: 991px) { @content; }
+}
+
+@mixin half-desktop-size-down {
+	@media (max-width: 1450px) { @content; }
+}

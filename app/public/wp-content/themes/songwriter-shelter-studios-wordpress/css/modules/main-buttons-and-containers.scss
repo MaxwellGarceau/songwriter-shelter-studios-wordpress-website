@@ -15,6 +15,10 @@
     width: $well-width;
     margin: $well-margin;
     padding: $well-padding;
+
+    &--home {
+        width: 50rem;
+    }
 }
 
 .well__medium-width {
@@ -23,6 +27,12 @@
 
 .well__max-width {
     width: $well-maximum-width;
+
+    &--home-music-player {
+        @include tablet-landscape-size-down {
+            width: 50%;
+        }
+    }
 }
 
 .well__bgcolor-white {
@@ -41,6 +51,12 @@
 
 .well__small-width {
     width: $well-small-width;
+
+    &--home-subtitle {
+        @include tablet-landscape-size-down {
+            width: 60%;
+        }
+    }
 }
 
 .well__medium-top-margin {

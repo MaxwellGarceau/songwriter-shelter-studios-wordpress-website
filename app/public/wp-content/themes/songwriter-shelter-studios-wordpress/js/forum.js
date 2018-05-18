@@ -1,14 +1,4 @@
 jQuery(document).ready(function ($) {
-	
-	// class CreateForumPost {
-	// 	constructor() {
-	// 		this.events();
-	// 	}
-
-	// 	events() {
-			
-	// 	}
-	// }
 
 	class UserPosts {
 		constructor() {
@@ -180,6 +170,5 @@ jQuery(document).ready(function ($) {
 		}								
 	}
 
-// const createForumPost = new CreateForumPost();
 const userPosts = new UserPosts();
 });

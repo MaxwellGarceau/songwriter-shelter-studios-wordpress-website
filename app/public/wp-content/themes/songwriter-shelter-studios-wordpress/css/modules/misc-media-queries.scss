@@ -13,6 +13,7 @@
     }
     .well__title {
         width: 70%;
+        min-width: 420px;
     }
     .cue-playlist-container {
         width: $well-medium-width;
@@ -58,6 +59,12 @@
     }
 }
 
+@include phone-size-down {
+    .well__title {
+        width: 90%;
+    }    
+}
+
 
 // @media only screen and (min-device-width : 400px) and (max-device-width : 480px) {
 @media only screen and (max-width: 480px) {
@@ -72,7 +79,18 @@
     }
     .well__title {
         width: $well-maximum-width;
+        min-width: initial;
+
+        &--contact-form {
+            padding: 20px;
+        }
     }
+    .h1-primary__font-size {
+        font-size: 2.5em;
+    } 
+    .home-title--padding {
+        padding: 9px;
+    }       
     iframe {
         width: initial;
         height: initial;
@@ -112,4 +130,16 @@
     // ul li.dropdown .itemdown li a {
     // 	width: 100%;
     // }
+}
+
+@include phone-size-down {
+    .phone-size-hide {
+        display: none;
+    }
+}
+
+@include tablet-portrait-size-down {
+    .tablet-portrait-size-hide {
+        display: none;
+    }        
 }

@@ -1,0 +1,5 @@
+	.services__description--mobile-margin {
+		@include tablet-portrait-size-down {
+			margin-bottom: 10px;
+		}
+	}

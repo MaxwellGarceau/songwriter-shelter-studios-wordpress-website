@@ -1,18 +1,18 @@
 <?php get_header(); ?>
 <!-- Home page -->
 <section id="home" class="well__medium-top-margin home-content">
-    <div class="well__title well__circle">
-        <h1><span class="h1-primary__font-size"> The Songwriter Shelter</span>
+    <div class="well__title well__title--home well__circle">
+        <h1 class="home-title--padding"><span class="h1-primary__font-size"> The Songwriter Shelter</span>
         <br>
         <span class="h1-secondary__font-size h1-secondary__font-family h1-secondary__margin">Recording Studios</span>
     </h1>
     </div>
-    <div class="well__title well__max-width well__small-margin-padding well__small-width">
-        <h3 class="italic__font">Fully Produced and Arranged Recordings for Singer/Songwriters Who Want To Hear Their Music Come To Life</h3>
+    <div class="well__title well__max-width well__small-margin-padding well__small-width well__small-width--home-subtitle">
+        <h3 class="italic__font home-subtitle--padding home-subtitle--font-size">Fully Produced and Arranged Recordings for Singer/Songwriters Who Want To Hear Their Music Come To Life</h3>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-xl-4 phone-size-hide">
                 <p>
                     "Working with Max at The Songwriter Shelter Recording Studios has definitely changed me as an artist. I have worked with him for almost a year now and have recorded 3 separate projects. Max definitely takes the heart and soul of the songs and project in mind. Being a musician himself he understands the need for musicians to be comfortable and feel like the best work is going to be done with their creations. I have never felt more confident to show my music to people as I have with the work that Max has produced."
 
@@ -20,12 +20,12 @@
                     <br>
                 </p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xl-4">
                 <a href="<?php echo site_url('#request-a-quote') ?>" class="js-scroll-trigger">
                     <button type="button" class="main-button main-button__lg-font bold__font title__font">Request A Quote</button>
                 </a>
                 <br>
-                <div class="well__title well__bgcolor-white well__max-width main-button">
+                <div class="well__title well__bgcolor-white well__max-width well__max-width--home-music-player main-button">
                     <div class="margin__bottom">Full Production (Before and After)</div>
                     <div>
                         <?php 
@@ -35,7 +35,7 @@
                 </div>
                 <!-- Music Player Goes Here -->
             </div>
-            <div class="col-sm-4">
+            <div class="col-xl-4 tablet-portrait-size-hide">
                 <p>
                     "Working with Max Garceau at The Songwriter Shelter Recording Studios was a great experience. He is extremely knowledgeable and cares deeply about his work. I recorded a full length album with him and would recommend him to anyone! He is experienced with different styles of music and really put in the time and effort to make my album sound incredible!"
                     <br> -Fawn Larson
@@ -61,7 +61,7 @@
                 <span class="subtitle-main">Mixing/Mastering</span>
                 <hr class="subtitle-hr">
                 <br>
-                <p class="no__margin-padding no__well">
+                <p class="no__margin-padding no__well services__description--mobile-margin">
                     Send me raw tracks recorded anywhere from a bedroom to a professional studio and I'll give you back a professional product.
                 </p>
             </div>
@@ -71,7 +71,7 @@
                 <span class="subtitle-main">Composition</span>
                 <hr class="subtitle-hr">
                 <br>
-                <p class="no__margin-padding no__well">
+                <p class="no__margin-padding no__well services__description--mobile-margin">
                     Have a great song, but having trouble writing the music and arranging the instruments? I can write AND record the music for you so all you have to do is focus on your song.
                 </p>
             </div>
@@ -81,7 +81,7 @@
                 <span class="subtitle-main">Recording</span>
                 <hr class="subtitle-hr">
                 <br>
-                <p class="no__margin-padding no__well">
+                <p class="no__margin-padding no__well services__description--mobile-margin">
                     If you've got the songs I've got the skills to bring your vision to life. From the studio to a live performance I can capture the magic.
                 </p>
             </div>
@@ -168,7 +168,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6"></div>
-            <div class="well__title col-sm-6">
+            <div class="well__title col-sm-6 about__column--width">
                 <h2>About</h2>
                 <h3>Max Garceau</h3>
                 <hr>
@@ -190,7 +190,7 @@
     </h2>
         <hr>
     </div>
-    <div class="well__title well__medium-width">
+    <div class="well__title well__title--contact-form well__medium-width">
             <form class="contact-form" data-formid="5" method="post" enctype="multipart/form-data" action="https://formspree.io/max@songwritershelterstudios.com" method="POST" novalidate="novalidate">
                 <div>
                     <div data-field-id="0">
@@ -230,7 +230,7 @@
                             </li>
                             <li>
                                 <input type="checkbox" name="Track Building (Making the instrumental section of the song)" value="Track Building (Making the instrumental section of the song)" required="" aria-required="true">
-                                <label class="contact-form__label contact-form__label--checkbox" for="Track Building (Making the instrumental section of the song)">Track Building (Making the instrumental section of the song)</label>
+                                <label class="contact-form__label contact-form__label--checkbox" for="Track Building (Making the instrumental section of the song)">Track Building <span class="italic__font smaller-font smaller-font--contact-form">(The instrumental section of the song)</span></label>
                             </li>
                             <li>
                                 <input type="checkbox" name="Editing" value="Editing" required="" aria-required="true">

@@ -2,7 +2,15 @@
 
 .blog-title__font {
     font-size: 5em;
-}
+
+    @media (max-width: 750px) {
+        font-size: 3.5em;
+    }
+    @media (max-width: 425px) {
+        font-size: 3.4em;
+    }
+}    
+
 
 .blog-title--smaller {
     font-size: .5em;

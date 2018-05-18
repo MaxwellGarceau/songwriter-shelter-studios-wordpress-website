@@ -77,7 +77,8 @@ function pageBanner($args = []) {
 	}
 	?>
 	<div class="page-banner">
-		<div class="page-banner__bg-image" style="background-image: url(<?php echo $args['photo']; ?>)">
+		<div class="flex-box-vertical__parent page-banner__bg-image" style="background-image: url(<?php echo $args['photo']; ?>)">
+			<div class="page-banner__flex-child">
 			<?php if (is_page() OR is_archive()) {
 				?> 
 				<h1 class="blog-title__font <?php if (!is_archive()) { 
@@ -88,7 +89,7 @@ function pageBanner($args = []) {
 				<hr class='no__margin-bottom' style="padding-bottom: 5px;">
 			<?php
 			} else { ?>
-				<h6 class="newsfeed-post-title pagebanner-title__margin pagebanner__title--width"><?php echo $args['title']; ?></h6>
+				<h6 class="page-single__title single-title__margin pagebanner__title--width"><?php echo $args['title']; ?></h6>
 				<hr>
 			<?php } if (!is_archive() AND !is_page(93) AND !is_page(246) AND !is_search() AND !is_single()) { ?>
 				<!-- <div class="meta-box"> -->
@@ -96,9 +97,10 @@ function pageBanner($args = []) {
 			<!-- </div> -->
 			<?php } if (is_single()) {
 				?>
-				<div class="meta-box meta-box--small-width"><span>Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span></div>
+				<div class="italic__font"><span>Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span></div>
 				<?php
 			} ?>
+		</div>
 		</div>
 	</div>
 	<?php

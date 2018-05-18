@@ -2,6 +2,10 @@
 
 .page-banner {
     margin-bottom: 30px;
+
+    &__flex-child {
+        width: 90%;
+    }
 }
 
 .page-banner__bg-image {
@@ -14,12 +18,35 @@
 }
 
 .pagebanner-title__margin {
-    padding-top: 100px;
+    padding-top: 50px;
+
+    // @include phone-size-down {
+    //     padding-top: 85px;
+    // }
 }
 
 .pagebanner-title__margin-archive {
-    padding-top: 100px;
+    // padding-top: 100px;
+    padding-top: 50px;
 }
+
+.single-title__margin {
+    padding-top: 60px;    
+}
+
+.music-production {
+    &__title {
+        font-size: .7em;
+    }
+    &__page-banner h1 {
+        @include tablet-portrait-size-down {
+            line-height: .9;
+        }        
+    }
+}
+
+
+
 
 .newsfeed-title {
     font-size: 4.5em; // margin-top: 10px;
@@ -33,12 +60,35 @@
 }
 
 .newsfeed-post-title {
-    font-size: 2.7em;
+    font-size: 2.5em;
+
+    @include tablet-portrait-size-down {
+        // font-size: 2.5em;
+        font-size: 2em;
+    }
+
+    // @media (max-width: 700px) {
+    //     font-size: 2.2em;
+    // }
+
+    // @media (max-width: 700px) {
+    //     font-size: 2.2em;
+    // }
+
+    @include phone-size-down {
+        // font-size: 2em;
+        font-size: 1.5em;
+    }            
 }
 
 .pagebanner__title--width {
     width: 70%;
     margin: auto;
+    max-height: 260px;
+
+    @include tablet-portrait-size-down {
+        width: 90%;
+    }
 }
 
 .meta-box {

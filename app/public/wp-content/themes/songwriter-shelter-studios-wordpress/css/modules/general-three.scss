@@ -26,3 +26,10 @@
 .newsfeed__margin {
     margin-bottom: 20px;
 }
+
+.flex-box-vertical__parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

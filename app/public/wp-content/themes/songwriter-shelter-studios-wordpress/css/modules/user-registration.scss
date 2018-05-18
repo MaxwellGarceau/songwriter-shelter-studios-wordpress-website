@@ -61,10 +61,23 @@
 
 .nav-reg__left-elem {
 	right: 80px;
+
+	@media (max-width: 1250px) {
+		left: 0px;
+		right: initial;
+	}
 }
 
 .nav-reg__user-name {
 	right: 140px;
+	@media (max-width: 1599px) {
+		right: initial;
+		left: 0px;
+	}
+
+	@media (max-width: 1325px) {
+		display: none;
+	}
 }
 
 @media (max-width: 991px) {

@@ -49,9 +49,18 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
         max-width: 60%;
         margin-bottom: 15px;
         height: 40px;
+        @include tablet-landscape-size-down {
+            max-width: 70%;
+        }
+        @include tablet-portrait-size-down {
+            max-width: 90%;
+        }        
         &--big {
             max-width: 85%;
             height: 120px;
+            @include tablet-portrait-size-down {
+                max-width: 100%;
+            }               
         }
         &--project-details {
             // margin-bottom: 15px;
@@ -67,6 +76,12 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
         text-align: left;
         margin-left: 20%;
         padding: 0;
+        @include tablet-landscape-size-down {
+            margin-left: 15%;
+        }    
+        @include tablet-portrait-size-down {
+            margin-left: 5%;
+        }               
     }
 }
 
