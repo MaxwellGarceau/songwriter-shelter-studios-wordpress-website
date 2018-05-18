@@ -224,6 +224,18 @@
     padding: 10px;
 }
 
+.must-log-in {
+  background-color: initial;
+  width: initial;
+  padding: 10px;
+  border-radius: initial;
+
+  & a {
+    @extend .inverse-link-color;
+    @extend .inverse-link-color, :visited;    
+  }
+}
+
 #comments {
   background-color: black;
   padding: 15px;

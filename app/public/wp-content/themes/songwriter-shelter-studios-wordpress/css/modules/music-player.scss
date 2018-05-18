@@ -1,0 +1,29 @@
+/* Music Player */
+
+.mejs-container,
+.mejs-container * {
+    border-radius: 25px;
+}
+
+.cue-playlist-container {
+    width: $well-small-width;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.cue-playlist {
+    // border-radius: 25px !important;
+    font-family: inherit !important;
+}
+
+.cue-skin-default {
+    font-family: inherit !important;
+}
+
+.cue-track-title {
+    font-size: 1.25em !important;
+}
+
+.mejs-mediaelement {
+    font-size: 3em !important;
+}

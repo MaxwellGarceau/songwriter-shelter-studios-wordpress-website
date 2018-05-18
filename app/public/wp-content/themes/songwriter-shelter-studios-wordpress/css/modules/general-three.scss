@@ -1,0 +1,28 @@
+.main-content-well {
+    // background-color: rgba(255, 255, 255, .7);
+    width: 60%;
+    margin: 0 auto;
+    border-radius: $border-radius-small;
+    padding: 50px;
+    padding-top: 15px;
+}
+
+.main-content-well p {
+    background-color: initial;
+    border-radius: initial;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.newsfeed-well__width {
+    width: 90%;
+}
+
+.newsfeed-well__background-color {
+    background-color: initial;
+}
+
+.newsfeed__margin {
+    margin-bottom: 20px;
+}

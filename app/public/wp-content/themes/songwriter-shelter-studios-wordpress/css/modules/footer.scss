@@ -1,0 +1,33 @@
+/* Footer */
+
+footer p {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.footer__font-size {
+    font-size: $footer-font-size;
+}
+
+.footer__background-color {
+    background-color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $title-font;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+h1 {
+    font-family: the-skinny-bold;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: $section-font-size;
+}

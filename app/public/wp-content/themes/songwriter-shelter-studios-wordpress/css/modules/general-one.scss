@@ -1,0 +1,42 @@
+// General One
+
+.hidden {
+    visibility: hidden;
+}
+
+.discography-shadow {
+    text-shadow: #ffffff 0px 0px 6px;
+}
+
+.text__reg-color {
+    color: white;
+}
+
+.h1-primary__font-size {
+    font-size: 2.2em;
+}
+
+.h1-secondary__font-size {
+    font-size: 1em;
+    letter-spacing: .3em;
+}
+
+.h1-secondary__font-family {
+    font-family: the-skinny;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+header {
+    margin: 0px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}

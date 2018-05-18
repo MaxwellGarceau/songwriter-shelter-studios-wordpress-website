@@ -1,0 +1,47 @@
+/* Blog Pages */
+
+.blog-title__font {
+    font-size: 5em;
+}
+
+.blog-title--smaller {
+    font-size: .5em;
+    font-style: italic;
+}
+
+h1 .blog-title--smaller-color {
+    color: $lightTan;
+}
+
+h1 .blog-title--bigger {
+    // color: $grey;
+}
+
+.blog-title__margin {
+    margin-top: 30px;
+}
+
+body {
+    text-align: center;
+    color: white; // font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
+    font-family: din-light-regular, Arial, Helvetica;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+hr {
+    border-color: white;
+    padding: 0 0 20px 0;
+    width: 20%;
+    border-width: 3px;
+}
+
+.thin-hr {
+    border-width: 2px;
+}
+
+section {
+    padding: 40px 0;
+}
