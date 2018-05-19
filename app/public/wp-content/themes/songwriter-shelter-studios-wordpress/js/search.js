@@ -48,32 +48,36 @@ class Search {
 			this.resultsDiv.html(`
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-3 text-container">
+						<div class="col-lg-3 text-container">
 							<h2 class="search-overlay__section-title">Pages</h2>
+							<div class="search-overlay__border"></div>
 							<div class="text-container__reset">
 								${results.pageSection.length !== 0 ? '<ul class="link-list min-list">' : '<span>Sorry, no results</span>'}
 								${results.pageSection.map((item) => `<li><a href="${item.permalink}">${item.title}</a>${item.postType == 'post' ?  ` - ${item.postDate}` : ''}</li><br>`).join('')}
 								${results.pageSection.length == 0 ? '</ul>' : ''}		
 							</div>					
 						</div>
-						<div class="col-sm-3 text-container">
+						<div class="col-lg-3 text-container">
 							<h2 class="search-overlay__section-title">Songwriter Salon</h2>
+							<div class="search-overlay__border"></div>
 							<div class="text-container__reset">
 								${results.songwriterSalon.length !== 0 ? '<ul class="link-list min-list">' : `<span>Sorry, no results. <br> <a href="${songwriterData.root_url}/songwriter-shelter-studios-blog-pages/songwriter-salon-music-philosophy-in-the-21st-century/">See all Songwriter Salon posts here.</a></span>`}
 								${results.songwriterSalon.map((item) => `<li><a href="${item.permalink}">${item.title}</a> - ${item.postDate}</li><br>`).join('')}
 								${results.songwriterSalon.length == 0 ? '</ul>' : ''}
 							</div>											
 						</div>
-						<div class="col-sm-3 text-container">
+						<div class="col-lg-3 text-container">
 							<h2 class="search-overlay__section-title">Advice for Songwriters</h2>
+							<div class="search-overlay__border"></div>
 							<div class="text-container__reset">
 								${results.songwriterAdvice.length !== 0 ? '<ul class="link-list min-list">' : `<span>Sorry, no results. <br> <a href="${songwriterData.root_url}/songwriter-shelter-studios-blog-pages/songwriter-advice-from-a-nashville-music-producer/">See all Advice for Songwriters posts here.</a></span>`}
 								${results.songwriterAdvice.map((item) => `<li><a href="${item.permalink}">${item.title}</a> - ${item.postDate}</li><br>`).join('')}
 								${results.songwriterAdvice.length == 0 ? '</ul>' : ''}		
 							</div>	
 						</div>
-						<div class="col-sm-3 text-container">
-							<h2 class="search-overlay__section-title">Music Production and Composition Tutorials</h2>
+						<div class="col-lg-3 text-container text-container--last-container">
+							<h2 class="search-overlay__section-title">Music Production</h2>
+							<div class="search-overlay__border"></div>
 							<div class="text-container__reset">
 								${results.productionTutorials.length !== 0 ? '<ul class="link-list min-list">' : `<span>Sorry, no results. <br> <a href="${songwriterData.root_url}/songwriter-shelter-studios-blog-pages/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how/">See all Music Production and Composition Tutorial posts here.</a></span>`}
 								${results.productionTutorials.map((item) => `<li><a href="${item.permalink}">${item.title}</a> - ${item.postDate}</li><br>`).join('')}

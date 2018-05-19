@@ -39,7 +39,7 @@
   // get_template_part('template-parts/content-returntomainpage');
   }
 ?>
-            <div style="padding-top: 100px;"></div>
+            <div style="padding-top: 90px;"></div>
             <h1 class="forum-title"><?php the_title(); ?></h1>
 
             <!-- Breadcrumb for Parent Pages -->
@@ -125,7 +125,7 @@
 
             <div class="forum-master-container__header">
               <?php wp_reset_query(); ?>
-              <h2>Music Philosophy</h2>
+              <h2 class="forum-master-container__subsection-title">Music Philosophy</h2>
                 <?php
       // Main Content
       forumMainContent([
@@ -149,7 +149,7 @@
 
             <div class="forum-master-container__header">
               <?php wp_reset_query(); ?>
-              <h2>Songwriting Discussion</h2>
+              <h2 class="forum-master-container__subsection-title">Songwriting Discussion</h2>
                 <?php
       // Main Content
       forumMainContent([
@@ -173,7 +173,7 @@
 
             <div class="forum-master-container__header">
               <?php wp_reset_query(); ?>
-              <h2>Music Production and Composition</h2>
+              <h2 class="forum-master-container__subsection-title">Music Production and Composition</h2>
                 <?php
       // Main Content
       forumMainContent([
@@ -197,7 +197,7 @@
 
             <div class="forum-master-container__header">
               <?php wp_reset_query(); ?>
-              <h2>Off Topic Forum</h2>
+              <h2 class="forum-master-container__subsection-title">Off Topic Forum</h2>
                 <?php
       // Main Content
       forumMainContent([

@@ -97,7 +97,7 @@ function pageBanner($args = []) {
 			<!-- </div> -->
 			<?php } if (is_single()) {
 				?>
-				<div class="italic__font"><span>Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span></div>
+				<div class="italic__font white-link-color"><span>Posted by <?php the_author_posts_link(); ?> in <?php the_time('F, Y'); ?></span></div>
 				<?php
 			} ?>
 		</div>
@@ -135,11 +135,12 @@ function forumMainContent($args = []) {
 	<span class="forum-post__icons">
 	<?php 
 	if (get_comments_number() == 0) { ?> 
-		<a href="<?php the_permalink(); ?>"><?php comments_number('Be the first to comment!', '1', '%') ?></a> <?php 
+		<a class="mobile-hide" href="<?php the_permalink(); ?>"><?php comments_number('Be the first to comment!', '1', '%') ?></a>
+		<span class="mobile-show">0</span>
+		<?php 
 	} else {
 		comments_number('Be the first to comment!', '1', '%');
-	} ?>
-	 &nbsp;&nbsp;<i class="fa fa-comments forum-post__icons--comments"></i>
+	} ?>&nbsp;&nbsp;<i class="fa fa-comments forum-post__icons--comments"></i>
 	</span>
 </div>
 
@@ -461,7 +462,7 @@ function pageMainContent($args = []) {
 	      while($args['query']->have_posts()) {
 	    $args['query']->the_post(); ?>
 	<!-- Post Body -->
-	<div class="main-content-well newsfeed__margin newsfeed-well__background-color">
+	<div class="main-content-well main-content-well--blog-page-mobile-width newsfeed__margin newsfeed-well__background-color">
 	<h6 class="newsfeed-post-title"><?php the_title(); ?></h6>
 
 	<div class="meta-box">
@@ -470,7 +471,7 @@ function pageMainContent($args = []) {
 
 
 
-	<div class="generic-content main-content-well newsfeed-well__width">
+	<div class="generic-content main-content-well main-content-well--blog-page-mobile-width newsfeed-well__width">
 	<?php if(empty(get_the_content())) {
 		echo custom_field_excerpt('main_body_content');
 	} else {

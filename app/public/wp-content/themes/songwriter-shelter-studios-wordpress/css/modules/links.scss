@@ -24,3 +24,15 @@ a:hover {
 .inverse-link-color:hover {
     color: $linkGrey;
 }
+
+.white-link-color a {
+	&:link {
+		color: white;
+	}
+	&:visited {
+		color: $darkerWhite;
+	}
+	&:hover {
+		color: $darkerWhite;
+	}
+}

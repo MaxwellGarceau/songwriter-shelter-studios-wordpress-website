@@ -3,9 +3,12 @@
 .blog-title__font {
     font-size: 5em;
 
-    @media (max-width: 750px) {
-        font-size: 3.5em;
+    @include tablet-portrait-size-down {
+        font-size: 4em;
     }
+    @media (max-width: 700px) {
+        font-size: 3.5em;
+    }    
     @media (max-width: 425px) {
         font-size: 3.4em;
     }
@@ -31,9 +34,23 @@ h1 .blog-title--bigger {
 
 body {
     text-align: center;
-    color: white; // font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
+    color: white; 
+    // font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
     font-family: din-light-regular, Arial, Helvetica;
 }
+
+/* Safari color fix for forum page */
+.page-id-119 {
+    color: $lightBlack;
+}
+
+.page-id-119 .nav-reg__user-name {
+    color: white;
+}
+
+// .page-id-119 .forum-post__icons--comments {
+//     color: black
+// }
 
 header {
     margin-bottom: 20px;

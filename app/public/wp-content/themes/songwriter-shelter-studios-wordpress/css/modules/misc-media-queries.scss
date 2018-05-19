@@ -108,6 +108,10 @@
         width: 90%;
         padding: $well-mobile-padding;
     }
+    .main-content-well--blog-page-mobile-width {
+        padding: 0;
+        // margin: 0;
+    }    
     .blog-landing {
         width: 90%;
         padding: $well-mobile-padding;
@@ -136,6 +140,10 @@
     .phone-size-hide {
         display: none;
     }
+    .main-content-well--blog-page-mobile-width {
+        padding: 0;
+        // margin: 0;
+    }     
 }
 
 @include tablet-portrait-size-down {

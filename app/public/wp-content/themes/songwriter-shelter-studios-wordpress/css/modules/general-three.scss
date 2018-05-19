@@ -5,6 +5,12 @@
     border-radius: $border-radius-small;
     padding: 50px;
     padding-top: 15px;
+
+    &--blog-page-mobile-width {
+        @media (max-width: 1300px) {
+            width: 90%;
+        }
+    }
 }
 
 .main-content-well p {
@@ -32,4 +38,17 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.mobile-hide {
+    @include phone-size-down {
+        display: none;
+    }
+}
+
+.mobile-show {
+    display: none;
+    @include phone-size-down {
+        display: inline-block;
+    }
 }
