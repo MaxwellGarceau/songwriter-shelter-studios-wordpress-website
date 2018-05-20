@@ -508,14 +508,14 @@ function singleMainContent($args = []) {
 		<h4 class="pagebanner__title--width"><?php the_title(); ?></h4>
 		<hr class="no__margin-bottom no__padding">
 		<?php if (has_post_thumbnail()) { ?>
-			<div class="generic-content main-content-well newsfeed-well__width container">
+			<div class="generic-content main-content-well newsfeed-well__width container single-content--mobile">
 				<div class="row">
 					<div class="row">
-						<div class="col-sm-4">
+						<div class="col-md-4">
 							<img class="featured-thumbnail-image-custom" src="<?php the_post_thumbnail_url('featured-blogimg-size'); ?>">
 							<p class="italic__font smaller-font darker-color"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
 						</div>
-						<div class="col-sm-8">
+						<div class="col-md-8">
 							<?php 
 								if(empty(get_the_content())) {
 									echo get_field('main_body_content');
@@ -613,7 +613,7 @@ function songwriter_files() {
 	wp_enqueue_script('search-js', get_theme_file_uri('/js/search.js'), NULL, '1.0', true);		
 	wp_enqueue_script('upvote-js', get_theme_file_uri('/js/upvote.js'), NULL, '1.0', true);
 	wp_enqueue_script('forum-js', get_theme_file_uri('/js/forum.js'), NULL, '1.0', true);
-	wp_enqueue_script('main-songwriter-js', get_theme_file_uri('/js/script.js'), NULL, '1.0', true);	
+	wp_enqueue_script('parallax-effect-js', get_theme_file_uri('/js/parallax-effect.js'), NULL, '1.0', true);	
 
 	// Styles
 
@@ -631,7 +631,7 @@ function songwriter_files() {
 	wp_localize_script('search-js', 'songwriterSearch', [
 		'root_url' => get_site_url()
 	]);	
-	wp_localize_script('main-songwriter-js', 'songwriterData', [
+	wp_localize_script('parallax-effect-js', 'songwriterData', [
 		'root_url' => get_site_url(),
 		'nonce' => wp_create_nonce('wp_rest')
 	]);	

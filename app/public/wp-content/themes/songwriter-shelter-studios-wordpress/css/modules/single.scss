@@ -16,7 +16,7 @@
     width: 200px;
     margin: auto;
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 15px;
 }
 
 .related-post--list {
@@ -42,5 +42,11 @@
         @include phone-size-down {
             font-size: 2em;
         }        
+    }
+}
+
+.single-content--mobile {
+    @include phone-size-down {
+        padding: 0;
     }
 }

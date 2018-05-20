@@ -196,6 +196,7 @@
 
   &__subsection-title {
     color: white;
+    padding: 10px;
   }
 
   &__header {
@@ -368,7 +369,7 @@
   width: 90%;
   height: 125px;
   border-radius: 10px;
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 #comment:focus {
@@ -664,6 +665,7 @@ div .page-links .page-links__title--forum {
 
 .user-posts {
   display: none;
+  color: white;
 }
 
 .user-create-posts {

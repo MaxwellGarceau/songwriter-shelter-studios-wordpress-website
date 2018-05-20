@@ -48,7 +48,7 @@ INSERT INTO `wp_usermeta` VALUES
 (45,2,"default_password_nag",""),
 (52,1,"closedpostboxes_music-phil-forum","a:0:{}"),
 (53,1,"metaboxhidden_music-phil-forum","a:3:{i:0;s:6:\"acf_78\";i:1;s:6:\"acf_64\";i:2;s:7:\"slugdiv\";}"),
-(55,1,"session_tokens","a:2:{s:64:\"36e999744600c87ee2525050310b49eb4738d3edd21dd9a7852ad8876b40c888\";a:4:{s:10:\"expiration\";i:1526850000;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36\";s:5:\"login\";i:1526677200;}s:64:\"faf427821626c9b0933bc9242e869353cf79d1e94ce2a31ba5571390a1aafed2\";a:4:{s:10:\"expiration\";i:1526870405;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36\";s:5:\"login\";i:1526697605;}}"),
+(55,1,"session_tokens","a:2:{s:64:\"36e999744600c87ee2525050310b49eb4738d3edd21dd9a7852ad8876b40c888\";a:4:{s:10:\"expiration\";i:1526850000;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36\";s:5:\"login\";i:1526677200;}s:64:\"50e8991ecec9a868306167ad16130fcafc965fb9a71cbc9238b8da8a6e8730c1\";a:4:{s:10:\"expiration\";i:1526930233;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36\";s:5:\"login\";i:1526757433;}}"),
 (56,1,"closedpostboxes_song-discuss-forum","a:0:{}"),
 (57,1,"metaboxhidden_song-discuss-forum","a:3:{i:0;s:6:\"acf_78\";i:1;s:6:\"acf_64\";i:2;s:7:\"slugdiv\";}"),
 (59,3,"nickname","MaxSignupTest2"),

@@ -3,6 +3,8 @@
   Author: Max Garceau
   Version: 1.0
 */
+@-ms-viewport {
+  width: device-width; }
 @define-mixin atSmall {
   @media (min-width: 530px) {
     @mixin-content; } }
@@ -590,7 +592,8 @@
       .forum-master-container__subsection {
         padding: 15px; } }
   .forum-master-container__subsection-title {
-    color: white; }
+    color: white;
+    padding: 10px; }
   .forum-master-container__header {
     background-color: #694629;
     border-radius: 20px; }
@@ -710,7 +713,7 @@
   width: 90%;
   height: 125px;
   border-radius: 10px;
-  padding: 0 10px; }
+  padding: 5px 10px; }
 
 #comment:focus {
   outline: none; }
@@ -927,7 +930,8 @@ div .page-links .page-links__title--forum {
 
 /* Edit/Delete User Posts area */
 .user-posts {
-  display: none; }
+  display: none;
+  color: white; }
 
 .user-create-posts {
   display: none; }
@@ -1310,7 +1314,7 @@ ul li.dropdown:hover .itemdown {
   color: #e8e8e8;
   opacity: .5; }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: .9rem;
     padding-left: .9rem; }
@@ -1328,6 +1332,9 @@ ul li.dropdown:hover .itemdown {
 @media (max-width: 1100px) {
   .js-search-trigger {
     display: none; } }
+@media (max-width: 991px) {
+  .js-search-trigger {
+    display: block; } }
 
 .hidden {
   visibility: hidden; }
@@ -1382,8 +1389,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
-  padding-bottom: 10%;
-  transition: all 2s; }
+  padding-bottom: 10%; }
 
 .iframe-div {
   width: 90%;
@@ -1856,7 +1862,7 @@ p {
   width: 200px;
   margin: auto;
   margin-bottom: 15px;
-  padding: 10px; }
+  padding: 15px; }
 
 .related-post--list {
   list-style: none;
@@ -1876,6 +1882,10 @@ p {
   @media (max-width: 600px) {
     .page-single__title {
       font-size: 2em; } }
+
+@media (max-width: 600px) {
+  .single-content--mobile {
+    padding: 0; } }
 
 @media only screen and (max-width: 1300px) {
   .page-links {
@@ -1963,7 +1973,7 @@ p {
 
   .main-content-well {
     width: 90%;
-    padding: 25px; }
+    padding: 0; }
 
   .main-content-well--blog-page-mobile-width {
     padding: 0; }
