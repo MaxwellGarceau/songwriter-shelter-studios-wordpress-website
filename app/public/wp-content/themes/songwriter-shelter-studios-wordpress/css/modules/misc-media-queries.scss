@@ -79,6 +79,7 @@
     }
     .well__title {
         width: $well-maximum-width;
+        min-width: 0;
         min-width: initial;
 
         &--contact-form {
@@ -87,12 +88,17 @@
     }
     .h1-primary__font-size {
         font-size: 2.5em;
+        @include tiny-phone-size-down {
+            font-size: 2em;
+        }        
     } 
     .home-title--padding {
         padding: 9px;
     }       
     iframe {
+        width: 300px;
         width: initial;
+        height: 150px;
         height: initial;
     }
     .cue-playlist-container {
@@ -135,6 +141,12 @@
     // ul li.dropdown .itemdown li a {
     // 	width: 100%;
     // }
+}
+
+@include tiny-phone-size-down {
+    #testimonials h2 {
+        font-size: 2.2em;
+    }    
 }
 
 @include phone-size-down {

@@ -87,7 +87,9 @@ iframe {
 }
 
 #testimonials p {
+    background-color: transparent;
     background-color: initial;
+    border-radius: 0;
     border-radius: initial;
     line-height: $large-line-height;
     letter-spacing: $wide-letter-spacing;
@@ -108,14 +110,18 @@ iframe {
 }
 
 #about p {
+    background-color: transparent;
     background-color: initial;
+    border-radius: 0;
     border-radius: initial;
     width: 100%;
 }
 
 .about__column--width {
     @include bootstrap-large-column-bp {
+        flex: 0 1 auto;
         flex: initial;
+        max-width: none;
         max-width: initial;
         // width: 80%;
     }    

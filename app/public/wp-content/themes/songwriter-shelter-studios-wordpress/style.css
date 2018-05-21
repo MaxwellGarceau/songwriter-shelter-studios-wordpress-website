@@ -107,9 +107,9 @@ html {
     @media (max-width: 600px) {
       .search-overlay input {
         font-size: 1.5em; } }
-    @media (max-width: 450px) {
+    @media (max-width: 400px) {
       .search-overlay input {
-        font-size: 1.25em; } }
+        font-size: 1.1em; } }
   .search-overlay .one-half {
     padding-bottom: 0; }
 
@@ -180,6 +180,7 @@ html {
   line-height: 170px; }
   @media (max-width: 991px) {
     .text-container {
+      height: auto;
       height: initial; } }
   .text-container--last-container {
     padding-bottom: 3rem; }
@@ -188,7 +189,9 @@ html {
     display: inline-block; }
 
 .text-container__reset {
+  height: auto;
   height: initial;
+  line-height: normal;
   line-height: initial;
   margin-bottom: 15px; }
 
@@ -210,7 +213,9 @@ html {
   margin: 0 auto;
   border-radius: 20px; }
   .default-search__well p {
+    background-color: transparent;
     background-color: initial;
+    border-radius: 0;
     border-radius: initial;
     width: 100%;
     padding: 0;
@@ -354,19 +359,26 @@ html {
   position: absolute; }
 
 .nav-reg__right-elem {
-  right: 0; }
+  right: 0;
+  top: 13px; }
 
 .nav-reg__left-elem {
-  right: 80px; }
+  right: 80px;
+  top: 13px; }
   @media (max-width: 1250px) {
     .nav-reg__left-elem {
       left: 0px;
+      right: auto;
       right: initial; } }
+  .nav-reg__left-elem--user-pic {
+    top: 5px; }
 
 .nav-reg__user-name {
-  right: 140px; }
+  right: 140px;
+  top: 13px; }
   @media (max-width: 1599px) {
     .nav-reg__user-name {
+      right: auto;
       right: initial;
       left: 0px; } }
   @media (max-width: 1325px) {
@@ -375,6 +387,7 @@ html {
 
 @media (max-width: 991px) {
   .nav-reg__position {
+    position: static;
     position: initial; }
 
   .nav-reg__user-name--mobile-display-none {
@@ -382,7 +395,9 @@ html {
 /* Login/Signup Screen */
 .login h1 a {
   background-image: url("");
+  background-size: auto;
   background-size: initial;
+  width: auto;
   width: initial;
   height: 60px;
   border-radius: 10px; }
@@ -397,6 +412,7 @@ html {
   min-height: 100vh; }
 
 #login p {
+  width: auto;
   width: initial; }
 
 #login h1 {
@@ -434,6 +450,7 @@ html {
 
 .message {
   color: black;
+  background-color: transparent;
   background-color: initial; }
 
 .login .message {
@@ -504,10 +521,12 @@ html {
   text-align: left;
   position: relative; }
   .forum-post p {
+    background-color: transparent;
     background-color: initial;
     border-radius: 0;
     width: 70%;
     padding: 0;
+    line-height: normal;
     line-height: initial;
     margin: 0 auto;
     margin-bottom: 0;
@@ -699,9 +718,12 @@ html {
       width: 50%; } }
 
 .must-log-in {
+  background-color: transparent;
   background-color: initial;
+  width: auto;
   width: initial;
   padding: 10px;
+  border-radius: 0;
   border-radius: initial; }
 
 #comments {
@@ -741,6 +763,7 @@ html {
   outline: none; }
 
 .form-submit {
+  background-color: transparent;
   background-color: initial;
   padding: 0; }
 
@@ -772,11 +795,13 @@ html {
   @media (max-width: 600px) {
     .comment-body {
       width: 90%;
+      margin: 0;
       margin: initial;
       margin-bottom: 10px; } }
   .comment-body p {
     width: 90%;
     color: black;
+    background-color: transparent;
     background-color: initial;
     padding: 10px;
     margin: 10px auto; }
@@ -1039,6 +1064,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 .nav-reg__button--contact {
   width: auto;
   padding: 15px 25px; }
+  @media (max-width: 400px) {
+    .nav-reg__button--contact {
+      margin: 15px; } }
 
 .contact-form__label {
   display: block; }
@@ -1115,8 +1143,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   .metabox .metabox__blog-home-link {
     background-color: white;
     display: inline-block;
-    padding: 10px 0;
-    border-radius: 3px 0 0 3px; }
+    padding: 10px 5px;
+    border-radius: 3px 0 0 3px;
+    border-radius: 25px; }
   .metabox__main {
     padding: 0px 15px 10px 11px;
     font-style: italic;
@@ -1239,6 +1268,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   @media (max-width: 425px) {
     .blog-title__font {
       font-size: 3.4em; } }
+  @media (max-width: 400px) {
+    .blog-title__font {
+      font-size: 3em; } }
 
 .blog-title--smaller {
   font-size: .5em;
@@ -1311,9 +1343,9 @@ h1 {
 
 h2 {
   font-size: 3.2em; }
-  @media (max-width: 450px) {
+  @media (max-width: 400px) {
     h2 {
-      font-size: 2.9em; } }
+      font-size: 2.4em; } }
 
 a {
   color: black;
@@ -1501,7 +1533,9 @@ iframe {
   background-position: center top; }
 
 #testimonials p {
+  background-color: transparent;
   background-color: initial;
+  border-radius: 0;
   border-radius: initial;
   line-height: 2.5;
   letter-spacing: 0.1rem; }
@@ -1518,13 +1552,17 @@ iframe {
       margin-bottom: 30px; } }
 
 #about p {
+  background-color: transparent;
   background-color: initial;
+  border-radius: 0;
   border-radius: initial;
   width: 100%; }
 
 @media (max-width: 991px) {
   .about__column--width {
+    flex: 0 1 auto;
     flex: initial;
+    max-width: none;
     max-width: initial; } }
 
 .about-content::before {
@@ -1594,6 +1632,9 @@ iframe {
   color: black;
   border-radius: 50px;
   padding: 30px; }
+  @media (max-width: 400px) {
+    .main-button {
+      padding: 10px; } }
 
 .main-button__lg-font {
   font-size: 2em; }
@@ -1659,6 +1700,14 @@ iframe {
 .mejs-mediaelement {
   font-size: 3em !important; }
 
+@media (max-width: 400px) {
+  .mejs-duration-container {
+    display: none; } }
+
+@media (max-width: 400px) {
+  .mejs-currenttime-container {
+    display: none; } }
+
 /* Subtitles */
 .subtitle-main {
   font-size: 1.2em; }
@@ -1707,7 +1756,9 @@ iframe {
   padding: 0px; }
 
 .no__well {
+  background-color: transparent;
   background-color: initial;
+  border-radius: 0;
   border-radius: initial; }
 
 .smaller-font {
@@ -1752,7 +1803,7 @@ p {
   margin-bottom: 30px; }
   .page-banner__flex-child {
     width: 90%; }
-    @media (max-width: 450px) {
+    @media (max-width: 400px) {
       .page-banner__flex-child {
         font-size: .9em; } }
 
@@ -1896,7 +1947,9 @@ p {
       width: 90%; } }
 
 .main-content-well p {
+  background-color: transparent;
   background-color: initial;
+  border-radius: 0;
   border-radius: initial;
   width: 100%;
   padding: 0;
@@ -1906,6 +1959,7 @@ p {
   width: 90%; }
 
 .newsfeed-well__background-color {
+  background-color: transparent;
   background-color: initial; }
 
 .newsfeed__margin {
@@ -1962,7 +2016,7 @@ p {
   @media (max-width: 600px) {
     .page-single__title {
       font-size: 2em; } }
-  @media (max-width: 450px) {
+  @media (max-width: 400px) {
     .page-single__title {
       font-size: 1.7em; } }
 @media (max-width: 751px) {
@@ -2034,18 +2088,25 @@ p {
 
   .well__title {
     width: 90%;
+    min-width: 0;
     min-width: initial; }
     .well__title--contact-form {
       padding: 20px; }
 
   .h1-primary__font-size {
-    font-size: 2.5em; }
+    font-size: 2.5em; } }
+  @media only screen and (max-width: 480px) and (max-width: 400px) {
+    .h1-primary__font-size {
+      font-size: 2em; } }
 
+@media only screen and (max-width: 480px) {
   .home-title--padding {
     padding: 9px; }
 
   iframe {
+    width: 300px;
     width: initial;
+    height: 150px;
     height: initial; }
 
   .cue-playlist-container {
@@ -2075,6 +2136,9 @@ p {
     width: 90%; }
 
   /* Dropdown for Mobile */ }
+@media (max-width: 400px) {
+  #testimonials h2 {
+    font-size: 2.2em; } }
 @media (max-width: 600px) {
   .phone-size-hide {
     display: none; }

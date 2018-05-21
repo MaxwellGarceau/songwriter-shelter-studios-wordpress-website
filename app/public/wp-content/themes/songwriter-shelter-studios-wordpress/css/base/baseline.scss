@@ -25,7 +25,7 @@
 // Main Breakpoints
 
 @mixin tiny-phone-size-down {
-  @media (max-width: 450px) { @content; }
+  @media (max-width: 400px) { @content; }
 }
 
 @mixin phone-size-down {

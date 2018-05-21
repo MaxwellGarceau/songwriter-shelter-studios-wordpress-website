@@ -100,7 +100,7 @@
             font-size: 1.5em;
         }
         @include tiny-phone-size-down {
-            font-size: 1.25em;
+            font-size: 1.1em;
         }        
     }
 
@@ -201,6 +201,7 @@
     height: 178px;
     line-height: 170px;
     @include bootstrap-large-column-bp {
+        height: auto;
         height: initial;
     }
     &--last-container {
@@ -214,7 +215,9 @@
 }
 
 .text-container__reset {
+    height: auto;
     height: initial;
+    line-height: normal;
     line-height: initial;
 
     margin-bottom: 15px;
@@ -250,8 +253,10 @@
     border-radius: 20px;
     // padding-top: 15px; 
       & p {
+        background-color: transparent;
         background-color: initial;
-        border-radius: initial; 
+        border-radius: 0;
+        border-radius: initial;
         width: 100%;  
         padding: 0;
         margin: 0;

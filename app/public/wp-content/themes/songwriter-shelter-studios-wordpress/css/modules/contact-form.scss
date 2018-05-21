@@ -33,6 +33,10 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 .nav-reg__button--contact {
     width: auto;
     padding: 15px 25px;
+
+    @include tiny-phone-size-down {
+        margin: 15px;        
+    }
 }
 
 .contact-form {

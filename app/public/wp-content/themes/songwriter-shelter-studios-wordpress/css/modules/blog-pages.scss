@@ -12,6 +12,9 @@
     @media (max-width: 425px) {
         font-size: 3.4em;
     }
+    @include tiny-phone-size-down {
+        font-size: 3em;
+    }
 }    
 
 .blog-title--smaller {

@@ -8,14 +8,13 @@
     </h1>
     </div>
     <div class="well__title well__max-width well__small-margin-padding well__small-width well__small-width--home-subtitle">
-        <h3 class="italic__font home-subtitle--padding home-subtitle--font-size">Fully Produced and Arranged Recordings for Singer/Songwriters Who Want To Hear Their Music Come To Life</h3>
+        <h3 class="italic__font home-subtitle--padding home-subtitle--font-size ">Fully Produced and Arranged Recordings for Singer/Songwriters Who Want To Hear Their Music Come To Life</h3>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-xl-4 phone-size-hide">
                 <p>
                     "Working with Max at The Songwriter Shelter Recording Studios has definitely changed me as an artist. I have worked with him for almost a year now and have recorded 3 separate projects. Max definitely takes the heart and soul of the songs and project in mind. Being a musician himself he understands the need for musicians to be comfortable and feel like the best work is going to be done with their creations. I have never felt more confident to show my music to people as I have with the work that Max has produced."
-
                     <br> -Jake Parker
                     <br>
                 </p>
@@ -32,9 +31,66 @@
     echo do_shortcode(get_post(42)->post_content);
     ?>
                     </div>
-                </div>
+                                </div>
+                    <!-- Intro Audio Player for Mobile (Taken from audio plugin code) -->
+<!--                     <div class="mobile-show">
+                        <div id="mep_0" class="mejs-container mejs-container-keyboard-inactive wp-audio-shortcode mejs-audio" tabindex="0" role="application" aria-label="Audio Player" style="height: 40px; min-width: 200px;">
+                            <div class="mejs-inner">
+                                <div class="mejs-mediaelement">
+                                    <mediaelementwrapper id="audio-76-1">
+                                        <audio class="wp-audio-shortcode" id="audio-76-1_html5" preload="none" style="width: 100%; height: 100%;" src="http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3?_=1">
+                                            <source type="audio/mpeg" src="http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3?_=1">
+                                            <a href="http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3">http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3</a>
+                                        </audio>
+                                    </mediaelementwrapper>
+                                </div>
+                                <div class="mejs-layers">
+                                    <div class="mejs-poster mejs-layer" style="display: none; width: 100%; height: 100%;"></div>
+                                </div>
+                                <div class="mejs-controls">
+                                    <div class="mejs-button mejs-playpause-button mejs-play">
+                                        <button type="button" aria-controls="mep_0" title="Play" aria-label="Play" tabindex="0">
+                                        </button>
+                                    </div>
+                                    <div style="width: 50px"></div> -->
+                                    <!-- <div class="mejs-time mejs-currenttime-container" role="timer" aria-live="off">
+                                        <span class="mejs-currenttime">00:00</span>
+                                    </div> -->
+                                    <!-- <div class="mejs-time-rail">
+                                        <span class="mejs-time-total mejs-time-slider">
+                                                <span class="mejs-time-buffering" style="display: none;"></span>
+                                        <span class="mejs-time-loaded"></span>
+                                        <span class="mejs-time-current"></span>
+                                        <span class="mejs-time-hovered no-hover"></span>
+                                        <span class="mejs-time-handle">
+                                                    <span class="mejs-time-handle-content"></span>
+                                        </span>
+                                        <span class="mejs-time-float">
+                                                    <span class="mejs-time-float-current">00:00</span>
+                                        <span class="mejs-time-float-corner"></span>
+                                        </span>
+                                        </span>
+                                    </div> -->
+                                 <!--    <div class="mejs-time mejs-duration-container">
+                                        <span class="mejs-duration">00:00</span>
+                                    </div> -->
+                              <!--       <div class="mejs-button mejs-volume-button mejs-mute">
+                                        <button type="button" aria-controls="mep_0" title="Mute" aria-label="Mute" tabindex="0"></button>
+                                    </div> -->
+                                  <!--   <a class="mejs-horizontal-volume-slider" href="javascript:void(0);" aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100" role="slider" style="display: block;">
+                                            <span class="mejs-offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span>
+                                            <div class="mejs-horizontal-volume-total">
+                                                <div class="mejs-horizontal-volume-current" style="left: 0px; width: 100%;"></div>
+                                                <div class="mejs-horizontal-volume-handle" style="left: 100%;"></div>
+                                            </div>
+                                        </a> -->
+   <!--                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
                 <!-- Music Player Goes Here -->
-            </div>
+</div>
             <div class="col-xl-4 tablet-portrait-size-hide">
                 <p>
                     "Working with Max Garceau at The Songwriter Shelter Recording Studios was a great experience. He is extremely knowledgeable and cares deeply about his work. I recorded a full length album with him and would recommend him to anyone! He is experienced with different styles of music and really put in the time and effort to make my album sound incredible!"
@@ -45,7 +101,6 @@
     </div>
 </section>
 <!-- Services -->
-
 <section id="services">
     <div class="well__title no__padding">
         <h2>
@@ -191,87 +246,87 @@
         <hr>
     </div>
     <div class="well__title well__title--contact-form well__medium-width">
-            <form class="contact-form" data-formid="5" method="post" enctype="multipart/form-data" action="https://formspree.io/max@songwritershelterstudios.com" method="POST" novalidate="novalidate">
-                <div>
-                    <div data-field-id="0">
-                        <label class="contact-form__label" for="Artist/Band Name">Artist/Band Name <span class="contact-form__required-indicator">*</span></label>
-                        <input class="contact-form__field" type="text" name="Artist/Band Name" required="" aria-required="true">
-                    </div>
-                    <div data-field-id="1">
-                        <label class="contact-form__label" for="Email Address">Email Address <span class="contact-form__required-indicator">*</span></label>
-                        <input class="contact-form__field" type="email" name="Email Address" required="" aria-required="true">
-                    </div>
-                    <div data-field-id="3">
-                        <label class="contact-form__label" for="Contact Name">Contact Name</label>
-                        <input class="contact-form__field" type="text" name="Contact Name">
-                    </div>
-                    <div data-field-id="4">
-                        <label class="contact-form__label" for="Location (City, State)">Location (City, State) <span class="contact-form__required-indicator">*</span></label>
-                        <input class="contact-form__field" type="text" name="Location (City, State)" required="" aria-required="true">
-                    </div>
-                    <div data-field-id="5">
-                        <label class="contact-form__label" class="wpforms-field-label" for="Genre">Genre</label>
-                        <input class="contact-form__field" type="text" name="Genre">
-                    </div>
-                    <div data-field-id="10">
-                        <label class="contact-form__label" for="wpforms-5-field_10">Project Needs <span class="contact-form__required-indicator">*</span></label>
-                        <ul class="contact-form__checkbox">
-                            <li>
-                                <input type="checkbox" name="Recording" value="Recording" required="" aria-required="true">
-                                <label class="contact-form__label contact-form__label--checkbox" for="Recording">Recording</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="Mixing" value="Mixing" required="" aria-required="true">
-                                <label class="contact-form__label contact-form__label--checkbox" for="Mixing">Mixing</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="Mastering" value="Mastering" required="" aria-required="true">
-                                <label class="contact-form__label contact-form__label--checkbox" for="Mastering">Mastering</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="Track Building (Making the instrumental section of the song)" value="Track Building (Making the instrumental section of the song)" required="" aria-required="true">
-                                <label class="contact-form__label contact-form__label--checkbox" for="Track Building (Making the instrumental section of the song)">Track Building <span class="italic__font smaller-font smaller-font--contact-form">(The instrumental section of the song)</span></label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="Editing" value="Editing" required="" aria-required="true">
-                                <label class="contact-form__label contact-form__label--checkbox" for="Editing">Editing</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="Vocal Tuning" value="Vocal Tuning" required="" aria-required="true">
-                                <label class="contact-form__label contact-form__label--checkbox" for="Vocal Tuning">Vocal Tuning</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="Other" value="Other" required="" aria-required="true">
-                                <label class="contact-form__label contact-form__label--checkbox" for="Other">Other</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div data-field-id="6">
-                        <label class="contact-form__label" for="Desired Project Start/End Date">Desired Project Start/End Date</label>
-                        <input class="contact-form__field" type="text" name="Desired Project Start/End Date">
-                    </div>
-                    <div data-field-id="7">
-                        <label class="contact-form__label" for="Budget">Budget <span class="contact-form__required-indicator">*</span></label>
-                        <input class="contact-form__field" type="text" name="Budget" required="" aria-required="true">
-                    </div>
-                    <div data-field-id="8">
-                        <label class="contact-form__label" for="Number of Songs">Number of Songs</label>
-                        <input class="contact-form__field" type="text" name="Number of Songs">
-                    </div>
-                    <div data-field-id="2">
-                        <label class="contact-form__label" for="Project Details/Link to Demos or Artist Website">Project Details/Link to Demos or Artist Website</label>
-                        <textarea class="contact-form__field contact-form__field--big contact-form__field--project-details" name="Project Details/Link to Demos or Artist Website"></textarea>
-                    </div>
+        <form class="contact-form" data-formid="5" method="post" enctype="multipart/form-data" action="https://formspree.io/max@songwritershelterstudios.com" method="POST" novalidate="novalidate">
+            <div>
+                <div data-field-id="0">
+                    <label class="contact-form__label" for="Artist/Band Name">Artist/Band Name <span class="contact-form__required-indicator">*</span></label>
+                    <input class="contact-form__field" type="text" name="Artist/Band Name" required="" aria-required="true">
                 </div>
-                <div>
-                    <input type="hidden" name="_next" value="<?php echo get_site_url() . '/quote-request-submission-successful'; ?>">
-<!--                     <input type="hidden" name="wpforms[id]" value="5">
+                <div data-field-id="1">
+                    <label class="contact-form__label" for="Email Address">Email Address <span class="contact-form__required-indicator">*</span></label>
+                    <input class="contact-form__field" type="email" name="Email Address" required="" aria-required="true">
+                </div>
+                <div data-field-id="3">
+                    <label class="contact-form__label" for="Contact Name">Contact Name</label>
+                    <input class="contact-form__field" type="text" name="Contact Name">
+                </div>
+                <div data-field-id="4">
+                    <label class="contact-form__label" for="Location (City, State)">Location (City, State) <span class="contact-form__required-indicator">*</span></label>
+                    <input class="contact-form__field" type="text" name="Location (City, State)" required="" aria-required="true">
+                </div>
+                <div data-field-id="5">
+                    <label class="contact-form__label" class="wpforms-field-label" for="Genre">Genre</label>
+                    <input class="contact-form__field" type="text" name="Genre">
+                </div>
+                <div data-field-id="10">
+                    <label class="contact-form__label" for="wpforms-5-field_10">Project Needs <span class="contact-form__required-indicator">*</span></label>
+                    <ul class="contact-form__checkbox">
+                        <li>
+                            <input type="checkbox" name="Recording" value="Recording" required="" aria-required="true">
+                            <label class="contact-form__label contact-form__label--checkbox" for="Recording">Recording</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Mixing" value="Mixing" required="" aria-required="true">
+                            <label class="contact-form__label contact-form__label--checkbox" for="Mixing">Mixing</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Mastering" value="Mastering" required="" aria-required="true">
+                            <label class="contact-form__label contact-form__label--checkbox" for="Mastering">Mastering</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Track Building (Making The Instrumental)" value="Track Building (Making The Instrumental)" required="" aria-required="true">
+                            <label class="contact-form__label contact-form__label--checkbox" for="Track Building (Making The Instrumental)">Track Building <span class="italic__font smaller-font smaller-font--contact-form">(Making The Instrumental)</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Editing" value="Editing" required="" aria-required="true">
+                            <label class="contact-form__label contact-form__label--checkbox" for="Editing">Editing</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Vocal Tuning" value="Vocal Tuning" required="" aria-required="true">
+                            <label class="contact-form__label contact-form__label--checkbox" for="Vocal Tuning">Vocal Tuning</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Other" value="Other" required="" aria-required="true">
+                            <label class="contact-form__label contact-form__label--checkbox" for="Other">Other</label>
+                        </li>
+                    </ul>
+                </div>
+                <div data-field-id="6">
+                    <label class="contact-form__label" for="Desired Project Start/End Date">Desired Project Start/End Date</label>
+                    <input class="contact-form__field" type="text" name="Desired Project Start/End Date">
+                </div>
+                <div data-field-id="7">
+                    <label class="contact-form__label" for="Budget">Budget <span class="contact-form__required-indicator">*</span></label>
+                    <input class="contact-form__field" type="text" name="Budget" required="" aria-required="true">
+                </div>
+                <div data-field-id="8">
+                    <label class="contact-form__label" for="Number of Songs">Number of Songs</label>
+                    <input class="contact-form__field" type="text" name="Number of Songs">
+                </div>
+                <div data-field-id="2">
+                    <label class="contact-form__label" for="Project Details/Link to Demos or Artist Website">Project Details/Link to Demos or Artist Website</label>
+                    <textarea class="contact-form__field contact-form__field--big contact-form__field--project-details" name="Project Details/Link to Demos or Artist Website"></textarea>
+                </div>
+            </div>
+            <div>
+                <input type="hidden" name="_next" value="<?php echo get_site_url() . '/quote-request-submission-successful'; ?>">
+                <!--                     <input type="hidden" name="wpforms[id]" value="5">
                     <input type="hidden" name="wpforms[author]" value="0"> -->
-                    <button class="nav-reg__button nav-reg__button--contact" type="submit" name="Submit Quote Request" value="submit-quote-request" data-alt-text="Sending...">Submit Quote Request</button>
-                </div>
-            </form>
+                <button class="nav-reg__button nav-reg__button--contact" type="submit" name="Submit Quote Request" value="submit-quote-request" data-alt-text="Sending...">Submit Quote Request</button>
+            </div>
+        </form>
     </div>
-<!--     <div class="well__title well__medium-width">
+    <!--     <div class="well__title well__medium-width">
         <?php 
     echo do_shortcode(get_post(6)->post_content);
     ?>

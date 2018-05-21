@@ -3,6 +3,10 @@
     color: black;
     border-radius: 50px;
     padding: 30px;
+
+    @include tiny-phone-size-down {
+        padding: 10px;
+    }
 }
 
 .main-button__lg-font {

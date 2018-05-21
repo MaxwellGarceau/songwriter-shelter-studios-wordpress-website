@@ -56,20 +56,31 @@
 
 .nav-reg__right-elem {
 	right: 0;
+	top: 13px;
+	// top: auto;	
 }
 
 .nav-reg__left-elem {
 	right: 80px;
-
+	top: 13px;
+	// top: auto;
 	@media (max-width: 1250px) {
 		left: 0px;
+		right: auto;
 		right: initial;
+	}
+
+	&--user-pic {
+		top: 5px;
 	}
 }
 
 .nav-reg__user-name {
 	right: 140px;
+	top: 13px;
+	// top: auto;
 	@media (max-width: 1599px) {
+		right: auto;
 		right: initial;
 		left: 0px;
 	}
@@ -81,6 +92,7 @@
 
 @media (max-width: 991px) {
 	.nav-reg__position {
+		position: static;
 		position: initial;
 	}
 	.nav-reg__user-name--mobile-display-none {
@@ -93,7 +105,9 @@
 .login h1 a {
 	// Put a background image in here (replaces wordpress logo)
 	background-image: url('');
+	background-size: auto;
 	background-size: initial;
+	width: auto;
 	width: initial;
 	height: 60px;
 	border-radius: 10px;
@@ -110,6 +124,7 @@
 }
 
 #login p {
+	width: auto;
 	width: initial;
 }
 
@@ -156,6 +171,7 @@
 
 .message {
 	color: black;
+	background-color: transparent;
 	background-color: initial;
 }
 

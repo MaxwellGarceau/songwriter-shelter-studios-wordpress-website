@@ -135,9 +135,7 @@ function forumMainContent($args = []) {
 	<span class="forum-post__icons">
 	<?php 
 	if (get_comments_number() == 0) { ?> 
-		<a class="mobile-hide" href="<?php the_permalink(); ?>"><?php comments_number('Be the first to comment!', '1', '%') ?></a>
-		<span class="mobile-show">0</span>
-		<?php 
+		<a class="mobile-hide" href="<?php the_permalink(); ?>"><?php comments_number('Be the first to comment!', '1', '%') ?></a><span class="mobile-show">0</span><?php 
 	} else {
 		comments_number('Be the first to comment!', '1', '%');
 	} ?>&nbsp;&nbsp;<i class="fa fa-comments forum-post__icons--comments"></i>
@@ -663,6 +661,15 @@ function songwriter_title() {
 }
 
 add_action('after_setup_theme', 'songwriter_title');
+
+// Add favicon to admin and login pages
+function add_favicon() {
+  	$favicon_url = get_stylesheet_directory_uri() . '/images/favicon.ico';
+	echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
+}
+ 
+add_action('login_head', 'add_favicon');
+add_action('admin_head', 'add_favicon');
 
 // // Custom single template for forum singles
 

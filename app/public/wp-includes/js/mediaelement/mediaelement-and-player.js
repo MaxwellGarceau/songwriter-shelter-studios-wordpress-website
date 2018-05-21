@@ -2989,7 +2989,7 @@ Object.assign(_player.config, {
 
 	videoVolume: 'vertical',
 
-	startVolume: 0.8
+	startVolume: 1
 });
 
 Object.assign(_player2.default.prototype, {

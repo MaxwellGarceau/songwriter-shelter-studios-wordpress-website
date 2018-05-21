@@ -4,7 +4,7 @@
 ?>
 <!-- USER LOGIN/SIGNUP/LOGOUT START -->
 				<?php if(is_user_logged_in()) { ?>
-		            <span class="nav-item nav-reg__position nav-reg__left-elem">
+		            <span class="nav-item nav-reg__position nav-reg__left-elem nav-reg__left-elem--user-pic">
 		              <span class="site-header__avatar nav-link">
 						<?php echo get_avatar(get_current_user_id(), 40); ?>		
 					  </span>

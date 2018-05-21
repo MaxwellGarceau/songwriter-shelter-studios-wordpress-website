@@ -28,3 +28,15 @@
 .mejs-mediaelement {
     font-size: 3em !important;
 }
+
+.mejs-duration-container {
+	@include tiny-phone-size-down {
+		display: none;
+	}
+}
+
+.mejs-currenttime-container {
+	@include tiny-phone-size-down {
+		display: none;
+	}
+}

@@ -31,10 +31,12 @@
 
   & p {
     // all: initial;
+    background-color: transparent;
     background-color: initial;
     border-radius: 0;
     width: 70%;
     padding: 0;
+    line-height: normal;
     line-height: initial;
     margin: 0 auto;
     margin-bottom: 0;
@@ -321,9 +323,12 @@
 }
 
 .must-log-in {
+  background-color: transparent;
   background-color: initial;
+  width: auto;
   width: initial;
   padding: 10px;
+  border-radius: 0;
   border-radius: initial;
 
   & a {
@@ -377,6 +382,7 @@
 }
 
 .form-submit {
+  background-color: transparent;
   background-color: initial;
   padding: 0;
 }
@@ -413,6 +419,7 @@
   }
   @include phone-size-down {
     width: 90%;
+    margin: 0;
     margin: initial;
     margin-bottom: 10px;
   }  
@@ -423,6 +430,7 @@
 
     // New styles
     color: black;
+    background-color: transparent;
     background-color: initial;
     padding: 10px;
     margin: 10px auto;
