@@ -1,5 +1,10 @@
 // Home Page Backgrounds
 
+.home-content {
+    position: relative;
+    overflow: auto;
+}
+
 .home-content::before {
     content: "";
     position: fixed;
@@ -20,12 +25,21 @@
 
 #services {
     background-image: url('./images/services-background.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    // @include phone-size-down {
+    //     background-size: 500px;
+    // }
     background-repeat: no-repeat;
     background-position: center top;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     padding-bottom: 10%; // Parallax image movement
-    // transition: all 2s;
+    // width: 100%;
+    // min-width: 400px;
+    // height: 100%;
+    // transition: all 2s;  
 }
 
 // #services:hover {
@@ -68,7 +82,8 @@ iframe {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    background-attachment: fixed; // filter: brightness(70%) grayscale(25%);			
+    // background-attachment: fixed; 
+    // filter: brightness(70%) grayscale(25%);			
 }
 
 #testimonials p {
@@ -129,7 +144,7 @@ iframe {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    background-attachment: fixed;
+    // background-attachment: fixed;
 }
 
 // Landing Page Section

@@ -3,6 +3,7 @@
 
         // Custom WordPress query to get custom post type
         $musicTutorials = new WP_Query([
+        'paged' => get_query_var('paged', 1),
         'posts_per_page' => 2,
         'post_type' => 'production-tutorials'
       ]);
@@ -47,12 +48,15 @@
       // Main Content
       pageMainContent([
         'query' => $musicTutorials
-      ]);             
+      ]);
+?>
+<div class="<?php if ($musicTutorials->found_posts > 2) echo 'paginate-links'?>">
+<?php
+      echo paginate_links([
+        'total' =>$musicTutorials->max_num_pages
+      ]); 
       ?>
-
-
-<?php echo paginate_links(); ?>
-
+</div>
     <?php  
       } 
     ?>

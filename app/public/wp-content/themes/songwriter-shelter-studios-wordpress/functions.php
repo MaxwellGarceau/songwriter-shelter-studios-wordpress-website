@@ -483,6 +483,7 @@ function pageMainContent($args = []) {
 	</div>
 	</div>
 	<?php
+	// echo paginate_links();
 	}
 }
 
@@ -505,8 +506,8 @@ function singleMainContent($args = []) {
 
 ?>
 	<div class="main-content-well newsfeed__margin newsfeed-well__width newsfeed-well__background-color">
-		<h4 class="pagebanner__title--width"><?php the_title(); ?></h4>
-		<hr class="no__margin-bottom no__padding">
+		<h4 class="pagebanner__title--width page-single__subtitle italic__font"><?php the_title(); ?></h4>
+		<hr class="no__padding">
 		<?php if (has_post_thumbnail()) { ?>
 			<div class="generic-content main-content-well newsfeed-well__width container single-content--mobile">
 				<div class="row">
@@ -604,16 +605,18 @@ function setPostViews($postID) {
 function songwriter_files() {
 	// Scripts
 
-	wp_enqueue_script('jquery', get_theme_file_uri('/vendor/jquery/jquery.min.js'), NULL, '1.0', true);	
-	wp_enqueue_script('bootstrap-js', get_theme_file_uri('/vendor/bootstrap/js/bootstrap.bundle.min.js'), NULL, '1.0', true);	
-	wp_enqueue_script('jquery-easing', get_theme_file_uri('/vendor/jquery-easing/jquery.easing.min.js'), NULL, '1.0', true);
-	wp_enqueue_script('jquery-ui', get_theme_file_uri('/vendor/jquery-ui-waypoints/jquery-ui.min.js'), NULL, '1.0', true);
-	wp_enqueue_script('jquery-waypoints', get_theme_file_uri('/vendor/jquery-ui-waypoints/jquery.waypoints.min.js'), NULL, '1.0', true);
-	wp_enqueue_script('scrolling-nav', get_theme_file_uri('/js/scrolling-nav.js'), NULL, '1.0', true);	
-	wp_enqueue_script('search-js', get_theme_file_uri('/js/search.js'), NULL, '1.0', true);		
-	wp_enqueue_script('upvote-js', get_theme_file_uri('/js/upvote.js'), NULL, '1.0', true);
-	wp_enqueue_script('forum-js', get_theme_file_uri('/js/forum.js'), NULL, '1.0', true);
-	wp_enqueue_script('parallax-effect-js', get_theme_file_uri('/js/parallax-effect.js'), NULL, '1.0', true);	
+	// wp_enqueue_script('jquery', get_theme_file_uri('/vendor/jquery/jquery.min.js'), NULL, '1.0', true);	
+	// wp_enqueue_script('bootstrap-js', get_theme_file_uri('/vendor/bootstrap/js/bootstrap.bundle.min.js'), NULL, '1.0', true);	
+	// wp_enqueue_script('jquery-easing', get_theme_file_uri('/vendor/jquery-easing/jquery.easing.min.js'), NULL, '1.0', true);
+	// wp_enqueue_script('jquery-ui', get_theme_file_uri('/vendor/jquery-ui-waypoints/jquery-ui.min.js'), NULL, '1.0', true);
+	// Couldn't get jQuery Waypoints to import correctly in bundled JS
+	// wp_enqueue_script('jquery-waypoints', get_theme_file_uri('/vendor/jquery-ui-waypoints/jquery.waypoints.min.js'), NULL, '1.0', true);
+	// wp_enqueue_script('scrolling-nav', get_theme_file_uri('/js/modules/scrolling-nav.js'), NULL, '1.0', true);	
+	// wp_enqueue_script('search-js', get_theme_file_uri('/js/modules/search.js'), NULL, '1.0', true);		
+	// wp_enqueue_script('upvote-js', get_theme_file_uri('/js/modules/upvote.js'), NULL, '1.0', true);
+	// wp_enqueue_script('forum-js', get_theme_file_uri('/js/modules/forum.js'), NULL, '1.0', true);
+	// wp_enqueue_script('parallax-effect-js', get_theme_file_uri('/js/modules/parallax-effect.js'), NULL, '1.0', true);
+	wp_enqueue_script('main-songwriter-js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, '1.0', true);
 
 	// Styles
 
@@ -631,10 +634,17 @@ function songwriter_files() {
 	wp_localize_script('search-js', 'songwriterSearch', [
 		'root_url' => get_site_url()
 	]);	
-	wp_localize_script('parallax-effect-js', 'songwriterData', [
+	wp_localize_script('main-songwriter-js', 'songwriterData', [
 		'root_url' => get_site_url(),
 		'nonce' => wp_create_nonce('wp_rest')
-	]);	
+	]);
+
+	// Old nonce code
+	
+	// wp_localize_script('parallax-effect-js', 'songwriterData', [
+	// 	'root_url' => get_site_url(),
+	// 	'nonce' => wp_create_nonce('wp_rest')
+	// ]);
 	// wp_localize_script('upvote-js', 'songwriterData', array(
 	//     'root_url' => get_site_url(),
 	//     'nonce' => wp_create_nonce('wp_rest')

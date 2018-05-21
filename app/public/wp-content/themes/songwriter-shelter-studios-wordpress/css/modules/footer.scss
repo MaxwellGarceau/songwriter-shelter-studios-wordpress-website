@@ -24,10 +24,13 @@ h6 {
 }
 
 h1 {
-    font-family: the-skinny-bold;
+    font-family: 'the-skinny-bold', 'Avant Garde', serif;
     font-size: 2.5em;
 }
 
 h2 {
     font-size: $section-font-size;
+    @include tiny-phone-size-down {
+		font-size: 2.9em;
+    }
 }

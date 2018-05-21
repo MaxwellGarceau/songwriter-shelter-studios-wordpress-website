@@ -38,11 +38,15 @@
       // Main Content
       pageMainContent([
         'query' => $songwriterAdvice
-      ]);     
+      ]);
+?>
+<div class="<?php if ($songwriterAdvice->found_posts > 2) echo 'paginate-links'?>">
+<?php
+      echo paginate_links([
+        'total' =>$songwriterAdvice->max_num_pages
+      ]); 
       ?>
-
-<?php echo paginate_links(); ?>
-
+</div>
     <?php  
       } 
     ?>

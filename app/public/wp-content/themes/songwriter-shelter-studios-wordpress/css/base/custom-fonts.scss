@@ -1,20 +1,74 @@
 /* Custom Fonts */
+// @font-face {
+// 	font-family: 'din-light-regular';
+// 	src: url('./fonts/din-light-regular.eot');
+// 	src: ;
+// }
+
 @font-face {
-	font-family: din-light-regular;
-	src: url('./fonts/din-light-regular.otf');
+    font-family: 'din-light-regular';
+    src: url('./fonts/din-light-regular.eot');
+    src: url('./fonts/din-light-regular.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/din-light-regular.woff2') format('woff2'),
+         url('./fonts/din-light-regular.woff') format('woff'),
+         url('./fonts/din-light-regular.ttf') format('truetype'),
+         url('./fonts/din-light-regular.svg#dinlight') format('svg'),
+         url('./fonts/din-light-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// @font-face {
+// 	font-family: 'futura-book-regular';
+// 	src: url('./fonts/futura-book-regular.eot');
+// 	src: url('./fonts/futura-book-regular.eot?#iefix') format('embedded-opentype'),
+// 	url('./fonts/futura-book-regular.otf') format('opentype');
+// }
+
+@font-face {
+    font-family: 'futura-book-regular';
+    src: url('./fonts/futura-book-regular.eot');
+    src: url('./fonts/futura-book-regular.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/futura-book-regular.woff2') format('woff2'),
+         url('./fonts/futura-book-regular.woff') format('woff'),
+         url('./fonts/futura-book-regular.ttf') format('truetype'),
+         url('./fonts/futura-book-regular.svg#futura_bookregular') format('svg'),
+         url('./fonts/futura-book-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-	font-family: futura-book-regular;
-	src: url('./fonts/futura-book-regular.otf');
+    font-family: 'the-skinny-bold';
+    src: url('./fonts/the-skinny-bold-webfont.eot');
+    src: url('./fonts/the-skinny-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/the-skinny-bold-webfont.woff2') format('woff2'),
+         url('./fonts/the-skinny-bold-webfont.woff') format('woff'),
+         url('./fonts/the-skinny-bold-webfont.ttf') format('truetype'),
+         url('./fonts/the-skinny-bold-webfont.svg#the_skinnybold') format('svg'),
+         url('./fonts/the-skinny-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
 }
 
-@font-face {
-	font-family: the-skinny-bold;
-	src: url('./fonts/the-skinny-bold.otf');
-}
+// @font-face {
+// 	font-family: 'the-skinny';
+// 	src: url('./fonts/the-skinny.eot');
+// 	src: url('./fonts/the-skinny.otf');
+// }
 
 @font-face {
-	font-family: the-skinny;
-	src: url('./fonts/the-skinny.otf');
+    font-family: 'the-skinny';
+    src: url('./fonts/the-skinny.eot');
+    src: url('./fonts/the-skinny.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/the-skinny.woff2') format('woff2'),
+         url('./fonts/the-skinny.woff') format('woff'),
+         url('./fonts/the-skinny.ttf') format('truetype'),
+         url('./fonts/the-skinny.svg#the_skinnyregular') format('svg'),
+         url('./fonts/the-skinny.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
 }

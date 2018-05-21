@@ -264,7 +264,7 @@
                     </div>
                 </div>
                 <div>
-                    <input type="hidden" name="_next" value="<?php echo get_site_url('/form-submission-successful'); ?>">
+                    <input type="hidden" name="_next" value="<?php echo get_site_url() . '/quote-request-submission-successful'; ?>">
 <!--                     <input type="hidden" name="wpforms[id]" value="5">
                     <input type="hidden" name="wpforms[author]" value="0"> -->
                     <button class="nav-reg__button nav-reg__button--contact" type="submit" name="Submit Quote Request" value="submit-quote-request" data-alt-text="Sending...">Submit Quote Request</button>

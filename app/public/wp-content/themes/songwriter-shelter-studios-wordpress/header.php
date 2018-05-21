@@ -9,11 +9,13 @@
     <meta name="fb_admins_meta_tag" content="" />
     <meta name="keywords" content="Arranging, Audio, Engineer, Mastering, Metal, Mixing, Music, Recording, Rock, Studio" />
     <meta name="description" content="The Songwriter Shelter Recording Studios is a music writing, recording and production company based out of Nashville, TN. Contact Max Garceau today for a quote." />
-    <link rel="shortcut icon" href="https://static.wixstatic.com/media/6a1d9d_e8ce4563e136438d9d4151d519e6d4f1%7Emv2_d_1293_1296_s_2.png/v1/fill/w_16%2Ch_16%2Clg_1%2Cusm_0.66_1.00_0.01/6a1d9d_e8ce4563e136438d9d4151d519e6d4f1%7Emv2_d_1293_1296_s_2.png" type="image/png" />
-    <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/6a1d9d_e8ce4563e136438d9d4151d519e6d4f1%7Emv2_d_1293_1296_s_2.png/v1/fill/w_16%2Ch_16%2Clg_1%2Cusm_0.66_1.00_0.01/6a1d9d_e8ce4563e136438d9d4151d519e6d4f1%7Emv2_d_1293_1296_s_2.png" type="image/png" />
-    <meta http-equiv="X-Wix-Meta-Site-Id" content="3d58b758-817c-4ab8-ae6f-cb7853448b13" />
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/apple-touch-icon.png" type="image/png" />
+    
+<!--     <meta http-equiv="X-Wix-Meta-Site-Id" content="3d58b758-817c-4ab8-ae6f-cb7853448b13" />
     <meta http-equiv="X-Wix-Application-Instance-Id" content="c4d8f195-dd27-4ac6-989b-898635bdea80" />
-    <meta http-equiv="X-Wix-Published-Version" content="141" />
+    <meta http-equiv="X-Wix-Published-Version" content="141" /> -->
+
     <meta http-equiv="etag" content="dcc504720ff6a9ebac1ef56d5ea7cb7e" />
     <meta property="og:title" content="The Songwriter Shelter Recording Studios | Max Garceau" />
     <meta property="og:type" content="website" />
@@ -60,13 +62,13 @@
                             <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages') ?>">BLOGS<span class="fa fa-angle-down"></span></a>
                             <ul class="itemdown">
                                 <li>
-                                    <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-salon-music-philosophy-in-the-21st-century') ?>">Songwriter Salon</a>
+                                    <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages/songwriter-salon-music-philosophy-in-the-21st-century') ?>">Songwriter Salon</a>
                                 </li>
                                 <li>
-                                    <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-advice-from-a-nashville-music-producer') ?>">Advice For Songwriters</a>
+                                    <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages/songwriter-advice-from-a-nashville-music-producer') ?>">Advice For Songwriters</a>
                                 </li>
                                 <li>
-                                    <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how') ?>">Music Tutorials</a>
+                                    <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages/modern-music-production-and-composition-a-deep-dive-into-the-why-and-the-how') ?>">Music Tutorials</a>
                                 </li>
                             </ul>
                         </li>

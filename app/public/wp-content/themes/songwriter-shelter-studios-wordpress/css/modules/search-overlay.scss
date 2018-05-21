@@ -95,6 +95,13 @@
 
     & input {
         font-size: 2em;
+
+        @include phone-size-down {
+            font-size: 1.5em;
+        }
+        @include tiny-phone-size-down {
+            font-size: 1.25em;
+        }        
     }
 
     .one-half {

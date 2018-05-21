@@ -250,7 +250,7 @@
     padding-bottom: 50px;
 
     @include phone-size-down {
-      width: 100%;
+      width: 90%;
     }
   }
 }
@@ -607,7 +607,7 @@ div .page-links .page-links__title--forum {
 .new-forum-post-title {
   width: 100%;
   padding: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Avant Garde', sans-serif;
   border: none;
   margin-bottom: 10px;
   font-size: 1.15rem;
@@ -616,7 +616,7 @@ div .page-links .page-links__title--forum {
 
 .new-forum-post-body-field {
   color: #333;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Avant Garde', sans-serif;
   resize: none;
   display: block;
   width: 60%;
@@ -639,7 +639,7 @@ div .page-links .page-links__title--forum {
   box-sizing: border-box;
   resize: none;
   padding: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Avant Garde', sans-serif;
   border: none;
   margin-bottom: 10px;
   height: 170px;
@@ -681,7 +681,7 @@ div .page-links .page-links__title--forum {
   width: auto;
   border-radius: $border-radius-small; 
   font-size: 1.85rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', 'Avant Garde', sans-serif;
   font-weight: 300;
   color: $mainBlue;
   border: 1px solid transparent;

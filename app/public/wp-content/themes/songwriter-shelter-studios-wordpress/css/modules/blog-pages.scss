@@ -14,7 +14,6 @@
     }
 }    
 
-
 .blog-title--smaller {
     font-size: .5em;
     font-style: italic;
@@ -36,7 +35,7 @@ body {
     text-align: center;
     color: white; 
     // font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
-    font-family: din-light-regular, Arial, Helvetica;
+    font-family: 'din-light-regular', Arial, Helvetica, sans-serif;
 }
 
 /* Safari color fix for forum page */
@@ -48,6 +47,24 @@ body {
     color: white;
 }
 
+// Paginate Links
+
+// .page-numbers {
+//     color: white;
+// }
+
+// .next {
+//     color: $darkerWhite;
+// }
+
+.paginate-links {
+    background-color: white;
+    color: black;
+    display: inline-block;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
 // .page-id-119 .forum-post__icons--comments {
 //     color: black
 // }
