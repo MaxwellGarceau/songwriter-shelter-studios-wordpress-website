@@ -6,6 +6,7 @@ import 'jquery-ui';
 // Imported from vendor folder
 import '../vendor/bootstrap/js/bootstrap.bundle.min.js';
 import '../vendor/jquery-ui-waypoints/jquery.waypoints.min.js';
+import './modules/misc.js';
 
 // Our modules / classes
 import ForumPosts from './modules/forum';

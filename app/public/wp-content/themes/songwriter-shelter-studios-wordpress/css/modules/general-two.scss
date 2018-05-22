@@ -69,12 +69,12 @@
 }
 
 .smaller-font {
-    font-size: .8em;
+    font-size: 0.8em;
     &--contact-form {
         @include phone-size-down {
-            font-size: .6em;
+            font-size: 0.6em;
         }
-    }    
+    }
 }
 
 .no__padding {

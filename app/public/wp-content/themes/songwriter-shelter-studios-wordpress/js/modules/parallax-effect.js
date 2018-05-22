@@ -1,7 +1,4 @@
 import $ from 'jquery';
-// import 'jquery-ui';
-// import '../../vendor/jquery-ui-waypoints/jquery.waypoints.min.js';
-// import 'jquery.waypoints.min';
 
 // Enable parallax scrolling
 const ParallaxEffect = () => {
@@ -25,32 +22,13 @@ const ParallaxEffect = () => {
             }
         });
 
-    // // Parallax Image Slight Movement
-    //     $('body').on('scroll', function() {
-    //         console.log('test');
-    //     });
+        // Implement better parallax later
+
+        // // Parallax Image Slight Movement
+        //     $('body').on('scroll', function() {
+        //         console.log('test');
+        //     });
     }
 }
-// });
-
-// Misc
-
-// Music Player
-
-// jQuery(document).ready(function ($) {
-//     if($.fn.mediaelementplayer) {
-//         $("audio").mediaelementplayer({
-//             success: function (mediaElement, domObject) {
-//                 mediaElement.addEventListener('play', function() {
-//                        mediaElement.setVolume(1);
-//                        console.log('event is firing');
-//                 });
-//             }
-//         });
-//     }
-// });
-
-// $('audio').addEventListener('play', function() {
-//     console.log('event is firing');
 
 export default ParallaxEffect;

@@ -1,13 +1,12 @@
 <?php
-	get_header();
+  get_header();
 
       // Custom WordPress query to get custom post type
       $mainPage = 53;
       $blogParentPage = 44;
   ?>
-
-<section class="page-background no__padding-top">		
-  <?php
+    <section class="page-background no__padding-top">
+        <?php
   // Custom PHP function to load page banner
   pageBanner([
     'title' => 'Modern Music Production And Composition <br> <span class="blog-title--smaller">Archive</span>'
@@ -19,6 +18,5 @@
   // Main content
   get_template_part('/template-parts/archivecontent-maincontent');
 ?>
-
-</section>
-	<?php get_footer();?>
+    </section>
+<?php get_footer();?>

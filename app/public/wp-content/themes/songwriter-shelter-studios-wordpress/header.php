@@ -11,11 +11,9 @@
     <meta name="description" content="The Songwriter Shelter Recording Studios is a music writing, recording and production company based out of Nashville, TN. Contact Max Garceau today for a quote." />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/apple-touch-icon.png" type="image/png" />
-    
-<!--     <meta http-equiv="X-Wix-Meta-Site-Id" content="3d58b758-817c-4ab8-ae6f-cb7853448b13" />
+    <!--     <meta http-equiv="X-Wix-Meta-Site-Id" content="3d58b758-817c-4ab8-ae6f-cb7853448b13" />
     <meta http-equiv="X-Wix-Application-Instance-Id" content="c4d8f195-dd27-4ac6-989b-898635bdea80" />
     <meta http-equiv="X-Wix-Published-Version" content="141" /> -->
-
     <meta http-equiv="etag" content="dcc504720ff6a9ebac1ef56d5ea7cb7e" />
     <meta property="og:title" content="The Songwriter Shelter Recording Studios | Max Garceau" />
     <meta property="og:type" content="website" />
@@ -59,7 +57,8 @@
                         </li>
                         <!-- Navigation for Blogs -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages') ?>">BLOGS<span class="fa fa-angle-down"></span></a>
+                            <a class="nav-link btndown" href="#" onclick="return false;">
+                                BLOGS<span class="fa fa-angle-down"></span></a>
                             <ul class="itemdown">
                                 <li>
                                     <a class="nav-link js-scroll-trigger" href="<?php echo site_url('/songwriter-shelter-studios-blog-pages/songwriter-salon-music-philosophy-in-the-21st-century') ?>">Songwriter Salon</a>
@@ -73,7 +72,7 @@
                             </ul>
                         </li>
                         <!-- Navigation for Forum -->
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
                             <a class="nav-link js-scroll-trigger btndown" href="<?php echo site_url('/songwriter-shelter-forum') ?>">FORUM</a>
                         </li>
                         <!-- Live Search -->

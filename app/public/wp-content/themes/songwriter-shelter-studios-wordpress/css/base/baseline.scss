@@ -25,39 +25,65 @@
 // Main Breakpoints
 
 @mixin tiny-phone-size-down {
-  @media (max-width: 400px) { @content; }
+  @media (max-width: 400px) {
+    @content;
+  }
 }
 
 @mixin phone-size-down {
-	@media (max-width: 600px) { @content; }
+  @media (max-width: 600px) {
+    @content;
+  }
 }
 
 @mixin tablet-portrait-size-down {
-	@media (max-width: 900px) { @content; }
+  @media (max-width: 900px) {
+    @content;
+  }
 }
 
 @mixin tablet-landscape-size-down {
-	@media (max-width: 1200px) { @content; }
+  @media (max-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin desktop-size-up {
-	@media (min-width: 1201px) { @content; }
+  @media (min-width: 1201px) {
+    @content;
+  }
 }
 
 @mixin big-desktop-size-up {
-	@media (min-width: 1801px) { @content; }
+  @media (min-width: 1801px) {
+    @content;
+  }
 }
 
 // Misc Media Breakpoints
 
 @mixin bootstrap-large-column-bp {
-	@media (max-width: 991px) { @content; }
+  @media (max-width: 991px) {
+    @content;
+  }
 }
 
 @mixin half-desktop-size-down {
-	@media (max-width: 1450px) { @content; }
+  @media (max-width: 1450px) {
+    @content;
+  }
 }
 
 @mixin forum-container-bp {
-	@media (max-width: 1650px) { @content; }
+  @media (max-width: 1650px) {
+    @content;
+  }
+}
+
+// Specific Devices
+
+@mixin mobile-landscape {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    @content;
+  }
 }

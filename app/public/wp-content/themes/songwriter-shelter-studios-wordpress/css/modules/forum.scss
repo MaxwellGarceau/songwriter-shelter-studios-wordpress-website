@@ -30,7 +30,6 @@
   position: relative;
 
   & p {
-    // all: initial;
     background-color: transparent;
     background-color: initial;
     border-radius: 0;
@@ -41,26 +40,20 @@
     margin: 0 auto;
     margin-bottom: 0;
     margin-left: $forumPostMargin;
-    // margin: 0 15px;
 
     @include tablet-portrait-size-down {
       width: 50%;
     }
     @include phone-size-down {
       width: 70%;
-    }    
-  } 
+    }
+  }
 
   &__well {
     background-color: rgba(255, 255, 255, 1);
-    // color: -webkit-linear-gradient(#FFF,#000);
     color: $lightBlack;
-    // width: 60%;
-    // width: 80%;
-    // margin: 0 auto; 
-    // margin-left: 30px;
     padding-bottom: 10px;
-    border-bottom: 1px solid black;   
+    border-bottom: 1px solid black;
   }
 
   & h6 a:link {
@@ -69,10 +62,6 @@
   & h6 a:hover {
     color: $linkGrey;
   }
-
-  &__content {
-
-  } 
 
   &__author {
     margin-left: $forumPostMargin;
@@ -89,30 +78,34 @@
 
     @include phone-size-down {
       width: 55%;
-    }    
+    }
   }
 
   @include tablet-portrait-size-down {
-    &__author, &__title, & p {
-        margin-left: $forumPostMarginMobile;
+    &__author,
+    &__title,
+    & p {
+      margin-left: $forumPostMarginMobile;
     }
-  @include phone-size-down {
-    &__author, &__title, & p {
+    @include phone-size-down {
+      &__author,
+      &__title,
+      & p {
         margin-left: 2%;
-    }    
-  }  
-}
+      }
+    }
+  }
 
   &__full-post {
     text-align: center;
-  }  
+  }
 
   &__icons-container {
     display: inline-block;
     position: absolute;
 
     &--comments {
-      margin-top: 15px; 
+      margin-top: 15px;
       text-align: right;
       width: 35%;
       left: 63%;
@@ -120,7 +113,7 @@
     }
 
     &--views {
-      margin-top: 75px; 
+      margin-top: 75px;
       text-align: right;
       width: 35%;
       left: 63%;
@@ -137,15 +130,13 @@
       }
       @include phone-size-down {
         display: none;
-      }      
+      }
     }
   }
 
-
-
   &__icons {
     color: black;
-    font-size: 1.3em;    
+    font-size: 1.3em;
   }
 
   &__icons--comments {
@@ -154,15 +145,15 @@
 
   &__icons--views {
     font-size: 1.25em;
-  }  
+  }
 
   &__icons--category {
     font-size: 1.5em;
-  } 
+  }
 
   &__icons--subtitle {
     color: black;
-    font-size: .7em;
+    font-size: 0.7em;
     padding: 5px;
   }
 }
@@ -173,7 +164,7 @@
   padding: 15px;
   background-color: white;
   border-radius: $border-radius-small;
-  font-size: .8em;
+  font-size: 0.8em;
   @include forum-container-bp {
     width: 90%;
     margin-left: 0;
@@ -203,7 +194,7 @@
 
   &__header {
     background-color: $earthyBrown;
-    border-radius: $border-radius-small;    
+    border-radius: $border-radius-small;
   }
 }
 
@@ -220,7 +211,6 @@
 }
 
 .forum-single {
-
   &__title {
     color: black;
     background-color: white;
@@ -229,8 +219,8 @@
     width: 50%;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 20px;    
-    padding: 10px;  
+    margin-bottom: 20px;
+    padding: 10px;
 
     @include tablet-landscape-size-down {
       font-size: 2.9em;
@@ -238,11 +228,11 @@
     @include tablet-portrait-size-down {
       font-size: 2.7em;
       width: 70%;
-    }  
+    }
     @include phone-size-down {
       font-size: 2.5em;
       width: 90%;
-    }         
+    }
   }
 
   .main-content-well &__well {
@@ -256,12 +246,6 @@
     }
   }
 }
-
-// .comment-form .logged-in-as {
-//   background-color: white;
-//   color: black;
-//   width: 25%;
-// }
 
 .comment-form {
   & .logged-in-as {
@@ -277,7 +261,7 @@
 
     @include phone-size-down {
       width: 70%;
-    }     
+    }
   }
 
   & .logged-in-as a {
@@ -288,7 +272,7 @@
   }
   & .logged-in-as a:hover {
     color: black;
-  }    
+  }
   & a {
     color: white;
   }
@@ -307,19 +291,19 @@
 }
 
 .comment-reply-title {
-    color: black;
-    background-color: white;
-    border-style: solid;
-    border-radius: 30px;
-    width: 30%;
-    margin: auto;
-    margin-bottom: 10px;
-    margin-top: 70px;
-    padding: 10px;
+  color: black;
+  background-color: white;
+  border-style: solid;
+  border-radius: 30px;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 70px;
+  padding: 10px;
 
-    @include phone-size-down {
-      width: 50%;
-    }
+  @include phone-size-down {
+    width: 50%;
+  }
 }
 
 .must-log-in {
@@ -333,7 +317,7 @@
 
   & a {
     @extend .inverse-link-color;
-    @extend .inverse-link-color, :visited;    
+    @extend .inverse-link-color, :visited;
   }
 }
 
@@ -363,10 +347,10 @@
   }
   @include tablet-portrait-size-down {
     width: 75%;
-  }  
+  }
   @include phone-size-down {
     width: 95%;
-    padding: 40px 20px;    
+    padding: 40px 20px;
   }
 }
 
@@ -393,7 +377,7 @@
   border-radius: 25px;
   padding: 5px 12px;
   width: auto;
-  transition: .6s ease;  
+  transition: 0.6s ease;
 }
 
 .submit:hover {
@@ -422,11 +406,9 @@
     margin: 0;
     margin: initial;
     margin-bottom: 10px;
-  }  
+  }
   & p {
     width: 90%;
-    // color: white;
-    // background-color: $blackIsh;
 
     // New styles
     color: black;
@@ -449,12 +431,12 @@
 
   @include phone-size-down {
     width: 50%;
-  }    
+  }
 }
 
-  .reply a:visited {
-    color: $darkerWhite;
-  }
+.reply a:visited {
+  color: $darkerWhite;
+}
 
 .comment {
   list-style: none;
@@ -488,7 +470,7 @@
   margin-bottom: 15px;
 }
 
-@media only screen and (max-width : 1300px) {
+@media only screen and (max-width: 1300px) {
   .forum-breadcrumb {
     display: none;
   }
@@ -505,40 +487,62 @@ div .page-links .page-links__title--forum {
   padding: 5px 10px;
   background-color: $redClay;
   color: $grey;
-  transition: .3s;
+  transition: 0.3s;
 
   &:hover {
     background-color: $redderClay;
   }
 
   &__caption {
-    font-size: .9em;
+    font-size: 0.9em;
     color: black;
+
+    &--log-in {
+      margin-bottom: 5px;
+    }
   }
 
   &__no-posts {
     color: black;
   }
+}
 
+.upvote-caption {
+  position: relative;
+  float: right;
+
+  &--caption {
+    position: absolute;
+    min-width: 100px;
+    left: -21px;
+    top: 54px;
+    opacity: .65;
+
+    @include tablet-portrait-size-down {
+      font-size: .7em;
+    }
+    @include phone-size-down {
+      font-size: .5em;
+    }    
+  }
 }
 
 .edit-forum-post,
 .delete-forum-post,
 .create-forum-post,
 .update-forum-post {
-  font-size: .9rem;
-  background-color: #EEE;
+  font-size: 0.9rem;
+  background-color: #eee;
   padding: 8px 16px;
   display: inline-block;
   margin-top: 25px;
-  // margin-bottom: $small-margin;
   margin-right: 7px;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .submit-forum-post {
-  color: #FFF;
+  color: #fff;
   border: none;
   background-color: $darkOrange;
   line-height: 1.65;
@@ -548,16 +552,18 @@ div .page-links .page-links__title--forum {
   background-color: color($darkOrange b(+10%) s(+10%));
 }
 
-.edit-forum-post, .delete-forum-post, .update-forum-post {
+.edit-forum-post,
+.delete-forum-post,
+.update-forum-post {
   @media (min-width: 635px) {
     position: relative;
     top: -12px;
-    // margin-bottom: 0px;
   }
 }
 
-.edit-forum-post:hover, .delete-forum-post:hover {
-  background-color: #DDD;
+.edit-forum-post:hover,
+.delete-forum-post:hover {
+  background-color: #ddd;
 }
 
 .delete-forum-post {
@@ -571,17 +577,13 @@ div .page-links .page-links__title--forum {
 .update-forum-post {
   color: blue;
   visibility: hidden;
-  // opacity: 0.75;
-  // transition: opacity 0.5s;
   transition: background-color 0.5s;
   transition: color 0.3s;
-  // display: none;
 }
 
 .update-forum-post:hover {
   background-color: blue;
   color: white;
-  // opacity: 1;
 }
 
 .update-forum-post--visible {
@@ -589,24 +591,24 @@ div .page-links .page-links__title--forum {
 }
 
 .forum-post-active-field {
-  border: 1px solid #DDD;
-  animation: pulseBorder .75s alternate infinite;
+  border: 1px solid #ddd;
+  animation: pulseBorder 0.75s alternate infinite;
 }
 
 @keyframes pulseBorder {
   0% {
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
   }
 
   100% {
-    border: 1px solid #CCC;
+    border: 1px solid #ccc;
   }
 }
 
 /* Create forum-post */
 
 .create-forum-post {
-  background-color: #DDD;
+  background-color: #ddd;
   color: black;
   padding: 20px;
   margin-bottom: 20px;
@@ -615,7 +617,7 @@ div .page-links .page-links__title--forum {
 .new-forum-post-title {
   width: 100%;
   padding: 10px;
-  font-family: 'Roboto', 'Avant Garde', sans-serif;
+  font-family: "Roboto", "Avant Garde", sans-serif;
   border: none;
   margin-bottom: 10px;
   font-size: 1.15rem;
@@ -624,7 +626,7 @@ div .page-links .page-links__title--forum {
 
 .new-forum-post-body-field {
   color: #333;
-  font-family: 'Roboto', 'Avant Garde', sans-serif;
+  font-family: "Roboto", "Avant Garde", sans-serif;
   resize: none;
   display: block;
   width: 60%;
@@ -639,7 +641,7 @@ div .page-links .page-links__title--forum {
 
   @include tablet-portrait-size-down {
     width: 90%;
-  }  
+  }
 }
 
 .new-forum-post-body {
@@ -647,7 +649,7 @@ div .page-links .page-links__title--forum {
   box-sizing: border-box;
   resize: none;
   padding: 10px;
-  font-family: 'Roboto', 'Avant Garde', sans-serif;
+  font-family: "Roboto", "Avant Garde", sans-serif;
   border: none;
   margin-bottom: 10px;
   height: 170px;
@@ -661,12 +663,7 @@ div .page-links .page-links__title--forum {
 }
 
 .forum-post-limit-message {
-  // visibility: hidden;
   display: none;
-}
-
-.forum-post-header {
-  // margin-bottom: $medium-margin;
 }
 
 /* Edit/Delete User Posts area */
@@ -685,11 +682,12 @@ div .page-links .page-links__title--forum {
   padding: 0;
 }
 
-.user-posts__title, .new-forum-post-title {
+.user-posts__title,
+.new-forum-post-title {
   width: auto;
-  border-radius: $border-radius-small; 
+  border-radius: $border-radius-small;
   font-size: 1.85rem;
-  font-family: 'Roboto Condensed', 'Avant Garde', sans-serif;
+  font-family: "Roboto Condensed", "Avant Garde", sans-serif;
   font-weight: 300;
   color: $mainBlue;
   border: 1px solid transparent;
@@ -717,12 +715,10 @@ div .page-links .page-links__title--forum {
   margin-top: $small-margin;
   resize: both;
   width: 60%;
-  // height: 150px;
-  // border-radius: 3px;
   border: 1px solid transparent;
   border-radius: 20px;
   height: 175px;
-  outline: none;  
+  outline: none;
   padding: 15px;
 
   @include tablet-portrait-size-down {
@@ -741,16 +737,15 @@ div .page-links .page-links__title--forum {
   display: none;
 }
 
-@media only screen and (max-width : 991px) {
+@media only screen and (max-width: 991px) {
   .new-forum-post-body-field {
-    // width: 70%;
     padding: $well-mobile-padding;
-  } 
+  }
 }
 
-@media only screen and (max-width : 480px) {  
+@media only screen and (max-width: 480px) {
   .new-forum-post-body-field {
     width: 90%;
     padding: $well-mobile-padding;
   }
-}  
+}

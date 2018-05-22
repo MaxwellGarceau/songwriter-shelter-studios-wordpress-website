@@ -19,7 +19,6 @@
             'title_li' => NULL,
             'child_of' => $findChildrenOf,
             'sort_column' => 'menu_order'
-          )); 
-          ?>
+          ));?>
       </ul>
     </div>

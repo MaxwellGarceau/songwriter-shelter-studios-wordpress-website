@@ -8,20 +8,20 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, .96);
+    background-color: rgba(255, 255, 255, 0.96);
     visibility: hidden;
     opacity: 0;
     transform: scale(1.09);
-    transition: opacity .3s, transform .3s, visibility .3s;
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
     box-sizing: border-box;
 
     &__border {
         border-top-style: solid;
         border-width: 1px;
-        border-top-color: #CCC;
+        border-top-color: #ccc;
         margin: auto;
         margin-bottom: 1rem;
-        width: 65%;        
+        width: 65%;
     }
 
     p {
@@ -42,7 +42,7 @@
     }
 
     &__top {
-        background-color: rgba(0, 0, 0, .12);
+        background-color: rgba(0, 0, 0, 0.12);
     }
 
     &__icon {
@@ -65,8 +65,6 @@
         font-weight: 400;
         color: $mainBlue;
         font-size: 2rem;
-        // padding: 15px 0;
-        // border-bottom: 1px solid #CCC;
     }
 
     &__close {
@@ -75,10 +73,9 @@
         right: 16px;
         font-size: 2.1rem;
         cursor: pointer;
-        transition: all .3s;
-        /*background-color: #FFF;*/
+        transition: all 0.3s;
         color: $darkOrange;
-        line-height: .7;
+        line-height: 0.7;
         @mixin atSmall {
             top: 18px;
             font-size: 2.1rem;
@@ -101,7 +98,7 @@
         }
         @include tiny-phone-size-down {
             font-size: 1.1em;
-        }        
+        }
     }
 
     .one-half {
@@ -121,7 +118,7 @@
     outline: none;
     color: $darkOrange;
     @mixin atSmall {
-        font-size: 1.5rem
+        font-size: 1.5rem;
     }
     @mixin atMedium {
         width: 80%;
@@ -170,9 +167,8 @@
 
 .link-list a:hover {
     color: $lightOrange;
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    /*animation-duration: 1s;*/
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     -webkit-animation-name: linkfade;
     animation-name: linkfade;
     -webkit-animation-fill-mode: both;
@@ -184,7 +180,7 @@
         opacity: 1;
     }
     100% {
-        opacity: .5;
+        opacity: 0.5;
     }
 }
 
@@ -193,7 +189,7 @@
         opacity: 1;
     }
     100% {
-        opacity: .5;
+        opacity: 0.5;
     }
 }
 
@@ -233,7 +229,6 @@
     }
 }
 
-
 .search-bar {
     border-radius: 25px;
     padding: 1px 15px;
@@ -244,23 +239,20 @@
     }
 }
 
-
-
 .default-search {
     &__well {
-    width: 60%;
-    margin: 0 auto;
-    border-radius: 20px;
-    // padding-top: 15px; 
-      & p {
-        background-color: transparent;
-        background-color: initial;
-        border-radius: 0;
-        border-radius: initial;
-        width: 100%;  
-        padding: 0;
-        margin: 0;
-      }       
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 20px;
+        & p {
+            background-color: transparent;
+            background-color: initial;
+            border-radius: 0;
+            border-radius: initial;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &__label {
@@ -289,7 +281,6 @@
     }
 
     &__results-list-item {
-        // border-bottom-style: dashed;
         border-width: 1px;
         padding: 15px;
         border-bottom-color: $lightBlack;
@@ -304,10 +295,10 @@
             color: $lightBlack;
         }
         &:nth-child(odd) {
-            background-color: $darkerWhite; // color: white;     
+            background-color: $darkerWhite;
         }
         &:nth-child(even) {
-            background-color: white; // color: black;
+            background-color: white;
         }
     }
 }

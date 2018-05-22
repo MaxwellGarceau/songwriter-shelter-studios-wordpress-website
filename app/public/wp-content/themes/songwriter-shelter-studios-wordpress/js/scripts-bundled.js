@@ -10340,15 +10340,17 @@ __webpack_require__(5);
 
 __webpack_require__(7);
 
-var _forum = _interopRequireDefault(__webpack_require__(8));
+__webpack_require__(8);
 
-var _parallaxEffect = _interopRequireDefault(__webpack_require__(9));
+var _forum = _interopRequireDefault(__webpack_require__(9));
 
-var _scrollingNav = _interopRequireDefault(__webpack_require__(10));
+var _parallaxEffect = _interopRequireDefault(__webpack_require__(10));
 
-var _search = _interopRequireDefault(__webpack_require__(11));
+var _scrollingNav = _interopRequireDefault(__webpack_require__(11));
 
-var _upvote = _interopRequireDefault(__webpack_require__(12));
+var _search = _interopRequireDefault(__webpack_require__(12));
+
+var _upvote = _interopRequireDefault(__webpack_require__(13));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14187,6 +14189,12 @@ window.jQuery = window.$ = __webpack_require__(0);
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14219,7 +14227,6 @@ function () {
   _createClass(ForumPosts, [{
     key: "events",
     value: function events() {
-      // $('#user-posts-button').on('click', this.toggleUserPosts);
       (0, _jquery.default)('.user-posts-button__show').on('click', this.toggleUserPosts);
       (0, _jquery.default)('.user-posts-button__create').on('click', this.toggleCreatePosts);
       (0, _jquery.default)('.user-forum-posts').on('click', '.delete-forum-post', this.deleteUserPost);
@@ -14344,8 +14351,7 @@ function () {
   }, {
     key: "createForumPost",
     value: function createForumPost(e) {
-      var thisSection = (0, _jquery.default)(e.target).parents('.forum-master-container__subsection'); // const thisPost = $(e.target).parents('div');
-
+      var thisSection = (0, _jquery.default)(e.target).parents('.forum-master-container__subsection');
       var ourNewPost = {
         'title': thisSection.find('.new-forum-post-title').val(),
         'content': thisSection.find('.new-forum-post-body-field').val(),
@@ -14380,7 +14386,6 @@ function () {
           console.log(response);
         },
         error: function error(response) {
-          // PHP adding white space, fix later
           if (response.responseText == "Slow down, you're posting too quickly.") {
             thisSection.find('.forum-post-limit-message').fadeIn();
           }
@@ -14399,7 +14404,7 @@ var _default = ForumPosts;
 exports.default = _default;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14414,9 +14419,6 @@ var _jquery = _interopRequireDefault(__webpack_require__(0));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import 'jquery-ui';
-// import '../../vendor/jquery-ui-waypoints/jquery.waypoints.min.js';
-// import 'jquery.waypoints.min';
 // Enable parallax scrolling
 var ParallaxEffect = function ParallaxEffect() {
   if (document.getElementById('home')) {
@@ -14435,35 +14437,19 @@ var ParallaxEffect = function ParallaxEffect() {
           (0, _jquery.default)('#home').removeClass('home-content my-work-content about-content').addClass('about-content');
         } else (0, _jquery.default)('#home').removeClass('home-content my-work-content about-content').addClass('my-work-content');
       }
-    }); // // Parallax Image Slight Movement
+    }); // Implement better parallax later
+    // // Parallax Image Slight Movement
     //     $('body').on('scroll', function() {
     //         console.log('test');
     //     });
   }
-}; // });
-// Misc
-// Music Player
-// jQuery(document).ready(function ($) {
-//     if($.fn.mediaelementplayer) {
-//         $("audio").mediaelementplayer({
-//             success: function (mediaElement, domObject) {
-//                 mediaElement.addEventListener('play', function() {
-//                        mediaElement.setVolume(1);
-//                        console.log('event is firing');
-//                 });
-//             }
-//         });
-//     }
-// });
-// $('audio').addEventListener('play', function() {
-//     console.log('event is firing');
-
+};
 
 var _default = ParallaxEffect;
 exports.default = _default;
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14478,12 +14464,9 @@ var _jquery = _interopRequireDefault(__webpack_require__(0));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import 'jquery.easing';
-// import '../vendor/bootstrap/js/bootstrap.bundle.min.js';
 // export default (function($) {
 var ScrollingNav = function ScrollingNav() {
-  "use strict"; // Start of use strict
-  // Smooth scrolling using jQuery easing
+  "use strict"; // Smooth scrolling using jQuery easing
 
   (0, _jquery.default)('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -14506,15 +14489,18 @@ var ScrollingNav = function ScrollingNav() {
   (0, _jquery.default)('body').scrollspy({
     target: '#mainNav',
     offset: 54
-  });
-}; // })(jQuery); // End of use strict
+  }); // Triggers open and close for blog dropdown menu inside mobile nav
 
+  (0, _jquery.default)('.dropdown').click(function () {
+    (0, _jquery.default)('ul li.dropdown .itemdown').toggle('1');
+  });
+};
 
 var _default = ScrollingNav;
 exports.default = _default;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14652,7 +14638,7 @@ var _default = Search;
 exports.default = _default;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

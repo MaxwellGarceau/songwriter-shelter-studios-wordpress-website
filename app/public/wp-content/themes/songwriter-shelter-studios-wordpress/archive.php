@@ -1,9 +1,8 @@
 <?php
-	get_header();
+  get_header();
   ?>
-
-<section class="page-background no__padding-top">		
-  <?php
+    <section class="page-background no__padding-top">
+        <?php
   // Custom PHP function to load page banner
   pageBanner([
     'title' => get_the_archive_title()
@@ -11,6 +10,5 @@
   // Main content
   get_template_part('/template-parts/archivecontent-authormaincontent'); 
 ?>
-
-</section>
-	<?php get_footer();?>
+    </section>
+<?php get_footer();?>

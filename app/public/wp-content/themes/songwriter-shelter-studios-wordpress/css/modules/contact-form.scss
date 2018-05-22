@@ -2,7 +2,7 @@
 
 .wpforms-field-container {
     display: block;
-    position: relative; // margin: 0 auto;
+    position: relative;
 }
 
 .wpforms-field input {
@@ -17,16 +17,12 @@ div.wpforms-container-full .wpforms-form ul {
     text-align: left;
 }
 
-div.wpforms-container-full .wpforms-form ul li {
-    // margin: inherit !important;
-}
-
-div.wpforms-container-full .wpforms-form button[type=submit] {
+div.wpforms-container-full .wpforms-form button[type="submit"] {
     border-radius: 25px !important;
 }
 
 .contact-form--list ul {
-    margin-left: 25% !important; // color: red !important;
+    margin-left: 25% !important;
 }
 
 // New Contact Form
@@ -35,12 +31,11 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     padding: 15px 25px;
 
     @include tiny-phone-size-down {
-        margin: 15px;        
+        margin: 15px;
     }
 }
 
 .contact-form {
-
     &__label {
         display: block;
         &--checkbox {
@@ -58,16 +53,13 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
         }
         @include tablet-portrait-size-down {
             max-width: 90%;
-        }        
+        }
         &--big {
             max-width: 85%;
             height: 120px;
             @include tablet-portrait-size-down {
                 max-width: 100%;
-            }               
-        }
-        &--project-details {
-            // margin-bottom: 15px;
+            }
         }
     }
 
@@ -82,10 +74,10 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
         padding: 0;
         @include tablet-landscape-size-down {
             margin-left: 15%;
-        }    
+        }
         @include tablet-portrait-size-down {
             margin-left: 5%;
-        }               
+        }
     }
 }
 
@@ -100,27 +92,31 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     z-index: -999;
 
     display: block;
-	background-color: black;
-	background-image: url('images/quote-request-background.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-color: black;
+    background-image: url("images/quote-request-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 100%;    
-	// background-attachment: fixed;
+    height: 100%;
+    @include tablet-portrait-size-down {
+        min-height: 1300px;
+    }
+    @include phone-size-down {
+        min-height: 800px;
+    }
 }
 
 .quote-request-submission-background {
     min-height: 1100px;
-    min-height: 100vh;    
+    min-height: 100vh;
 }
 
 .quote-request-confirmation {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: block;
     padding: 20px;
     margin: auto;
     border-radius: 50px;
-    // width: 70%;
     @media (max-width: 1000px) {
         margin-top: 50px;
     }

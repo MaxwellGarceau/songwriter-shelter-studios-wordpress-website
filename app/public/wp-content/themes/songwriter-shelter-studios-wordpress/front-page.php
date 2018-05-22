@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header();?>
 <!-- Home page -->
 <section id="home" class="well__medium-top-margin home-content">
     <div class="well__title well__title--home well__circle">
@@ -20,77 +20,17 @@
                 </p>
             </div>
             <div class="col-xl-4">
-                <a href="<?php echo site_url('#request-a-quote') ?>" class="js-scroll-trigger">
+                <a href="<?php echo site_url('#request-a-quote')?>" class="js-scroll-trigger">
                     <button type="button" class="main-button main-button__lg-font bold__font title__font">Request A Quote</button>
                 </a>
                 <br>
                 <div class="well__title well__bgcolor-white well__max-width well__max-width--home-music-player main-button">
                     <div class="margin__bottom">Full Production (Before and After)</div>
                     <div>
-                        <?php 
-    echo do_shortcode(get_post(42)->post_content);
-    ?>
+                        <?php echo do_shortcode(get_post(42)->post_content);?>
                     </div>
-                                </div>
-                    <!-- Intro Audio Player for Mobile (Taken from audio plugin code) -->
-<!--                     <div class="mobile-show">
-                        <div id="mep_0" class="mejs-container mejs-container-keyboard-inactive wp-audio-shortcode mejs-audio" tabindex="0" role="application" aria-label="Audio Player" style="height: 40px; min-width: 200px;">
-                            <div class="mejs-inner">
-                                <div class="mejs-mediaelement">
-                                    <mediaelementwrapper id="audio-76-1">
-                                        <audio class="wp-audio-shortcode" id="audio-76-1_html5" preload="none" style="width: 100%; height: 100%;" src="http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3?_=1">
-                                            <source type="audio/mpeg" src="http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3?_=1">
-                                            <a href="http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3">http://songwriter-shelter-studios.local/wp-content/uploads/2018/04/All-I-Want_All-I-Want-Teaser.mp3</a>
-                                        </audio>
-                                    </mediaelementwrapper>
-                                </div>
-                                <div class="mejs-layers">
-                                    <div class="mejs-poster mejs-layer" style="display: none; width: 100%; height: 100%;"></div>
-                                </div>
-                                <div class="mejs-controls">
-                                    <div class="mejs-button mejs-playpause-button mejs-play">
-                                        <button type="button" aria-controls="mep_0" title="Play" aria-label="Play" tabindex="0">
-                                        </button>
-                                    </div>
-                                    <div style="width: 50px"></div> -->
-                                    <!-- <div class="mejs-time mejs-currenttime-container" role="timer" aria-live="off">
-                                        <span class="mejs-currenttime">00:00</span>
-                                    </div> -->
-                                    <!-- <div class="mejs-time-rail">
-                                        <span class="mejs-time-total mejs-time-slider">
-                                                <span class="mejs-time-buffering" style="display: none;"></span>
-                                        <span class="mejs-time-loaded"></span>
-                                        <span class="mejs-time-current"></span>
-                                        <span class="mejs-time-hovered no-hover"></span>
-                                        <span class="mejs-time-handle">
-                                                    <span class="mejs-time-handle-content"></span>
-                                        </span>
-                                        <span class="mejs-time-float">
-                                                    <span class="mejs-time-float-current">00:00</span>
-                                        <span class="mejs-time-float-corner"></span>
-                                        </span>
-                                        </span>
-                                    </div> -->
-                                 <!--    <div class="mejs-time mejs-duration-container">
-                                        <span class="mejs-duration">00:00</span>
-                                    </div> -->
-                              <!--       <div class="mejs-button mejs-volume-button mejs-mute">
-                                        <button type="button" aria-controls="mep_0" title="Mute" aria-label="Mute" tabindex="0"></button>
-                                    </div> -->
-                                  <!--   <a class="mejs-horizontal-volume-slider" href="javascript:void(0);" aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100" role="slider" style="display: block;">
-                                            <span class="mejs-offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span>
-                                            <div class="mejs-horizontal-volume-total">
-                                                <div class="mejs-horizontal-volume-current" style="left: 0px; width: 100%;"></div>
-                                                <div class="mejs-horizontal-volume-handle" style="left: 100%;"></div>
-                                            </div>
-                                        </a> -->
-   <!--                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Music Player Goes Here -->
-</div>
+                </div>
+            </div>
             <div class="col-xl-4 tablet-portrait-size-hide">
                 <p>
                     "Working with Max Garceau at The Songwriter Shelter Recording Studios was a great experience. He is extremely knowledgeable and cares deeply about his work. I recorded a full length album with him and would recommend him to anyone! He is experienced with different styles of music and really put in the time and effort to make my album sound incredible!"
@@ -121,7 +61,7 @@
                 </p>
             </div>
             <div class="col-lg-4">
-                <img class="services-pics" src="<?php echo site_url('/wp-content/themes/songwriter-shelter-studios-wordpress/images/guitar.svg'); ?>">
+                <img class="services-pics" src="<?php echo site_url('/wp-content/themes/songwriter-shelter-studios-wordpress/images/guitar.svg');?>">
                 <br>
                 <span class="subtitle-main">Composition</span>
                 <hr class="subtitle-hr">
@@ -131,7 +71,7 @@
                 </p>
             </div>
             <div class="col-lg-4">
-                <img class="services-pics" src="<?php echo site_url('/wp-content/themes/songwriter-shelter-studios-wordpress/images/microphone.svg'); ?>">
+                <img class="services-pics" src="<?php echo site_url('/wp-content/themes/songwriter-shelter-studios-wordpress/images/microphone.svg');?>">
                 <br>
                 <span class="subtitle-main">Recording</span>
                 <hr class="subtitle-hr">
@@ -152,9 +92,7 @@
         <hr>
     </div>
     <div class="music-player">
-        <?php 
-    echo do_shortcode(get_post(22)->post_content);
-    ?>
+        <?php echo do_shortcode(get_post(22)->post_content);?>
     </div>
     <div class="well__title no__padding">
         <h2>
@@ -163,9 +101,7 @@
         <hr>
     </div>
     <div class="music-player">
-        <?php 
-    echo do_shortcode(get_post(25)->post_content);
-    ?>
+        <?php echo do_shortcode(get_post(25)->post_content);?>
     </div>
     <div class="well__title no__padding">
         <h2>
@@ -319,19 +255,15 @@
                 </div>
             </div>
             <div>
-                <input type="hidden" name="_next" value="<?php echo get_site_url() . '/quote-request-submission-successful'; ?>">
+                <input type="hidden" name="_next" value="<?php echo get_site_url() . '/quote-request-submission-successful';?>">
                 <!--                     <input type="hidden" name="wpforms[id]" value="5">
                     <input type="hidden" name="wpforms[author]" value="0"> -->
                 <button class="nav-reg__button nav-reg__button--contact" type="submit" name="Submit Quote Request" value="submit-quote-request" data-alt-text="Sending...">Submit Quote Request</button>
             </div>
         </form>
     </div>
-    <!--     <div class="well__title well__medium-width">
-        <?php 
+
+<?php 
     echo do_shortcode(get_post(6)->post_content);
-    ?>
-    </div> -->
-</section>
-<?php
-  get_footer();
+    get_footer();
 ?>

@@ -7,14 +7,14 @@
         width: 90%;
 
         @include tiny-phone-size-down {
-            font-size: .9em;
+            font-size: 0.9em;
         }
     }
 }
 
 .page-banner__bg-image {
-    z-index: -1000; // width: 1500px;
-    height: 350px; // position: absolute;
+    z-index: -1000;
+    height: 350px;
 }
 
 .page--posts .main-content-well:first-child {
@@ -23,43 +23,35 @@
 
 .pagebanner-title__margin {
     padding-top: 50px;
-
-    // @include phone-size-down {
-    //     padding-top: 85px;
-    // }
 }
 
 .pagebanner-title__margin-archive {
-    // padding-top: 100px;
     padding-top: 50px;
 }
 
 .single-title__margin {
-    padding-top: 60px;    
+    padding-top: 60px;
 }
 
 .music-production {
     &__title {
-        font-size: .7em;
+        font-size: 0.7em;
     }
     &__page-banner h1 {
         @include tablet-portrait-size-down {
-            line-height: .9;
-        }        
+            line-height: 0.9;
+        }
     }
 }
 
-
-
-
 .newsfeed-title {
-    font-size: 4.5em; // margin-top: 10px;
+    font-size: 4.5em;
     margin: auto;
     margin-bottom: 25px;
     padding-top: 13px;
     border-radius: 50px;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.5); // opacity: .1;
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
 }
 
@@ -67,22 +59,12 @@
     font-size: 2.5em;
 
     @include tablet-portrait-size-down {
-        // font-size: 2.5em;
         font-size: 2em;
     }
-
-    // @media (max-width: 700px) {
-    //     font-size: 2.2em;
-    // }
-
-    // @media (max-width: 700px) {
-    //     font-size: 2.2em;
-    // }
-
     @include phone-size-down {
         // font-size: 2em;
         font-size: 1.5em;
-    }            
+    }
 }
 
 .pagebanner__title--width {
@@ -97,7 +79,7 @@
 
 .meta-box {
     background-color: $grey;
-    opacity: .8;
+    opacity: 0.8;
     color: black;
     border-radius: $border-radius-main;
     width: 40%;

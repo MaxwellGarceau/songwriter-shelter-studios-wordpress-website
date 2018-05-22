@@ -7,10 +7,6 @@
 
 .login-text {
 	font-size: 1rem;
-	// margin: 0 auto; 
-	// text-align: center; 
-	// display: table-cell; 
-	// padding-left: 300px;
 	color: white;
 }
 
@@ -18,13 +14,9 @@
 	background-color: black;
 	color: white;
 	border-radius: 25px;
-	// margin-bottom: 10px;
-	// margin-right: 5px;
-	// padding: 8px;
 	padding: 0;
-	width: 70px;	
-	// transition: background-color 1s ease;
-	transition: .6s ease;
+	width: 70px;
+	transition: 0.6s ease;
 }
 
 .nav-reg__button:hover {
@@ -37,14 +29,6 @@
 }
 
 .site-header__avatar {
-	// margin-right: 70px;
-	/*margin-left: 52px;*/
-	/*border-radius: 25px;*/
-/*	border-style: solid;
-	border-width: 2px;
-	border-color: white;*/
-	// padding: 0;
-
 	& img {
 		border-radius: 12px;
 	}
@@ -57,13 +41,11 @@
 .nav-reg__right-elem {
 	right: 0;
 	top: 13px;
-	// top: auto;	
 }
 
 .nav-reg__left-elem {
 	right: 80px;
 	top: 13px;
-	// top: auto;
 	@media (max-width: 1250px) {
 		left: 0px;
 		right: auto;
@@ -78,7 +60,6 @@
 .nav-reg__user-name {
 	right: 140px;
 	top: 13px;
-	// top: auto;
 	@media (max-width: 1599px) {
 		right: auto;
 		right: initial;
@@ -103,8 +84,7 @@
 /* Login/Signup Screen */
 
 .login h1 a {
-	// Put a background image in here (replaces wordpress logo)
-	background-image: url('');
+	background-image: url("");
 	background-size: auto;
 	background-size: initial;
 	width: auto;
@@ -115,12 +95,12 @@
 
 .login {
 	background-color: #212121;
-	background-image: url('./images/wood-background-2-min-darker.jpg');
+	background-image: url("./images/wood-background-2-min-darker.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	min-height: 1100px;
-	min-height: 100vh;	
+	min-height: 100vh;
 }
 
 #login p {
@@ -132,18 +112,21 @@
 	color: white;
 }
 
-#loginform, #registerform {
+#loginform,
+#registerform {
 	border-radius: 10px;
 	color: white;
 	background-color: black;
 }
 
-#loginform label, #registerform label {
+#loginform label,
+#registerform label {
 	color: #e5e3e3;
 	font-size: 1.3em;
 }
 
-.login #login_error, .login .message {
+.login #login_error,
+.login .message {
 	color: black;
 }
 
@@ -165,7 +148,7 @@
 	color: white;
 }
 
-.register {	
+.register {
 	font-size: 1.2em;
 }
 
@@ -180,22 +163,20 @@
 }
 
 .login h1 a {
-	background-image: url('images/logo.png');
+	background-image: url("images/logo.png");
 	background-size: 320px auto;
 	height: 180px;
 	border-radius: $border-radius-main;
 }
 
 #wp-submit {
-	// background-color: $darkOrange;
 	background-color: white;
 	color: black;
-    border-radius: 25px;
-    transition: .6s ease;	
+	border-radius: 25px;
+	transition: 0.6s ease;
 }
 
 #wp-submit:hover {
-	// background-color: $darkOrange;
 	background-color: black;
 	color: white;
 }
@@ -208,22 +189,27 @@
 	color: white;
 }
 
-#nav a:link, #backtoblog a:link {
+#nav a:link,
+#backtoblog a:link {
 	color: white;
 }
 
-#nav a:visited, #backtoblog a:visited {
+#nav a:visited,
+#backtoblog a:visited {
 	color: $darkerWhite;
 }
 
-.login #nav a:hover, .login #backtoblog a:hover {
+.login #nav a:hover,
+.login #backtoblog a:hover {
 	color: $linkGrey;
 }
 
-.login #nav a:active, .login #backtoblog a:active {
+.login #nav a:active,
+.login #backtoblog a:active {
 	color: $linkGrey;
 }
 
-.login #nav a:focus, .login #backtoblog a:focus {
+.login #nav a:focus,
+.login #backtoblog a:focus {
 	box-shadow: none;
 }

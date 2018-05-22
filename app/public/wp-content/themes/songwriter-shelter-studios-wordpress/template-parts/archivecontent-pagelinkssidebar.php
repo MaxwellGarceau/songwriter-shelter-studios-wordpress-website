@@ -7,7 +7,6 @@
             'title_li' => NULL,
             'child_of' => $blogParentPage,
             'sort_column' => 'menu_order'
-          )); 
-          ?>
+          ));?>
       </ul>
     </div>

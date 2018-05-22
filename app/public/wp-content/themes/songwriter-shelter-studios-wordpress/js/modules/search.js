@@ -2,48 +2,48 @@ import $ from 'jquery';
 // Live Search
 
 class Search {
-	constructor() {
-		this.addSearchHTML();
-		this.resultsDiv = $('#search-overlay__results');
-		this.openButton = $('.js-search-trigger');
-		this.closeButton = $('.search-overlay__close');
-		this.searchOverlay = $('.search-overlay');
-		this.searchField = $('#search-term');
-		this.isOverlayOpen = false;
-		this.isSpinnerVisible = false;
-		this.previousValue;
-		this.typingTimer;
-		this.events();
-	}
+    constructor() {
+        this.addSearchHTML();
+        this.resultsDiv = $('#search-overlay__results');
+        this.openButton = $('.js-search-trigger');
+        this.closeButton = $('.search-overlay__close');
+        this.searchOverlay = $('.search-overlay');
+        this.searchField = $('#search-term');
+        this.isOverlayOpen = false;
+        this.isSpinnerVisible = false;
+        this.previousValue;
+        this.typingTimer;
+        this.events();
+    }
 
-	events() {
-		this.openButton.on('click', this.openOverlay.bind(this));
-		this.closeButton.on('click', this.closeOverlay.bind(this));
-		$(document).on('keydown', this.keyPressDispatcher.bind(this));
-		this.searchField.on('keyup', this.typingLogic.bind(this));
-	}
+    events() {
+        this.openButton.on('click', this.openOverlay.bind(this));
+        this.closeButton.on('click', this.closeOverlay.bind(this));
+        $(document).on('keydown', this.keyPressDispatcher.bind(this));
+        this.searchField.on('keyup', this.typingLogic.bind(this));
+    }
 
-	typingLogic() {
-		if (this.searchField.val() != this.previousValue) {
-			clearTimeout(this.typingTimer);
-			if (this.searchField.val()) {
-				if (!this.isSpinnerVisible) {
-					this.resultsDiv.html('<div class="spinner-loader"></div>');
-					this.isSpinnerVisible = true;
-				}	
-				this.typingTimer = setTimeout(this.getResults.bind(this), 750);							
-			} else {
-				this.resultsDiv.html('');
-				this.isSpinnerVisible = false;
-			}
+    typingLogic() {
+        if (this.searchField.val() != this.previousValue) {
+            clearTimeout(this.typingTimer);
+            if (this.searchField.val()) {
+                if (!this.isSpinnerVisible) {
+                    this.resultsDiv.html('<div class="spinner-loader"></div>');
+                    this.isSpinnerVisible = true;
+                }
+                this.typingTimer = setTimeout(this.getResults.bind(this), 750);
+            } else {
+                this.resultsDiv.html('');
+                this.isSpinnerVisible = false;
+            }
 
-			this.previousValue = this.searchField.val();
-		}
-	}
+            this.previousValue = this.searchField.val();
+        }
+    }
 
-	getResults() {
-		$.getJSON(songwriterData.root_url + '/wp-json/songwriter/v1/search?term=' + this.searchField.val(), (results) => {
-			this.resultsDiv.html(`
+    getResults() {
+        $.getJSON(songwriterData.root_url + '/wp-json/songwriter/v1/search?term=' + this.searchField.val(), (results) => {
+            this.resultsDiv.html(`
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-3 text-container">
@@ -85,39 +85,39 @@ class Search {
 					</div>
 				</div>
 				`);
-		});
-		this.isSpinnerVisible = false;
-	}
+        });
+        this.isSpinnerVisible = false;
+    }
 
-	keyPressDispatcher(e) {
-		switch(e.keyCode) {
-			case 83:
-			!this.isOverlayOpen && !$('input, textarea').is(':focus') ? this.openOverlay() : null;
-			break;
-			case 27:
-			this.isOverlayOpen  ? this.closeOverlay() : null;
-			break;
-		}
-	}
+    keyPressDispatcher(e) {
+        switch (e.keyCode) {
+            case 83:
+                !this.isOverlayOpen && !$('input, textarea').is(':focus') ? this.openOverlay() : null;
+                break;
+            case 27:
+                this.isOverlayOpen ? this.closeOverlay() : null;
+                break;
+        }
+    }
 
-	openOverlay() {
-		this.searchOverlay.addClass('search-overlay--active');
-		$('body').addClass('body-no-scroll');
-		this.searchField.val('');
-		this.resultsDiv.html('');
-		setTimeout(() => this.searchField.focus(), 301);
-		this.isOverlayOpen = true;
-		return false;
-	}
+    openOverlay() {
+        this.searchOverlay.addClass('search-overlay--active');
+        $('body').addClass('body-no-scroll');
+        this.searchField.val('');
+        this.resultsDiv.html('');
+        setTimeout(() => this.searchField.focus(), 301);
+        this.isOverlayOpen = true;
+        return false;
+    }
 
-	closeOverlay() {
-		this.searchOverlay.removeClass('search-overlay--active');
-		$('body').removeClass('body-no-scroll');
-		this.isOverlayOpen = false;
-	}
+    closeOverlay() {
+        this.searchOverlay.removeClass('search-overlay--active');
+        $('body').removeClass('body-no-scroll');
+        this.isOverlayOpen = false;
+    }
 
-	addSearchHTML() {
-		$('body').append(`
+    addSearchHTML() {
+        $('body').append(`
 		    <div class="search-overlay">
 		        <div class="search-overlay__top">
 		            <div class="">
@@ -131,7 +131,7 @@ class Search {
 		        </div>
 		    </div>
 		`);
-	}
+    }
 }
 
 export default Search;

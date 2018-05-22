@@ -4,8 +4,6 @@
     <h6 class="newsfeed-post-title default-search__title default-search__title--results">All Posts</h6>
     <ul class="min-list default-search__results-list">
         <?php
-        // while ($mainPageQuery->have_posts()) {
-        //   $mainPageQuery->the_post();    
         while (have_posts()) {
           the_post();
 
@@ -20,26 +18,20 @@
           ?>
             <li class="default-search__results-list-item">
                 <a class="inverse-link-color" href="<?php echo the_permalink(); ?>">
-                    <?php
-            echo the_title();
-            ?>
+            <?php
+            echo the_title();?>
                 </a>
                 -
                 <span class="italic__font smaller-font"><?php echo get_the_date('F Y'); ?></span>
                 <div>
-                    <?php
-             
+          <?php
           if(empty(get_the_content())) {
             echo custom_field_excerpt('main_body_content', 10);
           } else {
             echo wp_trim_words(get_the_excerpt(), 10);
-          }
-
-           ?>
+          }?>
                 </div>
             </li>
-            <?php
-         }
-          ?>
+            <?php }?>
     </ul>
 </div>

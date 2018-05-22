@@ -1,28 +1,28 @@
 // Links
 a {
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 a:visited {
-    color: $lightBlack;
+	color: $lightBlack;
 }
 
 a:hover {
-    color: $linkGrey;
+	color: $linkGrey;
 }
 
 .inverse-link-color {
-    color: white;
+	color: white;
 }
 
 .inverse-link-color:visited {
-    color: $grey;
+	color: $grey;
 }
 
 .inverse-link-color:hover {
-    color: $linkGrey;
+	color: $linkGrey;
 }
 
 .white-link-color a {
