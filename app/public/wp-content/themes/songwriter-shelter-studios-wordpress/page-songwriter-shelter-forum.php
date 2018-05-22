@@ -24,6 +24,13 @@ while (have_posts()) {
 ?>
             <div style="padding-top: 90px;"></div>
             <h1 class="forum-title"><?php the_title();?></h1>
+            <h6 class="italic__font under-construction">
+              *PLEASE READ*
+              <br><br>
+              I have created a number of "dummy" posts to fill this forum out while I make improvements and modifications to the layout and functionality.
+              <br><br>
+              Feel free to create your own posts! I will remove the "dummy" posts over time and I promise your posts will be safe.
+           </h6>
 
             <?php
 // Resets query from musicPhilForum User to default page query

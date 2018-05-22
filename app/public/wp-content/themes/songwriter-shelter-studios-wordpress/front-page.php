@@ -182,15 +182,15 @@
         <hr>
     </div>
     <div class="well__title well__title--contact-form well__medium-width">
-        <form class="contact-form" data-formid="5" method="post" enctype="multipart/form-data" action="https://formspree.io/max@songwritershelterstudios.com" method="POST" novalidate="novalidate">
+        <form class="contact-form" data-formid="5" method="post" enctype="multipart/form-data" action="https://formspree.io/max@songwritershelterstudios.com" method="POST">
             <div>
                 <div data-field-id="0">
                     <label class="contact-form__label" for="Artist/Band Name">Artist/Band Name <span class="contact-form__required-indicator">*</span></label>
-                    <input class="contact-form__field" type="text" name="Artist/Band Name" required="" aria-required="true">
+                    <input class="contact-form__field" type="text" name="Artist/Band Name" required aria-required="true">
                 </div>
                 <div data-field-id="1">
                     <label class="contact-form__label" for="Email Address">Email Address <span class="contact-form__required-indicator">*</span></label>
-                    <input class="contact-form__field" type="email" name="Email Address" required="" aria-required="true">
+                    <input class="contact-form__field" type="email" name="Email Address" required aria-required="true">
                 </div>
                 <div data-field-id="3">
                     <label class="contact-form__label" for="Contact Name">Contact Name</label>
@@ -198,41 +198,42 @@
                 </div>
                 <div data-field-id="4">
                     <label class="contact-form__label" for="Location (City, State)">Location (City, State) <span class="contact-form__required-indicator">*</span></label>
-                    <input class="contact-form__field" type="text" name="Location (City, State)" required="" aria-required="true">
+                    <input class="contact-form__field" type="text" name="Location (City, State)" required aria-required="true">
                 </div>
                 <div data-field-id="5">
                     <label class="contact-form__label" class="wpforms-field-label" for="Genre">Genre</label>
                     <input class="contact-form__field" type="text" name="Genre">
                 </div>
+                <!-- Would LIKE the user to fill out this field, but not 100 percent required -->
                 <div data-field-id="10">
                     <label class="contact-form__label" for="wpforms-5-field_10">Project Needs <span class="contact-form__required-indicator">*</span></label>
                     <ul class="contact-form__checkbox">
                         <li>
-                            <input type="checkbox" name="Recording" value="Recording" required="" aria-required="true">
+                            <input type="checkbox" name="Recording" value="Recording">
                             <label class="contact-form__label contact-form__label--checkbox" for="Recording">Recording</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="Mixing" value="Mixing" required="" aria-required="true">
+                            <input type="checkbox" name="Mixing" value="Mixing">
                             <label class="contact-form__label contact-form__label--checkbox" for="Mixing">Mixing</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="Mastering" value="Mastering" required="" aria-required="true">
+                            <input type="checkbox" name="Mastering" value="Mastering">
                             <label class="contact-form__label contact-form__label--checkbox" for="Mastering">Mastering</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="Track Building (Making The Instrumental)" value="Track Building (Making The Instrumental)" required="" aria-required="true">
+                            <input type="checkbox" name="Track Building (Making The Instrumental)" value="Track Building (Making The Instrumental)">
                             <label class="contact-form__label contact-form__label--checkbox" for="Track Building (Making The Instrumental)">Track Building <span class="italic__font smaller-font smaller-font--contact-form">(Making The Instrumental)</span></label>
                         </li>
                         <li>
-                            <input type="checkbox" name="Editing" value="Editing" required="" aria-required="true">
+                            <input type="checkbox" name="Editing" value="Editing">
                             <label class="contact-form__label contact-form__label--checkbox" for="Editing">Editing</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="Vocal Tuning" value="Vocal Tuning" required="" aria-required="true">
+                            <input type="checkbox" name="Vocal Tuning" value="Vocal Tuning">
                             <label class="contact-form__label contact-form__label--checkbox" for="Vocal Tuning">Vocal Tuning</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="Other" value="Other" required="" aria-required="true">
+                            <input type="checkbox" name="Other" value="Other">
                             <label class="contact-form__label contact-form__label--checkbox" for="Other">Other</label>
                         </li>
                     </ul>
@@ -243,7 +244,7 @@
                 </div>
                 <div data-field-id="7">
                     <label class="contact-form__label" for="Budget">Budget <span class="contact-form__required-indicator">*</span></label>
-                    <input class="contact-form__field" type="text" name="Budget" required="" aria-required="true">
+                    <input class="contact-form__field" type="text" name="Budget" required aria-required="true">
                 </div>
                 <div data-field-id="8">
                     <label class="contact-form__label" for="Number of Songs">Number of Songs</label>
@@ -256,14 +257,13 @@
             </div>
             <div>
                 <input type="hidden" name="_next" value="<?php echo get_site_url() . '/quote-request-submission-successful';?>">
-                <!--                     <input type="hidden" name="wpforms[id]" value="5">
-                    <input type="hidden" name="wpforms[author]" value="0"> -->
                 <button class="nav-reg__button nav-reg__button--contact" type="submit" name="Submit Quote Request" value="submit-quote-request" data-alt-text="Sending...">Submit Quote Request</button>
+
+                <!-- Might decide to implement required fields differently in the future -->
+
+<!--                 <div class="contact-form__required-error-container"><span class="contact-form__required-error">Please fill out all required fields</span></div> -->
             </div>
         </form>
     </div>
 
-<?php 
-    echo do_shortcode(get_post(6)->post_content);
-    get_footer();
-?>
+<?php get_footer();?>

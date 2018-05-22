@@ -8,8 +8,10 @@ footer p {
     font-size: $footer-font-size;
 }
 
-.footer__background-color {
+.footer {
     background-color: black;
+    position: absolute;
+    width: 100%;    
 }
 
 h1,

@@ -10357,7 +10357,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // 3rd party packages from NPM
 // Imported from vendor folder
 // Our modules / classes
+// import { ContactFormRequiredFields } from './modules/contact-form'; // Might validate contact form differently in future
 // Instantiate a new object using our modules/classes
+// const contactFormRequiredFields = new ContactFormRequiredFields(); // Might validate contact form differently in future
 var forumPosts = new _forum.default(); // Forum
 
 var parallaxEffect = new _parallaxEffect.default(); // Parallax
@@ -14191,7 +14193,7 @@ window.jQuery = window.$ = __webpack_require__(0);
 /* 8 */
 /***/ (function(module, exports) {
 
-
+// For any misc javascript
 
 /***/ }),
 /* 9 */

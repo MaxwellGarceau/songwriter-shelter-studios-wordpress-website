@@ -1,4 +1,4 @@
-<footer class="py-3 footer__background-color">
+<footer class="py-3 footer">
     <div class="container">
         <p class="text-center text-white no__margin-padding footer__font-size">
             The Songwriter Shelter Recording Studios

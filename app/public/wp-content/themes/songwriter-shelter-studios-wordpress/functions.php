@@ -91,7 +91,7 @@ function pageBanner($args = [])
                     <h6 class="page-single__title single-title__margin pagebanner__title--width"><?php echo $args['title']; ?></h6>
                     <hr>
                     <?php }if (!is_archive() and !is_page(93) and !is_page(246) and !is_search() and !is_single()) {?>
-                    <span class="italic__font">Last post on <?php the_time('F, Y');?></span>
+                    <span class="italic__font">Last post in <?php the_modified_time('F, Y');?></span>
                     <?php }if (is_single()) {?>
                     <div class="italic__font white-link-color"><span>Posted by <?php the_author_posts_link();?> in <?php the_time('F, Y');?></span></div>
                     <?php }?>

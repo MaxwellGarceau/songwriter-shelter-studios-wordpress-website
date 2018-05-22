@@ -1105,6 +1105,19 @@ div.wpforms-container-full .wpforms-form button[type="submit"] {
         max-width: 100%; } }
 .contact-form__required-indicator {
   color: red; }
+.contact-form__required-error-container {
+  margin-top: 15px;
+  display: none; }
+  @media (max-width: 400px) {
+    .contact-form__required-error-container {
+      margin-top: 5px;
+      margin-bottom: 5px; } }
+.contact-form__required-error {
+  font-style: italic;
+  font-size: 0.7em;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 25px;
+  padding: 10px; }
 .contact-form__checkbox {
   list-style: none;
   text-align: left;
@@ -1341,8 +1354,10 @@ footer p {
 .footer__font-size {
   font-size: 0.8em; }
 
-.footer__background-color {
-  background-color: black; }
+.footer {
+  background-color: black;
+  position: absolute;
+  width: 100%; }
 
 h1,
 h2,
@@ -2021,6 +2036,12 @@ p {
   @media (max-width: 600px) {
     .mobile-show {
       display: inline-block; } }
+
+.under-construction {
+  color: white;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 0.9em; }
 
 /* Single Page */
 .single-post__margin {

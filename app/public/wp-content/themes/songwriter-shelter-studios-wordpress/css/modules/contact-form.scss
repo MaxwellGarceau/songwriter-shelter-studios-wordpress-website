@@ -67,6 +67,24 @@ div.wpforms-container-full .wpforms-form button[type="submit"] {
         color: red;
     }
 
+    &__required-error-container {
+        margin-top: 15px;
+        display: none;
+
+        @include tiny-phone-size-down {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__required-error {
+        font-style: italic;
+        font-size: 0.7em;
+        background-color: rgba(255, 255, 255, .25);
+        border-radius: 25px;
+        padding: 10px;
+    }
+
     &__checkbox {
         list-style: none;
         text-align: left;
