@@ -50,6 +50,7 @@
 
 .mobile-show {
     display: none;
+    
     @include phone-size-down {
         display: inline-block;
     }
