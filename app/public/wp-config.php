@@ -18,6 +18,8 @@
  * @package WordPress
  */
 
+// define('FORCE_SSL_ADMIN', true);
+
 // ** MySQL settings ** //
 
 if (file_exists(dirname(__FILE__) . '/local.php')) {

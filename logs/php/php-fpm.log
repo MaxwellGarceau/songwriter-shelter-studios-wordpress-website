@@ -172,3 +172,7 @@
 [23-May-2018 05:29:42] NOTICE: exiting, bye-bye!
 [23-May-2018 14:44:25] NOTICE: fpm is running, pid 25
 [23-May-2018 14:44:25] NOTICE: ready to handle connections
+[23-May-2018 15:19:19] NOTICE: Terminating ...
+[23-May-2018 15:19:19] NOTICE: exiting, bye-bye!
+[23-May-2018 16:31:00] NOTICE: fpm is running, pid 26
+[23-May-2018 16:31:00] NOTICE: ready to handle connections

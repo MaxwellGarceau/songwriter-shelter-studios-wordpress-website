@@ -17,7 +17,7 @@ INSERT INTO `wp_usermeta` VALUES
 (13,1,"wp_user_level","10"),
 (14,1,"dismissed_wp_pointers",""),
 (15,1,"show_welcome_panel","1"),
-(17,1,"wp_dashboard_quick_press_last_post_id","202"),
+(17,1,"wp_dashboard_quick_press_last_post_id","290"),
 (18,1,"community-events-location","a:1:{s:2:\"ip\";s:12:\"192.168.95.0\";}"),
 (19,1,"wp_user-settings","editor=html&libraryContent=browse&editor_expand=on&hidetb=0"),
 (20,1,"wp_user-settings-time","1527002783"),

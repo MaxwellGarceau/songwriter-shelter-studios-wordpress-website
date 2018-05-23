@@ -1,0 +1,64 @@
+2018/05/23 16:31:00 Using in-memory storage
+2018/05/23 16:31:00 [SMTP] Binding to address: 0.0.0.0:1025
+2018/05/23 16:31:00 Serving under http://:1080/
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Starting session
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Received 16 bytes: 'EHLO localhost\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: ESTABLISH] In ESTABLISH state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 21 bytes: '250-Hello localhost\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 16 bytes: '250-PIPELINING\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Received 35 bytes: 'MAIL FROM:<www-data@ffb196322c52>\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: MAIL] Processing line: MAIL FROM:<www-data@ffb196322c52>
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<www-data@ffb196322c52>'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: MAIL] In MAIL state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 37 bytes: '250 Sender www-data@ffb196322c52 ok\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Received 34 bytes: 'RCPT TO:<mailhog@flywheel.local>\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: RCPT] Processing line: RCPT TO:<mailhog@flywheel.local>
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<mailhog@flywheel.local>'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: RCPT] In RCPT state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: RCPT] Got RCPT command
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 41 bytes: '250 Recipient mailhog@flywheel.local ok\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Received 6 bytes: 'DATA\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: RCPT] Processing line: DATA
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: RCPT] In RCPT state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: RCPT] Got DATA command, switching to DATA state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Received 860 bytes: 'To: maxgarceau@outlook.com\r\nSubject: [The Songwriter Shelter Recording Studios] Password Reset\r\nX-PHP-Originating-Script: 1000:class-phpmailer.php\r\nDate: Wed, 23 May 2018 16:33:25 +0000\r\nFrom: WordPress <wordpress@songwriter-shelter-studios.local>\r\nMessage-ID: <a46a4df27ecc29c80b4218e177a2a601@songwriter-shelter-studios.local>\r\nX-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\nSomeone has requested a password reset for the following account:\r\n\r\nSite Name: The Songwriter Shelter Recording Studios\r\n\r\nUsername: MaxSignupTest1\r\n\r\nIf this was a mistake, just ignore this email and nothing will happen.\r\n\r\nTo reset your password, visit the following address:\r\n\r\n<http://songwriter-shelter-studios.local/wp-login.php?action=rp&key=ZtuuihMLWFWmg5wDm9t7&login=MaxSignupTest1>\r\n\r\n.\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2018/05/23 16:33:25 Parsing Content from string: 'To: maxgarceau@outlook.com
+Subject: [The Songwriter Shelter Recording Studios] Password Reset
+X-PHP-Originating-Script: 1000:class-phpmailer.php
+Date: Wed, 23 May 2018 16:33:25 +0000
+From: WordPress <wordpress@songwriter-shelter-studios.local>
+Message-ID: <a46a4df27ecc29c80b4218e177a2a601@songwriter-shelter-studios.local>
+X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Someone has requested a password reset for the following account:
+
+Site Name: The Songwriter Shelter Recording Studios
+
+Username: MaxSignupTest1
+
+If this was a mistake, just ignore this email and nothing will happen.
+
+To reset your password, visit the following address:
+
+<http://songwriter-shelter-studios.local/wp-login.php?action=rp&key=ZtuuihMLWFWmg5wDm9t7&login=MaxSignupTest1>
+'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Storing message SoWGMjo0HdrwKDpY_e2CCjaZKcPrHvvRAouaDFqqRHg=@mailhog.example
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 80 bytes: '250 Ok: queued as SoWGMjo0HdrwKDpY_e2CCjaZKcPrHvvRAouaDFqqRHg=@mailhog.example\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Received 6 bytes: 'QUIT\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: MAIL] Processing line: QUIT
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: MAIL] In state 6, got command 'QUIT', args ''
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] [PROTO: MAIL] Got QUIT verb, staying in MAIL state
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Sent 9 bytes: '221 Bye\r\n'
+2018/05/23 16:33:25 [SMTP 127.0.0.1:36112] Session ended
