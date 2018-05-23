@@ -5,7 +5,6 @@
             <h5>Error. 404.</h5>
             <a class="inverse-link-color" href="<?php echo get_site_url('/home') ?>">
                 <p>Sorry, this page was not found. Click here to return home.</p>
-                <p>Automated deployment test success!</p>
             </a>
         </div>
     </section>
