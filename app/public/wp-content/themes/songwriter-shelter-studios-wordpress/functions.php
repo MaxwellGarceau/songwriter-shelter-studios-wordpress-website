@@ -677,6 +677,10 @@ function sanitizeForumPosts($data, $postArr)
 
 add_filter('wp_insert_post_data', 'sanitizeForumPosts', 10, 2);
 
+// Fix wordpress cookie problem on admin login
+setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
+if ( SITECOOKIEPATH != COOKIEPATH ) setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
+
 // Implement later
 
 // // Display custom post types in author archive
