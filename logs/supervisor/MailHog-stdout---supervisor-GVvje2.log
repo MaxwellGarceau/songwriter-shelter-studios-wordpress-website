@@ -1,0 +1,106 @@
+[HTTP] Binding to address: :1080
+Creating API v1 with WebPath: 
+Creating API v2 with WebPath: 
+Got message in APIv2 websocket channel
+[APIv2] BROADCAST /api/v2/websocket
+Got message in APIv1 event stream
+Sending content: {
+  "ID": "fiKgLVWI7sqinBXeTy36DJwWDoUu1wku8NzHJjGrCl8=@mailhog.example",
+  "From": {
+    "Relays": null,
+    "Mailbox": "www-data",
+    "Domain": "ffb196322c52",
+    "Params": ""
+  },
+  "To": [
+    {
+      "Relays": null,
+      "Mailbox": "mailhog",
+      "Domain": "flywheel.local",
+      "Params": ""
+    }
+  ],
+  "Content": {
+    "Headers": {
+      "Content-Type": [
+        "text/plain; charset=UTF-8"
+      ],
+      "Date": [
+        "Fri, 1 Jun 2018 23:02:03 +0000"
+      ],
+      "From": [
+        "WordPress \u003cwordpress@songwriter-shelter-studios.local\u003e"
+      ],
+      "MIME-Version": [
+        "1.0"
+      ],
+      "Message-ID": [
+        "\u003c1b4b0fc9d7937760412cb78c233c56ec@songwriter-shelter-studios.local\u003e"
+      ],
+      "Received": [
+        "from localhost by mailhog.example (MailHog)\r\n          id fiKgLVWI7sqinBXeTy36DJwWDoUu1wku8NzHJjGrCl8=@mailhog.example; Fri, 01 Jun 2018 23:02:03 +0000"
+      ],
+      "Return-Path": [
+        "\u003cwww-data@ffb196322c52\u003e"
+      ],
+      "Subject": [
+        "[The Songwriter Shelter Recording Studios] Your site has updated to WordPress 4.9.6"
+      ],
+      "To": [
+        "dev-email@flywheel.local"
+      ],
+      "X-Mailer": [
+        "PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)"
+      ],
+      "X-PHP-Originating-Script": [
+        "1000:class-phpmailer.php"
+      ]
+    },
+    "Body": "Howdy! Your site at http://songwriter-shelter-studios.local has been updated automatically to WordPress 4.9.6.\r\n\r\nNo further action is needed on your part. For more on version 4.9.6, see the About WordPress screen:\r\nhttp://songwriter-shelter-studios.local/wp-admin/about.php\r\n\r\nIf you experience any issues or need support, the volunteers in the WordPress.org support forums may be able to help.\r\nhttps://wordpress.org/support/\r\n\r\nYou also have some plugins or themes with updates available. Update them now:\r\nhttp://songwriter-shelter-studios.local/wp-admin/\r\n\r\nThe WordPress Team\r\n",
+    "Size": 1071,
+    "MIME": null
+  },
+  "Created": "2018-06-01T23:02:03.525062389Z",
+  "MIME": null,
+  "Raw": {
+    "From": "www-data@ffb196322c52",
+    "To": [
+      "mailhog@flywheel.local"
+    ],
+    "Data": "To: dev-email@flywheel.local\r\nSubject: [The Songwriter Shelter Recording Studios] Your site has updated to WordPress 4.9.6\r\nX-PHP-Originating-Script: 1000:class-phpmailer.php\r\nDate: Fri, 1 Jun 2018 23:02:03 +0000\r\nFrom: WordPress \u003cwordpress@songwriter-shelter-studios.local\u003e\r\nMessage-ID: \u003c1b4b0fc9d7937760412cb78c233c56ec@songwriter-shelter-studios.local\u003e\r\nX-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\nHowdy! Your site at http://songwriter-shelter-studios.local has been updated automatically to WordPress 4.9.6.\r\n\r\nNo further action is needed on your part. For more on version 4.9.6, see the About WordPress screen:\r\nhttp://songwriter-shelter-studios.local/wp-admin/about.php\r\n\r\nIf you experience any issues or need support, the volunteers in the WordPress.org support forums may be able to help.\r\nhttps://wordpress.org/support/\r\n\r\nYou also have some plugins or themes with updates available. Update them now:\r\nhttp://songwriter-shelter-studios.local/wp-admin/\r\n\r\nThe WordPress Team\r\n",
+    "Helo": "localhost"
+  }
+}
+
+[APIv1] BROADCAST /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
